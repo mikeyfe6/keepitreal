@@ -7,7 +7,7 @@ body {
 	color: $white;
 
 	@include mobile {
-		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 }
 
