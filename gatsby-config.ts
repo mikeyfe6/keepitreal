@@ -5,11 +5,41 @@ require('dotenv').config({
 	path: `.env`,
 });
 
+const siteMetadata = {
+	title: `Keep It Real`,
+	slogan: ``,
+	description: ``,
+
+	siteUrl: `https://www.yourdomain.tld`,
+	image: `/images/KIR-logo.png`,
+
+	twitterUsername: `@keepitreal`,
+	facebookUrl: `#!`,
+	instagramUrl: `#!`,
+	linkedinUrl: `#!`,
+	youtubeUrl: `#!`,
+
+	telephone: ``,
+	phoneRaw: ``,
+	mobile: ``,
+
+	email: ``,
+	address: ``,
+	postalCode: ``,
+	city: ``,
+
+	companyName: ``,
+	kvk: ``,
+	btw: ``,
+	bank: ``,
+
+	bgWebColor: `#0d0128`,
+	bgThemeColor: `#662d92`,
+};
+
 const config: GatsbyConfig = {
-	siteMetadata: {
-		title: `keepitreal`,
-		siteUrl: `https://www.yourdomain.tld`,
-	},
+	siteMetadata: siteMetadata,
+
 	// More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
 	// If you use VSCode you can also use the GraphQL plugin
 	// Learn more at: https://gatsby.dev/graphql-typegen
@@ -31,7 +61,7 @@ const config: GatsbyConfig = {
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
-				icon: 'src/images/icon.png',
+				icon: 'src/images/KIR-icon.png',
 			},
 		},
 		{
