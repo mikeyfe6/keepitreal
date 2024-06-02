@@ -23,6 +23,8 @@
 			position: relative;
 			overflow: hidden;
 
+			@include boxShadow(1);
+
 			&:after {
 				content: '';
 				position: absolute;
@@ -49,6 +51,8 @@
 			bottom: 25px;
 			right: -25px;
 			max-width: 200px;
+
+			@include boxShadow(1);
 		}
 	}
 }
