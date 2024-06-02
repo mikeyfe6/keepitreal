@@ -13,13 +13,17 @@
 	&-content {
 		position: relative;
 
+		@include mobile {
+			margin-top: -5em;
+		}
+
 		.logo {
 			max-width: 250px;
 			display: block;
 
 			@include phablet {
 				max-width: 200px;
-				margin: 0 auto 2em;
+				margin: 0 0 2em 1.5em;
 			}
 		}
 
