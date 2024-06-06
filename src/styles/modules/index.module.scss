@@ -1,85 +1,25 @@
-@import '../configs/resets';
 @import '../configs/globals';
 
-.landing-page {
+.index {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
+	margin: 4em 0;
 
-	max-width: 750px;
-	height: 100vh;
-	margin: 0 auto;
+	> div {
+		max-width: 525px;
+		background: rgba($white, 0.05);
+		padding: 2.5em 2em;
+		margin: -1em 0;
 
-	&-content {
-		position: relative;
+		@include boxShadow;
+		@include borderRadius;
 
-		@include mobile {
-			margin-top: -10em;
+		&:nth-child(odd) {
+			align-self: flex-start;
 		}
 
-		.logo {
-			max-width: 250px;
-			display: block;
-
-			@include phablet {
-				max-width: 200px;
-				margin: 0 0 2em 2em;
-			}
-		}
-
-		.wenner {
-			border-radius: 50%;
-			border: 0.375em solid rgba($white, 0.9);
-			position: relative;
-			overflow: hidden;
-			display: block;
-
-			@include phablet {
-				max-width: 85%;
-				margin: 0 auto;
-			}
-
-			@include boxShadow(1);
-
-			&:after {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: radial-gradient(
-					ellipse at center,
-					rgba($primary, 0) 0%,
-					rgba($primary, 0.3) 100%
-				);
-				border-radius: 50%;
-			}
-
-			img {
-				border-radius: 50%;
-			}
-		}
-
-		.avhj {
-			border-radius: 0.125em;
-			position: absolute;
-			bottom: 25px;
-			right: -25px;
-			max-width: 200px;
-
-			@include tablet {
-				right: 0;
-				bottom: 0;
-				max-width: 175px;
-			}
-
-			@include mobile {
-				max-width: 125px;
-				right: 25px;
-			}
-
-			@include boxShadow(1);
+		&:nth-child(even) {
+			align-self: flex-end;
 		}
 	}
 }

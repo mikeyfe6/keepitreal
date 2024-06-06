@@ -1,8 +1,8 @@
 import React from 'react';
 
-// import Header from './header';
-// import Hero from './hero';
-// import Footer from './footer';
+import Header from './header';
+import Hero from './hero';
+import Footer from './footer';
 
 import ResponsiveTag from './helpers/respoTag';
 
@@ -16,10 +16,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<>
 			<div className='keep-it-real'>
-				{/* <Header />
-        <Hero /> */}
+				<Header />
+				<Hero />
 				<main>{children}</main>
-				{/* <Footer /> */}
+				<Footer />
 			</div>
 
 			{process.env.NODE_ENV === 'development' && <ResponsiveTag />}

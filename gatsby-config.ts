@@ -61,7 +61,7 @@ const config: GatsbyConfig = {
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
-				icon: 'src/images/KIR-icon.png',
+				icon: 'src/images/KIR-light-icon.png',
 			},
 		},
 		{

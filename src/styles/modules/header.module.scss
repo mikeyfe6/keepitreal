@@ -1,0 +1,15 @@
+@import '../configs/globals';
+
+.header {
+	padding-top: 3em;
+
+	.logo {
+		max-width: 250px;
+		display: block;
+
+		@include phablet {
+			max-width: 200px;
+			margin: 0 0 2em 2em;
+		}
+	}
+}
