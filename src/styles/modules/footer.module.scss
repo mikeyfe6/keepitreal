@@ -12,12 +12,39 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 1em;
 
 		> p {
 			margin-bottom: 0;
 			font-weight: 500;
 			font-size: 1rem;
+
+			@include mobile {
+				&:first-child {
+					&::after {
+						content: '';
+						display: block;
+						width: 33%;
+						height: 3px;
+						background-color: $tertiary;
+						margin: 1em 0 0 0;
+
+						@include borderRadius;
+					}
+				}
+
+				&:last-child {
+					&::before {
+						content: '';
+						display: block;
+						width: 33%;
+						height: 3px;
+						background-color: $tertiary;
+						margin: 0 0 1em auto;
+
+						@include borderRadius;
+					}
+				}
+			}
 		}
 
 		> ul {
