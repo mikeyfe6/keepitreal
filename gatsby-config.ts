@@ -10,7 +10,7 @@ const siteMetadata = {
 	slogan: `Empowerment voor Jongeren`,
 	description: ``,
 
-	siteUrl: `https://www.yourdomain.tld`,
+	siteUrl: `https://keeptreal.nl`,
 	image: `/images/KIR-logo.png`,
 
 	twitterUsername: `@keepitreal`,
@@ -59,9 +59,16 @@ const config: GatsbyConfig = {
 		'gatsby-plugin-sass',
 		'gatsby-plugin-sitemap',
 		{
-			resolve: 'gatsby-plugin-manifest',
+			resolve: `gatsby-plugin-manifest`,
 			options: {
+				name: `Keep It Real`,
+				short_name: `Keep It Real`,
+				description: 'Empowerment voor Jongeren.',
+				start_url: `/`,
 				icon: 'src/images/KIR-light-icon.png',
+				background_color: `#0d0128`,
+				theme_color: `#662d92`,
+				display: `standalone`,
 			},
 		},
 		{
