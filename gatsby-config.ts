@@ -46,11 +46,60 @@ const config: GatsbyConfig = {
 	graphqlTypegen: true,
 	plugins: [
 		{
+			resolve: 'gatsby-plugin-google-tagmanager',
+			options: {
+				id: 'GTM-TRB3WC6M',
+
+				// Include GTM in development.
+				//
+				// Defaults to false meaning GTM will only be loaded in production.
+				includeInDevelopment: false,
+
+				// datalayer to be set before GTM is loaded
+				// should be an object or a function that is executed in the browser
+				//
+				// Defaults to null
+				defaultDataLayer: { platform: 'gatsby' },
+
+				// Specify optional GTM environment details.
+				// gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING',
+				// gtmPreview: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME',
+				// dataLayerName: 'YOUR_DATA_LAYER_NAME',
+
+				// Name of the event that is triggered
+				// on every Gatsby route change.
+				//
+				// Defaults to gatsby-route-change
+				// routeChangeEventName: 'YOUR_ROUTE_CHANGE_EVENT_NAME',
+				// Defaults to false
+				enableWebVitalsTracking: true,
+				// Defaults to https://www.googletagmanager.com
+				// selfHostedOrigin: 'YOUR_SELF_HOSTED_ORIGIN',
+				// Defaults to gtm.js
+				// selfHostedPath: 'YOUR_SELF_HOSTED_PATH',
+			},
+		},
+		{
 			resolve: 'gatsby-source-contentful',
 			options: {
 				accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 				spaceId: process.env.CONTENTFUL_SPACE_ID,
 				host: process.env.CONTENTFUL_HOST,
+			},
+		},
+		{
+			resolve: `gatsby-plugin-canonical-urls`,
+			options: {
+				siteUrl: siteMetadata.siteUrl,
+			},
+		},
+		{
+			resolve: `gatsby-plugin-nprogress`,
+			options: {
+				// Setting a color is optional.
+				color: siteMetadata.bgThemeColor,
+				// Disable the loading spinner.
+				showSpinner: false,
 			},
 		},
 		'gatsby-plugin-image',
@@ -59,19 +108,6 @@ const config: GatsbyConfig = {
 		'gatsby-plugin-sass',
 		'gatsby-plugin-sitemap',
 		{
-			resolve: `gatsby-plugin-manifest`,
-			options: {
-				name: `Keep It Real`,
-				short_name: `Keep It Real`,
-				description: 'Empowerment voor Jongeren.',
-				start_url: `/`,
-				icon: 'src/images/KIR-light-icon.png',
-				background_color: `#0d0128`,
-				theme_color: `#662d92`,
-				display: `standalone`,
-			},
-		},
-		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'images',
@@ -79,6 +115,22 @@ const config: GatsbyConfig = {
 			},
 			__key: 'images',
 		},
+		'gatsby-plugin-robots-txt',
+		'gatsby-plugin-catch-links',
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: siteMetadata.title,
+				short_name: siteMetadata.title,
+				description: siteMetadata.slogan,
+				start_url: `/`,
+				icon: 'src/images/KIR-light-icon.png',
+				background_color: siteMetadata.bgWebColor,
+				theme_color: siteMetadata.bgThemeColor,
+				display: `standalone`,
+			},
+		},
+		'gatsby-plugin-offline',
 	],
 };
 
