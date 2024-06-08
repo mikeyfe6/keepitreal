@@ -111,8 +111,21 @@ footer {
 }
 
 iframe {
-	margin: 1em 0;
-	display: none;
+	width: 100%;
+
+	&.youtube {
+		aspect-ratio: 16 / 9;
+		outline: $primary 2px solid;
+		margin: 1em 0;
+
+		@include borderRadius;
+	}
+
+	&.spotify {
+		aspect-ratio: 1;
+		height: 80px;
+		margin: 1em 0 2em;
+	}
 }
 
 .responsive-tag {

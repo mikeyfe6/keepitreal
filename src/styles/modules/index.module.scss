@@ -3,7 +3,7 @@
 .index {
 	display: flex;
 	flex-direction: column;
-	margin-top: -10em;
+	margin-top: -7em;
 	margin-bottom: 3em;
 
 	@include tablet {
@@ -11,7 +11,7 @@
 	}
 
 	@include compact {
-		margin-top: 9.5em;
+		margin-top: 10.5em;
 	}
 
 	> div {

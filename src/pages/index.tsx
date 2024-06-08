@@ -64,6 +64,17 @@ const IndexPage: React.FC<PageProps> = () => {
 							</p>
 						</li>
 					</ol>
+
+					<iframe
+						width='560'
+						height='315'
+						src='https://www.youtube.com/embed/v8i5Z0x0rwc?si=BStmnNjZ-vZQPNBV'
+						title='Amsterdammer van het Jaar: Wenner Regales'
+						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+						referrerPolicy='strict-origin-when-cross-origin'
+						allowFullScreen
+						className='youtube'
+					/>
 				</div>
 
 				<div>
@@ -95,11 +106,21 @@ const IndexPage: React.FC<PageProps> = () => {
 						en diepgaande gesprekken over onderwerpen die jongeren aan het hart
 						gaan.
 					</p>
+
+					<iframe
+						title='Keep It Real Podcast'
+						src='https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator'
+						allowFullScreen={true}
+						allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+						loading='lazy'
+						className='spotify'
+					/>
+
 					<p>
 						Abonneer je op onze podcast via jouw favoriete platform en blijf op
-						de hoogte van de laatste afleveringen. Keep it real en luister mee!
+						de hoogte van de laatste afleveringen. <strong>Keep it real</strong>{' '}
+						en luister mee!
 					</p>
-					{/* <iframe src='spotify'></iframe> */}
 				</div>
 			</div>
 		</Layout>

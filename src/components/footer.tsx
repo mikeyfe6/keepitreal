@@ -9,10 +9,20 @@ const Footer: React.FC = () => {
 				<p>© 2024 - Keep It Real </p>
 				<ul>
 					<li>
-						<i className='fab fa-instagram fa-xl'></i>
+						<a
+							href='https://www.instagram.com/keepitrealkir'
+							rel='noopener noreferrer'
+							target='_blank'>
+							<i className='fab fa-instagram fa-xl' />
+						</a>
 					</li>
 					<li>
-						<i className='fab fa-tiktok fa-xl'></i>
+						<a
+							href='https://www.tiktok.com/@keepitreal_nl'
+							rel='noopener noreferrer'
+							target='_blank'>
+							<i className='fab fa-tiktok fa-xl' />
+						</a>
 					</li>
 				</ul>
 

@@ -23,10 +23,20 @@ const Hero: React.FC = () => {
 				</div>
 			</div>
 
-			<h1 className={heroStyles.name}>
-				<span>Wenner Regales</span>
-				<span>Genomineerd voor Amsterdammer van het jaar 2024</span>
-			</h1>
+			<div className={heroStyles.name}>
+				<h1>
+					<span>Wenner Regales</span>
+					<span>
+						Genomineerd voor: <strong>Amsterdammer van het jaar 2024</strong>
+					</span>
+				</h1>
+				<a
+					href='https://amsterdammervanhetjaar.nl/wenner-regalus-founder-van-keep-it-real/'
+					rel='noopener noreferrer'
+					target='_blank'>
+					Stem hier
+				</a>
+			</div>
 		</section>
 	);
 };
