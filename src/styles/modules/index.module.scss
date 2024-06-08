@@ -11,7 +11,7 @@
 	}
 
 	@include compact {
-		margin-top: 10.5em;
+		margin-top: 11.5em;
 	}
 
 	> div {
@@ -19,6 +19,16 @@
 		background: rgba($white, 0.05);
 		padding: 2.5em 2em;
 		margin: -1em 0;
+
+		@include compact {
+			&:first-of-type {
+				padding-bottom: 3.5em;
+			}
+
+			&:not(:first-of-type) {
+				padding: 3.5em 2em;
+			}
+		}
 
 		@include boxShadow;
 		@include borderRadius;
