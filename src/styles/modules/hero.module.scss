@@ -11,7 +11,7 @@
 		background: $white;
 		color: $primary;
 		padding: 0.75em;
-		max-width: 275px;
+		max-width: 325px;
 		height: fit-content;
 
 		@include borderRadius;
@@ -25,11 +25,17 @@
 
 		@include compact {
 			max-width: 100%;
+			width: 100%;
 			top: 107.5%;
 		}
 
 		> h1 span {
 			display: block;
+
+			strong {
+				display: block;
+				margin-top: 0.25em;
+			}
 
 			&:first-of-type {
 				font-size: 1.5rem;
@@ -121,7 +127,7 @@
 				}
 
 				@include mobile {
-					max-width: 125px;
+					max-width: 112.5px;
 					right: 25px;
 				}
 

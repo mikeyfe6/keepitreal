@@ -27,7 +27,8 @@ const Hero: React.FC = () => {
 				<h1>
 					<span>Wenner Regales</span>
 					<span>
-						Genomineerd voor: <strong>Amsterdammer van het jaar 2024</strong>
+						Genomineerd voor: <br />
+						<strong>Amsterdammer van het jaar 2024</strong>
 					</span>
 				</h1>
 				<a
