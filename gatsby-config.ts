@@ -7,7 +7,7 @@ require('dotenv').config({
 
 const siteMetadata = {
 	title: `Keep It Real`,
-	slogan: ``,
+	slogan: `Empowerment voor Jongeren`,
 	description: ``,
 
 	siteUrl: `https://www.yourdomain.tld`,

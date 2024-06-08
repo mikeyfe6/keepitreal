@@ -1,7 +1,7 @@
 import * as React from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
 
-import { StaticImage } from 'gatsby-plugin-image';
+import { Seo } from '../components/seo';
 
 import Layout from '../components/layout';
 
@@ -104,7 +104,7 @@ const IndexPage: React.FC<PageProps> = () => {
 						Abonneer je op onze podcast via jouw favoriete platform en blijf op
 						de hoogte van de laatste afleveringen. Keep it real en luister mee!
 					</p>
-					<iframe src='spotify'></iframe>
+					{/* <iframe src='spotify'></iframe> */}
 				</div>
 			</div>
 		</Layout>
@@ -113,4 +113,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Keep It Real</title>;
+export const Head: HeadFC = () => <Seo />;

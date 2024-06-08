@@ -1,0 +1,45 @@
+@import '../configs/globals';
+
+.footer {
+	background-color: $primary;
+	color: $white;
+
+	@include fullWidth;
+
+	&-container {
+		@include container(1000px, 2em, 1em);
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1em;
+
+		> p {
+			margin-bottom: 0;
+			font-weight: 500;
+		}
+
+		> ul {
+			display: flex;
+			gap: 1.5em;
+		}
+
+		@include mobile {
+			flex-direction: column;
+
+			p {
+				&:first-child {
+					align-self: flex-start;
+				}
+
+				&:last-child {
+					align-self: flex-end;
+				}
+			}
+
+			ul {
+				align-self: center;
+			}
+		}
+	}
+}

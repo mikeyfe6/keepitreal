@@ -7,8 +7,8 @@ import * as heroStyles from '../styles/modules/hero.module.scss';
 const Hero: React.FC = () => {
 	return (
 		<section className={heroStyles.hero}>
-			<div className={heroStyles.landingPage}>
-				<div className={heroStyles.landingPageContent}>
+			<div className={heroStyles.heroContainer}>
+				<div className={heroStyles.heroWrapper}>
 					<StaticImage
 						src='../images/wenner.jpeg'
 						alt='Wenner'

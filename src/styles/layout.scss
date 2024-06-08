@@ -81,13 +81,11 @@ p {
 	font-size: 1.125em;
 	line-height: 1.4;
 
-	&:not(:last-of-type) {
-		margin-bottom: 1em;
+	main & {
+		&:not(:last-of-type) {
+			margin-bottom: 1em;
+		}
 	}
-
-	// @include mobile {
-	// 	font-size: 0.75rem;
-	// }
 }
 
 h1,
