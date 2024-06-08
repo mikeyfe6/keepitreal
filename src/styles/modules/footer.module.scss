@@ -23,6 +23,18 @@
 		> ul {
 			display: flex;
 			gap: 1.5em;
+
+			li {
+				a:hover {
+					color: $tertiary;
+				}
+			}
+		}
+
+		.menefex {
+			&:hover {
+				color: #ffcc00;
+			}
 		}
 
 		@include mobile {

@@ -26,7 +26,16 @@ const Footer: React.FC = () => {
 					</li>
 				</ul>
 
-				<p>Powered by Menefex</p>
+				<p>
+					Powered by{' '}
+					<a
+						href='https://menefex.nl'
+						rel='noopener noreferrer'
+						target='_blank'
+						className={footerStyles.menefex}>
+						Menefex
+					</a>
+				</p>
 			</div>
 		</footer>
 	);

@@ -124,8 +124,12 @@ iframe {
 	&.spotify {
 		aspect-ratio: 1;
 		height: 80px;
-		margin: 1em 0 2em;
+		margin: 1em 0 1.5em;
 	}
+}
+
+a {
+	@include smoothTrans;
 }
 
 .responsive-tag {
