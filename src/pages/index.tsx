@@ -13,19 +13,14 @@ const IndexPage: React.FC<PageProps> = () => {
 			<div className={indexStyles.index}>
 				<div>
 					<p>
-						<strong>
-							Wenner Regales: Genomineerd voor Amsterdammer van het jaar 2024
-						</strong>
-					</p>
-					<p>
-						Welkom bij Keep It Real, een programma dat jongeren een ervaring
-						biedt die verder gaat dan traditioneel onderwijs. Ontstaan uit de
-						visie van cultureel professional Wenner Regales, is Keep It Real een
-						initiatief dat jongeren ondersteunt bij het maken van positieve
-						keuzes en het grijpen van kansen. Geboren op Curaçao en deels
-						opgegroeid in Amsterdam, begrijpt Wenner de uitdagingen waar
-						jongeren mee te maken hebben. Zijn ervaring en netwerk hebben geleid
-						tot de oprichting van Keep It Real.
+						Welkom bij <strong>Keep It Real</strong>, een programma dat jongeren
+						een ervaring biedt die verder gaat dan traditioneel onderwijs.
+						Ontstaan uit de visie van cultureel professional Wenner Regales, is
+						Keep It Real een initiatief dat jongeren ondersteunt bij het maken
+						van positieve keuzes en het grijpen van kansen. Geboren op Curaçao
+						en deels opgegroeid in Amsterdam, begrijpt Wenner de uitdagingen
+						waar jongeren mee te maken hebben. Zijn ervaring en netwerk hebben
+						geleid tot de oprichting van Keep It Real.
 					</p>
 				</div>
 				<div>

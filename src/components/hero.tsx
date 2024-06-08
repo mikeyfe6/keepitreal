@@ -22,6 +22,11 @@ const Hero: React.FC = () => {
 					/>
 				</div>
 			</div>
+
+			<h1 className={heroStyles.name}>
+				<span>Wenner Regales</span>
+				<span>Genomineerd voor Amsterdammer van het jaar 2024</span>
+			</h1>
 		</section>
 	);
 };
