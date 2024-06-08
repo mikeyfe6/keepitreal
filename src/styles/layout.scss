@@ -9,6 +9,10 @@ body {
 	color: $white;
 
 	@include container(1000px);
+
+	@include toosmall {
+		display: none;
+	}
 }
 
 .keep-it-real {
