@@ -52,8 +52,9 @@ const IndexPage: React.FC<PageProps> = () => {
 								en thema's kunnen verkennen zoals verleidingen, identiteit, en
 								online veiligheid. Van therapeutische tekenlessen tot
 								muziekproductie-workshops, we bieden een breed scala aan
-								mogelijkheden. (graag de workshops in blokken laten zien en de
-								beschrijving weergeven als mensen eroverheen navigeren)
+								mogelijkheden.
+								{/* (graag de workshops in blokken laten zien en de
+								beschrijving weergeven als mensen eroverheen navigeren) */}
 							</p>
 						</li>
 						<li>
