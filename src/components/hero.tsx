@@ -36,6 +36,7 @@ const Hero: React.FC = () => {
 					rel='noopener noreferrer'
 					target='_blank'>
 					Stem hier
+					<i className='fa-solid fa-arrow-up-right-from-square fa-xs' />
 				</a>
 			</div>
 		</section>

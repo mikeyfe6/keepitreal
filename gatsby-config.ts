@@ -8,12 +8,12 @@ require('dotenv').config({
 const siteMetadata = {
 	title: `Keep It Real`,
 	slogan: `Empowerment voor Jongeren`,
-	description: ``,
+	description: `‘Keep It Real’ is een sociaal-maatschappelijk project waarbij ervaringsdeskundige interactief aan de slag gaan met jongeren om levenslessen te leren.`,
 
 	siteUrl: `https://keeptreal.nl`,
 	image: `/images/KIR-logo.png`,
 
-	twitterUsername: `@keepitreal`,
+	twitterUsername: `@keepitrealkir`,
 	facebookUrl: `#!`,
 	instagramUrl: `#!`,
 	linkedinUrl: `#!`,
