@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
 					href='https://amsterdammervanhetjaar.nl/wenner-regalus-founder-van-keep-it-real/'
 					rel='noopener noreferrer'
 					target='_blank'>
-					Stem hier
+					Stem hier{' '}
 					<i className='fa-solid fa-arrow-up-right-from-square fa-xs' />
 				</a>
 			</div>
