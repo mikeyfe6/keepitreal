@@ -113,7 +113,7 @@ const IndexPage: React.FC<PageProps> = () => {
 						src='https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator'
 						allowFullScreen={true}
 						allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
-						loading='lazy'
+						// loading='lazy'
 						className='spotify'
 					/>
 
