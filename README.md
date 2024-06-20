@@ -39,8 +39,8 @@ Powered by [Menefex](https://menefex.nl) ✨
 
 ---
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b5bbff72-c463-4ab9-a570-af6c13e2f08d/deploy-status)](https://app.netlify.com/sites/eternitydrum/deploys) <br><br>
-👨🏾‍💻 <ins>...this project</ins> <br> [![wakatime](https://wakatime.com/badge/user/172a37f5-1ff4-4cf8-9d08-5ccbe681726b/project/f460b1e1-1a75-443e-90df-c85fa8941e00.svg)](https://wakatime.com/badge/user/172a37f5-1ff4-4cf8-9d08-5ccbe681726b/project/f460b1e1-1a75-443e-90df-c85fa8941e00) <br>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/70599984-530f-409e-98d5-d1dd39cc1cc8/deploy-status)](https://app.netlify.com/sites/keeptreal/deploys) <br><br>
+👨🏾‍💻 <ins>...this project</ins> <br> [![wakatime](https://wakatime.com/badge/user/172a37f5-1ff4-4cf8-9d08-5ccbe681726b/project/a3a72533-b584-47eb-990b-4a9498b858f7.svg)](https://wakatime.com/badge/user/172a37f5-1ff4-4cf8-9d08-5ccbe681726b/project/a3a72533-b584-47eb-990b-4a9498b858f7) <br>
 👨🏾‍💻 <ins>...all projects</ins> <br> [![wakatime](https://wakatime.com/badge/user/172a37f5-1ff4-4cf8-9d08-5ccbe681726b.svg)](https://wakatime.com/@172a37f5-1ff4-4cf8-9d08-5ccbe681726b)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
