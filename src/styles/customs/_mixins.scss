@@ -36,7 +36,6 @@
 }
 
 @mixin borderRadius($radius: 3px) {
-	overflow: hidden;
 	border-radius: $radius;
 }
 
@@ -58,11 +57,10 @@
 }
 
 @mixin button($type: 1) {
+	display: block;
 	padding: 0.75em 1em;
-	border-width: 1px;
-	border-style: solid;
-	border-color: rgba($black, 0.875);
 	font-weight: 600;
+	cursor: pointer;
 
 	@include borderRadius;
 	@include boxShadow(1);
@@ -71,13 +69,17 @@
 	@if $type == 1 {
 		&:hover {
 			background-color: rgba($tertiary, 0.5);
+			border-width: 1px;
+			border-style: solid;
+			border-color: rgba($black, 0.875);
 		}
 	} @else if $type == 2 {
-		background-color: rgba($tertiary, 0.95);
+		background-color: rgba($tertiary, 0.825);
+		border-color: rgba($secondary, 0.875);
 		color: $white;
 
 		&:hover {
-			background-color: rgba($tertiary, 0.75);
+			background-color: rgba($tertiary, 1);
 			color: $white;
 		}
 	}

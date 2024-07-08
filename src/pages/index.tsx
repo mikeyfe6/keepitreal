@@ -5,6 +5,8 @@ import { Seo } from '../components/seo';
 
 import Layout from '../components/layout';
 
+import Cta from '../components/cta';
+
 import * as indexStyles from '../styles/modules/index.module.scss';
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -35,7 +37,7 @@ const IndexPage: React.FC<PageProps> = () => {
 				</div>
 
 				<div>
-					<h2>Wat We Doen </h2>
+					<Cta />
 					<ol>
 						<li>
 							<h4>KIR Take-overs</h4>

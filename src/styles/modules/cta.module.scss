@@ -1,0 +1,74 @@
+@import '../configs/globals';
+
+.cta {
+	$cta: &;
+
+	margin-bottom: 2em;
+
+	&-wrapper {
+		position: relative;
+		margin: 2em 0;
+
+		> ul {
+			display: inline-flex;
+			flex-wrap: wrap;
+			gap: 1.25em;
+
+			> li {
+				background: $secondary;
+				padding: 1.375em 1.25em;
+				flex: 1;
+				white-space: nowrap;
+				text-align: center;
+				font-weight: bold;
+				cursor: pointer;
+
+				@include borderRadius;
+				@include boxShadow(1);
+
+				&::marker {
+					color: $white;
+				}
+
+				&:hover {
+					background-color: rgba($tertiary, 0.825);
+					color: $white;
+				}
+			}
+		}
+
+		#{$cta}-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($secondary, 0.95);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@include borderRadius;
+			@include boxShadow(1);
+
+			&-content {
+				border-radius: 5px;
+				display: flex;
+				align-items: center;
+				padding: 3em 2em;
+				gap: 3em;
+
+				p {
+					max-width: 50ch;
+				}
+
+				button {
+					margin-left: auto;
+					height: fit-content;
+
+					@include button(2);
+				}
+			}
+		}
+	}
+}
