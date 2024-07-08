@@ -3,6 +3,12 @@ NODE_VERSION = "20.15.0" # - latest NODE version
 NPM_VERSION = "10.8.1"   # - latest NPM version
 YARN_VERSION = "1.22.22" # - latest YARN version
 
-[dev]
-command = "npm run develop"
-publish = "public"
+[build]
+  publish = "public"
+  command = "npm run build"
+
+[context.production]
+  command = "npm run build:prod"
+
+[context.staging]
+  command = "npm run build:staging"
