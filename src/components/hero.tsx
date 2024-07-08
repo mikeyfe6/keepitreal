@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
 
 			<div className={heroStyles.name}>
 				<h1>
-					<span>Wenner Regales</span>
+					<span>Wenner Regales Testing!</span>
 					<span>
 						Genomineerd voor: <br />
 						<strong>Amsterdammer van het jaar 2024</strong>
