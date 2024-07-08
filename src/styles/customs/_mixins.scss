@@ -13,13 +13,16 @@
 	transition: $style 0.15s ease-in-out;
 }
 
-@mixin link {
-	@include smoothTrans;
+@mixin navLink {
+	font-size: 1.125rem;
+	font-weight: 500;
+	text-underline-offset: 7px;
+	text-decoration-color: $tertiary !important;
+
+	@include smoothTrans(text-decoration);
 
 	&:hover {
-		// text-decoration: underline;
-		// text-underline-offset: 2px;
-		// text-decoration-color: $gold;
+		text-decoration: underline;
 	}
 }
 
@@ -33,6 +36,7 @@
 }
 
 @mixin borderRadius($radius: 3px) {
+	overflow: hidden;
 	border-radius: $radius;
 }
 
@@ -54,10 +58,11 @@
 }
 
 @mixin button($type: 1) {
-	padding: 0.5em 1em;
+	padding: 0.75em 1em;
 	border-width: 1px;
 	border-style: solid;
 	border-color: rgba($black, 0.875);
+	font-weight: 600;
 
 	@include borderRadius;
 	@include boxShadow(1);
@@ -65,14 +70,14 @@
 
 	@if $type == 1 {
 		&:hover {
-			background: rgba($green, 0.5);
+			background-color: rgba($tertiary, 0.5);
 		}
 	} @else if $type == 2 {
-		background: rgba($white, 0.95);
-		color: $green;
+		background-color: rgba($tertiary, 0.95);
+		color: $white;
 
 		&:hover {
-			background: rgba($green, 1);
+			background-color: rgba($tertiary, 0.75);
 			color: $white;
 		}
 	}

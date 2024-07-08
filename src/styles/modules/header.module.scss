@@ -2,14 +2,30 @@
 
 .header {
 	padding-top: 3em;
+	display: flex;
+	justify-content: space-between;
 
 	.logo {
 		max-width: 250px;
-		display: block;
 
 		@include phablet {
 			max-width: 200px;
 			margin: 0 0 1.5em 0.5em;
+		}
+	}
+
+	.nav {
+		padding-top: 1.5em;
+
+		> ul {
+			display: flex;
+			gap: 0.75em;
+
+			> li {
+				> a {
+					@include navLink;
+				}
+			}
 		}
 	}
 }

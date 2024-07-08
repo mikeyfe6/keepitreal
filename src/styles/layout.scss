@@ -4,11 +4,11 @@
 @import './configs/globals';
 
 body {
-	background-image: linear-gradient(145deg, $primary 30%, $secondary 100%);
+	background: linear-gradient(145deg, $primary 30%, $secondary 100%);
 	font-family: 'Montserrat', sans-serif;
 	color: $white;
 
-	@include container(1000px);
+	@include container(1200px);
 
 	@include toosmall {
 		display: none;
@@ -23,13 +23,16 @@ body {
 
 main {
 	flex: 1;
-	padding: 1em 0;
+	padding: 2em 0;
+
+	li {
+		margin: 1em 0;
+	}
 }
 
 h1 {
 	font-size: 2rem;
 	font-weight: 600;
-	margin-bottom: 1em;
 
 	@include mobile {
 		font-size: 1.75rem;
@@ -106,10 +109,6 @@ ol {
 	list-style-type: decimal;
 }
 
-li {
-	margin: 1em 0;
-}
-
 footer {
 	flex-shrink: 0;
 }
@@ -132,10 +131,6 @@ iframe {
 	}
 }
 
-a {
-	@include smoothTrans;
-}
-
 .responsive-tag {
 	position: fixed;
 	top: 1%;
@@ -145,7 +140,7 @@ a {
 	z-index: 1000;
 	font-weight: bold;
 	text-align: center;
-	background: $white;
+	background-color: $white;
 	opacity: 0.5;
 	color: $black;
 	outline: $black 1px solid;
