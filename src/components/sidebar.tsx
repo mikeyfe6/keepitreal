@@ -10,16 +10,15 @@ const Cta: React.FC = () => {
 			<div>
 				<ul>
 					<li>Onze Missie</li>
-				</ul>
-				<h4>Wat We Doen</h4>
-				<ul>
-					<li>Onze Missie</li>
 					<li>Wat We Doen:</li>
-					<li>1-op-1 Coaching</li>
+					<li>- KIR Take-overs</li>
+					<li>- KIR Workshops</li>
+					<li>- 1-op-1 Coaching</li>
 					<li>Onze Teamleden</li>
 					<li>Impact en Toekomst</li>
 					<li>Word Lid van Keep It Real</li>
 					<li>In de Media</li>
+					<li>Beluister onze Podcast</li>
 				</ul>
 			</div>
 		</aside>

@@ -13,30 +13,60 @@ const Header: React.FC = () => {
 				<StaticImage src='../images/KIR-light-logo.png' alt='KIR logo' />
 			</div>
 
-			<nav className={headerStyles.nav}>
+			<div>
+				<nav className={headerStyles.nav}>
+					<ul>
+						<li>
+							<Link to='/' activeClassName={headerStyles.active}>
+								Home
+							</Link>
+						</li>
+						<li>
+							<Link to='/over-ons/' activeClassName={headerStyles.active}>
+								Workshops
+							</Link>
+						</li>
+						<li>
+							<Link to='/workshops/' activeClassName={headerStyles.active}>
+								Over ons
+							</Link>
+						</li>
+						<li>
+							<Link to='/contact/' activeClassName={headerStyles.active}>
+								Contact
+							</Link>
+						</li>
+					</ul>
+				</nav>
+
 				<ul>
 					<li>
-						<Link to='/' activeClassName={headerStyles.active}>
-							Home
-						</Link>
+						<a
+							href='https://www.instagram.com/keepitrealkir'
+							rel='noopener noreferrer'
+							target='_blank'>
+							<i className='fab fa-instagram fa-xl' />
+						</a>
 					</li>
 					<li>
-						<Link to='/over-ons/' activeClassName={headerStyles.active}>
-							Workshops
-						</Link>
+						<a
+							href='https://www.tiktok.com/@keepitreal_nl'
+							rel='noopener noreferrer'
+							target='_blank'>
+							<i className='fab fa-tiktok fa-xl' />
+						</a>
 					</li>
 					<li>
-						<Link to='/workshops/' activeClassName={headerStyles.active}>
-							Over ons
-						</Link>
-					</li>
-					<li>
-						<Link to='/contact/' activeClassName={headerStyles.active}>
-							Contact
-						</Link>
+						<a
+							href='#!'
+							// rel='noopener noreferrer'
+							// target='_blank'
+						>
+							<i className='fab fa-facebook fa-xl' />
+						</a>
 					</li>
 				</ul>
-			</nav>
+			</div>
 		</header>
 	);
 };

@@ -24,6 +24,15 @@ const Footer: React.FC = () => {
 							<i className='fab fa-tiktok fa-xl' />
 						</a>
 					</li>
+					<li>
+						<a
+							href='#!'
+							// rel='noopener noreferrer'
+							// target='_blank'
+						>
+							<i className='fab fa-facebook fa-xl' />
+						</a>
+					</li>
 				</ul>
 
 				<p>

@@ -8,7 +8,7 @@ import Layout from '../components/layout';
 const WorkhopsPage: React.FC<PageProps> = () => {
 	return (
 		<Layout>
-			<div>WorkhopsPage</div>
+			<div>OverOnsPage</div>
 		</Layout>
 	);
 };
