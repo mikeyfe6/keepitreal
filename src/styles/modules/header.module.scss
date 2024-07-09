@@ -17,7 +17,7 @@
 	> div {
 		display: flex;
 		flex-direction: column;
-		gap: 2em;
+		gap: 1.75em;
 
 		.nav {
 			padding-top: 1.5em;
@@ -42,7 +42,7 @@
 								border-top: 7.5px solid $tertiary;
 
 								position: absolute;
-								top: -15px;
+								top: -20px;
 								left: 50%;
 								transform: translateX(-50%);
 							}
