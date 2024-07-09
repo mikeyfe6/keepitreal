@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'gatsby';
+
 import { StaticImage } from 'gatsby-plugin-image';
 
 import * as headerStyles from '../styles/modules/header.module.scss';
@@ -14,16 +16,24 @@ const Header: React.FC = () => {
 			<nav className={headerStyles.nav}>
 				<ul>
 					<li>
-						<a href='#'>Home</a>
+						<Link to='/' activeClassName={headerStyles.active}>
+							Home
+						</Link>
 					</li>
 					<li>
-						<a href='#'>Workshops</a>
+						<Link to='/over-ons/' activeClassName={headerStyles.active}>
+							Workshops
+						</Link>
 					</li>
 					<li>
-						<a href='#'>Over ons</a>
+						<Link to='/workshops/' activeClassName={headerStyles.active}>
+							Over ons
+						</Link>
 					</li>
 					<li>
-						<a href='#'>Contact</a>
+						<Link to='/contact/' activeClassName={headerStyles.active}>
+							Contact
+						</Link>
 					</li>
 				</ul>
 			</nav>

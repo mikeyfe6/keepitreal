@@ -55,11 +55,12 @@
 				border-radius: 5px;
 				display: flex;
 				align-items: center;
-				padding: 3em 2em;
-				gap: 3em;
+				gap: 2em 3em;
+				width: 100%;
+				padding: 2em;
 
-				p {
-					max-width: 50ch;
+				@include mobile {
+					flex-direction: column;
 				}
 
 				button {

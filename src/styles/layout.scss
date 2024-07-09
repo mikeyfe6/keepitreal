@@ -8,7 +8,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	color: $white;
 
-	@include container(1200px);
+	@include container(1300px);
 
 	@include toosmall {
 		display: none;
@@ -27,6 +27,11 @@ main {
 
 	p {
 		max-width: 70ch;
+	}
+
+	&:has(aside) {
+		display: flex;
+		gap: 3em;
 	}
 }
 

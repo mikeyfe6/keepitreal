@@ -1,0 +1,16 @@
+@import '../configs/globals';
+
+.aside {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	> div {
+		padding: 2.5em 2em;
+		// background: $tertiary;
+		background-color: rgba($tertiary, 0.25);
+		min-width: 300px;
+
+		@include borderRadius;
+	}
+}

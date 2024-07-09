@@ -6,6 +6,7 @@ import { Seo } from '../components/seo';
 import Layout from '../components/layout';
 
 import Cta from '../components/cta';
+import Sidebar from '../components/sidebar';
 
 import * as indexStyles from '../styles/modules/index.module.scss';
 
@@ -126,6 +127,7 @@ const IndexPage: React.FC<PageProps> = () => {
 					</p>
 				</div>
 			</div>
+			<Sidebar />
 		</Layout>
 	);
 };
