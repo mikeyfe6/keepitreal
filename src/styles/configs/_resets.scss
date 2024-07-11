@@ -348,7 +348,6 @@ select,
 textarea {
 	font-family: inherit;
 	font-size: 100%;
-	margin: 0;
 }
 
 button,
@@ -373,7 +372,6 @@ button::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
 [type='submit']::-moz-focus-inner {
 	border-style: none;
-	padding: 0;
 }
 
 button:-moz-focusring,
@@ -384,22 +382,14 @@ button:-moz-focusring,
 }
 
 legend {
-	box-sizing: border-box;
 	color: inherit;
 	display: table;
 	max-width: 100%;
-	padding: 0;
 	white-space: normal;
 }
 
 progress {
 	vertical-align: baseline;
-}
-
-[type='checkbox'],
-[type='radio'] {
-	box-sizing: border-box;
-	padding: 0;
 }
 
 [type='number']::-webkit-inner-spin-button,

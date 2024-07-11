@@ -20,7 +20,7 @@
 
 		.buttons {
 			display: flex;
-			gap: 0.625em;
+			gap: 0.75em;
 
 			> a {
 				@include button(2);

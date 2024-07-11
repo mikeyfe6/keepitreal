@@ -39,6 +39,11 @@
 	border-radius: $radius;
 }
 
+@mixin underLine($offset: 7px, $thickness: 2px, $color: $primary) {
+	text-underline-offset: $offset;
+	text-decoration: underline $thickness solid $color;
+}
+
 @mixin clamp($lines: 2) {
 	display: inline;
 	display: -webkit-box;
