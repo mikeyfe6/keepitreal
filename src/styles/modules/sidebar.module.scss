@@ -6,71 +6,33 @@
 	gap: 2em;
 	min-width: 350px;
 
-	> div:first-child {
-		padding: 2.5em 1.75em;
-		background-color: rgba($tertiary, 0.75);
-
+	> div {
 		@include borderRadius;
 		@include boxShadow(1);
 
-		> ul {
-			display: flex;
-			flex-direction: column;
-			gap: 0.5em;
+		&:not(:has(iframe)) {
+			padding: 2em 1.75em;
+		}
 
-			> li {
-				font-size: 1.125rem;
-				font-weight: 600;
+		&:first-child {
+			padding: 2.5em 1.75em;
+			background-color: rgba($tertiary, 0.75);
 
-				a,
-				button {
-					&.active {
-						&::after {
-							content: '';
-							width: 0;
-							height: 0;
-							border-top: 6px solid transparent;
-							border-bottom: 6px solid transparent;
-							border-right: 10px solid rgba($primary, 1);
-							position: absolute;
-							top: 50%;
-							right: -20px;
-							transform: translateY(-50%);
-						}
-					}
-				}
+			@include borderRadius;
+			@include boxShadow(1);
 
-				&:not(:has(ul)) {
-					width: fit-content;
+			> ul {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5em;
+
+				> li {
+					font-size: 1.125rem;
+					font-weight: 600;
 
 					a,
 					button {
-						position: relative;
-
-						@include smoothTrans;
-
-						&:hover:not(.active) {
-							&::after {
-								content: '';
-								width: 0;
-								height: 0;
-								border-top: 6px solid transparent;
-								border-bottom: 6px solid transparent;
-								border-right: 10px solid rgba($primary, 0.5);
-								position: absolute;
-								top: 50%;
-								right: -20px;
-								transform: translateY(-50%);
-							}
-						}
-					}
-				}
-
-				> button {
-					position: relative;
-
-					.active {
-						> u {
+						&.active {
 							&::after {
 								content: '';
 								width: 0;
@@ -86,49 +48,56 @@
 						}
 					}
 
-					> u {
-						position: relative;
-
-						@include underLine;
-
-						&:hover {
-							&::after {
-								content: '';
-								width: 0;
-								height: 0;
-								border-top: 6px solid transparent;
-								border-bottom: 6px solid transparent;
-								border-right: 10px solid rgba($primary, 0.5);
-								position: absolute;
-								top: 50%;
-								right: -20px;
-								transform: translateY(-50%);
-							}
-						}
-					}
-				}
-
-				> ul {
-					margin: 0.75em 0 0.25em;
-					display: flex;
-					flex-direction: column;
-					gap: 0.75em;
-					list-style-type: '-';
-					padding-left: 0.5em;
-
-					> li {
-						padding-left: 0.5em;
-
-						&::marker {
-							color: $primary;
-							margin-left: 2em;
-						}
+					&:not(:has(ul)) {
+						width: fit-content;
 
 						a,
 						button {
 							position: relative;
 
 							@include smoothTrans;
+
+							&:hover:not(.active) {
+								&::after {
+									content: '';
+									width: 0;
+									height: 0;
+									border-top: 6px solid transparent;
+									border-bottom: 6px solid transparent;
+									border-right: 10px solid rgba($primary, 0.5);
+									position: absolute;
+									top: 50%;
+									right: -20px;
+									transform: translateY(-50%);
+								}
+							}
+						}
+					}
+
+					> button {
+						position: relative;
+
+						.active {
+							> u {
+								&::after {
+									content: '';
+									width: 0;
+									height: 0;
+									border-top: 6px solid transparent;
+									border-bottom: 6px solid transparent;
+									border-right: 10px solid rgba($primary, 1);
+									position: absolute;
+									top: 50%;
+									right: -20px;
+									transform: translateY(-50%);
+								}
+							}
+						}
+
+						> u {
+							position: relative;
+
+							@include underLine;
 
 							&:hover {
 								&::after {
@@ -146,67 +115,93 @@
 							}
 						}
 					}
+
+					> ul {
+						margin: 0.75em 0 0.25em;
+						display: flex;
+						flex-direction: column;
+						gap: 0.75em;
+						list-style-type: '-';
+						padding-left: 0.5em;
+
+						> li {
+							padding-left: 0.5em;
+
+							&::marker {
+								color: $primary;
+								margin-left: 2em;
+							}
+
+							a,
+							button {
+								position: relative;
+
+								@include smoothTrans;
+
+								&:hover {
+									&::after {
+										content: '';
+										width: 0;
+										height: 0;
+										border-top: 6px solid transparent;
+										border-bottom: 6px solid transparent;
+										border-right: 10px solid rgba($primary, 0.5);
+										position: absolute;
+										top: 50%;
+										right: -20px;
+										transform: translateY(-50%);
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
-	}
 
-	> div:nth-child(2) {
-		padding: 2em 1.75em;
-		background-color: rgba($secondary, 0.75);
+		&:nth-child(2) {
+			background-color: rgba($secondary, 0.75);
 
-		@include borderRadius;
-		@include boxShadow(1);
-
-		> h4 {
-			font-size: 1.25rem;
-		}
-	}
-
-	> div:nth-child(3) {
-		@include borderRadius;
-	}
-
-	> div:nth-child(4) {
-		padding: 2em 1.75em;
-		background-color: rgba($primary, 0.75);
-
-		@include borderRadius;
-		@include boxShadow(1);
-
-		> h4 {
-			font-size: 1.25rem;
-		}
-	}
-
-	> div:nth-child(5) {
-		padding: 2em 1.75em;
-		background-color: rgba($secondary, 0.75);
-
-		@include borderRadius;
-		@include boxShadow(1);
-
-		> h4 {
-			font-size: 1.25rem;
-
-			@include underLine($color: $tertiary);
+			> h4 {
+				font-size: 1.25rem;
+			}
 		}
 
-		> ul > li > a {
-			display: flex;
-			gap: 0.5em;
-			border: 1px solid rgba($primary, 0.75);
-			padding: 0.75em;
-			width: fit-content;
+		&:nth-child(4) {
+			background-color: rgba($primary, 0.75);
 
-			@include smoothTrans;
+			> h4 {
+				font-size: 1.25rem;
 
-			&:hover {
-				border: 1px solid rgba($white, 0.75);
+				@include underLine($color: $secondary);
+			}
+		}
+
+		&:nth-child(5) {
+			background-color: rgba($secondary, 0.75);
+
+			> h4 {
+				font-size: 1.25rem;
+
+				@include underLine($color: $tertiary);
 			}
 
-			> i {
-				align-self: flex-end;
+			> ul > li > a {
+				display: flex;
+				gap: 0.5em;
+				border: 1px solid rgba($primary, 0.75);
+				padding: 0.75em;
+				width: fit-content;
+
+				@include smoothTrans;
+
+				&:hover {
+					border: 1px solid rgba($white, 0.75);
+				}
+
+				> i {
+					align-self: flex-end;
+				}
 			}
 		}
 	}

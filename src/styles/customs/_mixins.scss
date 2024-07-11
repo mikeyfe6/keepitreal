@@ -71,11 +71,11 @@
 	@include smoothTrans;
 
 	@if $type == 1 {
+		background-color: rgba($white, 0.825);
+		color: $primary;
+
 		&:hover {
-			background-color: rgba($tertiary, 0.5);
-			border-width: 1px;
-			border-style: solid;
-			border-color: rgba($black, 0.875);
+			background-color: rgba($white, 1);
 		}
 	} @else if $type == 2 {
 		background-color: rgba($tertiary, 0.825);
@@ -84,7 +84,6 @@
 
 		&:hover {
 			background-color: rgba($tertiary, 1);
-			color: $white;
 		}
 	}
 }

@@ -9,7 +9,7 @@ import * as ctaStyles from '../styles/modules/cta.module.scss';
 // 	whatwedoRef: React.RefObject<HTMLDivElement>;
 // }
 
-interface Workshop {
+interface CtaProps {
 	name: string;
 	description: string;
 }
@@ -18,11 +18,14 @@ const Overlay = ({ item, onClose }) => (
 	<div className={ctaStyles.ctaOverlay}>
 		<div className={ctaStyles.ctaOverlayContent}>
 			<div>
-				<h3>{item.name}</h3>
+				<h4>{item.name}</h4>
 				<p>{item.description}</p>
 			</div>
 
-			<button onClick={onClose}>Sluiten</button>
+			<div>
+				<Link to={item.anchor}>Meer informatie</Link>
+				<button onClick={onClose}>Sluiten</button>
+			</div>
 		</div>
 	</div>
 );
