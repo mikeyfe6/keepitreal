@@ -11,24 +11,31 @@ import Sidebar from '../components/sidebar';
 import * as indexStyles from '../styles/modules/index.module.scss';
 
 const IndexPage: React.FC<PageProps> = () => {
-	const missieRef = useRef<HTMLDivElement>(null);
-	const impactRef = useRef<HTMLDivElement>(null);
+	const missionRef = useRef<HTMLDivElement>(null);
 	const whatwedoRef = useRef<HTMLDivElement>(null);
+	const ourteamRef = useRef<HTMLDivElement>(null);
+	const impactRef = useRef<HTMLDivElement>(null);
 
 	const [activeSection, setActiveSection] = useState<string>('');
 
 	const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
 		if (ref.current) {
-			ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			const yOffset = -50;
+			const element = ref.current;
+			const y =
+				element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+			window.scrollTo({ top: y, behavior: 'smooth' });
 		}
 	};
 
 	const handleSidebarClick = (sectionId: string) => {
 		setActiveSection(sectionId);
 		const sections: Record<string, React.RefObject<HTMLDivElement>> = {
-			missie: missieRef,
-			impact: impactRef,
+			mission: missionRef,
 			whatwedo: whatwedoRef,
+			ourteam: ourteamRef,
+			impact: impactRef,
 		};
 		if (sections[sectionId]?.current) {
 			handleScroll(sections[sectionId]);
@@ -51,9 +58,9 @@ const IndexPage: React.FC<PageProps> = () => {
 					</p>
 				</div>
 				<div
-					ref={missieRef}
-					className={activeSection === 'missie' ? indexStyles.active : ''}>
-					<h2>Onze Missie: </h2>
+					ref={missionRef}
+					className={activeSection === 'mission' ? indexStyles.active : ''}>
+					<h2>Onze Missie</h2>
 					<p>
 						Bij Keep It Real geloven we in het belang van echte ervaringen. Geen
 						standaardlessen, maar een dag vol inspiratie, interactie en
@@ -66,7 +73,7 @@ const IndexPage: React.FC<PageProps> = () => {
 				<div
 					ref={whatwedoRef}
 					className={activeSection === 'whatwedo' ? indexStyles.active : ''}>
-					<h2>Wat We Doen </h2>
+					<h2>Wat We Doen</h2>
 					<ol>
 						<li>
 							<h4>KIR Take-overs</h4>
@@ -101,7 +108,9 @@ const IndexPage: React.FC<PageProps> = () => {
 					/>
 				</div>
 
-				<div>
+				<div
+					ref={ourteamRef}
+					className={activeSection === 'ourteam' ? indexStyles.active : ''}>
 					<h2>Teamleden</h2>
 					<p>
 						Ons diverse team van ervaringsdeskundigen deelt een passie voor het

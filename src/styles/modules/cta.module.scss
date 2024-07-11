@@ -67,6 +67,7 @@
 				button {
 					margin-left: auto;
 					height: fit-content;
+					align-self: flex-start;
 
 					@include button(2);
 				}

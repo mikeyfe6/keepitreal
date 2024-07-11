@@ -19,6 +19,9 @@
 			gap: 0.5em;
 
 			> li {
+				font-size: 1.125rem;
+				font-weight: 600;
+
 				a,
 				button {
 					&.active {
@@ -43,7 +46,6 @@
 					a,
 					button {
 						position: relative;
-						font-weight: bolder;
 
 						@include smoothTrans;
 
@@ -85,7 +87,6 @@
 					}
 
 					> u {
-						font-weight: bolder;
 						position: relative;
 
 						@include underLine;
@@ -126,7 +127,6 @@
 						a,
 						button {
 							position: relative;
-							font-weight: bolder;
 
 							@include smoothTrans;
 
@@ -176,6 +176,38 @@
 
 		> h4 {
 			font-size: 1.25rem;
+		}
+	}
+
+	> div:nth-child(5) {
+		padding: 2em 1.75em;
+		background-color: rgba($secondary, 0.75);
+
+		@include borderRadius;
+		@include boxShadow(1);
+
+		> h4 {
+			font-size: 1.25rem;
+
+			@include underLine($color: $tertiary);
+		}
+
+		> ul > li > a {
+			display: flex;
+			gap: 0.5em;
+			border: 1px solid rgba($primary, 0.75);
+			padding: 0.75em;
+			width: fit-content;
+
+			@include smoothTrans;
+
+			&:hover {
+				border: 1px solid rgba($white, 0.75);
+			}
+
+			> i {
+				align-self: flex-end;
+			}
 		}
 	}
 }

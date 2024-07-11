@@ -20,9 +20,9 @@ const Sidebar: React.FC<SidebarProps> = ({
 				<ul>
 					<li>
 						<button
-							onClick={() => handleSidebarClick('missie')}
+							onClick={() => handleSidebarClick('mission')}
 							className={
-								activeSection === 'missie' ? sidebarStyles.active : ''
+								activeSection === 'mission' ? sidebarStyles.active : ''
 							}>
 							Onze Missie
 						</button>
@@ -48,7 +48,13 @@ const Sidebar: React.FC<SidebarProps> = ({
 						</ul>
 					</li>
 					<li>
-						<Link to='/'>Onze Teamleden</Link>
+						<button
+							onClick={() => handleSidebarClick('ourteam')}
+							className={
+								activeSection === 'ourteam' ? sidebarStyles.active : ''
+							}>
+							Onze Teamleden
+						</button>
 					</li>
 					<li>
 						<button
@@ -58,9 +64,6 @@ const Sidebar: React.FC<SidebarProps> = ({
 							}>
 							Impact en Toekomst
 						</button>
-					</li>
-					<li>
-						<Link to='/'>In de Media </Link>
 					</li>
 				</ul>
 			</div>
@@ -101,6 +104,20 @@ const Sidebar: React.FC<SidebarProps> = ({
 					kunnen we het verschil maken voor de jongeren van vandaag en morgen.{' '}
 					<strong>Keep it real!</strong>
 				</p>
+			</div>
+
+			<div>
+				<h4>In de media</h4>
+
+				<ul>
+					<li>
+						<a href='https://www.parool.nl/amsterdam/ex-gedetineerden-motiveren-leerlingen-in-zuidoost-om-op-het-rechte-pad-te-blijven-je-bent-geen-pussy-als-je-nee-zegt~b2fdfa0b/?referrer=https://www.google.com/'>
+							Artikel Parool: "Keep It Real: Een uniek initiatief voor jongeren"
+							<i className='fa-solid fa-square-arrow-up-right' />
+						</a>
+					</li>
+					<li></li>
+				</ul>
 			</div>
 		</aside>
 	);
