@@ -1,9 +1,9 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
 <p align="center">
-  <a href="https://eternitydrum.com" rel="noopener noreferrer"
+  <a href="https://keeptreal.nl" rel="noopener noreferrer"
               target="_blank">
-    <img alt="Eternity Percussion Logo" src="https://keeptreal.nl/KIR-bg-logo.png" width="500" />
+    <img alt="Keep It Real Logo" src="https://keeptreal.nl/KIR-bg-logo.png" width="500" />
   </a>
 </p>
 
