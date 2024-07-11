@@ -21,13 +21,14 @@ const Header: React.FC = () => {
 								Home
 							</Link>
 						</li>
+
 						<li>
-							<Link to='/over-ons/' activeClassName={headerStyles.active}>
+							<Link to='/workshops/' activeClassName={headerStyles.active}>
 								Workshops
 							</Link>
 						</li>
 						<li>
-							<Link to='/workshops/' activeClassName={headerStyles.active}>
+							<Link to='/over-ons/' activeClassName={headerStyles.active}>
 								Over ons
 							</Link>
 						</li>

@@ -7,7 +7,6 @@
 	gap: 2em;
 
 	> div {
-		max-width: 100%;
 		background-color: rgba($white, 0.05);
 		padding: 2.5em 2em;
 
@@ -23,5 +22,16 @@
 
 	.active {
 		outline: 2px solid $tertiary;
+		animation: fadeOutOutline 3s forwards;
+	}
+
+	@keyframes fadeOutOutline {
+		0%,
+		60% {
+			outline-color: $tertiary;
+		}
+		100% {
+			outline-color: transparent;
+		}
 	}
 }

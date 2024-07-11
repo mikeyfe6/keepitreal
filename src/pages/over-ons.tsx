@@ -5,10 +5,12 @@ import { Seo } from '../components/seo';
 
 import Layout from '../components/layout';
 
+import * as aboutStyles from '../styles/modules/about.module.scss';
+
 const AboutUsPage: React.FC<PageProps> = () => {
 	return (
 		<Layout>
-			<div>
+			<div className={aboutStyles.about}>
 				<p>
 					Het KIR programma is een initiatief van cultureel professional Wenner
 					Regales, geboren op Curaçao en zelf grotendeels opgegroeid in

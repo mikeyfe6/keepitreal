@@ -1,0 +1,41 @@
+@import '../configs/globals';
+
+.workshops {
+	> div {
+		background-color: rgba($white, 0.05);
+		padding: 2.5em 2em;
+
+		@include boxShadow;
+		@include borderRadius;
+	}
+
+	> ul {
+		margin: 2em 0;
+
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+
+		> li {
+			display: flex;
+			align-items: center;
+			gap: 2em;
+
+			> div {
+				&:first-child {
+					background-color: rgba($tertiary, 0.5);
+					padding: 2.5em 2em;
+
+					@include borderRadius;
+				}
+
+				&:nth-child(2) {
+					background-color: rgba($primary, 0.75);
+					padding: 2.5em 2em;
+
+					@include borderRadius;
+				}
+			}
+		}
+	}
+}
