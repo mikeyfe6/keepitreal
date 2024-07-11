@@ -7,7 +7,7 @@
 
 	&-wrapper {
 		position: relative;
-		margin: 2em 0;
+		margin: 2em 0 1em;
 
 		> ul {
 			display: inline-flex;
@@ -47,7 +47,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			border: 2px solid $primary;
+			border: 2px solid $tertiary;
 
 			@include borderRadius;
 			@include boxShadow(1);

@@ -39,7 +39,7 @@
 	border-radius: $radius;
 }
 
-@mixin underLine($offset: 7px, $thickness: 2px, $color: $primary) {
+@mixin underLine($offset: 7px, $thickness: 1px, $color: $primary) {
 	text-underline-offset: $offset;
 	text-decoration: underline $thickness solid $color;
 }
@@ -65,7 +65,6 @@
 	display: block;
 	padding: 0.75em 1em;
 	font-weight: 600;
-	cursor: pointer;
 
 	@include borderRadius;
 	@include boxShadow(1);

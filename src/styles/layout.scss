@@ -126,6 +126,10 @@ iframe {
 		outline: $primary 2px solid;
 
 		@include borderRadius;
+
+		&.w-margin {
+			margin-top: 2em;
+		}
 	}
 
 	&.spotify {
@@ -133,7 +137,15 @@ iframe {
 		height: 80px;
 
 		@include boxShadow(1);
+
+		&.w-margin {
+			margin: 0.625em 0 1.25em;
+		}
 	}
+}
+
+button {
+	cursor: pointer;
 }
 
 .responsive-tag {

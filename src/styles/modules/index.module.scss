@@ -11,25 +11,17 @@
 		background-color: rgba($white, 0.05);
 		padding: 2.5em 2em;
 
-		// @include compact {
-		// 	&:first-of-type {
-		// 		padding-bottom: 3.5em;
-		// 	}
-
-		// 	&:not(:first-of-type) {
-		// 		padding: 3.5em 2em;
-		// 	}
-		// }
-
 		@include boxShadow;
 		@include borderRadius;
 
-		// &:nth-child(odd) {
-		// 	align-self: flex-start;
-		// }
+		> ol {
+			display: flex;
+			flex-direction: column;
+			gap: 2.5em;
+		}
+	}
 
-		// &:nth-child(even) {
-		// 	align-self: flex-end;
-		// }
+	.active {
+		outline: 2px solid $tertiary;
 	}
 }

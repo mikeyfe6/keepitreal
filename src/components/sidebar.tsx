@@ -4,17 +4,37 @@ import { Link } from 'gatsby';
 
 import * as sidebarStyles from '../styles/modules/sidebar.module.scss';
 
-const Cta: React.FC = () => {
+interface SidebarProps {
+	handleSidebarClick: (sectionId: string) => void;
+	activeSection: string;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({
+	handleSidebarClick,
+	activeSection,
+}) => {
 	return (
 		<aside className={sidebarStyles.aside}>
 			<div>
 				<h4>KiR</h4>
 				<ul>
 					<li>
-						<Link to='/'>Onze Missie</Link>
+						<button
+							onClick={() => handleSidebarClick('missie')}
+							className={
+								activeSection === 'missie' ? sidebarStyles.active : ''
+							}>
+							Onze Missie
+						</button>
 					</li>
 					<li>
-						<u>Wat We Doen</u>
+						<button
+							onClick={() => handleSidebarClick('whatwedo')}
+							className={
+								activeSection === 'whatwedo' ? sidebarStyles.active : ''
+							}>
+							<u>Wat We Doen</u>
+						</button>
 						<ul>
 							<li>
 								<Link to='/'>KIR Take-overs</Link>
@@ -31,10 +51,13 @@ const Cta: React.FC = () => {
 						<Link to='/'>Onze Teamleden</Link>
 					</li>
 					<li>
-						<Link to='/'>Impact en Toekomst</Link>
-					</li>
-					<li>
-						<Link to='/'>Word Lid van Keep It Real</Link>
+						<button
+							onClick={() => handleSidebarClick('impact')}
+							className={
+								activeSection === 'impact' ? sidebarStyles.active : ''
+							}>
+							Impact en Toekomst
+						</button>
 					</li>
 					<li>
 						<Link to='/'>In de Media </Link>
@@ -83,4 +106,4 @@ const Cta: React.FC = () => {
 	);
 };
 
-export default Cta;
+export default Sidebar;

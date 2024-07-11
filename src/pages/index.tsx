@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useRef, useState } from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
 
 import { Seo } from '../components/seo';
@@ -11,6 +11,30 @@ import Sidebar from '../components/sidebar';
 import * as indexStyles from '../styles/modules/index.module.scss';
 
 const IndexPage: React.FC<PageProps> = () => {
+	const missieRef = useRef<HTMLDivElement>(null);
+	const impactRef = useRef<HTMLDivElement>(null);
+	const whatwedoRef = useRef<HTMLDivElement>(null);
+
+	const [activeSection, setActiveSection] = useState<string>('');
+
+	const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
+		if (ref.current) {
+			ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		}
+	};
+
+	const handleSidebarClick = (sectionId: string) => {
+		setActiveSection(sectionId);
+		const sections: Record<string, React.RefObject<HTMLDivElement>> = {
+			missie: missieRef,
+			impact: impactRef,
+			whatwedo: whatwedoRef,
+		};
+		if (sections[sectionId]?.current) {
+			handleScroll(sections[sectionId]);
+		}
+	};
+
 	return (
 		<Layout>
 			<div className={indexStyles.index}>
@@ -26,7 +50,9 @@ const IndexPage: React.FC<PageProps> = () => {
 						geleid tot de oprichting van Keep It Real.
 					</p>
 				</div>
-				<div>
+				<div
+					ref={missieRef}
+					className={activeSection === 'missie' ? indexStyles.active : ''}>
 					<h2>Onze Missie: </h2>
 					<p>
 						Bij Keep It Real geloven we in het belang van echte ervaringen. Geen
@@ -37,8 +63,10 @@ const IndexPage: React.FC<PageProps> = () => {
 					</p>
 				</div>
 
-				<div>
-					<Cta />
+				<div
+					ref={whatwedoRef}
+					className={activeSection === 'whatwedo' ? indexStyles.active : ''}>
+					<h2>Wat We Doen </h2>
 					<ol>
 						<li>
 							<h4>KIR Take-overs</h4>
@@ -50,15 +78,7 @@ const IndexPage: React.FC<PageProps> = () => {
 						</li>
 						<li>
 							<h4>KIR Workshops</h4>
-							<p>
-								Diepgaande sessies waarin jongeren hun creativiteit kunnen uiten
-								en thema's kunnen verkennen zoals verleidingen, identiteit, en
-								online veiligheid. Van therapeutische tekenlessen tot
-								muziekproductie-workshops, we bieden een breed scala aan
-								mogelijkheden.
-								{/* (graag de workshops in blokken laten zien en de
-								beschrijving weergeven als mensen eroverheen navigeren) */}
-							</p>
+							<Cta />
 						</li>
 						<li>
 							<h4>1-op-1 Coaching</h4>
@@ -77,7 +97,7 @@ const IndexPage: React.FC<PageProps> = () => {
 						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 						referrerPolicy='strict-origin-when-cross-origin'
 						allowFullScreen
-						className='youtube'
+						className='youtube w-margin'
 					/>
 				</div>
 
@@ -90,7 +110,9 @@ const IndexPage: React.FC<PageProps> = () => {
 					</p>
 				</div>
 
-				<div>
+				<div
+					ref={impactRef}
+					className={activeSection === 'impact' ? indexStyles.active : ''}>
 					<h2>Impact en Toekomst</h2>
 					<p>
 						Keep It Real streeft naar een blijvende impact. We werken samen met
@@ -117,7 +139,7 @@ const IndexPage: React.FC<PageProps> = () => {
 						allowFullScreen={true}
 						allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
 						// loading='lazy'
-						className='spotify'
+						className='spotify w-margin'
 					/>
 
 					<p>
@@ -127,7 +149,10 @@ const IndexPage: React.FC<PageProps> = () => {
 					</p>
 				</div>
 			</div>
-			<Sidebar />
+			<Sidebar
+				handleSidebarClick={handleSidebarClick}
+				activeSection={activeSection}
+			/>
 		</Layout>
 	);
 };
