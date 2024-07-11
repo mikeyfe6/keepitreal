@@ -7,11 +7,11 @@
 	@include fullWidth;
 
 	&-container {
-		@include container(1000px, 2em, 1em);
-
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@include container(1000px, 2em, 1em);
 
 		> p {
 			margin-bottom: 0;

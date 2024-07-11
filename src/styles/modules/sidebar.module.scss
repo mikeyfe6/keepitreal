@@ -8,7 +8,8 @@
 	> div {
 		padding: 2.5em 2em;
 		// background: $tertiary;
-		background-color: rgba($tertiary, 0.25);
+		background-color: rgba($tertiary, 0.75);
+
 		min-width: 300px;
 
 		@include borderRadius;

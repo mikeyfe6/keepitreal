@@ -16,10 +16,10 @@
 @mixin navLink {
 	font-size: 1.125rem;
 	font-weight: 500;
-	text-underline-offset: 7px;
+	text-underline-offset: 10px;
 	text-decoration-color: $tertiary !important;
 
-	@include smoothTrans(text-decoration);
+	@include smoothTrans;
 
 	&:hover {
 		text-decoration: underline;
