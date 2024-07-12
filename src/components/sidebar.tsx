@@ -111,7 +111,10 @@ const Sidebar: React.FC<SidebarProps> = ({
 
 				<ul>
 					<li>
-						<a href='https://www.parool.nl/amsterdam/ex-gedetineerden-motiveren-leerlingen-in-zuidoost-om-op-het-rechte-pad-te-blijven-je-bent-geen-pussy-als-je-nee-zegt~b2fdfa0b/?referrer=https://www.google.com/'>
+						<a
+							href='https://www.parool.nl/amsterdam/ex-gedetineerden-motiveren-leerlingen-in-zuidoost-om-op-het-rechte-pad-te-blijven-je-bent-geen-pussy-als-je-nee-zegt~b2fdfa0b/?referrer=https://www.google.com/'
+							rel='noopener noreferrer'
+							target='_blank'>
 							Artikel Parool: "Keep It Real: Een uniek initiatief voor jongeren"
 							<i className='fa-solid fa-square-arrow-up-right' />
 						</a>

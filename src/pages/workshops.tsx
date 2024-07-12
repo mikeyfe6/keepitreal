@@ -24,15 +24,14 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 				<ul>
 					<li>
-						<div>
+						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/genge.tiff'
 								alt='Workshop Genge'
-								width={200}
 							/>
 						</div>
-						<div>
-							<h4>Workshop Genge</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Genge</h3>
 							<p>
 								Een therapeutische groepsles waarin tekenen het middel is. De
 								inhoud wordt aangepast aan de groep. Belangrijke thema’s zijn :
@@ -41,7 +40,20 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<span>
+							<div>
+								<h6>
+									Workshophouder: <span>Kenny Brenet</span>
+								</h6>
+
+								<span>&middot;</span>
+
+								<a href='mailto:s.g.brenet@gmail.com'>
+									<i className='fa-solid fa-right-long' />
+									<i className='fa-solid fa-square-envelope fa-xl' />
+								</a>
+							</div>
+
+							<p>
 								Kenny Brenet is een ervaringsdeskundige van het straatleven.
 								Zijn expressie in kunst is tekenen. Hij geeft in zijn dagelijks
 								leven therapeutische groepslessen aan jongeren en therapie aan
@@ -53,19 +65,19 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 								zijn leven hieraan ging toewijden. Hij put kracht uit zijn
 								geloof en via deze weg wilt hij de volgende generatie positief
 								beïnvloeden.
-							</span>
+							</p>
 						</div>
 					</li>
+
 					<li>
-						<div>
+						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/gevolg-oorzaak.tiff'
 								alt='Workshop Oorzaak: Gevolg - De Oorzaak'
-								width={200}
 							/>
 						</div>
-						<div>
-							<h4>Workshop Oorzaak: Gevolg - De Oorzaak</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Oorzaak: Gevolg - De Oorzaak</h3>
 							<p>
 								Gevolg-sessies gaan in op het straatleven vanuit de belevenis
 								van jongeren. Vanuit de eigen levenservaring gaat de
@@ -75,7 +87,20 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<span>
+							<div>
+								<h6>
+									Workshophouder: <span>F.I.</span>
+								</h6>
+
+								<span>&middot;</span>
+
+								<a href='mailto:l.g.ramazan2@icloud.com'>
+									<i className='fa-solid fa-right-long' />
+									<i className='fa-solid fa-square-envelope fa-xl' />
+								</a>
+							</div>
+
+							<p>
 								F.I. is een straatlegende van Amsterdam Zuidoost, beter bekend
 								als de Bijlmer. In de media wordt hij nog steeds gezien als de
 								baas van de bende Green Gang, maar zelf is hij nu CEO van
@@ -84,19 +109,19 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 								hebben gegeven, het ver heeft geschopt als rapper en Nederland
 								introduceerde aan de talenten van Djaga Djaga, Green Gang, Mario
 								Cash, Scarface en recentelijk C. Smoke.
-							</span>
+							</p>
 						</div>
 					</li>
+
 					<li>
-						<div>
+						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/identiteit.tiff'
 								alt='Workshop Identiteit'
-								width={200}
 							/>
 						</div>
-						<div>
-							<h4>Workshop Identiteit</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Identiteit</h3>
 							<p>
 								Dit onderdeel is gericht op preventieve aanpak voor jongeren,
 								maar ook toepasbaar op leraren en ouders. Onderdelen die aan de
@@ -109,28 +134,40 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<span>
+							<div>
+								<h6>
+									Workshophouder: <span>Melanie Falix</span>
+								</h6>
+
+								<span>&middot;</span>
+
+								<a href='mailto:m.falix@hotmail.com'>
+									<i className='fa-solid fa-right-long' />
+									<i className='fa-solid fa-square-envelope fa-xl' />
+								</a>
+							</div>
+
+							<p>
 								Melanie Falix is een ervaren jongerenwerker uit Amsterdam
 								Zuidoost. Melanie is zeer bekend met de doelgroep waardoor ze
 								haar ervaring omzet in een workshop Identiteit.
-							</span>
+							</p>
 						</div>
 					</li>
+
 					<li>
-						<div>
+						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/beats-pound-1.tiff'
 								alt='Workshop Beats by the Pound'
-								width={200}
 							/>
 							<StaticImage
 								src='../images/workshops/beats-pound-2.tiff'
 								alt='Workshop Beats by the Pound'
-								width={200}
 							/>
 						</div>
-						<div>
-							<h4>Workshop Beats by the Pound</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Beats by the Pound</h3>
 							<p>
 								Tijdens deze workshop werken producers vanuit de music business
 								met jongeren, die interesse hebben in het maken van beats, mixen
@@ -145,25 +182,45 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<span>
+							<div>
+								<h6>
+									Workshophouders: <span>Franco III</span>
+								</h6>
+								<span>&middot;</span>
+								<a href='mailto:francothethird3@gmail.com'>
+									<i className='fa-solid fa-right-long' />
+									<i className='fa-solid fa-square-envelope fa-xl' />
+								</a>
+								&
+								<h6>
+									<span>Mxller</span>
+								</h6>
+								<span>&middot;</span>
+								<a href='mxller444@gmail.com'>
+									<i className='fa-solid fa-right-long' />
+									<i className='fa-solid fa-square-envelope fa-xl' />
+								</a>
+							</div>
+
+							<p>
 								Franco III en Mxller: Deze twee zijn opgegroeid in Amsterdam
 								Zuidoost in de bekende “probleemwijken”. Ze zijn zelf nog jong
 								waardoor jongeren zich met hen identificeren. Zij zijn producers
 								en zijn bekend van grote urban bekendheden als Wizkid, Kodak
 								Black en Broederliefde.
-							</span>
+							</p>
 						</div>
 					</li>
+
 					<li>
-						<div>
+						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/oya-walks.tiff'
 								alt='Workshop Oya Talks'
-								width={200}
 							/>
 						</div>
-						<div>
-							<h4>Workshop Oya Talks</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Oya Talks</h3>
 							<p>
 								De stellingen tijdens de sessies zijn gebaseerd op het
 								(straat)leven. De stellingen gaan over liefde, onveilige
@@ -174,24 +231,37 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<span>
+							<div>
+								<h6>
+									Workshophouder: <span>Bradley Mensah</span>
+								</h6>
+
+								<span>&middot;</span>
+
+								<a href='mailto:edmondmensah96@gmail.com'>
+									<i className='fa-solid fa-right-long' />
+									<i className='fa-solid fa-square-envelope fa-xl' />
+								</a>
+							</div>
+
+							<p>
 								Bradley Mensah is een ervaringsdeskundige die zelf slachtoffer
 								en uitvoerder is geweest van het straatleven. Op jonge leeftijd
 								ondervond hij dat het straatleven niet loont, waardoor hij Oya
 								Talk heeft opgezet om te praten met jongeren over hun pijn.
-							</span>
+							</p>
 						</div>
 					</li>
+
 					<li>
-						<div>
+						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/drill-101.tiff'
 								alt='Workshop Drill 101'
-								width={200}
 							/>
 						</div>
-						<div>
-							<h4>Workshop Drill 101</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Drill 101</h3>
 							<p>
 								Drill is een hot item in de media, onder de jeugd en huiskamers.
 								Maar wat is drill precies? Hoe komt het dat het momenteel de
@@ -206,26 +276,39 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<span>
+							<div>
+								<h6>
+									Workshophouder: <span>Wenner Regales</span>
+								</h6>
+
+								<span>&middot;</span>
+
+								<a href='mailto:regalnessnl@gmail.com'>
+									<i className='fa-solid fa-right-long' />
+									<i className='fa-solid fa-square-envelope fa-xl' />
+								</a>
+							</div>
+
+							<p>
 								Wenner is opgegroeid deels op Curaçao en deels in NL,
 								grotendeels in achterstandswijken. Heeft zichzelf opgewerkt tot
 								waar hij nu is. Waardoor hij de verschillende werelden snapt en
 								aan elkaar kan verbinden. Leerlingen denken dat er maar 1 wereld
 								is. Wenner leert leerlingen hoe je kan komen waar je wil. Door
 								inzet en discipline.
-							</span>
+							</p>
 						</div>
 					</li>
+
 					<li>
-						<div>
+						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/drum-muziek.tiff'
 								alt='Workshop Drum / Muziek'
-								width={200}
 							/>
 						</div>
-						<div>
-							<h4>Workshop Drum / Muziek</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Drum / Muziek</h3>
 							<p>
 								Tijdens deze workshop wordt aan jongeren geleerd om hun
 								gevoelens d.m.v. muziek/beweging te uiten. Drummen zorgt voor
@@ -236,7 +319,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<span>
+							<p>
 								Saffira van Kanten is geboren in Amsterdam. Drummen en het
 								produceren van muziek zijn haar passie en leven. Op haar 13e is
 								ze begonnen met drummen bij The Originals entertainment en daar
@@ -246,19 +329,19 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 								van muzikale workshops en inspireert zij de jeugd met mijn
 								muziek en levenservaring. Momenteel werkt ze voornamelijk in
 								jeugdgevangenissen en jeugdzorg en instellingen.
-							</span>
+							</p>
 						</div>
 					</li>
+
 					<li>
-						<div>
+						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/online-weerbaarheid.tiff'
 								alt='Workshop Online weerbaarheid'
-								width={200}
 							/>
 						</div>
-						<div>
-							<h4>Workshop Online weerbaarheid</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Online weerbaarheid</h3>
 							<p>
 								Bij de workshop online weerbaarheid gaan we diep op in wat de
 								jongeren meemaken in hun online leefwereld. Zo komen topics als
@@ -270,19 +353,33 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<span>
+							<div>
+								<h6>
+									Workshophouder: <span>Kimberley Leysner</span>
+								</h6>
+
+								<span>&middot;</span>
+
+								<a href='mailto:kimberley_leysner@hotmail.com'>
+									<i className='fa-solid fa-right-long' />
+									<i className='fa-solid fa-square-envelope fa-xl' />
+								</a>
+							</div>
+
+							<p>
 								Kimberley Leysner is al vele jaren jongerenwerker in Amsterdam
 								zuidoost en heeft in alle wijken gewerkt. Begonnen als
 								kinderwerker en daarna gespecialiseerd als jongerenwerker en
 								meidenwerker. Naast het meidenwerk heeft zij ook
 								vindplaatsgericht jongerenwerk gedaan zoals het werken met de
 								lastigere doelgroep.
-							</span>
+							</p>
 						</div>
 					</li>
+
 					<li>
-						<div>
-							<h4>Workshop Social Media</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Social Media</h3>
 							<p>
 								We stappen in de leefwereld van social media en creëren een safe
 								space in dialogen waarin influencers aan bod komen. Er wordt
@@ -298,16 +395,16 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 							</p>
 						</div>
 					</li>
+
 					<li>
-						<div>
+						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/fashion.tiff'
 								alt='Workshop Fashion and identity'
-								width={200}
 							/>
 						</div>
-						<div>
-							<h4>Workshop Fashion and identity</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Fashion and identity</h3>
 							<p>
 								Tijdens de workshops krijgen de leerlingen de mogelijkheid om
 								hun creativiteit te benutten en tijdens de gesprekken krijgt de
@@ -317,10 +414,24 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 							</p>
 
 							<hr />
+							<div>
+								<h6>
+									Workshophouder: <span>Naomi Rosheuvel</span>
+								</h6>
 
-							<span>
-								Naomi van Rosheuvel: Naomi is opgegroeid in ’t oosten van het
-								land. Daar voelde zij zich door haar huidskleur niet altijd
+								<span>&middot;</span>
+
+								<a
+									href='mailto:nomibynaomi@gmail.com
+'>
+									<i className='fa-solid fa-right-long' />
+									<i className='fa-solid fa-square-envelope fa-xl' />
+								</a>
+							</div>
+
+							<p>
+								Naomi Rosheuvel: Naomi is opgegroeid in ’t oosten van het land.
+								Daar voelde zij zich door haar huidskleur niet altijd
 								geaccepteerd of begrepen, zij werd gediscrimineerd. Zij was het
 								onbegrepen zwarte kind in het witte schoolsysteem. Ze heeft
 								ervaren hoe belangrijk het is om te weten waar je vandaan komt
@@ -328,21 +439,23 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 								begrijpt. Zij is dus op jonge leeftijd al naar Amsterdam gekomen
 								waar zij zichzelf heeft ontwikkeld tot Fashion maker en
 								pedagoog.
-							</span>
+							</p>
 						</div>
 					</li>
+
 					<li>
-						<div>
-							<h4>Workshop Sport</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Sport</h3>
 							<p>
 								Tijdens de workshops sport wordt bij de jongeren de focus op
 								mentale gezondheid, discipline en een gezond lichaam gelegd.
 							</p>
 						</div>
 					</li>
+
 					<li>
-						<div>
-							<h4>Workshop Spoken Word</h4>
+						<div className={workshopStyles.workshopsContent}>
+							<h3>Workshop Spoken Word</h3>
 							<p>
 								Door middel van storytelling worden thema’s aangekaart, die
 								momenteel actueel zijn bij jongeren zoals o.a. zelfdoding;
@@ -352,7 +465,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<span>
+							<p>
 								Hij combineert zijn levenservaring (o.a. gevlucht uit Syrie,
 								gewoond in een asielzoekerscentra) met zijn kunst om bruggen te
 								slaan tussen organisaties en burgers. Hij is opgegroeid in een
@@ -361,7 +474,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 								gewoontes. Dit komt terug in zijn werk, hij is een veelzijdige
 								kunstenaar, schrijver, een woordkunstenaar en een
 								verhalenverteller.
-							</span>
+							</p>
 						</div>
 					</li>
 				</ul>
