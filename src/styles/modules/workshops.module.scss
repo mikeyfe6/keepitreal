@@ -3,6 +3,12 @@
 .workshops {
 	> div {
 		@include mainCard;
+
+		&:last-child {
+			color: $primary;
+
+			@include mainCard(rgba($white, 0.825));
+		}
 	}
 
 	> ul {

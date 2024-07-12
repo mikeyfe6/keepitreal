@@ -10,7 +10,9 @@ const Header: React.FC = () => {
 	return (
 		<header className={headerStyles.header}>
 			<div className={headerStyles.logo}>
-				<StaticImage src='../images/logo/KIR-light-logo.png' alt='KIR logo' />
+				<Link to='/'>
+					<StaticImage src='../images/logo/KIR-light-logo.png' alt='KIR logo' />
+				</Link>
 			</div>
 
 			<div>
