@@ -16,7 +16,7 @@
 
 		&:first-child {
 			padding: 2.5em 1.75em;
-			background-color: rgba($tertiary, 0.75);
+			background: linear-gradient(to left, rgba($tertiary, 87.5%), $secondary);
 
 			@include borderRadius;
 			@include boxShadow(1);
@@ -168,7 +168,7 @@
 		}
 
 		&:nth-child(4) {
-			background-color: rgba($primary, 0.75);
+			background: linear-gradient(to left, rgba($secondary, 1%), $primary);
 
 			> h4 {
 				font-size: 1.25rem;
@@ -189,7 +189,7 @@
 			> ul > li > a {
 				display: flex;
 				gap: 0.5em;
-				border: 1px solid rgba($primary, 0.75);
+				border: 1px solid rgba($white, 0.25);
 				padding: 0.75em;
 				width: fit-content;
 
