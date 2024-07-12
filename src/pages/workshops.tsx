@@ -196,7 +196,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 									<span>Mxller</span>
 								</h6>
 								<span>&middot;</span>
-								<a href='mxller444@gmail.com'>
+								<a href='mailto:mxller444@gmail.com'>
 									<i className='fa-solid fa-right-long' />
 									<i className='fa-solid fa-square-envelope fa-xl' />
 								</a>
