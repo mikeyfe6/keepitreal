@@ -124,7 +124,7 @@ const config: GatsbyConfig = {
 				short_name: siteMetadata.title,
 				description: siteMetadata.slogan,
 				start_url: `/`,
-				icon: 'src/images/KIR-light-icon.png',
+				icon: 'src/images/logo/KIR-light-icon.png',
 				background_color: siteMetadata.bgWebColor,
 				theme_color: siteMetadata.bgThemeColor,
 				display: `standalone`,

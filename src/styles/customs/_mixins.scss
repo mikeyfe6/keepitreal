@@ -87,3 +87,11 @@
 		}
 	}
 }
+
+@mixin mainCard($color: rgba($white, 0.0625)) {
+	background-color: $color;
+	padding: 2.5em 2em;
+
+	@include boxShadow;
+	@include borderRadius;
+}

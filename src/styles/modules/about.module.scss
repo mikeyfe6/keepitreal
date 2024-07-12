@@ -1,11 +1,5 @@
 @import '../configs/globals';
 
 .about {
-	// > div {
-	background-color: rgba($white, 0.05);
-	padding: 2.5em 2em;
-
-	@include boxShadow;
-	@include borderRadius;
-	// }
+	@include mainCard;
 }

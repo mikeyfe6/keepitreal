@@ -2,11 +2,7 @@
 
 .workshops {
 	> div {
-		background-color: rgba($white, 0.05);
-		padding: 2.5em 2em;
-
-		@include boxShadow;
-		@include borderRadius;
+		@include mainCard;
 	}
 
 	> ul {
@@ -23,17 +19,44 @@
 
 			> div {
 				&:first-child {
-					background-color: rgba($tertiary, 0.5);
-					padding: 2.5em 2em;
+					&:has([data-gatsby-image-wrapper]) {
+						display: flex;
+						gap: 1em;
+						padding: 0;
+					}
 
-					@include borderRadius;
+					&:not(:has([data-gatsby-image-wrapper])) {
+						width: 100%;
+
+						@include mainCard(rgba($primary, 0.75));
+					}
+
+					> div {
+						overflow: hidden;
+
+						@include borderRadius;
+					}
 				}
 
-				&:nth-child(2) {
-					background-color: rgba($primary, 0.75);
-					padding: 2.5em 2em;
+				&:has(> *:nth-child(2)) {
+					&:nth-child(2) {
+						@include mainCard(rgba($primary, 0.75));
+					}
+				}
 
-					@include borderRadius;
+				hr {
+					width: 100%;
+					margin: 1.5em 0;
+					height: 1px;
+					background: $tertiary;
+				}
+
+				span {
+					opacity: 0.75;
+				}
+
+				img {
+					min-width: 200px;
 				}
 			}
 		}
