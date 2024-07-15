@@ -5,10 +5,15 @@ import { Seo } from '../components/seo';
 
 import Layout from '../components/layout';
 
+import * as contactStyles from '../styles/modules/contact.module.scss';
+
 const ContactPage: React.FC<PageProps> = () => {
 	return (
 		<Layout>
-			<div>ContactPage</div>
+			<div className={contactStyles.contact}>
+				<div>form</div>
+				<div>texst</div>
+			</div>
 		</Layout>
 	);
 };

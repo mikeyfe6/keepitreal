@@ -1,5 +1,75 @@
 @import '../configs/globals';
 
 .about {
-	@include mainCard;
+	display: flex;
+	flex-direction: column;
+	gap: 3em;
+
+	> div {
+		max-width: 850px;
+
+		@include mainCard;
+
+		@include compact {
+			&:first-of-type {
+				padding-bottom: 3.5em;
+			}
+
+			&:not(:first-of-type) {
+				padding: 3.5em 2em;
+			}
+		}
+
+		@include boxShadow;
+		@include borderRadius;
+
+		&:nth-child(odd) {
+			align-self: flex-start;
+		}
+
+		&:nth-child(even) {
+			align-self: flex-end;
+		}
+
+		table {
+			overflow: hidden;
+
+			@include borderRadius;
+
+			thead {
+				background: rgba($white, 0.825);
+				color: $primary;
+
+				th {
+					font-weight: bolder;
+					font-size: 1.125rem;
+					border-bottom: 1px solid $white;
+				}
+			}
+
+			tbody {
+				tr {
+					&:first-child {
+						td {
+							padding-top: 2em;
+						}
+					}
+
+					td:first-child {
+						font-weight: 600;
+					}
+				}
+			}
+
+			th,
+			td {
+				min-width: 225px;
+				padding: 1em 0.75em;
+			}
+		}
+
+		ol {
+			margin: 1em 0;
+		}
+	}
 }

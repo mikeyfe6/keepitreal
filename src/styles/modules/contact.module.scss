@@ -1,0 +1,13 @@
+@import '../configs/globals';
+
+.contact {
+	display: flex;
+
+	> div:nth-child(1) {
+		flex: 50%;
+	}
+
+	> div:nth-child(2) {
+		flex: 50%;
+	}
+}

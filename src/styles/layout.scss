@@ -29,6 +29,7 @@ main {
 	span {
 		max-width: 80ch;
 		line-height: 1.5;
+		letter-spacing: 0.125px;
 	}
 
 	&:has(aside) {
@@ -116,7 +117,7 @@ h6 {
 }
 
 ol {
-	padding-left: 1.5em;
+	padding-left: 1.25em;
 	list-style-type: decimal;
 }
 
