@@ -9,26 +9,11 @@
 		max-width: 850px;
 
 		@include mainCard;
-
-		@include compact {
-			&:first-of-type {
-				padding-bottom: 3.5em;
-			}
-
-			&:not(:first-of-type) {
-				padding: 3.5em 2em;
-			}
-		}
-
 		@include boxShadow;
 		@include borderRadius;
 
-		&:nth-child(odd) {
-			align-self: flex-start;
-		}
-
-		&:nth-child(even) {
-			align-self: flex-end;
+		ol {
+			margin: 1em 0;
 		}
 
 		table {
@@ -68,8 +53,12 @@
 			}
 		}
 
-		ol {
-			margin: 1em 0;
+		&:nth-child(odd) {
+			align-self: flex-start;
+		}
+
+		&:nth-child(even) {
+			align-self: flex-end;
 		}
 	}
 }
