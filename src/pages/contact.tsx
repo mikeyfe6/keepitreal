@@ -6,6 +6,7 @@ import { Seo } from '../components/seo';
 import Layout from '../components/layout';
 
 import Form from '../components/form';
+import Maps from '../components/maps';
 
 import * as contactStyles from '../styles/modules/contact.module.scss';
 
@@ -15,25 +16,25 @@ const ContactPage: React.FC<PageProps> = () => {
 			<div className={contactStyles.contact}>
 				<Form />
 				<div>
-					<h3>Dit is intro tekst betreft de contactformulier</h3>
+					<h3>Contactinformatie</h3>
 					<p>
-						Est amet laboris et ad mollit officia commodo qui duis esse qui
-						exercitation in excepteur. Culpa sunt sit exercitation laboris
-						occaecat non cupidatat sint dolore ullamco ut fugiat culpa. Deserunt
-						exercitation sint sint irure aute aute pariatur aliqua.
+						<span>Bezoekadres / postadres</span>
+						<br />
+						Straatnaam 123 <br /> 1111 AA Plaatsnaam
 					</p>
 					<p>
-						Est amet laboris et ad mollit officia commodo qui duis esse qui
-						exercitation in excepteur. Culpa sunt sit exercitation laboris
-						occaecat non cupidatat sint dolore ullamco ut fugiat culpa. Deserunt
-						exercitation sint sint irure aute aute pariatur aliqua.
+						<span>Telefoonnummer:</span> 0612345678 <br />
+						<span>E-mailadres:</span> test@keeptreal.nl
 					</p>
 					<p>
-						Est amet laboris et ad mollit officia commodo qui duis esse qui
-						exercitation in excepteur. Culpa sunt sit exercitation laboris
-						occaecat non cupidatat sint dolore ullamco ut fugiat culpa. Deserunt
-						exercitation sint sint irure aute aute pariatur aliqua.
+						We zijn open/bereikbaar van maandag t/m vrijdag van 9:00 tot 17:00
 					</p>
+
+					<p>
+						<span>KvK:</span> 12345678 <br /> <span>BTW:</span> NL123456789B01
+					</p>
+
+					<Maps />
 				</div>
 			</div>
 		</Layout>

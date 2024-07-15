@@ -1,0 +1,35 @@
+@import '../configs/globals';
+
+.maps {
+	filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="g"><feColorMatrix type="matrix" values="0.3 0.3 0.3 0 0 0.3 0.3 0.3 0 0 0.3 0.3 0.3 0 0 0 0 0 1 0"/></filter></svg>#g');
+	filter: grayscale(100%);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
+	position: relative;
+	height: 200px;
+	width: 100%;
+	margin-top: 2em;
+	overflow: hidden;
+	border: 5px solid $secondary;
+
+	@include boxShadow;
+	@include smoothTrans;
+	@include borderRadius;
+
+	.marker {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		cursor: pointer;
+
+		img {
+			max-width: 50px;
+			object-fit: cover;
+		}
+	}
+
+	&:hover {
+		filter: grayscale(50%);
+	}
+}
