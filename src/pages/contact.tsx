@@ -43,4 +43,4 @@ const ContactPage: React.FC<PageProps> = () => {
 
 export default ContactPage;
 
-export const Head: HeadFC = () => <Seo />;
+export const Head: HeadFC = () => <Seo title='Neem Contact Op' />;

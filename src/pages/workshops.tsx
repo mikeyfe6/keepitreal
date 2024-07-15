@@ -430,15 +430,14 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 							</div>
 
 							<p>
-								Naomi Rosheuvel: Naomi is opgegroeid in ’t oosten van het land.
-								Daar voelde zij zich door haar huidskleur niet altijd
-								geaccepteerd of begrepen, zij werd gediscrimineerd. Zij was het
-								onbegrepen zwarte kind in het witte schoolsysteem. Ze heeft
-								ervaren hoe belangrijk het is om te weten waar je vandaan komt
-								en hoe je jezelf mag zijn in een systeem dat je niet altijd
-								begrijpt. Zij is dus op jonge leeftijd al naar Amsterdam gekomen
-								waar zij zichzelf heeft ontwikkeld tot Fashion maker en
-								pedagoog.
+								Naomi is opgegroeid in ’t oosten van het land. Daar voelde zij
+								zich door haar huidskleur niet altijd geaccepteerd of begrepen,
+								zij werd gediscrimineerd. Zij was het onbegrepen zwarte kind in
+								het witte schoolsysteem. Ze heeft ervaren hoe belangrijk het is
+								om te weten waar je vandaan komt en hoe je jezelf mag zijn in
+								een systeem dat je niet altijd begrijpt. Zij is dus op jonge
+								leeftijd al naar Amsterdam gekomen waar zij zichzelf heeft
+								ontwikkeld tot Fashion maker en pedagoog.
 							</p>
 						</div>
 					</li>
@@ -503,4 +502,4 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 export default WorkhopsPage;
 
-export const Head: HeadFC = () => <Seo />;
+export const Head: HeadFC = () => <Seo title='Workshops' />;

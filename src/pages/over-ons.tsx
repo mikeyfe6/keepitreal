@@ -313,4 +313,4 @@ const AboutUsPage: React.FC<PageProps> = () => {
 
 export default AboutUsPage;
 
-export const Head: HeadFC = () => <Seo />;
+export const Head: HeadFC = () => <Seo title='Over Ons' />;

@@ -22,8 +22,8 @@ const Hero: React.FC = () => {
 					</span>
 				</h1>
 				<div className={heroStyles.buttons}>
-					<Link to='/'>Workshops</Link>
-					<Link to='/'>Contact</Link>
+					<Link to='/workshops/'>Workshops</Link>
+					<Link to='/contact/'>Contact</Link>
 				</div>
 			</div>
 

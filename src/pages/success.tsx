@@ -18,4 +18,4 @@ const SuccessPage: React.FC<PageProps> = () => {
 
 export default SuccessPage;
 
-export const Head: HeadFC = () => <Seo />;
+export const Head: HeadFC = () => <Seo title='Formulier verzonden!' />;
