@@ -19,11 +19,22 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
+	position: relative;
+
+	&__logo {
+		position: absolute;
+		bottom: 100px;
+		right: 0;
+		max-width: 300px;
+		opacity: 0.0375;
+		z-index: -1;
+		mask-image: linear-gradient(165deg, transparent, black);
+	}
 }
 
 main {
 	flex: 1;
-	margin: 3em 0 2em;
+	margin: 3em 0 5em;
 
 	p,
 	span {
@@ -35,6 +46,10 @@ main {
 	&:has(aside) {
 		display: flex;
 		gap: 3em;
+
+		@include tablet {
+			flex-direction: column-reverse;
+		}
 	}
 }
 

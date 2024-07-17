@@ -14,10 +14,14 @@
 		}
 	}
 
-	> div {
+	.desktop {
 		display: flex;
 		flex-direction: column;
 		gap: 1.75em;
+
+		@include phablet {
+			display: none;
+		}
 
 		.nav {
 			padding-top: 1.5em;
@@ -63,6 +67,16 @@
 				&:hover {
 					color: rgba($tertiary, 1);
 				}
+			}
+		}
+	}
+
+	.mobile {
+		display: none;
+
+		@include phablet {
+			&.open {
+				display: block;
 			}
 		}
 	}

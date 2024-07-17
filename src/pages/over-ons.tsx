@@ -25,8 +25,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						Maarten van Rossem (VMBO) en Leerpark Presikhaaf (VMBO en praktijk
 						onderwijs) in Arnhem en het OCZO, de Dreef en OSB in Amsterdam.
 					</p>
-				</div>
-				<div>
+
 					<p>
 						De vraag was om een dag/ochtend te organiseren waarbij de leerlingen
 						geen “les” maar een echte “experience” binnen het thema veiligheid.
@@ -42,8 +41,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						werd al gauw duidelijk dat de aanpak de potentie had om impact te
 						maken, mits het een duurzaam en ingebed programma betrof.
 					</p>
-				</div>
-				<div>
+
 					<p>
 						KIR is zich sindsdien aan het ontwikkelen tot een lessenreeks,
 						bestaande uit startdagen, workshops, individuele coaching en
@@ -54,6 +52,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						niet, minder of anders aanwezig zijn.
 					</p>
 				</div>
+
 				<div>
 					<table>
 						<thead>
@@ -132,8 +131,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						dienen zij als positieve rolmodellen: het bewijs dat een goed leven
 						mogelijk is, ook al kom je van de straat.
 					</p>
-				</div>
-				<div>
+
 					<p>
 						De positieve rolmodellen van KIR drukken die kinderen op het hart
 						dat ze juist géén pussy zijn als ze nee zeggen. Ze doen dit, op een
@@ -144,8 +142,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						opgedaan. Hierdoor voelen jongeren de vrijheid om open en eerlijk te
 						zijn.
 					</p>
-				</div>
-				<div>
+
 					<p>
 						De impact van KIR is groot: jongeren voelen zich gezien en gehoord
 						en kunnen terecht bij mensen die hun eigen wereld snappen. De
@@ -156,8 +153,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						van deze signalen de hulpmiddelen inschakelen die bij de jongeren
 						passen.
 					</p>
-				</div>
-				<div>
+
 					<p>
 						KIR streeft naar een goede inbedding van het programma in de
 						werkwijze van de school en borging van de signalen die worden
@@ -166,8 +162,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						school en keten erg belangrijk, middels het formuleren van een
 						gezamenlijke missie en doelsteling.
 					</p>
-				</div>
-				<div>
+
 					<p>
 						Hoewel de activiteiten van KIR een vertrouwde bubbel vormen waarin
 						de jongeren hun verhaal kunnen doen, wordt de gehele keten idealiter
@@ -202,8 +197,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						leerlingen een dag niet uit boeken hoeven te leren maar door zelf te
 						praten, na te denken of te “doen “ onder begeleiding van het team.
 					</p>
-				</div>
-				<div>
+
 					<p>
 						Wel vaker staan ex-gedetineerden voor een schoolklas om als
 						ervaringsdeskundigen uit te leggen waarom leerlingen het juiste pad

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { StaticImage } from 'gatsby-plugin-image';
+
 import Header from './header';
 import Hero from './hero';
 import Footer from './footer';
@@ -19,6 +21,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 				<Header />
 				<Hero />
 				<main>{children}</main>
+
+				<div className='keep-it-real__logo'>
+					<StaticImage src='../images/logo/KIR-light-icon.png' alt='' />
+				</div>
+
 				<Footer />
 			</div>
 
