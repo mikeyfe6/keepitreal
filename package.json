@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "clean": "gatsby clean && yarn cache clean",
+    "reinstall": "rm -rf node_modules package-lock.json yarn.lock && yarn",
     "typecheck": "tsc --noEmit",
     "build:prod": "gatsby build",
     "build:staging": "gatsby build"
@@ -40,10 +41,10 @@
     "sass": "^1.77.8"
   },
   "devDependencies": {
-    "@types/node": "^20.14.11",
+    "@types/node": "^20.14.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "packageManager": "yarn@1.22.22"
 }
