@@ -8,6 +8,8 @@
 
 		&:last-child {
 			color: $primary;
+			width: 85%;
+			margin: 0 auto;
 
 			@include mainCard(rgba($white, 0.825));
 		}
@@ -24,6 +26,24 @@
 			display: flex;
 			align-items: center;
 			gap: 2em;
+			padding: 1em 0;
+
+			&.active {
+				#{$workshops}-content {
+					outline: 2px solid $tertiary;
+					animation: fadeOutOutline 3s forwards;
+				}
+
+				@keyframes fadeOutOutline {
+					0%,
+					60% {
+						outline-color: $tertiary;
+					}
+					100% {
+						outline-color: transparent;
+					}
+				}
+			}
 
 			#{$workshops} {
 				&-image {

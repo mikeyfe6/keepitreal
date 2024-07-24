@@ -48,8 +48,18 @@
 
 			th,
 			td {
-				min-width: 225px;
+				min-width: 267.5px;
 				padding: 1em 0.75em;
+			}
+
+			td:first-of-type {
+				display: flex;
+				align-items: center;
+				gap: 0.825em;
+
+				> i {
+					min-width: 1.5em;
+				}
 			}
 		}
 

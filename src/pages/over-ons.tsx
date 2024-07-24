@@ -63,7 +63,10 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						</thead>
 						<tbody>
 							<tr>
-								<td>Empathie en acceptatie</td>
+								<td>
+									<i className='fa-solid fa-hand-holding-hand fa-xl' /> Empathie
+									en acceptatie
+								</td>
 								<td>
 									De ervaringsdeskundige veroordeelt niet, bejegent de leerling
 									positief, is niet gericht op de waarheid, ziet de leerling als
@@ -71,21 +74,29 @@ const AboutUsPage: React.FC<PageProps> = () => {
 								</td>
 							</tr>
 							<tr>
-								<td>Sociaal leren</td>
+								<td>
+									<i className='fa-solid fa-people-arrows fa-xl' /> Sociaal
+									leren
+								</td>
 								<td>
 									De leerling kan leren om nee te zeggen, weerstand te
 									ontwikkelen tegen negatieve beeldvorming en stigma
 								</td>
 							</tr>
 							<tr>
-								<td>Sociale verbinding</td>
+								<td>
+									<i className='fa-solid fa-handshake fa-xl' /> Sociale
+									verbinding
+								</td>
 								<td>
 									Vertrouwensrelatie die bijdraagt aan negatieve beeldvorming
 									over voorgaande interacties met volwassenen
 								</td>
 							</tr>
 							<tr>
-								<td>Sociale controle</td>
+								<td>
+									<i className='fa-solid fa-users fa-xl' /> Sociale controle
+								</td>
 								<td>
 									De ervaringsdeskundige doorziet sneller motieven, kan
 									makkelijker corrigeren of kritische vragen stellen zonder
@@ -93,7 +104,10 @@ const AboutUsPage: React.FC<PageProps> = () => {
 								</td>
 							</tr>
 							<tr>
-								<td>Verhaal en identiteitsvorming</td>
+								<td>
+									<i className='fa-solid fa-person-chalkboard fa-xl' /> Verhaal
+									en identiteitsvorming
+								</td>
 								<td>
 									De leerling kan het eigen verleden omarmen, een volledig beeld
 									van zichzelf vormen en het gevoel van eigenaarschap
@@ -101,14 +115,20 @@ const AboutUsPage: React.FC<PageProps> = () => {
 								</td>
 							</tr>
 							<tr>
-								<td>Hoop en perspectief</td>
+								<td>
+									<i className='fa-solid fa-users-viewfinder fa-xl' /> Hoop en
+									perspectief
+								</td>
 								<td>
 									De ervaringsdeskundige biedt hoop, laat de mogelijkheid zien
 									van een alternatieve toekomst
 								</td>
 							</tr>
 							<tr>
-								<td>Vertaling en verbinding</td>
+								<td>
+									<i className='fa-solid fa-language fa-xl' /> Vertaling en
+									verbinding
+								</td>
 								<td>
 									De ervaringsdeskundige kan de verbinding leggen tussen de
 									leerling en formele vormen van hulp en kan als vertaler dienen
@@ -239,30 +259,32 @@ const AboutUsPage: React.FC<PageProps> = () => {
 					/>
 				</div>
 				<div>
-					<h3>Communicatiestrategie</h3>
+					<h3>De kernboodschap</h3>
 					<p>
-						Communicatiestrategie De kernboodschap van onze communicatie is dat
-						KIR een leerling kan helpen om de regie te pakken over hun eigen
-						leven. Onze communicatie hierover naar de leerlingen toe is
-						laagdrempelig, makkelijk, enthousiasmerend, aanspreken en
-						aansluitend bij hun belevingswereld. Naar de ouders toe is de
-						boodschap samenwerkend en vertrouwenwekkend. En naar de teams en
-						externe besturen is het professioneel. De communicatiestijl van KIR
-						zit al in de naam. Er wordt, ongeacht het niveau van communicatie,
-						gecommuniceerd op een authentieke wijze die de levenservaring van
-						het team van KIR weerspiegelt. Het taalgebruik is altijd
-						toegankelijk (B1) en waar nodig wordt de informatie in het Engels
-						voor de ouders beschikbaar gemaakt. De middelen die wij inzetten om
-						onze doelgroepen te bereiken zijn:
-						<ol>
-							<li>flyers</li>
-							<li>website</li>
-							<li>sociale media</li>
-							<li>video’s en reels</li>
-							<li>nieuwsbrieven</li>
-							<li>persoonlijk contact (ouders en leerlingen)</li>
-							<li>Podcast</li>
-						</ol>
+						De kernboodschap van onze communicatie is dat KIR een leerling kan
+						helpen om de regie te pakken over hun eigen leven. Onze communicatie
+						hierover naar de leerlingen toe is laagdrempelig, makkelijk,
+						enthousiasmerend, aanspreken en aansluitend bij hun belevingswereld.
+						Naar de ouders toe is de boodschap samenwerkend en
+						vertrouwenwekkend. En naar de teams en externe besturen is het
+						professioneel. De communicatiestijl van KIR zit al in de naam. Er
+						wordt, ongeacht het niveau van communicatie, gecommuniceerd op een
+						authentieke wijze die de levenservaring van het team van KIR
+						weerspiegelt. Het taalgebruik is altijd toegankelijk (B1) en waar
+						nodig wordt de informatie in het Engels voor de ouders beschikbaar
+						gemaakt. De middelen die wij inzetten om onze doelgroepen te
+						bereiken zijn:
+					</p>
+					<ol>
+						<li>flyers</li>
+						<li>website</li>
+						<li>sociale media</li>
+						<li>video’s en reels</li>
+						<li>nieuwsbrieven</li>
+						<li>persoonlijk contact (ouders en leerlingen)</li>
+						<li>Podcast</li>
+					</ol>
+					<p>
 						NB: podcast is een idee dat ten goede komt van KIR in algemene zin.
 						We willen ook podcasts specifiek toespitsen op deze samenwerking.
 						Info podcast: we willen succesverhalen van “Bijlmernaren” laten

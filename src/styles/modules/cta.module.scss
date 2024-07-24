@@ -15,24 +15,24 @@
 			gap: 1.25em;
 
 			> li {
-				background: $secondary;
-				padding: 1.375em 1.25em;
 				flex: 1;
-				white-space: nowrap;
-				text-align: center;
-				font-weight: bold;
-				cursor: pointer;
+				display: flex;
 
-				@include borderRadius;
-				@include boxShadow(1);
+				> button {
+					background: $secondary;
+					padding: 1.375em 1.25em;
+					flex: 1;
+					white-space: nowrap;
+					text-align: center;
+					font-weight: bold;
 
-				&::marker {
-					color: $white;
-				}
+					@include borderRadius;
+					@include boxShadow(1);
 
-				&:hover {
-					background-color: rgba($tertiary, 0.825);
-					color: $white;
+					&:hover {
+						background-color: rgba($tertiary, 0.825);
+						color: $white;
+					}
 				}
 			}
 		}

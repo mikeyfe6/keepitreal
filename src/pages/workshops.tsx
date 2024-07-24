@@ -1,5 +1,7 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
+
+import { useLocation } from '@reach/router';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -10,6 +12,14 @@ import Layout from '../components/layout';
 import * as workshopStyles from '../styles/modules/workshops.module.scss';
 
 const WorkhopsPage: React.FC<PageProps> = () => {
+	const [activeSection, setActiveSection] = useState<string>('');
+
+	const { hash } = useLocation();
+
+	useEffect(() => {
+		setActiveSection(hash);
+	}, [hash]);
+
 	return (
 		<Layout>
 			<div className={workshopStyles.workshops}>
@@ -23,7 +33,9 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 				</div>
 
 				<ul>
-					<li>
+					<li
+						id='genge'
+						className={activeSection === '#genge' ? workshopStyles.active : ''}>
 						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/genge.tiff'
@@ -69,7 +81,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 						</div>
 					</li>
 
-					<li>
+					<li
+						id='oorzaak-gevolg'
+						className={
+							activeSection === '#oorzaak-gevolg' ? workshopStyles.active : ''
+						}>
 						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/gevolg-oorzaak.tiff'
@@ -113,7 +129,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 						</div>
 					</li>
 
-					<li>
+					<li
+						id='identiteit'
+						className={
+							activeSection === '#identiteit' ? workshopStyles.active : ''
+						}>
 						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/identiteit.tiff'
@@ -155,7 +175,13 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 						</div>
 					</li>
 
-					<li>
+					<li
+						id='beats-by-the-pound'
+						className={
+							activeSection === '#beats-by-the-pound'
+								? workshopStyles.active
+								: ''
+						}>
 						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/beats-pound-1.tiff'
@@ -212,7 +238,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 						</div>
 					</li>
 
-					<li>
+					<li
+						id='oya-talks'
+						className={
+							activeSection === '#oya-talks' ? workshopStyles.active : ''
+						}>
 						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/oya-walks.tiff'
@@ -253,7 +283,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 						</div>
 					</li>
 
-					<li>
+					<li
+						id='drill-101'
+						className={
+							activeSection === '#drill-101' ? workshopStyles.active : ''
+						}>
 						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/drill-101.tiff'
@@ -300,7 +334,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 						</div>
 					</li>
 
-					<li>
+					<li
+						id='drum-muziek'
+						className={
+							activeSection === '#drum-muziek' ? workshopStyles.active : ''
+						}>
 						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/drum-muziek.tiff'
@@ -333,7 +371,13 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 						</div>
 					</li>
 
-					<li>
+					<li
+						id='online-weerbaarheid'
+						className={
+							activeSection === '#online-weerbaarheid'
+								? workshopStyles.active
+								: ''
+						}>
 						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/online-weerbaarheid.tiff'
@@ -377,7 +421,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 						</div>
 					</li>
 
-					<li>
+					<li
+						id='social-media'
+						className={
+							activeSection === '#social-media' ? workshopStyles.active : ''
+						}>
 						<div className={workshopStyles.workshopsContent}>
 							<h3>Workshop Social Media</h3>
 							<p>
@@ -396,7 +444,13 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 						</div>
 					</li>
 
-					<li>
+					<li
+						id='fashion-and-identity'
+						className={
+							activeSection === '#fashion-and-identity'
+								? workshopStyles.active
+								: ''
+						}>
 						<div className={workshopStyles.workshopsImage}>
 							<StaticImage
 								src='../images/workshops/fashion.tiff'
@@ -442,7 +496,9 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 						</div>
 					</li>
 
-					<li>
+					<li
+						id='sport'
+						className={activeSection === '#sport' ? workshopStyles.active : ''}>
 						<div className={workshopStyles.workshopsContent}>
 							<h3>Workshop Sport</h3>
 							<p>
@@ -452,7 +508,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 						</div>
 					</li>
 
-					<li>
+					<li
+						id='spoken-word'
+						className={
+							activeSection === '#spoken-word' ? workshopStyles.active : ''
+						}>
 						<div className={workshopStyles.workshopsContent}>
 							<h3>Workshop Spoken Word</h3>
 							<p>

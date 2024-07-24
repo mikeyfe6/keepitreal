@@ -22,8 +22,7 @@ const IndexPage: React.FC<PageProps> = () => {
 		if (ref.current) {
 			const yOffset = -50;
 			const element = ref.current;
-			const y =
-				element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+			const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
 
 			window.scrollTo({ top: y, behavior: 'smooth' });
 		}

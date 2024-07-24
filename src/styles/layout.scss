@@ -3,6 +3,10 @@
 @import './configs/resets';
 @import './configs/globals';
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: linear-gradient(145deg, $primary 30%, $secondary 100%);
 	font-family: 'Montserrat', sans-serif;

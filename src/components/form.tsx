@@ -5,6 +5,11 @@ import * as formStyles from '../styles/modules/form.module.scss';
 const Form: React.FC = () => {
 	return (
 		<div className={formStyles.form}>
+			<div>
+				<h5>Vul hieronder je gegevens in</h5>
+				<p>En we komen spoedig met je in contact!</p>
+			</div>
+
 			<form
 				name='kir-netlifyform'
 				method='POST'
@@ -12,11 +17,6 @@ const Form: React.FC = () => {
 				data-netlify-honeypot='bot-field'
 				action='/success/'>
 				<input type='hidden' name='form-name' value='kir-netlifyform' />
-
-				<div>
-					<h5>Vul hieronder je gegevens in</h5>
-					<p>En we komen spoedig met je in contact!</p>
-				</div>
 
 				<div>
 					<label htmlFor='formFirstName'>Voornaam</label>
