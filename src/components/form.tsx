@@ -25,6 +25,7 @@ const Form: React.FC = () => {
 						name='firstName'
 						id='formFirstName'
 						placeholder='Voornaam'
+						required
 					/>
 				</div>
 				<div>
@@ -34,6 +35,7 @@ const Form: React.FC = () => {
 						name='lastName'
 						id='formLastName'
 						placeholder='Achternaam'
+						required
 					/>
 				</div>
 				<div>
@@ -43,6 +45,7 @@ const Form: React.FC = () => {
 						name='company'
 						id='formCompany'
 						placeholder='Bedrijfsnaam'
+						required
 					/>
 				</div>
 				<div>
@@ -52,6 +55,7 @@ const Form: React.FC = () => {
 						name='phone'
 						id='formPhoneNr'
 						placeholder='Telefoonnummer'
+						required
 					/>
 				</div>
 				<div>
@@ -61,6 +65,7 @@ const Form: React.FC = () => {
 						name='email'
 						id='formEmail'
 						placeholder='E-mailadres'
+						required
 					/>
 				</div>
 				<div>
@@ -70,6 +75,7 @@ const Form: React.FC = () => {
 						id='formMessage'
 						rows={7}
 						placeholder='Bericht'
+						required
 					/>
 				</div>
 				<div>

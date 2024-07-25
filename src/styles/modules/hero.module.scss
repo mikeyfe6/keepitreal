@@ -40,7 +40,8 @@
 		}
 
 		@include mobile {
-			margin-top: -3em;
+			flex-direction: column;
+			gap: 0;
 		}
 
 		> h1 {
@@ -69,6 +70,10 @@
 				flex-direction: column;
 				margin-top: 0.5em;
 				gap: 1em;
+			}
+
+			@include mobile {
+				flex-direction: row;
 			}
 
 			> a {

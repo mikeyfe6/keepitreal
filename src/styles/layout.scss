@@ -17,6 +17,10 @@ body {
 	@include toosmall {
 		display: none;
 	}
+
+	&:has(.mobileMenu) {
+		overflow: hidden;
+	}
 }
 
 .keep-it-real {

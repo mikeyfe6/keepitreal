@@ -16,7 +16,10 @@ const Header: React.FC = () => {
 	};
 
 	return (
-		<header className={headerStyles.header}>
+		<header
+			className={`${headerStyles.header} ${
+				isOpen ? 'mobileMenu' : 'defaultMenu'
+			}`}>
 			<div className={headerStyles.logo}>
 				<Link to='/'>
 					<StaticImage src='../images/logo/KIR-light-logo.png' alt='KIR logo' />
@@ -79,12 +82,17 @@ const Header: React.FC = () => {
 				</ul>
 			</div>
 
-			<div
+			<nav
 				className={`${headerStyles.mobile} ${isOpen ? headerStyles.open : ''}`}>
 				<ul>
 					<li>
 						<Link to='/' activeClassName={headerStyles.active}>
 							Home
+						</Link>
+					</li>
+					<li>
+						<Link to='/workshops' activeClassName={headerStyles.active}>
+							Workshops
 						</Link>
 					</li>
 					<li>
@@ -98,7 +106,7 @@ const Header: React.FC = () => {
 						</Link>
 					</li>
 				</ul>
-			</div>
+			</nav>
 
 			<Hamburger isOpen={isOpen} toggleMenu={toggleMenu} />
 		</header>
