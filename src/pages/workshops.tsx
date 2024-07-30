@@ -52,20 +52,19 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<div>
-								<h6>
-									Workshophouder: <span>Kenny Brenet</span>
-								</h6>
-
-								<span>&middot;</span>
-
-								<a href='mailto:s.g.brenet@gmail.com'>
-									<i className='fa-solid fa-right-long' />
-									<i className='fa-solid fa-square-envelope fa-xl' />
-								</a>
+							<div className={workshopStyles.workshopsHolder}>
+								<p>Workshophouders:</p>
+								<div className={workshopStyles.workshopsHolderInfo}>
+									<h6>Kenny Brenet</h6>
+									<span>&middot;</span>
+									<a href='mailto:s.g.brenet@gmail.com'>
+										<i className='fa-solid fa-right-long' />
+										<i className='fa-solid fa-square-envelope fa-xl' />
+									</a>
+								</div>
 							</div>
 
-							<p>
+							<p className={workshopStyles.workshopsBio}>
 								Kenny Brenet is een ervaringsdeskundige van het straatleven.
 								Zijn expressie in kunst is tekenen. Hij geeft in zijn dagelijks
 								leven therapeutische groepslessen aan jongeren en therapie aan
@@ -103,20 +102,19 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<div>
-								<h6>
-									Workshophouder: <span>F.I.</span>
-								</h6>
-
-								<span>&middot;</span>
-
-								<a href='mailto:l.g.ramazan2@icloud.com'>
-									<i className='fa-solid fa-right-long' />
-									<i className='fa-solid fa-square-envelope fa-xl' />
-								</a>
+							<div className={workshopStyles.workshopsHolder}>
+								<p>Workshophouder:</p>
+								<div className={workshopStyles.workshopsHolderInfo}>
+									<h6>F.I.</h6>
+									<span>&middot;</span>
+									<a href='mailto:l.g.ramazan2@icloud.com'>
+										<i className='fa-solid fa-right-long' />
+										<i className='fa-solid fa-square-envelope fa-xl' />
+									</a>
+								</div>
 							</div>
 
-							<p>
+							<p className={workshopStyles.workshopsBio}>
 								F.I. is een straatlegende van Amsterdam Zuidoost, beter bekend
 								als de Bijlmer. In de media wordt hij nog steeds gezien als de
 								baas van de bende Green Gang, maar zelf is hij nu CEO van
@@ -154,20 +152,19 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<div>
-								<h6>
-									Workshophouder: <span>Melanie Falix</span>
-								</h6>
-
-								<span>&middot;</span>
-
-								<a href='mailto:m.falix@hotmail.com'>
-									<i className='fa-solid fa-right-long' />
-									<i className='fa-solid fa-square-envelope fa-xl' />
-								</a>
+							<div className={workshopStyles.workshopsHolder}>
+								<p>Workshophouder:</p>
+								<div className={workshopStyles.workshopsHolderInfo}>
+									<h6>Melanie Falix</h6>
+									<span>&middot;</span>
+									<a href='mailto:m.falix@hotmail.com'>
+										<i className='fa-solid fa-right-long' />
+										<i className='fa-solid fa-square-envelope fa-xl' />
+									</a>
+								</div>
 							</div>
 
-							<p>
+							<p className={workshopStyles.workshopsBio}>
 								Melanie Falix is een ervaren jongerenwerker uit Amsterdam
 								Zuidoost. Melanie is zeer bekend met de doelgroep waardoor ze
 								haar ervaring omzet in een workshop Identiteit.
@@ -182,7 +179,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 								? workshopStyles.active
 								: ''
 						}>
-						<div className={workshopStyles.workshopsImage}>
+						<div className={workshopStyles.workshopsImageDouble}>
 							<StaticImage
 								src='../images/workshops/beats-pound-1.tiff'
 								alt='Workshop Beats by the Pound'
@@ -208,27 +205,28 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<div>
-								<h6>
-									Workshophouders: <span>Franco III</span>
-								</h6>
-								<span>&middot;</span>
-								<a href='mailto:francothethird3@gmail.com'>
-									<i className='fa-solid fa-right-long' />
-									<i className='fa-solid fa-square-envelope fa-xl' />
-								</a>
-								&
-								<h6>
-									<span>Mxller</span>
-								</h6>
-								<span>&middot;</span>
-								<a href='mailto:mxller444@gmail.com'>
-									<i className='fa-solid fa-right-long' />
-									<i className='fa-solid fa-square-envelope fa-xl' />
-								</a>
+							<div className={workshopStyles.workshopsHolder}>
+								<p>Workshophouders:</p>
+								<div className={workshopStyles.workshopsHolderInfo}>
+									<h6>Franco III</h6>
+									<span>&middot;</span>
+									<a href='mailto:francothethird3@gmail.com'>
+										<i className='fa-solid fa-right-long' />
+										<i className='fa-solid fa-square-envelope fa-xl' />
+									</a>
+								</div>
+								<span>&</span>
+								<div className={workshopStyles.workshopsHolderInfo}>
+									<h6>Mxller</h6>
+									<span>&middot;</span>
+									<a href='mailto:mxller444@gmail.com'>
+										<i className='fa-solid fa-right-long' />
+										<i className='fa-solid fa-square-envelope fa-xl' />
+									</a>
+								</div>
 							</div>
 
-							<p>
+							<p className={workshopStyles.workshopsBio}>
 								Franco III en Mxller: Deze twee zijn opgegroeid in Amsterdam
 								Zuidoost in de bekende “probleemwijken”. Ze zijn zelf nog jong
 								waardoor jongeren zich met hen identificeren. Zij zijn producers
@@ -261,20 +259,19 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<div>
-								<h6>
-									Workshophouder: <span>Bradley Mensah</span>
-								</h6>
-
-								<span>&middot;</span>
-
-								<a href='mailto:edmondmensah96@gmail.com'>
-									<i className='fa-solid fa-right-long' />
-									<i className='fa-solid fa-square-envelope fa-xl' />
-								</a>
+							<div className={workshopStyles.workshopsHolder}>
+								<p>Workshophouders:</p>
+								<div className={workshopStyles.workshopsHolderInfo}>
+									<h6>Bradley Mensah</h6>
+									<span>&middot;</span>
+									<a href='mailto:edmondmensah96@gmail.com'>
+										<i className='fa-solid fa-right-long' />
+										<i className='fa-solid fa-square-envelope fa-xl' />
+									</a>
+								</div>
 							</div>
 
-							<p>
+							<p className={workshopStyles.workshopsBio}>
 								Bradley Mensah is een ervaringsdeskundige die zelf slachtoffer
 								en uitvoerder is geweest van het straatleven. Op jonge leeftijd
 								ondervond hij dat het straatleven niet loont, waardoor hij Oya
@@ -310,20 +307,19 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<div>
-								<h6>
-									Workshophouder: <span>Wenner Regales</span>
-								</h6>
-
-								<span>&middot;</span>
-
-								<a href='mailto:regalnessnl@gmail.com'>
-									<i className='fa-solid fa-right-long' />
-									<i className='fa-solid fa-square-envelope fa-xl' />
-								</a>
+							<div className={workshopStyles.workshopsHolder}>
+								<p>Workshophouders:</p>
+								<div className={workshopStyles.workshopsHolderInfo}>
+									<h6>Wenner Regales</h6>
+									<span>&middot;</span>
+									<a href='mailto:regalnessnl@gmail.com'>
+										<i className='fa-solid fa-right-long' />
+										<i className='fa-solid fa-square-envelope fa-xl' />
+									</a>
+								</div>
 							</div>
 
-							<p>
+							<p className={workshopStyles.workshopsBio}>
 								Wenner is opgegroeid deels op Curaçao en deels in NL,
 								grotendeels in achterstandswijken. Heeft zichzelf opgewerkt tot
 								waar hij nu is. Waardoor hij de verschillende werelden snapt en
@@ -357,7 +353,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<p>
+							<p className={workshopStyles.workshopsBio}>
 								Saffira van Kanten is geboren in Amsterdam. Drummen en het
 								produceren van muziek zijn haar passie en leven. Op haar 13e is
 								ze begonnen met drummen bij The Originals entertainment en daar
@@ -397,20 +393,19 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<div>
-								<h6>
-									Workshophouder: <span>Kimberley Leysner</span>
-								</h6>
-
-								<span>&middot;</span>
-
-								<a href='mailto:kimberley_leysner@hotmail.com'>
-									<i className='fa-solid fa-right-long' />
-									<i className='fa-solid fa-square-envelope fa-xl' />
-								</a>
+							<div className={workshopStyles.workshopsHolder}>
+								<p>Workshophouder:</p>
+								<div className={workshopStyles.workshopsHolderInfo}>
+									<h6>Kimberley Leysner</h6>
+									<span>&middot;</span>
+									<a href='mailto:kimberley_leysner@hotmail.com'>
+										<i className='fa-solid fa-right-long' />
+										<i className='fa-solid fa-square-envelope fa-xl' />
+									</a>
+								</div>
 							</div>
 
-							<p>
+							<p className={workshopStyles.workshopsBio}>
 								Kimberley Leysner is al vele jaren jongerenwerker in Amsterdam
 								zuidoost en heeft in alle wijken gewerkt. Begonnen als
 								kinderwerker en daarna gespecialiseerd als jongerenwerker en
@@ -468,22 +463,23 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 							</p>
 
 							<hr />
-							<div>
-								<h6>
-									Workshophouder: <span>Naomi Rosheuvel</span>
-								</h6>
 
-								<span>&middot;</span>
+							<div className={workshopStyles.workshopsHolder}>
+								<p>Workshophouders:</p>
+								<div className={workshopStyles.workshopsHolderInfo}>
+									<h6>Naomi Rosheuvel</h6>
+									<span>&middot;</span>
 
-								<a
-									href='mailto:nomibynaomi@gmail.com
+									<a
+										href='mailto:nomibynaomi@gmail.com
 '>
-									<i className='fa-solid fa-right-long' />
-									<i className='fa-solid fa-square-envelope fa-xl' />
-								</a>
+										<i className='fa-solid fa-right-long' />
+										<i className='fa-solid fa-square-envelope fa-xl' />
+									</a>
+								</div>
 							</div>
 
-							<p>
+							<p className={workshopStyles.workshopsBio}>
 								Naomi is opgegroeid in ’t oosten van het land. Daar voelde zij
 								zich door haar huidskleur niet altijd geaccepteerd of begrepen,
 								zij werd gediscrimineerd. Zij was het onbegrepen zwarte kind in
@@ -524,7 +520,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 							<hr />
 
-							<p>
+							<p className={workshopStyles.workshopsBio}>
 								Hij combineert zijn levenservaring (o.a. gevlucht uit Syrie,
 								gewoond in een asielzoekerscentra) met zijn kunst om bruggen te
 								slaan tussen organisaties en burgers. Hij is opgegroeid in een

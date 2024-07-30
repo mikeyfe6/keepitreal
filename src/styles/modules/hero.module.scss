@@ -8,7 +8,6 @@
 
 	@include tablet {
 		flex-wrap: wrap;
-		margin-top: 1em;
 	}
 
 	.slogan {
@@ -40,8 +39,15 @@
 		}
 
 		@include mobile {
+			margin-top: -2.5em;
 			flex-direction: column;
 			gap: 0;
+		}
+
+		@include compact {
+			margin-top: -2em;
+			margin-left: 1em;
+			margin-right: 1em;
 		}
 
 		> h1 {
@@ -59,6 +65,16 @@
 
 			@include tablet {
 				line-height: 45px;
+			}
+
+			@include mobile {
+				font-size: 1.5rem;
+				line-height: 40px;
+			}
+
+			@include compact {
+				font-size: 1.25rem;
+				line-height: 35px;
 			}
 		}
 
@@ -111,6 +127,10 @@
 			height: 375px;
 			width: 3px;
 		}
+
+		@include compact {
+			height: 337.5px;
+		}
 	}
 
 	.image {
@@ -144,6 +164,11 @@
 		@include mobile {
 			max-height: 275px;
 			border: 2px solid $tertiary;
+		}
+
+		@include compact {
+			flex-basis: 98%;
+			max-height: 250px;
 		}
 
 		&::after {

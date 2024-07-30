@@ -10,6 +10,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: 2em;
 
 		@include container(1000px, 2em, 1em);
 
@@ -17,16 +18,18 @@
 			margin-bottom: 0;
 			font-weight: 500;
 			font-size: 1rem;
+			position: relative;
 
 			@include mobile {
 				&:first-child {
 					&::after {
 						content: '';
-						display: block;
-						width: 33%;
+						position: absolute;
+						width: 25%;
 						height: 3px;
 						background-color: $tertiary;
-						margin: 1em 0 0 0;
+						bottom: -43.75px;
+						left: 0;
 
 						@include borderRadius;
 					}
@@ -35,11 +38,12 @@
 				&:last-child {
 					&::before {
 						content: '';
-						display: block;
-						width: 33%;
+						position: absolute;
+						width: 25%;
 						height: 3px;
 						background-color: $tertiary;
-						margin: 0 0 1em auto;
+						top: -42.5px;
+						right: 0;
 
 						@include borderRadius;
 					}

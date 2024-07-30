@@ -16,7 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 	return (
 		<aside className={sidebarStyles.aside}>
 			<div>
-				<h4>KiR</h4>
+				<h3>KiR</h3>
 				<ul>
 					<li>
 						<button
@@ -37,13 +37,13 @@ const Sidebar: React.FC<SidebarProps> = ({
 						</button>
 						<ul>
 							<li>
-								<Link to='/'>KIR Take-overs</Link>
+								<h4>KIR Take-overs</h4>
 							</li>
 							<li>
-								<Link to='/'>KIR Workshops</Link>
+								<h4>KIR Workshops</h4>
 							</li>
 							<li>
-								<Link to='/'>1-op-1 Coaching</Link>
+								<h4>1-op-1 Coaching</h4>
 							</li>
 						</ul>
 					</li>
@@ -69,7 +69,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 			</div>
 
 			<div>
-				<h4>Opkomende evenementen</h4>
+				<h3>Opkomende evenementen</h3>
 
 				<ul>
 					<li>
@@ -92,7 +92,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 			</div>
 
 			<div>
-				<h4>Word Lid van Keep It Real</h4>
+				<h3>Word Lid van Keep It Real</h3>
 
 				<p>
 					Wil je deel uitmaken van ons team of meer informatie over onze
@@ -107,7 +107,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 			</div>
 
 			<div>
-				<h4>In de media</h4>
+				<h3>In de media</h3>
 
 				<ul>
 					<li>
