@@ -6,6 +6,10 @@
 	gap: 2em;
 	min-width: 350px;
 
+	@include mobile {
+		min-width: 100%;
+	}
+
 	> div {
 		@include borderRadius;
 		@include boxShadow(1);

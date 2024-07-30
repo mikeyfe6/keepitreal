@@ -16,6 +16,14 @@
 			margin: 1em 0;
 		}
 
+		.showOnMobile {
+			display: none;
+
+			@include mobile {
+				display: block;
+			}
+		}
+
 		table {
 			overflow: hidden;
 
@@ -24,6 +32,10 @@
 			thead {
 				background: rgba($white, 0.825);
 				color: $primary;
+
+				@include mobile {
+					display: none;
+				}
 
 				th {
 					font-weight: bolder;
@@ -34,6 +46,11 @@
 
 			tbody {
 				tr {
+					@include mobile {
+						display: flex;
+						flex-direction: column;
+					}
+
 					&:first-child {
 						td {
 							padding-top: 2em;
@@ -50,6 +67,10 @@
 			td {
 				min-width: 267.5px;
 				padding: 1em 0.75em;
+
+				@include mobile {
+					padding: 1em 0;
+				}
 			}
 
 			td:first-of-type {

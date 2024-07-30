@@ -4,6 +4,11 @@
 	display: flex;
 	gap: 3em;
 
+	@include phablet {
+		flex-direction: column-reverse;
+		gap: 2em;
+	}
+
 	> div:nth-child(1) {
 		flex: 50%;
 	}

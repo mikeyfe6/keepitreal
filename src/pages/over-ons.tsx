@@ -54,6 +54,9 @@ const AboutUsPage: React.FC<PageProps> = () => {
 				</div>
 
 				<div>
+					<h3 className={aboutStyles.showOnMobile}>
+						Mechanisme - Belangrijke elementen
+					</h3>
 					<table>
 						<thead>
 							<tr>
@@ -276,13 +279,27 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						bereiken zijn:
 					</p>
 					<ol>
-						<li>flyers</li>
-						<li>website</li>
-						<li>sociale media</li>
-						<li>video’s en reels</li>
-						<li>nieuwsbrieven</li>
-						<li>persoonlijk contact (ouders en leerlingen)</li>
-						<li>Podcast</li>
+						<li>
+							<p>flyers</p>
+						</li>
+						<li>
+							<p>websit</p>
+						</li>
+						<li>
+							<p>sociale media</p>
+						</li>
+						<li>
+							<p>video’s en reels</p>
+						</li>
+						<li>
+							<p>nieuwsbrieven</p>
+						</li>
+						<li>
+							<p>persoonlijk contact (ouders en leerlingen)</p>
+						</li>
+						<li>
+							<p>Podcast</p>
+						</li>
 					</ol>
 					<p>
 						NB: podcast is een idee dat ten goede komt van KIR in algemene zin.
@@ -300,20 +317,24 @@ const AboutUsPage: React.FC<PageProps> = () => {
 					<p>
 						Punten die we de komende twee jaar samen met het Orion college en de
 						Dreef gaan ontwikkelen/organiseren:
-						<ol>
-							<li>
+					</p>
+					<ol>
+						<li>
+							<p>
 								Professionaliseringsslag team (traumasensitief werken, kennis
 								van verstandelijke beperkingen middels supervisie)
-							</li>
-							<li>
-								Actie- onderzoek: wat zijn de effecten/resultaten van KIR?
-							</li>
-							<li>
+							</p>
+						</li>
+						<li>
+							<p>Actie- onderzoek: wat zijn de effecten/resultaten van KIR? </p>
+						</li>
+						<li>
+							<p>
 								Ontwikkelen leerlijn: hoe maken we KIR basis onderdeel van een
 								school curriculum?
-							</li>
-						</ol>
-					</p>
+							</p>
+						</li>
+					</ol>
 				</div>
 				<div>
 					<h3>Ambities</h3>
