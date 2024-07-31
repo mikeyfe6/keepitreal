@@ -53,7 +53,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 							<hr />
 
 							<div className={workshopStyles.workshopsHolder}>
-								<p>Workshophouders:</p>
+								<p>Workshophouder:</p>
 								<div className={workshopStyles.workshopsHolderInfo}>
 									<h6>Kenny Brenet</h6>
 									<span>&middot;</span>
@@ -260,7 +260,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 							<hr />
 
 							<div className={workshopStyles.workshopsHolder}>
-								<p>Workshophouders:</p>
+								<p>Workshophouder:</p>
 								<div className={workshopStyles.workshopsHolderInfo}>
 									<h6>Bradley Mensah</h6>
 									<span>&middot;</span>
@@ -308,7 +308,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 							<hr />
 
 							<div className={workshopStyles.workshopsHolder}>
-								<p>Workshophouders:</p>
+								<p>Workshophouder:</p>
 								<div className={workshopStyles.workshopsHolderInfo}>
 									<h6>Wenner Regales</h6>
 									<span>&middot;</span>
@@ -465,7 +465,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 							<hr />
 
 							<div className={workshopStyles.workshopsHolder}>
-								<p>Workshophouders:</p>
+								<p>Workshophouder:</p>
 								<div className={workshopStyles.workshopsHolderInfo}>
 									<h6>Naomi Rosheuvel</h6>
 									<span>&middot;</span>
