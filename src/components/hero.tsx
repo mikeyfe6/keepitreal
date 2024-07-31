@@ -16,8 +16,7 @@ const Hero: React.FC = () => {
 						Welkom bij <strong>Keep It Real</strong>, een programma dat jongeren
 					</span>{' '}
 					<span>
-						een ervaring biedt die verder gaat dan
-						<br />
+						een ervaring biedt die verder gaat dan{' '}
 						<strong>traditioneel onderwijs</strong>
 					</span>
 				</h1>
