@@ -16,7 +16,7 @@ const defaultProps: DefaultProps = {
 		lat: 52.370216,
 		lng: 4.895168,
 	},
-	zoom: 10,
+	zoom: 15,
 };
 
 interface MarkerProps {

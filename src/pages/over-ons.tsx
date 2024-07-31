@@ -280,22 +280,22 @@ const AboutUsPage: React.FC<PageProps> = () => {
 					</p>
 					<ol>
 						<li>
-							<p>flyers</p>
+							<p>Flyers</p>
 						</li>
 						<li>
-							<p>websit</p>
+							<p>Website</p>
 						</li>
 						<li>
-							<p>sociale media</p>
+							<p>Sociale Media</p>
 						</li>
 						<li>
-							<p>video’s en reels</p>
+							<p>Video’s en Reels</p>
 						</li>
 						<li>
-							<p>nieuwsbrieven</p>
+							<p>Nieuwsbrieven</p>
 						</li>
 						<li>
-							<p>persoonlijk contact (ouders en leerlingen)</p>
+							<p>Persoonlijk contact (ouders en leerlingen)</p>
 						</li>
 						<li>
 							<p>Podcast</p>

@@ -12,7 +12,7 @@
 		align-items: center;
 		gap: 2em;
 
-		@include container(1000px, 2em, 1em);
+		@include container(1300px, 2em, 1.25em);
 
 		> p {
 			margin-bottom: 0;

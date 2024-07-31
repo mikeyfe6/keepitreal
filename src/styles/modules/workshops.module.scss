@@ -8,7 +8,7 @@
 
 		&:last-child {
 			color: $primary;
-			width: 85%;
+			max-width: 1000px;
 			margin: 0 auto;
 
 			@include mainCard(rgba($white, 0.825));
@@ -92,6 +92,8 @@
 				}
 
 				&-content {
+					width: 100%;
+
 					@include mainCard(rgba($primary, 0.75));
 
 					> hr {

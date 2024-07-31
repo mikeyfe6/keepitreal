@@ -46,7 +46,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 							<h3>Workshop Genge</h3>
 							<p>
 								Een therapeutische groepsles waarin tekenen het middel is. De
-								inhoud wordt aangepast aan de groep. Belangrijke thema’s zijn :
+								inhoud wordt aangepast aan de groep. Belangrijke thema’s zijn:
 								Verleidingen, keuzes en weerbaarheid.
 							</p>
 
