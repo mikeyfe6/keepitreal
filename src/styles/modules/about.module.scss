@@ -8,16 +8,13 @@
 	> div {
 		max-width: 850px;
 
-		@include mainCard;
-		@include boxShadow;
 		@include borderRadius;
-
-		ol {
-			margin: 1em 0;
-		}
+		@include boxShadow;
+		@include mainCard;
 
 		.showOnMobile {
 			display: none;
+			margin-bottom: 2em;
 
 			@include mobile {
 				display: block;
@@ -54,6 +51,10 @@
 					&:first-child {
 						td {
 							padding-top: 2em;
+
+							@include mobile {
+								padding-top: 0;
+							}
 						}
 					}
 
