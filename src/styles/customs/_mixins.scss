@@ -5,7 +5,7 @@
 	width: 100%;
 
 	@include mobile {
-		padding: $gap 1.5em;
+		padding: $gap 1.25em;
 	}
 }
 
@@ -97,6 +97,6 @@
 	@include borderRadius;
 
 	@include mobile {
-		padding: 2.25em 1.75em;
+		padding: 2.25em 1.5em;
 	}
 }

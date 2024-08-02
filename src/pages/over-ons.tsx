@@ -55,7 +55,8 @@ const AboutUsPage: React.FC<PageProps> = () => {
 
 				<div>
 					<h3 className={aboutStyles.showOnMobile}>
-						Mechanisme - Belangrijke elementen
+						Mechanisme
+						<span>Belangrijke elementen</span>
 					</h3>
 					<table>
 						<thead>

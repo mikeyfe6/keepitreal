@@ -87,7 +87,7 @@
 		background-color: $primary;
 		z-index: 2;
 
-		> ul {
+		&-menu {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
@@ -115,6 +115,24 @@
 							transform: rotate(270deg);
 						}
 					}
+				}
+			}
+		}
+
+		&-socials {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			justify-content: center;
+
+			gap: 2em;
+			margin-top: 1em;
+
+			> li {
+				color: rgba($tertiary, 0.825);
+
+				&:hover {
+					color: rgba($tertiary, 1);
 				}
 			}
 		}

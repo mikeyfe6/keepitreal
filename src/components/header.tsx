@@ -84,7 +84,7 @@ const Header: React.FC = () => {
 
 			<nav
 				className={`${headerStyles.mobile} ${isOpen ? headerStyles.open : ''}`}>
-				<ul>
+				<ul className={headerStyles.mobileMenu}>
 					<li>
 						<Link to='/' activeClassName={headerStyles.active}>
 							Home
@@ -105,6 +105,34 @@ const Header: React.FC = () => {
 							Contact
 						</Link>
 					</li>
+
+					<ul className={headerStyles.mobileSocials}>
+						<li>
+							<a
+								href='https://www.instagram.com/keepitrealkir'
+								rel='noopener noreferrer'
+								target='_blank'>
+								<i className='fab fa-instagram fa-2xl' />
+							</a>
+						</li>
+						<li>
+							<a
+								href='https://www.tiktok.com/@keepitreal_nl'
+								rel='noopener noreferrer'
+								target='_blank'>
+								<i className='fab fa-tiktok fa-2xl' />
+							</a>
+						</li>
+						<li>
+							<a
+								href='#!'
+								// rel='noopener noreferrer'
+								// target='_blank'
+							>
+								<i className='fab fa-facebook fa-2xl' />
+							</a>
+						</li>
+					</ul>
 				</ul>
 			</nav>
 
