@@ -25,7 +25,9 @@ const Overlay: React.FC<OverlayProps> = ({ item, onClose }) => (
 
 			<div>
 				<Link to={`/workshops/#${item.anchor}`}>Meer informatie</Link>
-				<button onClick={onClose}>Sluiten</button>
+				<button onClick={onClose}>
+					<i className='fa-solid fa-xmark fa-xl' />
+				</button>
 			</div>
 		</div>
 	</div>
