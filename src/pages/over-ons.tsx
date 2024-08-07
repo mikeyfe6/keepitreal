@@ -262,7 +262,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						className='youtube w-margin'
 					/>
 				</div>
-				<div>
+				{/* <div>
 					<h3>De kernboodschap</h3>
 					<p>
 						De kernboodschap van onze communicatie is dat KIR een leerling kan
@@ -343,7 +343,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
 						We willen komen tot een volledig aanbod inclusief visie/missie
 						waarmee we onszelf kunnen profileren. On- en offline.
 					</p>
-				</div>
+				</div> */}
 			</div>
 		</Layout>
 	);

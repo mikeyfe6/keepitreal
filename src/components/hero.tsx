@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { useLocation } from '@reach/router';
 
@@ -11,15 +11,29 @@ import * as heroStyles from '../styles/modules/hero.module.scss';
 const Hero: React.FC = () => {
 	const { pathname } = useLocation();
 
-	const isHome = pathname === '/';
+	const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsSmallScreen(window.innerWidth < 641);
+		};
+
+		handleResize();
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	const isHomeAndSmallScreen = pathname === '/' && isSmallScreen;
 
 	return (
 		<section className={heroStyles.hero}>
-			{isHome && (
+			{(isHomeAndSmallScreen || !isSmallScreen) && (
 				<div className={heroStyles.slogan}>
 					<h1>
 						<span>
-							{' '}
 							Welkom bij <strong>Keep It Real</strong>, een programma dat
 							jongeren
 						</span>{' '}

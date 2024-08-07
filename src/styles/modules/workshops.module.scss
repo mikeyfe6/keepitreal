@@ -8,8 +8,6 @@
 
 		&:last-child {
 			color: $primary;
-			max-width: 1000px;
-			margin: 0 auto;
 
 			@include mainCard(rgba($white, 0.825));
 		}
