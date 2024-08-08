@@ -23,6 +23,7 @@
 	> div {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 
 		@include container(1275px);
 
@@ -31,12 +32,10 @@
 
 			@include phablet {
 				max-width: 200px;
-				margin: 0 0 1.5em 0.5em;
 			}
 
 			@include mobile {
 				max-width: 175px;
-				margin: 0 0 1.5em 0.5em;
 			}
 		}
 

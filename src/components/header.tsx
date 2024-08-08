@@ -18,7 +18,7 @@ const Header: React.FC = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (window.scrollY > 100) {
+			if (window.scrollY > 37.5) {
 				setIsSticky(true);
 			} else {
 				setIsSticky(false);
