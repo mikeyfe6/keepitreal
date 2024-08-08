@@ -6,9 +6,9 @@
 	padding: 0.75em 0.5em;
 	height: fit-content;
 	margin: 1.75em 0.5em 0 0;
-	display: none;
 	position: relative;
 	z-index: 2;
+	display: none;
 
 	@include borderRadius;
 

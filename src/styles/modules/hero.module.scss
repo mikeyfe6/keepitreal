@@ -5,6 +5,7 @@
 
 	display: flex;
 	align-items: center;
+	padding-top: 12.5em;
 
 	@include tablet {
 		flex-wrap: wrap;
