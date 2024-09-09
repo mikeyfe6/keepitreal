@@ -40,7 +40,7 @@ Powered by [Menefex](https://menefex.nl) ✨
 ---
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/70599984-530f-409e-98d5-d1dd39cc1cc8/deploy-status)](https://app.netlify.com/sites/keeptreal/deploys) <br><br>
-👨🏾‍💻 <ins>...this project</ins> <br> [![wakatime](https://wakatime.com/badge/user/172a37f5-1ff4-4cf8-9d08-5ccbe681726b/project/a3a72533-b584-47eb-990b-4a9498b858f7.svg)](https://wakatime.com/badge/user/172a37f5-1ff4-4cf8-9d08-5ccbe681726b/project/a3a72533-b584-47eb-990b-4a9498b858f7) <br>
+👨🏾‍💻 <ins>...this project</ins> <br> [![wakatime](https://wakatime.com/badge/github/mikeyfe6/keepitreal.svg)](https://wakatime.com/badge/github/mikeyfe6/keepitreal) <br>
 👨🏾‍💻 <ins>...all projects</ins> <br> [![wakatime](https://wakatime.com/badge/user/172a37f5-1ff4-4cf8-9d08-5ccbe681726b.svg)](https://wakatime.com/@172a37f5-1ff4-4cf8-9d08-5ccbe681726b)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
