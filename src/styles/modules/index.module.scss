@@ -3,42 +3,50 @@
 .index {
 	display: flex;
 	flex-direction: column;
-	margin-top: -7em;
-	margin-bottom: 3em;
+	align-items: center;
+	min-width: 350px;
+	max-width: 625px;
+	background: rgba($white, 0.05);
+	padding: 2.5em 2em;
 
-	@include tablet {
-		margin-top: -1em;
-	}
+	// display: flex;
+	// flex-direction: column;
+	// margin-top: -7em;
+	// margin-bottom: 3em;
 
-	@include compact {
-		margin-top: 12.75em;
-	}
+	// @include tablet {
+	// 	margin-top: -1em;
+	// }
 
-	> div {
-		max-width: 525px;
-		background: rgba($white, 0.05);
-		padding: 2.5em 2em;
-		margin: -1em 0;
+	// @include compact {
+	// 	margin-top: 12.75em;
+	// }
 
-		@include compact {
-			&:first-of-type {
-				padding-bottom: 3.5em;
-			}
+	// > div {
+	// 	max-width: 525px;
+	// 	background: rgba($white, 0.05);
+	// 	padding: 2.5em 2em;
+	// 	margin: -1em 0;
 
-			&:not(:first-of-type) {
-				padding: 3.5em 2em;
-			}
-		}
+	// 	@include compact {
+	// 		&:first-of-type {
+	// 			padding-bottom: 3.5em;
+	// 		}
 
-		@include boxShadow;
-		@include borderRadius;
+	// 		&:not(:first-of-type) {
+	// 			padding: 3.5em 2em;
+	// 		}
+	// 	}
 
-		&:nth-child(odd) {
-			align-self: flex-start;
-		}
+	// 	@include boxShadow;
+	// 	@include borderRadius;
 
-		&:nth-child(even) {
-			align-self: flex-end;
-		}
-	}
+	// 	&:nth-child(odd) {
+	// 		align-self: flex-start;
+	// 	}
+
+	// 	&:nth-child(even) {
+	// 		align-self: flex-end;
+	// 	}
+	// }
 }

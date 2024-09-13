@@ -13,6 +13,25 @@ const IndexPage: React.FC<PageProps> = () => {
 			<div className={indexStyles.index}>
 				<div>
 					<p>
+						<strong>Onze website is momenteel in ontwikkeling!</strong>
+						<br />
+						<br />
+						We werken hard aan iets <u>geweldigs</u> en zijn binnenkort weer
+						terug. Houd ons in de gaten!
+						<br />
+						<br />
+						<iframe
+							title='Keep It Real Podcast'
+							src='https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator'
+							allowFullScreen={true}
+							allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+							// loading='lazy'
+							className='spotify'
+						/>
+					</p>
+				</div>
+				{/* <div>
+					<p>
 						Welkom bij <strong>Keep It Real</strong>, een programma dat jongeren
 						een ervaring biedt die verder gaat dan traditioneel onderwijs.
 						Ontstaan uit de visie van cultureel professional Wenner Regales, is
@@ -53,8 +72,6 @@ const IndexPage: React.FC<PageProps> = () => {
 								online veiligheid. Van therapeutische tekenlessen tot
 								muziekproductie-workshops, we bieden een breed scala aan
 								mogelijkheden.
-								{/* (graag de workshops in blokken laten zien en de
-								beschrijving weergeven als mensen eroverheen navigeren) */}
 							</p>
 						</li>
 						<li>
@@ -122,7 +139,7 @@ const IndexPage: React.FC<PageProps> = () => {
 						de hoogte van de laatste afleveringen. <strong>Keep it real</strong>{' '}
 						en luister mee!
 					</p>
-				</div>
+				</div> */}
 			</div>
 		</Layout>
 	);

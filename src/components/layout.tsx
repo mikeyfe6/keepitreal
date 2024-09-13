@@ -17,7 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 		<>
 			<div className='keep-it-real'>
 				<Header />
-				<Hero />
+				{/* <Hero /> */}
 				<main>{children}</main>
 				<Footer />
 			</div>
