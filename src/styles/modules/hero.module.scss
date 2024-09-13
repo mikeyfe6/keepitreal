@@ -57,11 +57,11 @@
 			gap: 0.5em;
 			padding: 0.5em 0.75em;
 
+			@include borderRadius;
+
 			&:hover {
 				background: darken(#d71635, 10%);
 			}
-
-			@include borderRadius;
 		}
 	}
 
@@ -89,12 +89,12 @@
 				overflow: hidden;
 				display: block;
 
+				@include boxShadow(1);
+
 				@include phablet {
 					max-width: 85%;
 					margin: 0 auto;
 				}
-
-				@include boxShadow(1);
 
 				&::after {
 					content: '';
@@ -122,6 +122,9 @@
 				right: 0px;
 				max-width: 150px;
 
+				@include boxShadow(1);
+				@include borderRadius;
+
 				@include tablet {
 					right: 0;
 					bottom: 0;
@@ -132,9 +135,6 @@
 					max-width: 112.5px;
 					right: 25px;
 				}
-
-				@include boxShadow(1);
-				@include borderRadius;
 			}
 		}
 	}
