@@ -12,6 +12,10 @@
 	@include boxShadow;
 	@include borderRadius;
 
+	@include mobile {
+		padding: 2em 1.5em;
+	}
+
 	h1 {
 		font-size: x-large;
 
