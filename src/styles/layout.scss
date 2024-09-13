@@ -103,6 +103,10 @@ p {
 			margin-bottom: 1em;
 		}
 	}
+
+	@include mobile {
+		font-size: 1rem;
+	}
 }
 
 h1,
