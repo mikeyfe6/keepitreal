@@ -9,6 +9,14 @@
 	background: rgba($white, 0.05);
 	padding: 2.5em 2em;
 
+	h1 {
+		font-size: x-large;
+
+		@include mobile {
+			font-size: large;
+		}
+	}
+
 	@include boxShadow;
 	@include borderRadius;
 

@@ -12,10 +12,8 @@ const IndexPage: React.FC<PageProps> = () => {
 		<Layout>
 			<div className={indexStyles.index}>
 				<div>
+					<h1>Onze website is momenteel in ontwikkeling!</h1>
 					<p>
-						<strong>Onze website is momenteel in ontwikkeling!</strong>
-						<br />
-						<br />
 						We werken hard aan iets <u>geweldigs</u> en zijn binnenkort weer
 						terug. Houd ons in de gaten!
 						<br />
