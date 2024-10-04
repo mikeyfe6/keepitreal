@@ -47,8 +47,6 @@ const AnbiPage: React.FC<PageProps> = () => {
 					<p>
 						<strong>Naam ANBI:</strong> Stichting Keep It Real <br />
 						<strong>RSIN:</strong> Niet bekend <br />
-						<strong>Telefoonnummer:</strong> Stichting Keep It Real <br />
-						<strong>Naam ANBI:</strong> Stichting Keep It Real <br />
 					</p>
 
 					<br />

@@ -57,7 +57,11 @@ main {
 
 	ul li {
 		list-style-type: disc;
-		margin-inline-start: 1em;
+
+		&:not(#workshops li) {
+			margin-inline-start: 1em;
+			padding-left: 0.5em;
+		}
 
 		&::marker {
 			color: $tertiary;
