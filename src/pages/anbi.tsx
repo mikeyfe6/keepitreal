@@ -1,5 +1,6 @@
 import * as React from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
+import { Link } from 'gatsby';
 
 import { Seo } from '../components/seo';
 
@@ -108,6 +109,19 @@ const AnbiPage: React.FC<PageProps> = () => {
 						voor hun werkzaamheden. <br />
 						<strong>Personeel:</strong> CAO niet van toepassing.
 					</p>
+
+					<br />
+
+					<Link to='/halfjaarrapportage-KIR.pdf'>
+						<u>Klik hier voor de halfjaarrapportage van KIR</u>
+					</Link>
+
+					<br />
+					<br />
+
+					<Link to='/begroting-KIR.xlsx'>
+						<u>Klik hier voor de begroting van KIR</u>
+					</Link>
 				</div>
 			</section>
 		</Layout>
