@@ -73,7 +73,6 @@ const Sidebar: React.FC<SidebarProps> = ({
 
 				<ul>
 					<li>
-						<img src='' alt='' />
 						<p>
 							<strong>plaats</strong>: locatie
 						</p>
