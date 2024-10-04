@@ -129,7 +129,7 @@ const Header: React.FC = () => {
 							</Link>
 						</li>
 						<li>
-							<Link to='/over-ons/' activeClassName={headerStyles.active}>
+							<Link to='/anbi/' activeClassName={headerStyles.active}>
 								ANBI
 							</Link>
 						</li>
