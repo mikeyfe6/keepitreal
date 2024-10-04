@@ -29,10 +29,10 @@ const ContactPage: React.FC<PageProps> = () => {
 					</p> */}
 					<p>We zijn bereikbaar van maandag t/m vrijdag van 9:00 tot 17:00</p>
 
-					<p>
+					{/* <p>
 						<strong>KvK:</strong> 12345678 <br /> <strong>BTW:</strong>{' '}
 						NL123456789B01
-					</p>
+					</p> */}
 
 					<Maps />
 				</div>
