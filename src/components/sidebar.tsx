@@ -68,14 +68,18 @@ const Sidebar: React.FC<SidebarProps> = ({
 				</ul>
 			</div>
 
-			<div>
+			<div id='events'>
 				<h3>Opkomende evenementen</h3>
 
 				<ul>
 					<li>
 						<img src='' alt='' />
-						<p>plaats:</p>
-						<p>tijd/datum:</p>
+						<p>
+							<strong>plaats</strong>: locatie
+						</p>
+						<p>
+							<strong>tijd/datum:</strong> 12:00 - 16:00, 01-01-2022
+						</p>
 					</li>
 				</ul>
 			</div>
@@ -106,7 +110,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 				</p>
 			</div>
 
-			<div>
+			<div id='media'>
 				<h3>In de media</h3>
 
 				<ul>

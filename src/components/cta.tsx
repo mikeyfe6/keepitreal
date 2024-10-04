@@ -123,7 +123,7 @@ const Cta: React.FC = () => {
 				muziekproductie-workshops, we bieden een breed scala aan mogelijkheden.
 			</p>
 
-			<div className={ctaStyles.ctaWrapper}>
+			<div className={ctaStyles.ctaWrapper} id='cta'>
 				<ul>
 					{workshops.map((workshop, index) => (
 						<li key={index}>
