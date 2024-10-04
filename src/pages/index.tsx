@@ -20,7 +20,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
 	const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
 		if (ref.current) {
-			const yOffset = -50;
+			const yOffset = -167.5;
 			const element = ref.current;
 			const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
 

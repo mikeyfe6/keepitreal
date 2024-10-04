@@ -25,6 +25,7 @@
 			align-items: center;
 			gap: 2em;
 			padding: 1em 0;
+			scroll-margin-top: 150px;
 
 			@include phablet {
 				flex-direction: column;

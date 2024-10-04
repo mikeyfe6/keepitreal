@@ -1,0 +1,9 @@
+@import '../configs/globals';
+
+.anbi {
+	> div {
+		@include borderRadius;
+		@include boxShadow;
+		@include mainCard;
+	}
+}

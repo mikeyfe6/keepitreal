@@ -27,7 +27,7 @@
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-nprogress": "^5.13.1",
-    "gatsby-plugin-offline": "^6.13.2",
+    "gatsby-plugin-offline": "^6.13.3",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sass": "^6.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
@@ -38,13 +38,13 @@
     "google-map-react": "^2.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.77.8"
+    "sass": "^1.79.4"
   },
   "devDependencies": {
-    "@types/node": "^22.1.0",
-    "@types/react": "^18.3.3",
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.6.2"
   },
   "packageManager": "yarn@1.22.22"
 }

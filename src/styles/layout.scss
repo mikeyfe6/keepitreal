@@ -45,10 +45,30 @@ main {
 	margin: 3em 0 5em;
 
 	p,
-	span {
-		// max-width: 90ch;
+	span,
+	li {
 		line-height: 1.5;
 		letter-spacing: 0.125px;
+
+		&:not(#workshops p):not(#workshops span):not(#workshops li) {
+			max-width: 70ch;
+		}
+	}
+
+	ul li {
+		list-style-type: disc;
+		margin-inline-start: 1em;
+
+		&::marker {
+			color: $tertiary;
+		}
+	}
+
+	aside {
+		ul li {
+			list-style-type: none;
+			margin-inline-start: 0;
+		}
 	}
 
 	&:has(aside) {
@@ -115,7 +135,8 @@ h6 {
 	}
 }
 
-p {
+p,
+li {
 	font-size: 1.125rem;
 
 	@include mobile {
@@ -196,4 +217,8 @@ a {
 	opacity: 0.5;
 	color: $black;
 	outline: $black 1px solid;
+}
+
+u {
+	@include underLine($color: $tertiary);
 }

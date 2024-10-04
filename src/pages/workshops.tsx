@@ -22,7 +22,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 	return (
 		<Layout>
-			<div className={workshopStyles.workshops}>
+			<div className={workshopStyles.workshops} id='workshops'>
 				<div>
 					<h2>Workshops</h2>
 					<p>
