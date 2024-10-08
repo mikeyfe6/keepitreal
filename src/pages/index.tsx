@@ -84,6 +84,14 @@ const IndexPage: React.FC<PageProps> = () => {
 						</li>
 						<li>
 							<h4>KIR Workshops</h4>
+							<p>
+								Diepgaande sessies waarin jongeren hun creativiteit kunnen uiten
+								en thema's kunnen verkennen zoals verleidingen, identiteit, en
+								online veiligheid. Van therapeutische tekenlessen tot
+								muziekproductie-workshops, we bieden een breed scala aan
+								mogelijkheden.
+							</p>
+
 							<Cta />
 						</li>
 						<li>

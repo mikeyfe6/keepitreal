@@ -116,13 +116,6 @@ const Cta: React.FC = () => {
 
 	return (
 		<section>
-			<p>
-				Diepgaande sessies waarin jongeren hun creativiteit kunnen uiten en
-				thema's kunnen verkennen zoals verleidingen, identiteit, en online
-				veiligheid. Van therapeutische tekenlessen tot
-				muziekproductie-workshops, we bieden een breed scala aan mogelijkheden.
-			</p>
-
 			<div className={ctaStyles.ctaWrapper} id='cta'>
 				<ul>
 					{workshops.map((workshop, index) => (
