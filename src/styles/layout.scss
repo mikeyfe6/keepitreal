@@ -50,7 +50,7 @@ main {
 		line-height: 1.5;
 		letter-spacing: 0.125px;
 
-		&:not(#workshops p):not(#workshops span):not(#workshops li) {
+		&:not(#workshops p):not(#workshops span):not(#workshops li):not(#media li) {
 			max-width: 70ch;
 		}
 	}

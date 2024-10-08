@@ -194,10 +194,10 @@
 
 			> ul > li > a {
 				display: flex;
+				justify-content: space-between;
 				gap: 0.5em;
 				border: 1px solid rgba($white, 0.25);
 				padding: 0.75em;
-				width: fit-content;
 
 				@include smoothTrans;
 
