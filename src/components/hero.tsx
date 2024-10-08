@@ -33,14 +33,9 @@ const Hero: React.FC = () => {
 			{(isHomeAndSmallScreen || !isSmallScreen) && (
 				<div className={heroStyles.slogan}>
 					<h1>
-						<span>
-							Welkom bij <strong>Keep It Real</strong>, een programma dat
-							jongeren
-						</span>{' '}
-						<span>
-							een ervaring biedt die verder gaat dan{' '}
-							<strong>traditioneel onderwijs</strong>
-						</span>
+						Welkom bij <strong>KEEP IT REAL</strong>. Een programma waarin
+						jongeren talenten ontdekken en we het onderwijs verrijken met
+						levenslessen.
 					</h1>
 					<div className={heroStyles.buttons}>
 						<Link to='/workshops/'>Workshops</Link>
