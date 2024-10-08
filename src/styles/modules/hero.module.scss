@@ -11,6 +11,10 @@
 		flex-wrap: wrap;
 	}
 
+	@include mobile {
+		padding-top: 10em;
+	}
+
 	.slogan {
 		color: $white;
 		padding: 0.75em;

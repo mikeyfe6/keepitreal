@@ -7,6 +7,10 @@
 	z-index: 3;
 	padding: 3em 0 1em;
 
+	@include mobile {
+		padding: 2em 0 1em;
+	}
+
 	&.is-sticky {
 		background: $primary;
 		padding: 1.25em 0 1.375em;
