@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
 							href='https://www.instagram.com/keepitrealkir'
 							rel='noopener noreferrer'
 							target='_blank'>
-							<i className='fab fa-instagram fa-xl' />
+							<i className='fab fa-instagram fa-lg' />
 						</a>
 					</li>
 					<li>
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
 							href='https://www.tiktok.com/@keepitreal_nl'
 							rel='noopener noreferrer'
 							target='_blank'>
-							<i className='fab fa-tiktok fa-xl' />
+							<i className='fab fa-tiktok fa-lg' />
 						</a>
 					</li>
 					<li>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
 							// rel='noopener noreferrer'
 							// target='_blank'
 						>
-							<i className='fab fa-facebook fa-xl' />
+							<i className='fab fa-facebook fa-lg' />
 						</a>
 					</li>
 				</ul>
