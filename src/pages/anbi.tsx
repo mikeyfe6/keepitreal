@@ -110,18 +110,18 @@ const AnbiPage: React.FC<PageProps> = () => {
 						<strong>Personeel:</strong> CAO niet van toepassing.
 					</p>
 
-					<br />
+					{/* <br /> */}
 
-					<Link to='/halfjaarrapportage-KIR.pdf'>
+					{/* <Link to='/halfjaarrapportage-KIR.pdf'>
 						<u>Klik hier voor de halfjaarrapportage van KIR</u>
-					</Link>
+					</Link> */}
 
-					<br />
-					<br />
+					{/* <br /> */}
+					{/* <br /> */}
 
-					<Link to='/begroting-KIR.xlsx'>
+					{/* <Link to='/begroting-KIR.xlsx'>
 						<u>Klik hier voor de begroting van KIR</u>
-					</Link>
+					</Link> */}
 				</div>
 			</section>
 		</Layout>
