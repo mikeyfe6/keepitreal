@@ -45,23 +45,6 @@ const IndexPage: React.FC<PageProps> = () => {
 		<Layout>
 			<div className={indexStyles.index}>
 				<div>
-					<h1>Onze website is momenteel in ontwikkeling!</h1>
-					<p>
-						We werken hard aan iets <u>geweldigs</u> en zijn binnenkort weer
-						terug. Houd ons in de gaten!
-						<br />
-						<br />
-						<iframe
-							title='Keep It Real Podcast'
-							src='https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator'
-							allowFullScreen={true}
-							allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
-							// loading='lazy'
-							className='spotify'
-						/>
-					</p>
-				</div>
-				{/* <div>
 					<p>
 						Welkom bij <strong>Keep It Real</strong>, een programma dat jongeren
 						een ervaring biedt die verder gaat dan traditioneel onderwijs.
@@ -180,7 +163,7 @@ const IndexPage: React.FC<PageProps> = () => {
 						de hoogte van de laatste afleveringen. <strong>Keep it real</strong>{' '}
 						en luister mee!
 					</p>
-				</div> */}
+				</div>
 			</div>
 			<Sidebar
 				handleSidebarClick={handleSidebarClick}

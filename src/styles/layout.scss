@@ -7,14 +7,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-html,
-body {
-	height: 100%;
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-}
-
 body {
 	background: linear-gradient(145deg, $primary 30%, $secondary 100%);
 	font-family: 'Montserrat', sans-serif;
@@ -172,10 +164,6 @@ li {
 			margin-bottom: 1em;
 		}
 	}
-
-	@include mobile {
-		font-size: 1rem;
-	}
 }
 
 h1,
@@ -185,6 +173,10 @@ h4,
 h5,
 h6 {
 	margin-bottom: 1em;
+}
+
+footer {
+	flex-shrink: 0;
 }
 
 iframe {
@@ -216,10 +208,6 @@ iframe {
 button,
 a {
 	cursor: pointer;
-}
-
-u {
-	text-decoration: underline;
 }
 
 .responsive-tag {
