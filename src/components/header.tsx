@@ -160,7 +160,7 @@ const Header: React.FC = () => {
 									href='https://www.instagram.com/keepitrealkir'
 									rel='noopener noreferrer'
 									target='_blank'>
-									<i className='fab fa-instagram fa-2xl' />
+									<i className='fab fa-instagram fa-xl' />
 								</a>
 							</li>
 							<li>
@@ -168,7 +168,7 @@ const Header: React.FC = () => {
 									href='https://www.facebook.com/profile.php?id=61559466671196'
 									rel='noopener noreferrer'
 									target='_blank'>
-									<i className='fab fa-facebook fa-2xl' />
+									<i className='fab fa-facebook fa-xl' />
 								</a>
 							</li>
 							<li>
@@ -176,7 +176,7 @@ const Header: React.FC = () => {
 									href='https://www.tiktok.com/@keepitreal_nl'
 									rel='noopener noreferrer'
 									target='_blank'>
-									<i className='fab fa-tiktok fa-2xl' />
+									<i className='fab fa-tiktok fa-xl' />
 								</a>
 							</li>
 							<li>
@@ -184,7 +184,7 @@ const Header: React.FC = () => {
 									href='https://www.youtube.com/@keepitreal_de_podcast'
 									rel='noopener noreferrer'
 									target='_blank'>
-									<i className='fab fa-youtube fa-2xl' />
+									<i className='fab fa-youtube fa-xl' />
 								</a>
 							</li>
 							<li>
@@ -192,7 +192,7 @@ const Header: React.FC = () => {
 									href='https://open.spotify.com/show/7wDDGz0HtXhn3WPCJ3KLcO?si=80196a51f4e4423d'
 									rel='noopener noreferrer'
 									target='_blank'>
-									<i className='fab fa-spotify fa-2xl' />
+									<i className='fab fa-spotify fa-xl' />
 								</a>
 							</li>
 						</ul>
