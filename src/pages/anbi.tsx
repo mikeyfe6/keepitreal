@@ -130,4 +130,4 @@ const AnbiPage: React.FC<PageProps> = () => {
 
 export default AnbiPage;
 
-export const Head: HeadFC = () => <Seo title='ANBI' />;
+export const Head: HeadFC = () => <Seo title='ANBI' pathname='/anbi/' />;

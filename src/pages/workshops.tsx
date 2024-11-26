@@ -558,4 +558,6 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 
 export default WorkhopsPage;
 
-export const Head: HeadFC = () => <Seo title='Workshops' />;
+export const Head: HeadFC = () => (
+	<Seo title='Workshops' pathname='/workshops/' />
+);
