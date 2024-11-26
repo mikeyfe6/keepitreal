@@ -1,0 +1,94 @@
+@use '../customs' as *;
+
+.cta {
+	$cta: &;
+
+	margin-bottom: 2em;
+
+	&-wrapper {
+		position: relative;
+		margin: 2em 0 1em -1.5em;
+
+		> ul {
+			display: inline-flex;
+			flex-wrap: wrap;
+			gap: 1.25em;
+
+			> li {
+				flex: 1;
+				display: flex;
+
+				> button {
+					background: $secondary;
+					padding: 1.375em 1.25em;
+					flex: 1;
+					white-space: nowrap;
+					text-align: center;
+					font-weight: bold;
+
+					@include borderRadius;
+					@include boxShadow(1);
+
+					&:hover {
+						background-color: rgba($tertiary, 0.825);
+						color: $white;
+					}
+				}
+			}
+		}
+
+		#{$cta}-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($secondary, 0.95);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 2px solid $tertiary;
+
+			@include borderRadius;
+			@include boxShadow(1);
+
+			&-content {
+				border-radius: 5px;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				gap: 1.25em 2em;
+				width: 100%;
+				padding: 2.5em 1.5em;
+
+				@include mobile {
+					flex-direction: column;
+				}
+
+				div:first-child {
+					h4 {
+						margin-bottom: 0.5em;
+					}
+
+					p {
+						font-size: 1rem;
+					}
+				}
+
+				div:nth-child(2) {
+					display: flex;
+					align-self: flex-end;
+					gap: 1em;
+
+					> a {
+						@include button(1);
+					}
+
+					> button {
+						@include button(2);
+					}
+				}
+			}
+		}
+	}
+}

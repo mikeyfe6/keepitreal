@@ -1,26 +1,32 @@
-@import '../configs/globals';
+@use '../customs' as *;
 
 .index {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	min-width: 350px;
-	max-width: 625px;
-	background: rgba($white, 0.05);
-	padding: 2.5em 2em;
+	gap: 2em;
 
-	@include boxShadow;
-	@include borderRadius;
+	> div {
+		@include mainCard;
 
-	@include mobile {
-		padding: 2em 1.5em;
+		> ol {
+			display: flex;
+			flex-direction: column;
+			gap: 2.5em;
+		}
 	}
 
-	h1 {
-		font-size: x-large;
+	.active {
+		outline: 2px solid $tertiary;
+		animation: fadeOutOutline 3s forwards;
+	}
 
-		@include mobile {
-			font-size: large;
+	@keyframes fadeOutOutline {
+		0%,
+		60% {
+			outline-color: $tertiary;
+		}
+		100% {
+			outline-color: transparent;
 		}
 	}
 

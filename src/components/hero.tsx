@@ -1,43 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import { useLocation } from '@reach/router';
+
+import { Link } from 'gatsby';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
 import * as heroStyles from '../styles/modules/hero.module.scss';
 
 const Hero: React.FC = () => {
+	const { pathname } = useLocation();
+
+	const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsSmallScreen(window.innerWidth < 641);
+		};
+
+		handleResize();
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	const isHomeAndSmallScreen = pathname === '/' && isSmallScreen;
+
 	return (
 		<section className={heroStyles.hero}>
-			<div className={heroStyles.heroContainer}>
-				<div className={heroStyles.heroWrapper}>
-					<StaticImage
-						src='../images/wenner.jpeg'
-						alt='Wenner'
-						className={heroStyles.wenner}
-					/>
-
-					<StaticImage
-						src='../images/AVHJ.png'
-						alt='Wenner'
-						className={heroStyles.avhj}
-					/>
+			{(isHomeAndSmallScreen || !isSmallScreen) && (
+				<div className={heroStyles.slogan}>
+					<h1>
+						Welkom bij <strong>KEEP IT REAL</strong>. Een programma waarin
+						jongeren talenten ontdekken en we het onderwijs verrijken met
+						levenslessen.
+					</h1>
+					<div className={heroStyles.buttons}>
+						<Link to='/workshops/'>Workshops</Link>
+						<Link to='/contact/'>Contact</Link>
+					</div>
 				</div>
-			</div>
+			)}
 
-			<div className={heroStyles.name}>
-				<h1>
-					<span>Wenner Regales</span>
-					<span>
-						Genomineerd voor: <br />
-						<strong>Amsterdammer van het jaar 2023</strong>
-					</span>
-				</h1>
-				<a
-					href='https://amsterdammervanhetjaar.nl/wenner-regalus-founder-van-keep-it-real/'
-					rel='noopener noreferrer'
-					target='_blank'>
-					Stem hier{' '}
-					<i className='fa-solid fa-arrow-up-right-from-square fa-xs' />
-				</a>
+			<div className={heroStyles.line} />
+
+			<div className={heroStyles.image}>
+				<StaticImage
+					src='../images/hero.jpeg'
+					alt='Keep It Real Hero Image'
+					objectPosition={'100% 62.5%'}
+				/>
 			</div>
 		</section>
 	);

@@ -1,0 +1,9 @@
+@use '../customs' as *;
+
+.anbi {
+	> div {
+		@include borderRadius;
+		@include boxShadow;
+		@include mainCard;
+	}
+}

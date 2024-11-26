@@ -1,7 +1,11 @@
+@use './customs' as *;
+@use 'resets';
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-@import './configs/resets';
-@import './configs/globals';
+html {
+	scroll-behavior: smooth;
+}
 
 html,
 body {
@@ -12,37 +16,94 @@ body {
 }
 
 body {
-	background-image: linear-gradient(145deg, $primary 30%, $secondary 100%);
+	background: linear-gradient(145deg, $primary 30%, $secondary 100%);
 	font-family: 'Montserrat', sans-serif;
 	color: $white;
 
-	@include container(1000px);
+	@include container(1300px);
 
 	@include toosmall {
 		display: none;
+	}
+
+	&:has(.mobileMenu) {
+		overflow: hidden;
 	}
 }
 
 .keep-it-real {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	margin: 0;
+	position: relative;
+
+	&__logo {
+		position: absolute;
+		bottom: 100px;
+		right: 0;
+		max-width: 300px;
+		opacity: 0.0375;
+		z-index: -1;
+		mask-image: linear-gradient(165deg, transparent, black);
+	}
 }
 
 main {
 	flex: 1;
-	padding: 1em 0;
+	margin: 3em 0 5em;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	p,
+	span,
+	li {
+		line-height: 1.5;
+		letter-spacing: 0.125px;
+
+		&:not(#workshops p):not(#workshops span):not(#workshops li):not(#media li) {
+			max-width: 70ch;
+		}
+	}
+
+	ul {
+		&:not(#events ul):not(#media ul) {
+			list-style-type: disc;
+		}
+		li {
+			&:not(#workshops li):not(#cta li):not(#events li):not(#media li) {
+				margin-inline-start: 1em;
+				padding-left: 0.5em;
+			}
+
+			&::marker {
+				color: $tertiary;
+			}
+		}
+	}
+
+	ol {
+		list-style-type: decimal;
+		margin: 1em 0;
+
+		li {
+			&:not(#cta li) {
+				margin-inline-start: 1em;
+				padding-left: 0.5em;
+			}
+		}
+	}
+
+	&:has(aside) {
+		display: flex;
+		gap: 3em;
+
+		@include tablet {
+			flex-direction: column-reverse;
+		}
+	}
 }
 
 h1 {
 	font-size: 2rem;
 	font-weight: 600;
-	margin-bottom: 1em;
 
 	@include mobile {
 		font-size: 1.75rem;
@@ -94,12 +155,20 @@ h6 {
 	}
 }
 
-p {
+p,
+li {
 	font-size: 1.125rem;
-	line-height: 1.4;
+
+	@include mobile {
+		font-size: 1.0625rem;
+	}
+
+	aside & {
+		font-size: 1rem;
+	}
 
 	main & {
-		&:not(:last-of-type) {
+		&:not(:last-of-type):has(+ p) {
 			margin-bottom: 1em;
 		}
 	}
@@ -115,16 +184,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin-bottom: 0.5em;
-}
-
-ol {
-	padding-left: 1.5em;
-	list-style-type: decimal;
-}
-
-li {
-	margin: 1em 0;
+	margin-bottom: 1em;
 }
 
 iframe {
@@ -133,20 +193,29 @@ iframe {
 	&.youtube {
 		aspect-ratio: 16 / 9;
 		outline: $primary 2px solid;
-		margin: 1em 0;
 
 		@include borderRadius;
+
+		&.w-margin {
+			margin-top: 2em;
+		}
 	}
 
 	&.spotify {
 		aspect-ratio: 1;
 		height: 80px;
-		// margin: 1em 0 1.5em;
+
+		@include boxShadow(1);
+
+		&.w-margin {
+			margin: 2em 0 1.75em;
+		}
 	}
 }
 
+button,
 a {
-	@include smoothTrans;
+	cursor: pointer;
 }
 
 u {
@@ -162,8 +231,12 @@ u {
 	z-index: 1000;
 	font-weight: bold;
 	text-align: center;
-	background: $white;
+	background-color: $white;
 	opacity: 0.5;
 	color: $black;
 	outline: $black 1px solid;
+}
+
+u {
+	@include underLine($color: $tertiary);
 }

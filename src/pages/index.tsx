@@ -1,13 +1,46 @@
-import * as React from 'react';
+import React, { useRef, useState } from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
 
 import { Seo } from '../components/seo';
 
 import Layout from '../components/layout';
 
+import Cta from '../components/cta';
+import Sidebar from '../components/sidebar';
+
 import * as indexStyles from '../styles/modules/index.module.scss';
 
 const IndexPage: React.FC<PageProps> = () => {
+	const missionRef = useRef<HTMLDivElement>(null);
+	const whatwedoRef = useRef<HTMLDivElement>(null);
+	const ourteamRef = useRef<HTMLDivElement>(null);
+	const impactRef = useRef<HTMLDivElement>(null);
+
+	const [activeSection, setActiveSection] = useState<string>('');
+
+	const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
+		if (ref.current) {
+			const yOffset = -167.5;
+			const element = ref.current;
+			const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+			window.scrollTo({ top: y, behavior: 'smooth' });
+		}
+	};
+
+	const handleSidebarClick = (sectionId: string) => {
+		setActiveSection(sectionId);
+		const sections: Record<string, React.RefObject<HTMLDivElement>> = {
+			mission: missionRef,
+			whatwedo: whatwedoRef,
+			ourteam: ourteamRef,
+			impact: impactRef,
+		};
+		if (sections[sectionId]?.current) {
+			handleScroll(sections[sectionId]);
+		}
+	};
+
 	return (
 		<Layout>
 			<div className={indexStyles.index}>
@@ -40,8 +73,10 @@ const IndexPage: React.FC<PageProps> = () => {
 						geleid tot de oprichting van Keep It Real.
 					</p>
 				</div>
-				<div>
-					<h2>Onze Missie: </h2>
+				<div
+					ref={missionRef}
+					className={activeSection === 'mission' ? indexStyles.active : ''}>
+					<h2>Onze Missie</h2>
 					<p>
 						Bij Keep It Real geloven we in het belang van echte ervaringen. Geen
 						standaardlessen, maar een dag vol inspiratie, interactie en
@@ -51,8 +86,10 @@ const IndexPage: React.FC<PageProps> = () => {
 					</p>
 				</div>
 
-				<div>
-					<h2>Wat We Doen </h2>
+				<div
+					ref={whatwedoRef}
+					className={activeSection === 'whatwedo' ? indexStyles.active : ''}>
+					<h2>Wat We Doen</h2>
 					<ol>
 						<li>
 							<h4>KIR Take-overs</h4>
@@ -71,6 +108,8 @@ const IndexPage: React.FC<PageProps> = () => {
 								muziekproductie-workshops, we bieden een breed scala aan
 								mogelijkheden.
 							</p>
+
+							<Cta />
 						</li>
 						<li>
 							<h4>1-op-1 Coaching</h4>
@@ -89,11 +128,13 @@ const IndexPage: React.FC<PageProps> = () => {
 						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 						referrerPolicy='strict-origin-when-cross-origin'
 						allowFullScreen
-						className='youtube'
+						className='youtube w-margin'
 					/>
 				</div>
 
-				<div>
+				<div
+					ref={ourteamRef}
+					className={activeSection === 'ourteam' ? indexStyles.active : ''}>
 					<h2>Teamleden</h2>
 					<p>
 						Ons diverse team van ervaringsdeskundigen deelt een passie voor het
@@ -102,7 +143,9 @@ const IndexPage: React.FC<PageProps> = () => {
 					</p>
 				</div>
 
-				<div>
+				<div
+					ref={impactRef}
+					className={activeSection === 'impact' ? indexStyles.active : ''}>
 					<h2>Impact en Toekomst</h2>
 					<p>
 						Keep It Real streeft naar een blijvende impact. We werken samen met
@@ -129,7 +172,7 @@ const IndexPage: React.FC<PageProps> = () => {
 						allowFullScreen={true}
 						allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
 						// loading='lazy'
-						className='spotify'
+						className='spotify w-margin'
 					/>
 
 					<p>
@@ -139,6 +182,10 @@ const IndexPage: React.FC<PageProps> = () => {
 					</p>
 				</div> */}
 			</div>
+			<Sidebar
+				handleSidebarClick={handleSidebarClick}
+				activeSection={activeSection}
+			/>
 		</Layout>
 	);
 };

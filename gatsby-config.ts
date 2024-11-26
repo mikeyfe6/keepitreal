@@ -105,7 +105,15 @@ const config: GatsbyConfig = {
 		'gatsby-plugin-image',
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
-		'gatsby-plugin-sass',
+		{
+			resolve: `gatsby-plugin-sass`,
+			options: {
+				implementation: require('sass'),
+				sassOptions: {
+					silenceDeprecations: ['legacy-js-api'],
+				},
+			},
+		},
 		'gatsby-plugin-sitemap',
 		{
 			resolve: 'gatsby-source-filesystem',
@@ -124,7 +132,7 @@ const config: GatsbyConfig = {
 				short_name: siteMetadata.title,
 				description: siteMetadata.slogan,
 				start_url: `/`,
-				icon: 'src/images/KIR-light-icon.png',
+				icon: 'src/images/logo/KIR-light-icon.png',
 				background_color: siteMetadata.bgWebColor,
 				theme_color: siteMetadata.bgThemeColor,
 				display: `standalone`,

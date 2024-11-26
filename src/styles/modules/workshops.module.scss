@@ -1,0 +1,209 @@
+@use '../customs' as *;
+
+.workshops {
+	$workshops: &;
+
+	> div {
+		@include mainCard;
+
+		&:last-child {
+			color: $primary;
+
+			@include mainCard(rgba($white, 0.825));
+		}
+	}
+
+	> ul {
+		margin: 2em 0;
+
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+
+		> li {
+			display: flex;
+			align-items: center;
+			gap: 2em;
+			padding: 1em 0;
+			scroll-margin-top: 150px;
+
+			@include phablet {
+				flex-direction: column;
+				gap: 1.25em;
+			}
+
+			&.active {
+				#{$workshops}-content {
+					outline: 2px solid $tertiary;
+					animation: fadeOutOutline 3s forwards;
+				}
+
+				@keyframes fadeOutOutline {
+					0%,
+					60% {
+						outline-color: $tertiary;
+					}
+					100% {
+						outline-color: transparent;
+					}
+				}
+			}
+
+			#{$workshops} {
+				&-image {
+					max-width: 250px;
+					min-width: 250px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> div[data-gatsby-image-wrapper] {
+						overflow: hidden;
+
+						@include borderRadius;
+					}
+
+					&-double {
+						display: flex;
+						flex-direction: column;
+						gap: 1.25em 1.5em;
+						max-width: 250px;
+						min-width: 250px;
+
+						@include phablet {
+							flex-direction: row;
+							max-width: 500px;
+						}
+
+						@include mobile {
+							max-width: 400px;
+						}
+
+						@include compact {
+							max-width: 100%;
+						}
+
+						> div[data-gatsby-image-wrapper] {
+							overflow: hidden;
+
+							@include borderRadius;
+						}
+					}
+				}
+
+				&-content {
+					width: 100%;
+
+					@include mainCard(rgba($primary, 0.75));
+
+					> hr {
+						width: 100%;
+						margin: 1.5em 0;
+						height: 1px;
+						background: $tertiary;
+					}
+
+					#{$workshops}-holder {
+						display: flex;
+						align-items: center;
+						margin-bottom: 1em;
+						gap: 0.5em 1.5em;
+						flex-wrap: wrap;
+
+						@include tablet {
+							flex-direction: column;
+							align-items: flex-start;
+							gap: 1em;
+						}
+
+						> span {
+							color: $tertiary;
+							// border-radius: 50%;
+							// background: $tertiary;
+							// height: 20px;
+							// width: 20px;
+							// display: flex;
+							// align-items: center;
+							// justify-content: center;
+
+							@include tablet {
+								display: none;
+							}
+						}
+
+						&-info {
+							display: flex;
+							align-items: center;
+							gap: 1em;
+
+							> h6 {
+								width: fit-content;
+								margin-bottom: 0;
+
+								background-color: rgba($white, 0.9);
+								color: $primary;
+								padding: 0.175em 0.5em;
+
+								@include borderRadius;
+							}
+
+							> span {
+								color: $tertiary;
+							}
+
+							> a {
+								display: flex;
+								align-items: center;
+								flex-wrap: wrap;
+								gap: 0.825em;
+								padding: 0.25em;
+
+								@include smoothTrans;
+
+								&:hover {
+									> i:first-child {
+										animation: arrowBounce 2.5s infinite;
+									}
+
+									> i:nth-of-type(2) {
+										color: rgba($tertiary, 0.95);
+									}
+
+									@keyframes arrowBounce {
+										0%,
+										100% {
+											transform: translateX(0);
+										}
+										10%,
+										30%,
+										50%,
+										70%,
+										90% {
+											transform: translateX(0);
+											animation-timing-function: ease-in-out;
+										}
+										20%,
+										60% {
+											transform: translateX(5px);
+											animation-timing-function: ease-in-out;
+										}
+										40%,
+										80% {
+											transform: translateX(5px);
+											animation-timing-function: ease-in-out;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					#{$workshops}-bio {
+						opacity: 0.75;
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+}

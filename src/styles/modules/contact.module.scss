@@ -1,0 +1,27 @@
+@use '../customs' as *;
+
+.contact {
+	display: flex;
+	gap: 3em;
+
+	@include phablet {
+		flex-direction: column-reverse;
+		gap: 2em;
+	}
+
+	> div:nth-child(1) {
+		flex: 50%;
+	}
+
+	> div:nth-child(2) {
+		flex: 50%;
+		height: fit-content;
+
+		@include mainCard;
+
+		span {
+			font-weight: 600;
+			color: $tertiary;
+		}
+	}
+}

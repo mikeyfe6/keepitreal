@@ -1,15 +1,171 @@
-@import '../configs/globals';
+@use '../customs' as *;
 
 .header {
-	padding-top: 3em;
+	position: fixed;
+	width: 100%;
+	right: 0;
+	z-index: 3;
+	padding: 3em 0 1em;
 
-	.logo {
-		max-width: 250px;
-		display: block;
+	@include mobile {
+		padding: 2em 0 1em;
+	}
 
-		@include phablet {
-			max-width: 200px;
-			margin: 0 0 1.5em 0.5em;
+	&.is-sticky {
+		background: $primary;
+		padding: 1.25em 0 1.375em;
+
+		@include boxShadow;
+
+		> div {
+			.logo {
+				max-width: 175px;
+			}
+		}
+	}
+
+	> div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include container(1275px);
+
+		.logo {
+			max-width: 250px;
+
+			@include phablet {
+				max-width: 200px;
+			}
+
+			@include mobile {
+				max-width: 175px;
+			}
+		}
+
+		.desktop {
+			display: flex;
+			flex-direction: column;
+			gap: 1.75em;
+
+			@include phablet {
+				display: none;
+			}
+
+			.nav {
+				padding-top: 1.5em;
+
+				> ul {
+					display: flex;
+					gap: 1em;
+
+					> li {
+						> a {
+							@include navLink;
+
+							&.active {
+								position: relative;
+
+								&::before {
+									content: '';
+									width: 0;
+									height: 0;
+									border-left: 6px solid transparent;
+									border-right: 6px solid transparent;
+									border-top: 7.5px solid $tertiary;
+
+									position: absolute;
+									top: -20px;
+									left: 50%;
+									transform: translateX(-50%);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			> ul {
+				align-self: flex-end;
+				display: flex;
+				gap: 1em;
+
+				> li {
+					color: rgba($tertiary, 0.825);
+
+					&:hover {
+						color: rgba($tertiary, 1);
+					}
+				}
+			}
+		}
+
+		.mobile {
+			display: none;
+
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			background-color: $primary;
+			z-index: 2;
+
+			&-menu {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				justify-content: center;
+				height: 100%;
+				gap: 2em;
+				padding: 0 3em;
+
+				> li {
+					> a {
+						font-size: 1.75rem;
+						display: flex;
+						align-items: center;
+						gap: 0.5em;
+
+						&.active {
+							&::before {
+								content: '';
+								width: 0;
+								height: 0;
+								border-left: 7px solid transparent;
+								border-right: 7px solid transparent;
+								border-top: 8.5px solid $tertiary;
+
+								transform: rotate(270deg);
+							}
+						}
+					}
+				}
+			}
+
+			&-socials {
+				display: flex;
+				flex-direction: row;
+				align-items: flex-end;
+				justify-content: center;
+
+				gap: 2em;
+				margin-top: 1em;
+
+				> li {
+					color: rgba($tertiary, 0.825);
+
+					&:hover {
+						color: rgba($tertiary, 1);
+					}
+				}
+			}
+
+			@include phablet {
+				&.open {
+					display: block;
+				}
+			}
 		}
 	}
 }
