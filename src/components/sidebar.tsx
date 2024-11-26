@@ -79,7 +79,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 						<p>
 							<strong>tijd/datum:</strong> 12:00 - 16:00, 01-01-2022
 						</p> */}
-						<p>Nog geen events..</p>
+						<p>Stay tuned...</p>
 					</li>
 				</ul>
 			</div>
