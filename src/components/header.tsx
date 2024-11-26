@@ -42,7 +42,7 @@ const Header: React.FC = () => {
 					<Link to='/'>
 						<StaticImage
 							src='../images/logo/KIR-light-logo.png'
-							alt='KIR logo'
+							alt='Keep It Real Logo'
 						/>
 					</Link>
 				</div>

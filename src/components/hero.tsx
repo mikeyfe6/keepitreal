@@ -47,7 +47,11 @@ const Hero: React.FC = () => {
 			<div className={heroStyles.line} />
 
 			<div className={heroStyles.image}>
-				<StaticImage src='../images/hero.jpeg' alt='' />
+				<StaticImage
+					src='../images/hero.jpeg'
+					alt='Keep It Real Hero Image'
+					objectPosition={'100% 62.5%'}
+				/>
 			</div>
 		</section>
 	);

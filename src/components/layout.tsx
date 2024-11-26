@@ -23,7 +23,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 				<main>{children}</main>
 
 				<div className='keep-it-real__logo'>
-					<StaticImage src='../images/logo/KIR-light-icon.png' alt='' />
+					<StaticImage
+						src='../images/logo/KIR-light-icon.png'
+						alt='Keep It Real Transparent Logo'
+					/>
 				</div>
 
 				<Footer />
