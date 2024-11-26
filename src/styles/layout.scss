@@ -6,6 +6,10 @@
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+
+	&:has(.mobileMenu) {
+		overflow-y: hidden;
+	}
 }
 
 body {
