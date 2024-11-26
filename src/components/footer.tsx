@@ -18,6 +18,14 @@ const Footer: React.FC = () => {
 					</li>
 					<li>
 						<a
+							href='https://www.facebook.com/profile.php?id=61559466671196'
+							rel='noopener noreferrer'
+							target='_blank'>
+							<i className='fab fa-facebook fa-lg' />
+						</a>
+					</li>
+					<li>
+						<a
 							href='https://www.tiktok.com/@keepitreal_nl'
 							rel='noopener noreferrer'
 							target='_blank'>
@@ -26,11 +34,18 @@ const Footer: React.FC = () => {
 					</li>
 					<li>
 						<a
-							href='#!'
-							// rel='noopener noreferrer'
-							// target='_blank'
-						>
-							<i className='fab fa-facebook fa-lg' />
+							href='https://www.youtube.com/@keepitreal_de_podcast'
+							rel='noopener noreferrer'
+							target='_blank'>
+							<i className='fab fa-youtube fa-lg' />
+						</a>
+					</li>
+					<li>
+						<a
+							href='https://open.spotify.com/show/7wDDGz0HtXhn3WPCJ3KLcO?si=80196a51f4e4423d'
+							rel='noopener noreferrer'
+							target='_blank'>
+							<i className='fab fa-spotify fa-lg' />
 						</a>
 					</li>
 				</ul>

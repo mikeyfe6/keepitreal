@@ -201,6 +201,8 @@ iframe {
 
 		&.w-margin {
 			margin: 2em 0 1.75em;
+			aspect-ratio: auto;
+			height: 352px;
 		}
 	}
 }

@@ -73,12 +73,13 @@ const Sidebar: React.FC<SidebarProps> = ({
 
 				<ul>
 					<li>
-						<p>
+						{/* <p>
 							<strong>plaats</strong>: locatie
 						</p>
 						<p>
 							<strong>tijd/datum:</strong> 12:00 - 16:00, 01-01-2022
-						</p>
+						</p> */}
+						<p>Nog geen events..</p>
 					</li>
 				</ul>
 			</div>
