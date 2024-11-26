@@ -5,6 +5,7 @@
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
@@ -42,7 +43,7 @@ body {
 
 main {
 	flex: 1;
-	margin: 3em 0 5em;
+	margin: 2.5em 0 5em;
 
 	p,
 	span,

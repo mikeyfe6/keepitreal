@@ -108,6 +108,7 @@
 		background-color: white;
 
 		@include borderRadius(2px);
+		@include boxShadow(2);
 
 		@include desktop {
 			height: 600px;
@@ -143,15 +144,17 @@
 		height: 100%;
 		border-radius: 0 2em 2em 0;
 		overflow: hidden;
-		border: 3px solid $tertiary;
+		border: 5px solid $tertiary;
 		border-left: none !important;
+
+		@include boxShadow;
 
 		@include tablet {
 			flex-basis: 99%;
 		}
 
 		@include mobile {
-			border: 2px solid $tertiary;
+			border: 3px solid $tertiary;
 		}
 
 		@include compact {
@@ -177,7 +180,7 @@
 		}
 
 		[data-gatsby-image-wrapper] {
-			max-height: 425px;
+			max-height: 412.5px;
 
 			@include desktop {
 				max-height: 375px;
@@ -192,15 +195,15 @@
 			}
 
 			@include phablet {
-				max-height: 350px;
+				max-height: 300px;
 			}
 
 			@include mobile {
-				max-height: 275px;
+				max-height: 237.5px;
 			}
 
 			@include compact {
-				max-height: 250px;
+				max-height: 212.5px;
 			}
 
 			img {
