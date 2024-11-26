@@ -165,6 +165,14 @@ const Header: React.FC = () => {
 							</li>
 							<li>
 								<a
+									href='https://www.facebook.com/profile.php?id=61559466671196'
+									rel='noopener noreferrer'
+									target='_blank'>
+									<i className='fab fa-facebook fa-2xl' />
+								</a>
+							</li>
+							<li>
+								<a
 									href='https://www.tiktok.com/@keepitreal_nl'
 									rel='noopener noreferrer'
 									target='_blank'>
@@ -173,11 +181,18 @@ const Header: React.FC = () => {
 							</li>
 							<li>
 								<a
-									href='#!'
-									// rel='noopener noreferrer'
-									// target='_blank'
-								>
-									<i className='fab fa-facebook fa-2xl' />
+									href='https://www.youtube.com/@keepitreal_de_podcast'
+									rel='noopener noreferrer'
+									target='_blank'>
+									<i className='fab fa-youtube fa-2xl' />
+								</a>
+							</li>
+							<li>
+								<a
+									href='https://open.spotify.com/show/7wDDGz0HtXhn3WPCJ3KLcO?si=80196a51f4e4423d'
+									rel='noopener noreferrer'
+									target='_blank'>
+									<i className='fab fa-spotify fa-2xl' />
 								</a>
 							</li>
 						</ul>

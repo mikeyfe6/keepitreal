@@ -16,16 +16,15 @@ const ContactPage: React.FC<PageProps> = () => {
 			<div className={contactStyles.contact}>
 				<Form />
 				<div>
-					<h3>
-						<u>Contactinformatie</u>
-					</h3>
-					<h4>Bezoekadres & postadres:</h4>
-					<h5>Stichting Keep It Real</h5>
+					<h3>Bezoekadres & postadres:</h3>
+					<h4>
+						<u>Stichting Keep It Real</u>
+					</h4>
 					<p>
 						Piet Heinkade 3, 1019 BR Amsterdam <br />
-						Kvk<span>:</span> 94261237 <br />
-						Bank<span>:</span> ​NL77 ABNA 0136 1411 96 <br />
-						Email<span>:</span> Secretariaat@keeptreal.nl
+						E-mail<span>:</span> Secretariaat@keeptreal.nl <br />
+						KvK<span>:</span> 94261237 <br />
+						Bank<span>:</span> ​NL77 ABNA 0136 1411 96
 					</p>
 
 					{/* <p>
