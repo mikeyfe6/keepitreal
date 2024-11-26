@@ -26,7 +26,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
 				<div>
 					<h2>Workshops</h2>
 					<p>
-						Deze workshop dienen om jonge positieve ervaringen mee te geven,
+						Deze workshops dienen om jonge positieve ervaringen mee te geven,
 						verdiepende gesprekken aan te gaan met mensen die qua ervaring op
 						henzelf lijken. Het workshopaanbod ziet er als volgt uit.
 					</p>
