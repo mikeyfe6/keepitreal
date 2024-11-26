@@ -1,3 +1,6 @@
+@use 'colors' as *;
+@use 'mediaqueries' as *;
+
 @mixin container($maxWidth: 1400px, $padding: 2em, $gap: 0) {
 	max-width: $maxWidth;
 	margin: 0 auto;

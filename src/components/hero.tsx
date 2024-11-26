@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
 			<div className={heroStyles.line} />
 
 			<div className={heroStyles.image}>
-				<StaticImage src='../images/hero.jpg' alt='' />
+				<StaticImage src='../images/hero.jpeg' alt='' />
 			</div>
 		</section>
 	);

@@ -19,32 +19,32 @@
     "build:staging": "gatsby build"
   },
   "dependencies": {
-    "gatsby": "^5.13.7",
-    "gatsby-adapter-netlify": "^1.1.7",
-    "gatsby-plugin-canonical-urls": "^5.13.1",
-    "gatsby-plugin-catch-links": "^5.13.1",
-    "gatsby-plugin-google-tagmanager": "^5.13.1",
-    "gatsby-plugin-image": "^3.13.1",
-    "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-nprogress": "^5.13.1",
-    "gatsby-plugin-offline": "^6.13.3",
+    "gatsby": "^5.14.0",
+    "gatsby-adapter-netlify": "^1.2.0",
+    "gatsby-plugin-canonical-urls": "^5.14.0",
+    "gatsby-plugin-catch-links": "^5.14.0",
+    "gatsby-plugin-google-tagmanager": "^5.14.0",
+    "gatsby-plugin-image": "^3.14.0",
+    "gatsby-plugin-manifest": "^5.14.0",
+    "gatsby-plugin-nprogress": "^5.14.0",
+    "gatsby-plugin-offline": "^6.14.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sass": "^6.13.1",
-    "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-plugin-sitemap": "^6.13.1",
-    "gatsby-source-contentful": "^8.13.2",
-    "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-transformer-sharp": "^5.13.1",
+    "gatsby-plugin-sass": "^6.14.0",
+    "gatsby-plugin-sharp": "^5.14.0",
+    "gatsby-plugin-sitemap": "^6.14.0",
+    "gatsby-source-contentful": "^8.14.0",
+    "gatsby-source-filesystem": "^5.14.0",
+    "gatsby-transformer-sharp": "^5.14.0",
     "google-map-react": "^2.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.79.4"
+    "sass": "^1.81.0"
   },
   "devDependencies": {
-    "@types/node": "^22.7.5",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.0",
-    "typescript": "^5.6.2"
+    "@types/node": "^22.9.3",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.7.2"
   },
   "packageManager": "yarn@1.22.22"
 }
