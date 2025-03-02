@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { HeadFC, PageProps } from "gatsby";
+import type { HeadFC, PageProps } from "gatsby";
 
 import Layout from "../components/layout";
 
