@@ -8,9 +8,9 @@
         margin-top: 3.5em;
         position: relative;
 
-        &:before {
-            position: absolute;
+        &::before {
             content: "";
+            position: absolute;
             top: -2em;
             left: 0;
             width: 25%;

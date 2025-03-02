@@ -73,7 +73,6 @@
                                     border-left: 6px solid transparent;
                                     border-right: 6px solid transparent;
                                     border-top: 7.5px solid $tertiary;
-
                                     position: absolute;
                                     top: -20px;
                                     left: 50%;
@@ -102,7 +101,6 @@
 
         .mobile {
             display: none;
-
             position: fixed;
             top: 0;
             left: 0;
@@ -135,7 +133,6 @@
                                 border-left: 7px solid transparent;
                                 border-right: 7px solid transparent;
                                 border-top: 8.5px solid $tertiary;
-
                                 transform: rotate(270deg);
                             }
                         }
@@ -148,7 +145,6 @@
                 flex-direction: row;
                 align-items: flex-end;
                 justify-content: center;
-
                 gap: 1.75em;
                 margin-top: 1em;
 

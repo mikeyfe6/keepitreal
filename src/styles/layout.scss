@@ -1,7 +1,22 @@
 @use "./customs" as *;
 @use "resets";
 
-@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 100 900;
+    src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 100 900;
+    src: url("../fonts/Montserrat-Italic-VariableFont_wght.woff2")
+        format("woff2");
+    font-display: swap;
+}
 
 html {
     scroll-behavior: smooth;
@@ -51,19 +66,18 @@ main {
         line-height: 1.5;
         letter-spacing: 0.125px;
 
-        &:not(#workshops p):not(#workshops span):not(#workshops li):not(
-                #media li
-            ) {
+        &:not(#workshops p, #workshops span, #workshops li, #media li) {
             max-width: 70ch;
         }
     }
 
     ul {
-        &:not(#events ul):not(#media ul) {
+        &:not(#events ul, #media ul) {
             list-style-type: disc;
         }
+
         li {
-            &:not(#workshops li):not(#cta li):not(#events li):not(#media li) {
+            &:not(#workshops li, #cta li, #events li, #media li) {
                 margin-inline-start: 1em;
                 padding-left: 0.5em;
             }
