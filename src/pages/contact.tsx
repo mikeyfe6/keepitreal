@@ -2,11 +2,11 @@ import * as React from "react";
 
 import type { HeadFC, PageProps } from "gatsby";
 
-import { Seo } from "../components/seo";
-
 import Layout from "../components/layout";
 import Form from "../components/form";
 import Maps from "../components/maps";
+
+import { Seo } from "../components/seo";
 
 import * as contactStyles from "../styles/modules/contact.module.scss";
 

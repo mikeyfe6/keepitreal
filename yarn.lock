@@ -7119,9 +7119,9 @@ is-finalizationregistry@^1.1.0:
   dependencies:
     call-bound "^1.0.3"
 
-is-full-width-code-point@^3.0.0:
+is-fullwidth-code-point@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/is-full-width-code-point/-/is-full-width-code-point-3.0.0.tgz#f116f8064fe90b3f7844a38997c0b75051269f1d"
+  resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz#f116f8064fe90b3f7844a38997c0b75051269f1d"
   integrity sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==
 
 is-generator-function@^1.0.10:
@@ -10316,7 +10316,7 @@ slice-ansi@^4.0.0:
   dependencies:
     ansi-styles "^4.0.0"
     astral-regex "^2.0.0"
-    is-full-width-code-point "^3.0.0"
+    is-fullwidth-code-point "^3.0.0"
 
 slugify@^1.6.6:
   version "1.6.6"
@@ -10526,7 +10526,7 @@ string-width@^4.0.0, string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
   dependencies:
     emoji-regex "^8.0.0"
-    is-full-width-code-point "^3.0.0"
+    is-fullwidth-code-point "^3.0.0"
     strip-ansi "^6.0.1"
 
 string.prototype.includes@^2.0.1:

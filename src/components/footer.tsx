@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import * as footerStyles from "../styles/modules/footer.module.scss";
 
