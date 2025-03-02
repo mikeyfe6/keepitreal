@@ -1,224 +1,224 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .hero {
-	$this: &;
+    $this: &;
 
-	display: flex;
-	align-items: center;
-	padding-top: 12.5em;
+    display: flex;
+    align-items: center;
+    padding-top: 12.5em;
 
-	@include tablet {
-		flex-wrap: wrap;
-	}
+    @include tablet {
+        flex-wrap: wrap;
+    }
 
-	@include mobile {
-		padding-top: 10em;
-	}
+    @include mobile {
+        padding-top: 10em;
+    }
 
-	.slogan {
-		color: $white;
-		padding: 0.75em;
-		max-width: 325px;
-		margin-right: 4em;
-		display: flex;
-		flex-direction: column;
-		height: fit-content;
+    .slogan {
+        color: $white;
+        padding: 0.75em;
+        max-width: 325px;
+        margin-right: 4em;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
 
-		@include laptop {
-			margin-right: 2em;
-		}
+        @include laptop {
+            margin-right: 2em;
+        }
 
-		@include tablet {
-			order: 3;
-			max-width: 100%;
-			margin-top: -5em;
-			margin-left: 2em;
-			flex-direction: row;
-			gap: 5em;
-			justify-content: space-between;
-		}
+        @include tablet {
+            order: 3;
+            max-width: 100%;
+            margin-top: -5em;
+            margin-left: 2em;
+            flex-direction: row;
+            gap: 5em;
+            justify-content: space-between;
+        }
 
-		@include phablet {
-			margin-top: -4em;
-		}
+        @include phablet {
+            margin-top: -4em;
+        }
 
-		@include mobile {
-			margin-top: -2.5em;
-			flex-direction: column;
-			gap: 0;
-		}
+        @include mobile {
+            margin-top: -2.5em;
+            flex-direction: column;
+            gap: 0;
+        }
 
-		@include compact {
-			margin-top: -2em;
-			margin-left: 1em;
-			margin-right: 1em;
-		}
+        @include compact {
+            margin-top: -2em;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
 
-		> h1 {
-			line-height: 45px;
+        > h1 {
+            line-height: 45px;
 
-			@include desktop {
-				font-size: 1.75rem;
-			}
+            @include desktop {
+                font-size: 1.75rem;
+            }
 
-			@include laptop {
-				font-size: 1.625rem;
-				line-height: 42.5px;
-			}
+            @include laptop {
+                font-size: 1.625rem;
+                line-height: 42.5px;
+            }
 
-			@include tablet {
-				line-height: 45px;
-			}
+            @include tablet {
+                line-height: 45px;
+            }
 
-			@include mobile {
-				font-size: 1.5rem;
-				line-height: 40px;
-			}
+            @include mobile {
+                font-size: 1.5rem;
+                line-height: 40px;
+            }
 
-			@include compact {
-				font-size: 1.25rem;
-				line-height: 35px;
-			}
-		}
+            @include compact {
+                font-size: 1.25rem;
+                line-height: 35px;
+            }
+        }
 
-		.buttons {
-			display: flex;
-			gap: 0.75em;
+        .buttons {
+            display: flex;
+            gap: 0.75em;
 
-			@include tablet {
-				flex-direction: column;
-				margin-top: 0.5em;
-				gap: 1em;
-			}
+            @include tablet {
+                flex-direction: column;
+                margin-top: 0.5em;
+                gap: 1em;
+            }
 
-			@include mobile {
-				flex-direction: row;
-			}
+            @include mobile {
+                flex-direction: row;
+            }
 
-			> a {
-				@include button(2);
-			}
-		}
-	}
+            > a {
+                @include button(2);
+            }
+        }
+    }
 
-	.line {
-		width: 7px;
-		height: 650px;
-		display: inline-block;
-		background-color: white;
+    .line {
+        width: 7px;
+        height: 650px;
+        display: inline-block;
+        background-color: white;
 
-		@include borderRadius(2px);
-		@include boxShadow(2);
+        @include border-radius(2px);
+        @include box-shadow(2);
 
-		@include desktop {
-			height: 600px;
-		}
+        @include desktop {
+            height: 600px;
+        }
 
-		@include laptop {
-			height: 575px;
-		}
+        @include laptop {
+            height: 575px;
+        }
 
-		@include tablet {
-			height: 600px;
-			width: 5px;
-		}
+        @include tablet {
+            height: 600px;
+            width: 5px;
+        }
 
-		@include phablet {
-			height: 525px;
-		}
+        @include phablet {
+            height: 525px;
+        }
 
-		@include mobile {
-			height: 375px;
-			width: 3px;
-		}
+        @include mobile {
+            height: 375px;
+            width: 3px;
+        }
 
-		@include compact {
-			height: 337.5px;
-		}
-	}
+        @include compact {
+            height: 337.5px;
+        }
+    }
 
-	.image {
-		position: relative;
-		display: inline-block;
-		width: 100%;
-		height: 100%;
-		border-radius: 0 2em 2em 0;
-		overflow: hidden;
-		border: 5px solid $tertiary;
-		border-left: none !important;
+    .image {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 2em 2em 0;
+        overflow: hidden;
+        border: 5px solid $tertiary;
+        border-left: none !important;
 
-		@include boxShadow;
+        @include box-shadow;
 
-		@include tablet {
-			flex-basis: 99%;
-		}
+        @include tablet {
+            flex-basis: 99%;
+        }
 
-		@include mobile {
-			border: 3px solid $tertiary;
-		}
+        @include mobile {
+            border: 3px solid $tertiary;
+        }
 
-		@include compact {
-			flex-basis: 98%;
-		}
+        @include compact {
+            flex-basis: 98%;
+        }
 
-		&::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			// background: linear-gradient(
-			// 	to right,
-			// 	rgba($primary, 1) 0%,
-			// 	rgba($primary, 0.75) 25%,
-			// 	rgba(transparent, 0.25) 50%,
-			// 	rgba($secondary, 0.5) 75%,
-			// 	rgba($secondary, 0.75) 100%
-			// );
-			pointer-events: none;
-		}
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // background: linear-gradient(
+            // 	to right,
+            // 	rgba($primary, 1) 0%,
+            // 	rgba($primary, 0.75) 25%,
+            // 	rgba(transparent, 0.25) 50%,
+            // 	rgba($secondary, 0.5) 75%,
+            // 	rgba($secondary, 0.75) 100%
+            // );
+            pointer-events: none;
+        }
 
-		[data-gatsby-image-wrapper] {
-			max-height: 412.5px;
+        [data-gatsby-image-wrapper] {
+            max-height: 412.5px;
 
-			@include desktop {
-				max-height: 375px;
-			}
+            @include desktop {
+                max-height: 375px;
+            }
 
-			@include laptop {
-				max-height: 350px;
-			}
+            @include laptop {
+                max-height: 350px;
+            }
 
-			@include tablet {
-				max-height: 400px;
-			}
+            @include tablet {
+                max-height: 400px;
+            }
 
-			@include phablet {
-				max-height: 300px;
-			}
+            @include phablet {
+                max-height: 300px;
+            }
 
-			@include mobile {
-				max-height: 237.5px;
-			}
+            @include mobile {
+                max-height: 237.5px;
+            }
 
-			@include compact {
-				max-height: 212.5px;
-			}
+            @include compact {
+                max-height: 212.5px;
+            }
 
-			img {
-				&::before {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 10px;
-					height: 150%;
-					background: white;
-					pointer-events: none;
-					z-index: 1;
-				}
-			}
-		}
-	}
+            img {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 10px;
+                    height: 150%;
+                    background: white;
+                    pointer-events: none;
+                    z-index: 1;
+                }
+            }
+        }
+    }
 }

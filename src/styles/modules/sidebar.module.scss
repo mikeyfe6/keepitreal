@@ -1,214 +1,223 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .aside {
-	display: flex;
-	flex-direction: column;
-	gap: 2em;
-	min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    min-width: 400px;
 
-	@include compact {
-		min-width: 100%;
-	}
+    @include compact {
+        min-width: 100%;
+    }
 
-	> div {
-		@include borderRadius;
-		@include boxShadow(1);
+    > div {
+        @include border-radius;
+        @include box-shadow(1);
 
-		&:not(:has(iframe)) {
-			padding: 2em 1.75em;
-		}
+        &:not(:has(iframe)) {
+            padding: 2em 1.75em;
+        }
 
-		&:first-child {
-			padding: 2.5em 1.75em;
-			background: linear-gradient(to left, rgba($tertiary, 87.5%), $secondary);
+        &:first-child {
+            padding: 2.5em 1.75em;
+            background: linear-gradient(
+                to left,
+                rgba($tertiary, 87.5%),
+                $secondary
+            );
 
-			@include borderRadius;
-			@include boxShadow(1);
+            @include border-radius;
+            @include box-shadow(1);
 
-			> ul {
-				display: flex;
-				flex-direction: column;
-				gap: 0.5em;
+            > ul {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
 
-				> li {
-					font-size: 1.125rem;
-					font-weight: 600;
+                > li {
+                    font-size: 1.125rem;
+                    font-weight: 600;
 
-					a,
-					button {
-						&.active {
-							&::after {
-								content: '';
-								width: 0;
-								height: 0;
-								border-top: 6px solid transparent;
-								border-bottom: 6px solid transparent;
-								border-right: 10px solid rgba($primary, 1);
-								position: absolute;
-								top: 50%;
-								right: -20px;
-								transform: translateY(-50%);
-							}
-						}
-					}
+                    a,
+                    button {
+                        &.active {
+                            &::after {
+                                content: "";
+                                width: 0;
+                                height: 0;
+                                border-top: 6px solid transparent;
+                                border-bottom: 6px solid transparent;
+                                border-right: 10px solid rgba($primary, 1);
+                                position: absolute;
+                                top: 50%;
+                                right: -20px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
 
-					&:not(:has(ul)) {
-						width: fit-content;
+                    &:not(:has(ul)) {
+                        width: fit-content;
 
-						a,
-						button {
-							position: relative;
+                        a,
+                        button {
+                            position: relative;
 
-							@include smoothTrans;
+                            @include smooth-trans;
 
-							&:hover:not(.active) {
-								&::after {
-									content: '';
-									width: 0;
-									height: 0;
-									border-top: 6px solid transparent;
-									border-bottom: 6px solid transparent;
-									border-right: 10px solid rgba($primary, 0.5);
-									position: absolute;
-									top: 50%;
-									right: -20px;
-									transform: translateY(-50%);
-								}
-							}
-						}
-					}
+                            &:hover:not(.active) {
+                                &::after {
+                                    content: "";
+                                    width: 0;
+                                    height: 0;
+                                    border-top: 6px solid transparent;
+                                    border-bottom: 6px solid transparent;
+                                    border-right: 10px solid rgba($primary, 0.5);
+                                    position: absolute;
+                                    top: 50%;
+                                    right: -20px;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
+                    }
 
-					> button {
-						position: relative;
+                    > button {
+                        position: relative;
 
-						.active {
-							> u {
-								&::after {
-									content: '';
-									width: 0;
-									height: 0;
-									border-top: 6px solid transparent;
-									border-bottom: 6px solid transparent;
-									border-right: 10px solid rgba($primary, 1);
-									position: absolute;
-									top: 50%;
-									right: -20px;
-									transform: translateY(-50%);
-								}
-							}
-						}
+                        .active {
+                            > u {
+                                &::after {
+                                    content: "";
+                                    width: 0;
+                                    height: 0;
+                                    border-top: 6px solid transparent;
+                                    border-bottom: 6px solid transparent;
+                                    border-right: 10px solid rgba($primary, 1);
+                                    position: absolute;
+                                    top: 50%;
+                                    right: -20px;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
 
-						> u {
-							position: relative;
+                        > u {
+                            position: relative;
 
-							&:hover {
-								&::after {
-									content: '';
-									width: 0;
-									height: 0;
-									border-top: 6px solid transparent;
-									border-bottom: 6px solid transparent;
-									border-right: 10px solid rgba($primary, 0.5);
-									position: absolute;
-									top: 50%;
-									right: -20px;
-									transform: translateY(-50%);
-								}
-							}
-						}
-					}
+                            &:hover {
+                                &::after {
+                                    content: "";
+                                    width: 0;
+                                    height: 0;
+                                    border-top: 6px solid transparent;
+                                    border-bottom: 6px solid transparent;
+                                    border-right: 10px solid rgba($primary, 0.5);
+                                    position: absolute;
+                                    top: 50%;
+                                    right: -20px;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
+                    }
 
-					> ul {
-						margin: 0.75em 0 0.25em;
-						display: flex;
-						flex-direction: column;
-						gap: 0.75em;
-						list-style-type: '-';
-						padding-left: 0.5em;
+                    > ul {
+                        margin: 0.75em 0 0.25em;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.75em;
+                        list-style-type: "-";
+                        padding-left: 0.5em;
 
-						> li {
-							padding-left: 0.5em;
+                        > li {
+                            padding-left: 0.5em;
 
-							&::marker {
-								color: $primary;
-							}
+                            &::marker {
+                                color: $primary;
+                            }
 
-							h4 {
-								font-size: 1.125rem;
-								margin-bottom: 0;
-							}
+                            h4 {
+                                font-size: 1.125rem;
+                                margin-bottom: 0;
+                            }
 
-							a,
-							button {
-								position: relative;
+                            a,
+                            button {
+                                position: relative;
 
-								@include smoothTrans;
+                                @include smooth-trans;
 
-								&:hover {
-									&::after {
-										content: '';
-										width: 0;
-										height: 0;
-										border-top: 6px solid transparent;
-										border-bottom: 6px solid transparent;
-										border-right: 10px solid rgba($primary, 0.5);
-										position: absolute;
-										top: 50%;
-										right: -20px;
-										transform: translateY(-50%);
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
+                                &:hover {
+                                    &::after {
+                                        content: "";
+                                        width: 0;
+                                        height: 0;
+                                        border-top: 6px solid transparent;
+                                        border-bottom: 6px solid transparent;
+                                        border-right: 10px solid
+                                            rgba($primary, 0.5);
+                                        position: absolute;
+                                        top: 50%;
+                                        right: -20px;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-		&:nth-child(2) {
-			background-color: rgba($secondary, 0.75);
+        &:nth-child(2) {
+            background-color: rgba($secondary, 0.75);
 
-			> h4 {
-				font-size: 1.25rem;
-			}
-		}
+            > h4 {
+                font-size: 1.25rem;
+            }
+        }
 
-		&:nth-child(4) {
-			background: linear-gradient(to left, rgba($secondary, 1%), $primary);
+        &:nth-child(4) {
+            background: linear-gradient(
+                to left,
+                rgba($secondary, 1%),
+                $primary
+            );
 
-			> h4 {
-				font-size: 1.25rem;
+            > h4 {
+                font-size: 1.25rem;
 
-				@include underLine($color: $secondary);
-			}
-		}
+                @include underline($color: $secondary);
+            }
+        }
 
-		&:nth-child(5) {
-			background-color: rgba($secondary, 0.75);
+        &:nth-child(5) {
+            background-color: rgba($secondary, 0.75);
 
-			> h4 {
-				font-size: 1.25rem;
+            > h4 {
+                font-size: 1.25rem;
 
-				@include underLine($color: $tertiary);
-			}
+                @include underline($color: $tertiary);
+            }
 
-			> ul > li > a {
-				display: flex;
-				justify-content: space-between;
-				gap: 0.5em;
-				border: 1px solid rgba($white, 0.25);
-				padding: 0.75em;
+            > ul > li > a {
+                display: flex;
+                justify-content: space-between;
+                gap: 0.5em;
+                border: 1px solid rgba($white, 0.25);
+                padding: 0.75em;
 
-				@include smoothTrans;
+                @include smooth-trans;
 
-				&:hover {
-					border: 1px solid rgba($white, 0.75);
-				}
+                &:hover {
+                    border: 1px solid rgba($white, 0.75);
+                }
 
-				> i {
-					align-self: flex-end;
-				}
-			}
-		}
-	}
+                > i {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
 }

@@ -1,174 +1,172 @@
-@use './customs' as *;
-@use 'resets';
+@use "./customs" as *;
+@use "resets";
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
 
 html {
-	scroll-behavior: smooth;
-	overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 
-	&:has(.mobileMenu) {
-		overflow-y: hidden;
-	}
+    &:has(.mobileMenu) {
+        overflow-y: hidden;
+    }
 }
 
 body {
-	background: linear-gradient(145deg, $primary 30%, $secondary 100%);
-	font-family: 'Montserrat', sans-serif;
-	color: $white;
+    background: linear-gradient(145deg, $primary 30%, $secondary 100%);
+    font-family: Montserrat, sans-serif;
+    color: $white;
 
-	@include container(1300px);
+    @include container(1300px);
 
-	@include toosmall {
-		display: none;
-	}
-
-	&:has(.mobileMenu) {
-		overflow: hidden;
-	}
+    &:has(.mobileMenu) {
+        overflow: hidden;
+    }
 }
 
 .keep-it-real {
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-	position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
 
-	&__logo {
-		position: absolute;
-		bottom: 100px;
-		right: 0;
-		max-width: 300px;
-		opacity: 0.0375;
-		z-index: -1;
-		mask-image: linear-gradient(165deg, transparent, black);
-	}
+    &__logo {
+        position: absolute;
+        bottom: 100px;
+        right: 0;
+        max-width: 300px;
+        opacity: 0.0375;
+        z-index: -1;
+        mask-image: linear-gradient(165deg, transparent, black);
+    }
 }
 
 main {
-	flex: 1;
-	margin: 2.5em 0 5em;
+    flex: 1;
+    margin: 2.5em 0 5em;
 
-	p,
-	span,
-	li {
-		line-height: 1.5;
-		letter-spacing: 0.125px;
+    p,
+    span,
+    li {
+        line-height: 1.5;
+        letter-spacing: 0.125px;
 
-		&:not(#workshops p):not(#workshops span):not(#workshops li):not(#media li) {
-			max-width: 70ch;
-		}
-	}
+        &:not(#workshops p):not(#workshops span):not(#workshops li):not(
+                #media li
+            ) {
+            max-width: 70ch;
+        }
+    }
 
-	ul {
-		&:not(#events ul):not(#media ul) {
-			list-style-type: disc;
-		}
-		li {
-			&:not(#workshops li):not(#cta li):not(#events li):not(#media li) {
-				margin-inline-start: 1em;
-				padding-left: 0.5em;
-			}
+    ul {
+        &:not(#events ul):not(#media ul) {
+            list-style-type: disc;
+        }
+        li {
+            &:not(#workshops li):not(#cta li):not(#events li):not(#media li) {
+                margin-inline-start: 1em;
+                padding-left: 0.5em;
+            }
 
-			&::marker {
-				color: $tertiary;
-			}
-		}
-	}
+            &::marker {
+                color: $tertiary;
+            }
+        }
+    }
 
-	ol {
-		list-style-type: decimal;
-		margin: 1em 0;
+    ol {
+        list-style-type: decimal;
+        margin: 1em 0;
 
-		li {
-			&:not(#cta li) {
-				margin-inline-start: 1em;
-				padding-left: 0.5em;
-			}
-		}
-	}
+        li {
+            &:not(#cta li) {
+                margin-inline-start: 1em;
+                padding-left: 0.5em;
+            }
+        }
+    }
 
-	&:has(aside) {
-		display: flex;
-		gap: 3em;
+    &:has(aside) {
+        display: flex;
+        gap: 3em;
 
-		@include tablet {
-			flex-direction: column-reverse;
-		}
-	}
+        @include tablet {
+            flex-direction: column-reverse;
+        }
+    }
 }
 
 h1 {
-	font-size: 2rem;
-	font-weight: 600;
+    font-size: 2rem;
+    font-weight: 600;
 
-	@include mobile {
-		font-size: 1.75rem;
-	}
+    @include mobile {
+        font-size: 1.75rem;
+    }
 }
 
 h2 {
-	font-size: 1.75rem;
-	font-weight: 600;
+    font-size: 1.75rem;
+    font-weight: 600;
 
-	@include mobile {
-		font-size: 1.5rem;
-	}
+    @include mobile {
+        font-size: 1.5rem;
+    }
 }
 
 h3 {
-	font-size: 1.5rem;
-	font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 600;
 
-	@include mobile {
-		font-size: 1.375rem;
-	}
+    @include mobile {
+        font-size: 1.375rem;
+    }
 }
 
 h4 {
-	font-size: 1.375rem;
-	font-weight: 600;
+    font-size: 1.375rem;
+    font-weight: 600;
 
-	@include mobile {
-		font-size: 1.25rem;
-	}
+    @include mobile {
+        font-size: 1.25rem;
+    }
 }
 
 h5 {
-	font-size: 1.25rem;
-	font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 600;
 
-	@include mobile {
-		font-size: 1.125rem;
-	}
+    @include mobile {
+        font-size: 1.125rem;
+    }
 }
 
 h6 {
-	font-size: 1.125rem;
-	font-weight: 600;
+    font-size: 1.125rem;
+    font-weight: 600;
 
-	@include mobile {
-		font-size: 1rem;
-	}
+    @include mobile {
+        font-size: 1rem;
+    }
 }
 
 p,
 li {
-	font-size: 1.125rem;
+    font-size: 1.125rem;
 
-	@include mobile {
-		font-size: 1.0625rem;
-	}
+    @include mobile {
+        font-size: 1.0625rem;
+    }
 
-	aside & {
-		font-size: 1rem;
-	}
+    aside & {
+        font-size: 1rem;
+    }
 
-	main & {
-		&:not(:last-of-type):has(+ p) {
-			margin-bottom: 1em;
-		}
-	}
+    main & {
+        &:not(:last-of-type):has(+ p) {
+            margin-bottom: 1em;
+        }
+    }
 }
 
 h1,
@@ -177,61 +175,61 @@ h3,
 h4,
 h5,
 h6 {
-	margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 footer {
-	flex-shrink: 0;
+    flex-shrink: 0;
 }
 
 iframe {
-	width: 100%;
+    width: 100%;
 
-	&.youtube {
-		aspect-ratio: 16 / 9;
-		outline: $primary 2px solid;
+    &.youtube {
+        aspect-ratio: 16 / 9;
+        outline: $primary 2px solid;
 
-		@include borderRadius;
+        @include border-radius;
 
-		&.w-margin {
-			margin-top: 2em;
-		}
-	}
+        &.w-margin {
+            margin-top: 2em;
+        }
+    }
 
-	&.spotify {
-		aspect-ratio: 1;
-		height: 80px;
+    &.spotify {
+        aspect-ratio: 1;
+        height: 80px;
 
-		@include boxShadow(1);
+        @include box-shadow(1);
 
-		&.w-margin {
-			margin: 2em 0 1.75em;
-			aspect-ratio: auto;
-			height: 352px;
-		}
-	}
+        &.w-margin {
+            margin: 2em 0 1.75em;
+            aspect-ratio: auto;
+            height: 352px;
+        }
+    }
 }
 
 button,
 a {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .responsive-tag {
-	position: fixed;
-	top: 1%;
-	left: 50%;
-	transform: translateX(-50%);
-	padding: 0.25em 0.75em;
-	z-index: 1000;
-	font-weight: bold;
-	text-align: center;
-	background-color: $white;
-	opacity: 0.5;
-	color: $black;
-	outline: $black 1px solid;
+    position: fixed;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.25em 0.75em;
+    z-index: 1000;
+    font-weight: bold;
+    text-align: center;
+    background-color: $white;
+    opacity: 0.5;
+    color: $black;
+    outline: $black 1px solid;
 }
 
 u {
-	@include underLine($color: $tertiary);
+    @include underline($color: $tertiary);
 }

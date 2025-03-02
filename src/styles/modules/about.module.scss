@@ -1,108 +1,108 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .about {
-	display: flex;
-	flex-direction: column;
-	gap: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
 
-	> div {
-		max-width: 850px;
+    > div {
+        max-width: 850px;
 
-		@include borderRadius;
-		@include boxShadow;
-		@include mainCard;
+        @include border-radius;
+        @include box-shadow;
+        @include main-card;
 
-		.showOnMobile {
-			display: none;
-			margin-bottom: 1.25em;
-			padding-bottom: 1em;
-			border-bottom: 1px solid rgba($white, 0.825);
+        .showOnMobile {
+            display: none;
+            margin-bottom: 1.25em;
+            padding-bottom: 1em;
+            border-bottom: 1px solid rgba($white, 0.825);
 
-			span {
-				display: block;
-				font-size: 1.125rem;
-				margin-top: 0.25em;
-			}
+            span {
+                display: block;
+                font-size: 1.125rem;
+                margin-top: 0.25em;
+            }
 
-			@include mobile {
-				display: block;
-			}
-		}
+            @include mobile {
+                display: block;
+            }
+        }
 
-		table {
-			overflow: hidden;
+        table {
+            overflow: hidden;
 
-			@include borderRadius;
+            @include border-radius;
 
-			thead {
-				background: rgba($white, 0.825);
-				color: $primary;
+            thead {
+                background: rgba($white, 0.825);
+                color: $primary;
 
-				@include mobile {
-					display: none;
-				}
+                @include mobile {
+                    display: none;
+                }
 
-				th {
-					font-weight: bolder;
-					font-size: 1.125rem;
-					border-bottom: 3px solid $white;
-				}
-			}
+                th {
+                    font-weight: bolder;
+                    font-size: 1.125rem;
+                    border-bottom: 3px solid $white;
+                }
+            }
 
-			tbody {
-				tr {
-					@include mobile {
-						display: flex;
-						flex-direction: column;
-					}
+            tbody {
+                tr {
+                    @include mobile {
+                        display: flex;
+                        flex-direction: column;
+                    }
 
-					&:first-child {
-						td {
-							padding-top: 2em;
+                    &:first-child {
+                        td {
+                            padding-top: 2em;
 
-							@include mobile {
-								padding-top: 0.5em;
-							}
-						}
-					}
+                            @include mobile {
+                                padding-top: 0.5em;
+                            }
+                        }
+                    }
 
-					td {
-						&:first-child {
-							font-weight: 600;
-						}
+                    td {
+                        &:first-child {
+                            font-weight: 600;
+                        }
 
-						&:first-of-type {
-							display: flex;
-							align-items: center;
-							gap: 0.825em;
+                        &:first-of-type {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.825em;
 
-							> i {
-								min-width: 1.5em;
-							}
-						}
-					}
-				}
-			}
+                            > i {
+                                min-width: 1.5em;
+                            }
+                        }
+                    }
+                }
+            }
 
-			th,
-			td {
-				min-width: 267.5px;
-				padding: 1em 0.75em;
+            th,
+            td {
+                min-width: 267.5px;
+                padding: 1em 0.75em;
 
-				@include mobile {
-					&:last-of-type {
-						padding: 0.5em 0.75em 2em;
-					}
-				}
-			}
-		}
+                @include mobile {
+                    &:last-of-type {
+                        padding: 0.5em 0.75em 2em;
+                    }
+                }
+            }
+        }
 
-		&:nth-child(odd) {
-			align-self: flex-start;
-		}
+        &:nth-child(odd) {
+            align-self: flex-start;
+        }
 
-		&:nth-child(even) {
-			align-self: flex-end;
-		}
-	}
+        &:nth-child(even) {
+            align-self: flex-end;
+        }
+    }
 }

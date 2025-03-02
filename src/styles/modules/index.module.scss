@@ -1,73 +1,73 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .index {
-	display: flex;
-	flex-direction: column;
-	gap: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 
-	> div {
-		@include mainCard;
+    > div {
+        @include main-card;
 
-		> ol {
-			display: flex;
-			flex-direction: column;
-			gap: 2.5em;
-		}
-	}
+        > ol {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5em;
+        }
+    }
 
-	.active {
-		outline: 2px solid $tertiary;
-		animation: fadeOutOutline 3s forwards;
-	}
+    .active {
+        outline: 2px solid $tertiary;
+        animation: fadeOutOutline 3s forwards;
+    }
 
-	@keyframes fadeOutOutline {
-		0%,
-		60% {
-			outline-color: $tertiary;
-		}
-		100% {
-			outline-color: transparent;
-		}
-	}
+    @keyframes fadeOutOutline {
+        0%,
+        60% {
+            outline-color: $tertiary;
+        }
+        100% {
+            outline-color: transparent;
+        }
+    }
 
-	// display: flex;
-	// flex-direction: column;
-	// margin-top: -7em;
-	// margin-bottom: 3em;
+    // display: flex;
+    // flex-direction: column;
+    // margin-top: -7em;
+    // margin-bottom: 3em;
 
-	// @include tablet {
-	// 	margin-top: -1em;
-	// }
+    // @include tablet {
+    // 	margin-top: -1em;
+    // }
 
-	// @include compact {
-	// 	margin-top: 12.75em;
-	// }
+    // @include compact {
+    // 	margin-top: 12.75em;
+    // }
 
-	// > div {
-	// 	max-width: 525px;
-	// 	background: rgba($white, 0.05);
-	// 	padding: 2.5em 2em;
-	// 	margin: -1em 0;
+    // > div {
+    // 	max-width: 525px;
+    // 	background: rgba($white, 0.05);
+    // 	padding: 2.5em 2em;
+    // 	margin: -1em 0;
 
-	// 	@include compact {
-	// 		&:first-of-type {
-	// 			padding-bottom: 3.5em;
-	// 		}
+    // 	@include compact {
+    // 		&:first-of-type {
+    // 			padding-bottom: 3.5em;
+    // 		}
 
-	// 		&:not(:first-of-type) {
-	// 			padding: 3.5em 2em;
-	// 		}
-	// 	}
+    // 		&:not(:first-of-type) {
+    // 			padding: 3.5em 2em;
+    // 		}
+    // 	}
 
-	// 	@include boxShadow;
-	// 	@include borderRadius;
+    // 	@include box-shadow;
+    // 	@include border-radius;
 
-	// 	&:nth-child(odd) {
-	// 		align-self: flex-start;
-	// 	}
+    // 	&:nth-child(odd) {
+    // 		align-self: flex-start;
+    // 	}
 
-	// 	&:nth-child(even) {
-	// 		align-self: flex-end;
-	// 	}
-	// }
+    // 	&:nth-child(even) {
+    // 		align-self: flex-end;
+    // 	}
+    // }
 }

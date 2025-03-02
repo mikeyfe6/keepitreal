@@ -1,105 +1,105 @@
-@use 'colors' as *;
-@use 'mediaqueries' as *;
+@use "colors" as *;
+@use "mediaqueries" as *;
 
 @mixin container($maxWidth: 1400px, $padding: 2em, $gap: 0) {
-	max-width: $maxWidth;
-	margin: 0 auto;
-	padding: $gap $padding;
-	width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: $gap $padding;
+    width: 100%;
 
-	@include mobile {
-		padding: $gap 1.25em;
-	}
+    @include mobile {
+        padding: $gap 1.25em;
+    }
 }
 
-@mixin smoothTrans($style: all) {
-	transition: $style 0.15s ease-in-out;
+@mixin smooth-trans($style: all) {
+    transition: $style 0.15s ease-in-out;
 }
 
-@mixin navLink {
-	font-size: 1.125rem;
-	font-weight: 500;
-	text-underline-offset: 10px;
-	text-decoration: underline;
-	text-decoration-color: transparent;
-	padding: 0.25em;
+@mixin nav-link {
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-underline-offset: 10px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    padding: 0.25em;
 
-	@include smoothTrans;
+    @include smooth-trans;
 
-	&:hover {
-		text-decoration-color: $tertiary;
-	}
+    &:hover {
+        text-decoration-color: $tertiary;
+    }
 }
 
-@mixin fullWidth {
-	width: 100vw;
-	position: relative;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
+@mixin full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
-@mixin borderRadius($radius: 3px) {
-	border-radius: $radius;
+@mixin border-radius($radius: 3px) {
+    border-radius: $radius;
 }
 
-@mixin underLine($offset: 7px, $thickness: 1px, $color: $primary) {
-	text-underline-offset: $offset;
-	text-decoration: underline $thickness solid $color;
+@mixin underline($offset: 7px, $thickness: 1px, $color: $primary) {
+    text-underline-offset: $offset;
+    text-decoration: underline $thickness solid $color;
 }
 
 @mixin clamp($lines: 2) {
-	display: -webkit-box;
-	-webkit-line-clamp: $lines;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
-@mixin boxShadow($type: 1) {
-	@if $type == 1 {
-		box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
-	} @else if $type == 2 {
-		box-shadow: 0 4px 4px 0 rgba(172, 178, 185, 0.5),
-			0 0 8px 0 rgba(172, 178, 185, 0.5);
-	}
+@mixin box-shadow($type: 1) {
+    @if $type == 1 {
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    } @else if $type == 2 {
+        box-shadow: 0 4px 4px 0 rgba(172, 178, 185, 0.5),
+            0 0 8px 0 rgba(172, 178, 185, 0.5);
+    }
 }
 
 @mixin button($type: 1) {
-	display: block;
-	padding: 0.75em 1em;
-	font-weight: 600;
+    display: block;
+    padding: 0.75em 1em;
+    font-weight: 600;
 
-	@include borderRadius;
-	@include boxShadow(1);
-	@include smoothTrans;
+    @include border-radius;
+    @include box-shadow(1);
+    @include smooth-trans;
 
-	@if $type == 1 {
-		background-color: rgba($white, 0.825);
-		color: $primary;
+    @if $type == 1 {
+        background-color: rgba($white, 0.825);
+        color: $primary;
 
-		&:hover {
-			background-color: rgba($white, 1);
-		}
-	} @else if $type == 2 {
-		background-color: rgba($tertiary, 0.825);
-		border-color: rgba($secondary, 0.875);
-		color: $white;
+        &:hover {
+            background-color: rgba($white, 1);
+        }
+    } @else if $type == 2 {
+        background-color: rgba($tertiary, 0.825);
+        border-color: rgba($secondary, 0.875);
+        color: $white;
 
-		&:hover {
-			background-color: rgba($tertiary, 1);
-		}
-	}
+        &:hover {
+            background-color: rgba($tertiary, 1);
+        }
+    }
 }
 
-@mixin mainCard($color: rgba($white, 0.0625)) {
-	background-color: $color;
-	padding: 2.5em 2em;
+@mixin main-card($color: rgba($white, 0.0625)) {
+    background-color: $color;
+    padding: 2.5em 2em;
 
-	@include boxShadow;
-	@include borderRadius;
+    @include box-shadow;
+    @include border-radius;
 
-	@include mobile {
-		padding: 2.25em 1.5em;
-	}
+    @include mobile {
+        padding: 2.25em 1.5em;
+    }
 }

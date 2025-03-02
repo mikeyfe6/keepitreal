@@ -1,91 +1,91 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .footer {
-	background-color: $primary;
-	color: $white;
+    background-color: $primary;
+    color: $white;
 
-	@include fullWidth;
+    @include full-width;
 
-	&-container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 2em;
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
 
-		@include container(1300px, 2em, 1.25em);
+        @include container(1300px, 2em, 1.25em);
 
-		@include container(1000px, 2em, 1em);
+        // @include container(1000px, 2em, 1em);
 
-		> p {
-			margin-bottom: 0;
-			font-weight: 500;
-			font-size: 1rem;
-			position: relative;
+        @include mobile {
+            flex-direction: column;
 
-			@include mobile {
-				&:first-child {
-					&::after {
-						content: '';
-						position: absolute;
-						width: 25%;
-						height: 3px;
-						background-color: $tertiary;
-						bottom: -43.75px;
-						left: 0;
+            p {
+                &:first-child {
+                    align-self: flex-start;
+                }
 
-						@include borderRadius;
-					}
-				}
+                &:last-child {
+                    align-self: flex-end;
+                }
+            }
 
-				&:last-child {
-					&::before {
-						content: '';
-						position: absolute;
-						width: 25%;
-						height: 3px;
-						background-color: $tertiary;
-						top: -42.5px;
-						right: 0;
+            ul {
+                align-self: center;
+            }
+        }
 
-						@include borderRadius;
-					}
-				}
-			}
-		}
+        > p {
+            margin-bottom: 0;
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
 
-		> ul {
-			display: flex;
-			gap: 1em;
+            @include mobile {
+                &:first-child {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 25%;
+                        height: 3px;
+                        background-color: $tertiary;
+                        bottom: -43.75px;
+                        left: 0;
 
-			li {
-				a:hover {
-					color: $tertiary;
-				}
-			}
-		}
+                        @include border-radius;
+                    }
+                }
 
-		.menefex {
-			&:hover {
-				color: #ffcc00;
-			}
-		}
+                &:last-child {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 25%;
+                        height: 3px;
+                        background-color: $tertiary;
+                        top: -42.5px;
+                        right: 0;
 
-		@include mobile {
-			flex-direction: column;
+                        @include border-radius;
+                    }
+                }
+            }
+        }
 
-			p {
-				&:first-child {
-					align-self: flex-start;
-				}
+        > ul {
+            display: flex;
+            gap: 1em;
 
-				&:last-child {
-					align-self: flex-end;
-				}
-			}
+            li {
+                a:hover {
+                    color: $tertiary;
+                }
+            }
+        }
 
-			ul {
-				align-self: center;
-			}
-		}
-	}
+        .menefex {
+            &:hover {
+                color: #ffcc00;
+            }
+        }
+    }
 }

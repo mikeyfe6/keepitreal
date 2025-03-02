@@ -1,60 +1,60 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import { useLocation } from '@reach/router';
+import { useLocation } from "@reach/router";
 
-import { Link } from 'gatsby';
+import { Link } from "gatsby";
 
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage } from "gatsby-plugin-image";
 
-import * as heroStyles from '../styles/modules/hero.module.scss';
+import * as heroStyles from "../styles/modules/hero.module.scss";
 
 const Hero: React.FC = () => {
-	const { pathname } = useLocation();
+    const { pathname } = useLocation();
 
-	const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-	useEffect(() => {
-		const handleResize = () => {
-			setIsSmallScreen(window.innerWidth < 641);
-		};
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 641);
+        };
 
-		handleResize();
-		window.addEventListener('resize', handleResize);
+        handleResize();
+        window.addEventListener("resize", handleResize);
 
-		return () => {
-			window.removeEventListener('resize', handleResize);
-		};
-	}, []);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
-	const isHomeAndSmallScreen = pathname === '/' && isSmallScreen;
+    const isHomeAndSmallScreen = pathname === "/" && isSmallScreen;
 
-	return (
-		<section className={heroStyles.hero}>
-			{(isHomeAndSmallScreen || !isSmallScreen) && (
-				<div className={heroStyles.slogan}>
-					<h1>
-						Welkom bij <strong>KEEP IT REAL</strong>. Een programma waarin
-						jongeren talenten ontdekken en we het onderwijs verrijken met
-						levenslessen.
-					</h1>
-					<div className={heroStyles.buttons}>
-						<Link to='/workshops/'>Workshops</Link>
-						<Link to='/contact/'>Contact</Link>
-					</div>
-				</div>
-			)}
+    return (
+        <section className={heroStyles.hero}>
+            {(isHomeAndSmallScreen || !isSmallScreen) && (
+                <div className={heroStyles.slogan}>
+                    <h1>
+                        Welkom bij <strong>KEEP IT REAL</strong>. Een programma
+                        waarin jongeren talenten ontdekken en we het onderwijs
+                        verrijken met levenslessen.
+                    </h1>
+                    <div className={heroStyles.buttons}>
+                        <Link to="/workshops/">Workshops</Link>
+                        <Link to="/contact/">Contact</Link>
+                    </div>
+                </div>
+            )}
 
-			<div className={heroStyles.line} />
+            <div className={heroStyles.line} />
 
-			<div className={heroStyles.image}>
-				<StaticImage
-					src='../images/hero.jpeg'
-					alt='Keep It Real Hero Image'
-					objectPosition={'100% 62.5%'}
-				/>
-			</div>
-		</section>
-	);
+            <div className={heroStyles.image}>
+                <StaticImage
+                    src="../images/hero.jpeg"
+                    alt="Keep It Real Hero Image"
+                    objectPosition={"100% 62.5%"}
+                />
+            </div>
+        </section>
+    );
 };
 
 export default Hero;

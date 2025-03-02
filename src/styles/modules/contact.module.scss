@@ -1,27 +1,27 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .contact {
-	display: flex;
-	gap: 3em;
+    display: flex;
+    gap: 3em;
 
-	@include phablet {
-		flex-direction: column-reverse;
-		gap: 2em;
-	}
+    @include phablet {
+        flex-direction: column-reverse;
+        gap: 2em;
+    }
 
-	> div:nth-child(1) {
-		flex: 50%;
-	}
+    > div:nth-child(1) {
+        flex: 50%;
+    }
 
-	> div:nth-child(2) {
-		flex: 50%;
-		height: fit-content;
+    > div:nth-child(2) {
+        flex: 50%;
+        height: fit-content;
 
-		@include mainCard;
+        @include main-card;
 
-		span {
-			font-weight: 600;
-			color: $tertiary;
-		}
-	}
+        span {
+            font-weight: 600;
+            color: $tertiary;
+        }
+    }
 }

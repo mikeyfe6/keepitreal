@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby clean && yarn cache clean && gatsby develop -H 0.0.0.0 --open",
+    "develop": "gatsby develop -H 0.0.0.0 --open",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -16,10 +16,11 @@
     "reinstall": "rm -rf node_modules package-lock.json yarn.lock && yarn",
     "typecheck": "tsc --noEmit",
     "build:prod": "gatsby build",
-    "build:staging": "gatsby build"
+    "build:staging": "gatsby build",
+    "stylelint-scss-check": "stylelint-config-prettier-scss-check"
   },
   "dependencies": {
-    "gatsby": "^5.14.0",
+    "gatsby": "^5.14.1",
     "gatsby-adapter-netlify": "^1.2.0",
     "gatsby-plugin-canonical-urls": "^5.14.0",
     "gatsby-plugin-catch-links": "^5.14.0",
@@ -32,19 +33,22 @@
     "gatsby-plugin-sass": "^6.14.0",
     "gatsby-plugin-sharp": "^5.14.0",
     "gatsby-plugin-sitemap": "^6.14.0",
-    "gatsby-source-contentful": "^8.14.0",
+    "gatsby-source-contentful": "^8.15.0",
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-sharp": "^5.14.0",
     "google-map-react": "^2.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.81.0"
+    "sass": "^1.85.1"
   },
   "devDependencies": {
-    "@types/node": "^22.10.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "typescript": "^5.7.2"
+    "@types/node": "^22.13.8",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "stylelint": "^16.15.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "typescript": "^5.8.2"
   },
   "packageManager": "yarn@1.22.22"
 }

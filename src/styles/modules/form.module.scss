@@ -1,53 +1,53 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .form {
-	form {
-		display: flex;
-		flex-direction: column;
-		gap: 1em;
-		margin-top: 3.5em;
-		position: relative;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 3.5em;
+        position: relative;
 
-		&:before {
-			position: absolute;
-			content: '';
-			top: -2em;
-			left: 0;
-			width: 25%;
-			height: 3px;
-			background: rgba($tertiary, 1);
-		}
+        &:before {
+            position: absolute;
+            content: "";
+            top: -2em;
+            left: 0;
+            width: 25%;
+            height: 3px;
+            background: rgba($tertiary, 1);
+        }
 
-		> div {
-			label {
-				display: none;
-			}
+        > div {
+            label {
+                display: none;
+            }
 
-			input,
-			textarea {
-				width: 100%;
-				background: rgba($white, 0.15);
-				padding: 0.875em;
+            input,
+            textarea {
+                width: 100%;
+                background: rgba($white, 0.15);
+                padding: 0.875em;
 
-				@include borderRadius;
-				@include smoothTrans;
+                @include border-radius;
+                @include smooth-trans;
 
-				&::placeholder {
-					opacity: 0.5;
-				}
+                &::placeholder {
+                    opacity: 0.5;
+                }
 
-				&:focus {
-					outline: 2px solid rgba($tertiary, 1);
-				}
-			}
+                &:focus {
+                    outline: 2px solid rgba($tertiary, 1);
+                }
+            }
 
-			&:has(button) {
-				align-self: flex-end;
+            &:has(button) {
+                align-self: flex-end;
 
-				> button {
-					@include button;
-				}
-			}
-		}
-	}
+                > button {
+                    @include button;
+                }
+            }
+        }
+    }
 }

@@ -1,26 +1,27 @@
-import React from 'react';
+import React from "react";
 
-import * as hamburgerStyles from '../styles/modules/hamburger.module.scss';
+import * as hamburgerStyles from "../styles/modules/hamburger.module.scss";
 
 interface HamburgerProps {
-	isOpen: boolean;
-	toggleMenu: () => void;
+    isOpen: boolean;
+    toggleMenu: () => void;
 }
 
 const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggleMenu }) => {
-	return (
-		<div className={hamburgerStyles.hamburger}>
-			<button
-				className={`${hamburgerStyles.icon} ${
-					isOpen ? hamburgerStyles.open : ''
-				}`}
-				onClick={toggleMenu}>
-				<div className={hamburgerStyles.line} />
-				<div className={hamburgerStyles.line} />
-				<div className={hamburgerStyles.line} />
-			</button>
-		</div>
-	);
+    return (
+        <div className={hamburgerStyles.hamburger}>
+            <button
+                className={`${hamburgerStyles.icon} ${
+                    isOpen ? hamburgerStyles.open : ""
+                }`}
+                onClick={toggleMenu}
+            >
+                <div className={hamburgerStyles.line} />
+                <div className={hamburgerStyles.line} />
+                <div className={hamburgerStyles.line} />
+            </button>
+        </div>
+    );
 };
 
 export default Hamburger;
