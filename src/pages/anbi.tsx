@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 
 import { Seo } from "../components/seo";
 
-import * as anbiStyles from "../styles/modules/anbi.module.scss";
+import * as anbiStyles from "../styles/modules/pages/anbi.module.scss";
 
 const AnbiPage: React.FC<PageProps> = () => {
     return (

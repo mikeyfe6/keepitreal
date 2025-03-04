@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 
 import { Seo } from "../components/seo";
 
-import * as aboutStyles from "../styles/modules/about.module.scss";
+import * as aboutStyles from "../styles/modules/pages/about.module.scss";
 
 const AboutUsPage: React.FC<PageProps> = () => {
     return (

@@ -1,4 +1,4 @@
-@use "../customs" as *;
+@use "../../customs/" as *;
 
 .about {
     display: flex;
@@ -12,7 +12,7 @@
         @include box-shadow;
         @include main-card;
 
-        .showOnMobile {
+        .show-on-mobile {
             display: none;
             margin-bottom: 1.25em;
             padding-bottom: 1em;

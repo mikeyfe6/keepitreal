@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import * as formStyles from "../styles/modules/form.module.scss";
+import * as formStyles from "../styles/modules/forms/form.module.scss";
 
 const Form: React.FC = () => {
     return (

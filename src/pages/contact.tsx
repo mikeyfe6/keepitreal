@@ -8,7 +8,7 @@ import Maps from "../components/maps";
 
 import { Seo } from "../components/seo";
 
-import * as contactStyles from "../styles/modules/contact.module.scss";
+import * as contactStyles from "../styles/modules/pages/contact.module.scss";
 
 const ContactPage: React.FC<PageProps> = () => {
     return (

@@ -1,4 +1,4 @@
-@use "../customs" as *;
+@use "../../customs/" as *;
 
 .workshops {
     $workshops: &;
@@ -34,10 +34,10 @@
             &.active {
                 #{$workshops}-content {
                     outline: 2px solid $tertiary;
-                    animation: fadeOutOutline 3s forwards;
+                    animation: fade-out-outline 3s forwards;
                 }
 
-                @keyframes fadeOutOutline {
+                @keyframes fade-out-outline {
                     0%,
                     60% {
                         outline-color: $tertiary;
@@ -118,6 +118,7 @@
 
                         > span {
                             color: $tertiary;
+
                             // border-radius: 50%;
                             // background: $tertiary;
                             // height: 20px;
@@ -161,14 +162,14 @@
 
                                 &:hover {
                                     > i:first-child {
-                                        animation: arrowBounce 2.5s infinite;
+                                        animation: arrow-bounce 2.5s infinite;
                                     }
 
                                     > i:nth-of-type(2) {
                                         color: rgba($tertiary, 0.95);
                                     }
 
-                                    @keyframes arrowBounce {
+                                    @keyframes arrow-bounce {
                                         0%,
                                         100% {
                                             transform: translateX(0);

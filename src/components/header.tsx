@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import Hamburger from "./hamburger";
 
-import * as headerStyles from "../styles/modules/header.module.scss";
+import * as headerStyles from "../styles/modules/layout/header.module.scss";
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);

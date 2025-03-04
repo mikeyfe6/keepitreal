@@ -8,7 +8,7 @@ import Layout from "../components/layout";
 
 import { Seo } from "../components/seo";
 
-import * as workshopStyles from "../styles/modules/workshops.module.scss";
+import * as workshopStyles from "../styles/modules/pages/workshops.module.scss";
 
 const WorkhopsPage: React.FC<PageProps> = () => {
     const [activeSection, setActiveSection] = useState<string>("");

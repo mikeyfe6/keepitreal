@@ -1,4 +1,4 @@
-@use "../customs" as *;
+@use "../../customs/" as *;
 
 .index {
     display: flex;
@@ -17,15 +17,15 @@
 
     .active {
         outline: 2px solid $tertiary;
-        animation: fadeOutOutline 3s forwards;
+        animation: fade-out-outline 3s forwards;
     }
 
-    @keyframes fadeOutOutline {
+    @keyframes fade-out-outline {
         0%,
         60% {
             outline-color: $tertiary;
         }
-        
+
         100% {
             outline-color: transparent;
         }

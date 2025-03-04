@@ -8,7 +8,7 @@ import Sidebar from "../components/sidebar";
 
 import { Seo } from "../components/seo";
 
-import * as indexStyles from "../styles/modules/index.module.scss";
+import * as indexStyles from "../styles/modules/pages/index.module.scss";
 
 const IndexPage: React.FC<PageProps> = () => {
     const missionRef = useRef<HTMLDivElement>(null);
