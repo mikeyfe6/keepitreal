@@ -5,57 +5,57 @@
 
     display: flex;
     align-items: center;
-    padding-top: 12.5em;
+    padding-top: rem-calc(200);
 
     @include tablet {
         flex-wrap: wrap;
     }
 
     @include mobile {
-        padding-top: 10em;
+        padding-top: rem-calc(160);
     }
 
     .slogan {
         color: $white;
-        padding: 0.75em;
-        max-width: 325px;
-        margin-right: 4em;
+        padding: rem-calc(12);
+        max-width: rem-calc(325);
+        margin-right: rem-calc(64);
         display: flex;
         flex-direction: column;
         height: fit-content;
 
         @include laptop {
-            margin-right: 2em;
+            margin-right: rem-calc(32);
         }
 
         @include tablet {
             order: 3;
             max-width: 100%;
-            margin-top: -5em;
-            margin-left: 2em;
+            margin-top: rem-calc(-80);
+            margin-left: rem-calc(32);
             flex-direction: row;
-            gap: 5em;
+            gap: rem-calc(80);
             justify-content: space-between;
         }
 
         @include phablet {
-            margin-top: -4em;
+            margin-top: rem-calc(-64);
         }
 
         @include mobile {
-            margin-top: -2.5em;
+            margin-top: rem-calc(-40);
             flex-direction: column;
             gap: 0;
         }
 
         @include compact {
-            margin-top: -2em;
-            margin-left: 1em;
-            margin-right: 1em;
+            margin-top: rem-calc(-32);
+            margin-left: rem-calc(16);
+            margin-right: rem-calc(16);
         }
 
         > h1 {
-            line-height: 45px;
+            line-height: rem-calc(45);
 
             @include desktop {
                 font-size: 1.75rem;
@@ -63,32 +63,32 @@
 
             @include laptop {
                 font-size: 1.625rem;
-                line-height: 42.5px;
+                line-height: rem-calc(42.5);
             }
 
             @include tablet {
-                line-height: 45px;
+                line-height: rem-calc(45);
             }
 
             @include mobile {
                 font-size: 1.5rem;
-                line-height: 40px;
+                line-height: rem-calc(40);
             }
 
             @include compact {
                 font-size: 1.25rem;
-                line-height: 35px;
+                line-height: rem-calc(35);
             }
         }
 
         .buttons {
             display: flex;
-            gap: 0.75em;
+            gap: rem-calc(12);
 
             @include tablet {
                 flex-direction: column;
-                margin-top: 0.5em;
-                gap: 1em;
+                margin-top: rem-calc(8);
+                gap: rem-calc(16);
             }
 
             @include mobile {
@@ -103,7 +103,7 @@
 
     .line {
         width: 7px;
-        height: 650px;
+        height: rem-calc(650);
         display: inline-block;
         background-color: white;
 
@@ -111,29 +111,29 @@
         @include box-shadow(2);
 
         @include desktop {
-            height: 600px;
+            height: rem-calc(600);
         }
 
         @include laptop {
-            height: 575px;
+            height: rem-calc(575);
         }
 
         @include tablet {
-            height: 600px;
-            width: 5px;
+            height: rem-calc(600);
+            width: rem-calc(5);
         }
 
         @include phablet {
-            height: 525px;
+            height: rem-calc(525);
         }
 
         @include mobile {
-            height: 375px;
-            width: 3px;
+            height: rem-calc(375);
+            width: rem-calc(3);
         }
 
         @include compact {
-            height: 337.5px;
+            height: rem-calc(337.5);
         }
     }
 
@@ -142,7 +142,7 @@
         display: inline-block;
         width: 100%;
         height: 100%;
-        border-radius: 0 2em 2em 0;
+        border-radius: rem-calc(0 32 32 0);
         overflow: hidden;
         border: 5px solid $tertiary;
         border-left: none !important;
@@ -181,30 +181,30 @@
         }
 
         [data-gatsby-image-wrapper] {
-            max-height: 412.5px;
+            max-height: rem-calc(412.5);
 
             @include desktop {
-                max-height: 375px;
+                max-height: rem-calc(375);
             }
 
             @include laptop {
-                max-height: 350px;
+                max-height: rem-calc(350);
             }
 
             @include tablet {
-                max-height: 400px;
+                max-height: rem-calc(400);
             }
 
             @include phablet {
-                max-height: 300px;
+                max-height: rem-calc(300);
             }
 
             @include mobile {
-                max-height: 237.5px;
+                max-height: rem-calc(237.5);
             }
 
             @include compact {
-                max-height: 212.5px;
+                max-height: rem-calc(212.5);
             }
 
             img {
@@ -213,7 +213,7 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    width: 10px;
+                    width: rem-calc(10);
                     height: 150%;
                     background: white;
                     pointer-events: none;

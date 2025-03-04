@@ -14,21 +14,21 @@
     }
 
     > ul {
-        margin: 2em 0;
+        margin: rem-calc(32 0);
         display: flex;
         flex-direction: column;
-        gap: 2em;
+        gap: rem-calc(32);
 
         > li {
             display: flex;
             align-items: center;
-            gap: 2em;
-            padding: 1em 0;
-            scroll-margin-top: 150px;
+            gap: rem-calc(32);
+            padding: rem-calc(16 0);
+            scroll-margin-top: rem-calc(150);
 
             @include phablet {
                 flex-direction: column;
-                gap: 1.25em;
+                gap: rem-calc(20);
             }
 
             &.active {
@@ -51,8 +51,7 @@
 
             #{$workshops} {
                 &-image {
-                    max-width: 250px;
-                    min-width: 250px;
+                    width: rem-calc(250);
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -66,17 +65,16 @@
                     &-double {
                         display: flex;
                         flex-direction: column;
-                        gap: 1.25em 1.5em;
-                        max-width: 250px;
-                        min-width: 250px;
+                        gap: rem-calc(20 24);
+                        width: rem-calc(250);
 
                         @include phablet {
                             flex-direction: row;
-                            max-width: 500px;
+                            max-width: rem-calc(500);
                         }
 
                         @include mobile {
-                            max-width: 400px;
+                            max-width: rem-calc(400);
                         }
 
                         @include compact {
@@ -98,7 +96,7 @@
 
                     > hr {
                         width: 100%;
-                        margin: 1.5em 0;
+                        margin: rem-calc(24 0);
                         height: 1px;
                         background: $tertiary;
                     }
@@ -106,14 +104,14 @@
                     #{$workshops}-holder {
                         display: flex;
                         align-items: center;
-                        margin-bottom: 1em;
-                        gap: 0.5em 1.5em;
+                        margin-bottom: rem-calc(16);
+                        gap: rem-calc(8 24);
                         flex-wrap: wrap;
 
                         @include tablet {
                             flex-direction: column;
                             align-items: flex-start;
-                            gap: 1em;
+                            gap: rem-calc(16);
                         }
 
                         > span {
@@ -135,14 +133,14 @@
                         &-info {
                             display: flex;
                             align-items: center;
-                            gap: 1em;
+                            gap: rem-calc(16);
 
                             > h6 {
                                 width: fit-content;
                                 margin-bottom: 0;
                                 background-color: rgba($white, 0.9);
                                 color: $primary;
-                                padding: 0.175em 0.5em;
+                                padding: rem-calc(4 8);
 
                                 @include border-radius;
                             }
@@ -155,8 +153,8 @@
                                 display: flex;
                                 align-items: center;
                                 flex-wrap: wrap;
-                                gap: 0.825em;
-                                padding: 0.25em;
+                                gap: rem-calc(14);
+                                padding: rem-calc(4);
 
                                 @include smooth-trans;
 
@@ -203,7 +201,7 @@
 
                     #{$workshops}-bio {
                         opacity: 0.75;
-                        font-size: 1rem;
+                        font-size: rem-calc(16);
                     }
                 }
             }

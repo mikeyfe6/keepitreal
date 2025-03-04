@@ -2,11 +2,11 @@
 
 .contact {
     display: flex;
-    gap: 3em;
+    gap: rem-calc(48);
 
     @include phablet {
         flex-direction: column-reverse;
-        gap: 2em;
+        gap: rem-calc(32);
     }
 
     > div:nth-child(1) {

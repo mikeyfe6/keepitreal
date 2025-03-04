@@ -3,16 +3,16 @@
 .cta {
     $cta: &;
 
-    margin-bottom: 2em;
+    margin-bottom: rem-calc(32);
 
     &-wrapper {
         position: relative;
-        margin: 2em 0 1em -1.5em;
+        margin: rem-calc(32 0 16 -24);
 
         > ul {
             display: inline-flex;
             flex-wrap: wrap;
-            gap: 1.25em;
+            gap: rem-calc(20);
 
             > li {
                 flex: 1;
@@ -20,7 +20,7 @@
 
                 > button {
                     background: $secondary;
-                    padding: 1.375em 1.25em;
+                    padding: rem-calc(22 20);
                     flex: 1;
                     white-space: nowrap;
                     text-align: center;
@@ -53,13 +53,14 @@
             @include box-shadow(1);
 
             &-content {
-                border-radius: 5px;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                gap: 1.25em 2em;
+                gap: rem-calc(20 32);
                 width: 100%;
-                padding: 2.5em 1.5em;
+                padding: rem-calc(40 24);
+
+                @include border-radius;
 
                 @include mobile {
                     flex-direction: column;
@@ -67,18 +68,18 @@
 
                 div:first-child {
                     h4 {
-                        margin-bottom: 0.5em;
+                        margin-bottom: rem-calc(8);
                     }
 
                     p {
-                        font-size: 1rem;
+                        font-size: rem-calc(16);
                     }
                 }
 
                 div:nth-child(2) {
                     display: flex;
                     align-self: flex-end;
-                    gap: 1em;
+                    gap: rem-calc(16);
 
                     > a {
                         @include button(1);

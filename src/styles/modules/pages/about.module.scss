@@ -3,10 +3,10 @@
 .about {
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: rem-calc(48);
 
     > div {
-        max-width: 850px;
+        max-width: rem-calc(850);
 
         @include border-radius;
         @include box-shadow;
@@ -14,14 +14,14 @@
 
         .show-on-mobile {
             display: none;
-            margin-bottom: 1.25em;
-            padding-bottom: 1em;
+            margin-bottom: rem-calc(20);
+            padding-bottom: rem-calc(16);
             border-bottom: 1px solid rgba($white, 0.825);
 
             span {
                 display: block;
-                font-size: 1.125rem;
-                margin-top: 0.25em;
+                font-size: rem-calc(18);
+                margin-top: rem-calc(4);
             }
 
             @include mobile {
@@ -44,7 +44,7 @@
 
                 th {
                     font-weight: bolder;
-                    font-size: 1.125rem;
+                    font-size: rem-calc(18);
                     border-bottom: 3px solid $white;
                 }
             }
@@ -58,10 +58,10 @@
 
                     &:first-child {
                         td {
-                            padding-top: 2em;
+                            padding-top: rem-calc(32);
 
                             @include mobile {
-                                padding-top: 0.5em;
+                                padding-top: rem-calc(8);
                             }
                         }
                     }
@@ -74,10 +74,10 @@
                         &:first-of-type {
                             display: flex;
                             align-items: center;
-                            gap: 0.825em;
+                            gap: rem-calc(12);
 
                             > i {
-                                min-width: 1.5em;
+                                min-width: rem-calc(24);
                             }
                         }
                     }
@@ -86,12 +86,12 @@
 
             th,
             td {
-                min-width: 267.5px;
-                padding: 1em 0.75em;
+                min-width: rem-calc(267.5);
+                padding: rem-calc(16 12);
 
                 @include mobile {
                     &:last-of-type {
-                        padding: 0.5em 0.75em 2em;
+                        padding: rem-calc(8 12 32);
                     }
                 }
             }

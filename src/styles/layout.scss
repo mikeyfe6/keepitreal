@@ -48,9 +48,9 @@ body {
 
     &__logo {
         position: absolute;
-        bottom: 100px;
-        right: 50px;
-        max-width: 300px;
+        bottom: rem-calc(100);
+        right: rem-calc(50);
+        max-width: rem-calc(300);
         opacity: 0.1;
         z-index: -1;
         mask-image: linear-gradient(165deg, transparent, black);
@@ -59,7 +59,7 @@ body {
 
 main {
     flex: 1;
-    margin: 2.5em 0 5em;
+    margin: rem-calc(40 0 80);
 
     p,
     span,
@@ -79,8 +79,8 @@ main {
 
         li {
             &:not(#workshops li, #cta li, #events li, #media li) {
-                margin-inline-start: 1em;
-                padding-left: 0.5em;
+                margin-inline-start: rem-calc(16);
+                padding-left: rem-calc(8);
             }
 
             &::marker {
@@ -91,19 +91,19 @@ main {
 
     ol {
         list-style-type: decimal;
-        margin: 1em 0;
+        margin: rem-calc(16) 0;
 
         li {
             &:not(#cta li) {
-                margin-inline-start: 1em;
-                padding-left: 0.5em;
+                margin-inline-start: rem-calc(16);
+                padding-left: rem-calc(8);
             }
         }
     }
 
     &:has(aside) {
         display: flex;
-        gap: 3em;
+        gap: rem-calc(48);
 
         @include tablet {
             flex-direction: column-reverse;
@@ -125,7 +125,7 @@ iframe {
         @include border-radius;
 
         &.w-margin {
-            margin-top: 2em;
+            margin-top: rem-calc(32);
         }
     }
 
@@ -136,9 +136,9 @@ iframe {
         @include box-shadow(1);
 
         &.w-margin {
-            margin: 2em 0 1.75em;
+            margin: rem-calc(32 0 28);
             aspect-ratio: auto;
-            height: 352px;
+            height: rem-calc(352);
         }
     }
 }
@@ -153,7 +153,7 @@ a {
     top: 1%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 0.25em 0.75em;
+    padding: rem-calc(4 12);
     z-index: 1000;
     font-weight: bold;
     text-align: center;

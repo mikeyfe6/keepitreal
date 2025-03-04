@@ -10,11 +10,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 2em;
+        gap: rem-calc(32);
 
-        @include container(1300px, 2em, 1.25em);
-
-        // @include container(1000px, 2em, 1em);
+        @include container(rem-calc(1300), rem-calc(32), rem-calc(20));
 
         @include mobile {
             flex-direction: column;
@@ -37,7 +35,7 @@
         > p {
             margin-bottom: 0;
             font-weight: 500;
-            font-size: 1rem;
+            font-size: rem-calc(16);
             position: relative;
 
             @include mobile {
@@ -48,7 +46,7 @@
                         width: 25%;
                         height: 3px;
                         background-color: $tertiary;
-                        bottom: -43.75px;
+                        bottom: rem-calc(-45);
                         left: 0;
 
                         @include border-radius;
@@ -62,7 +60,7 @@
                         width: 25%;
                         height: 3px;
                         background-color: $tertiary;
-                        top: -42.5px;
+                        top: rem-calc(-42.5);
                         right: 0;
 
                         @include border-radius;
@@ -73,7 +71,7 @@
 
         > ul {
             display: flex;
-            gap: 1em;
+            gap: rem-calc(16);
 
             li {
                 a:hover {

@@ -5,9 +5,9 @@
     filter: grayscale(100%);
     filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
     position: relative;
-    height: 200px;
+    height: rem-calc(200);
     width: 100%;
-    margin-top: 2em;
+    margin-top: rem-calc(32);
     overflow: hidden;
     border: 5px solid $secondary;
 
@@ -23,7 +23,7 @@
         cursor: pointer;
 
         img {
-            max-width: 50px;
+            max-width: rem-calc(50);
             object-fit: cover;
         }
     }

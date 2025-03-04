@@ -4,14 +4,14 @@
     form {
         display: flex;
         flex-direction: column;
-        gap: 1em;
-        margin-top: 3.5em;
+        gap: rem-calc(16);
+        margin-top: rem-calc(56);
         position: relative;
 
         &::before {
             content: "";
             position: absolute;
-            top: -2em;
+            top: rem-calc(-32);
             left: 0;
             width: 25%;
             height: 3px;
@@ -27,7 +27,7 @@
             textarea {
                 width: 100%;
                 background: rgba($white, 0.15);
-                padding: 0.875em;
+                padding: rem-calc(14);
 
                 @include border-radius;
                 @include smooth-trans;

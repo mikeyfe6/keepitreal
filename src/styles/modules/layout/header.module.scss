@@ -5,23 +5,10 @@
     width: 100%;
     right: 0;
     z-index: 3;
-    padding: 3em 0 1em;
+    padding: rem-calc(48 0 16);
 
     @include mobile {
-        padding: 2em 0 1em;
-    }
-
-    &.is-sticky {
-        background: $primary;
-        padding: 1.25em 0 1.375em;
-
-        @include box-shadow;
-
-        > div {
-            .logo {
-                max-width: 175px;
-            }
-        }
+        padding: rem-calc(32 0 16);
     }
 
     > div {
@@ -29,35 +16,35 @@
         justify-content: space-between;
         align-items: center;
 
-        @include container(1275px);
+        @include container(rem-calc(1275));
 
         .logo {
-            max-width: 250px;
+            max-width: rem-calc(250);
 
             @include phablet {
-                max-width: 200px;
+                max-width: rem-calc(200);
             }
 
             @include mobile {
-                max-width: 175px;
+                max-width: rem-calc(175);
             }
         }
 
         .desktop {
             display: flex;
             flex-direction: column;
-            gap: 1.75em;
+            gap: rem-calc(28);
 
             @include phablet {
                 display: none;
             }
 
             .nav {
-                padding-top: 1.5em;
+                padding-top: rem-calc(24);
 
                 > ul {
                     display: flex;
-                    gap: 1em;
+                    gap: rem-calc(16);
 
                     > li {
                         > a {
@@ -74,7 +61,7 @@
                                     border-right: 6px solid transparent;
                                     border-top: 7.5px solid $tertiary;
                                     position: absolute;
-                                    top: -20px;
+                                    top: rem-calc(-20);
                                     left: 50%;
                                     transform: translateX(-50%);
                                 }
@@ -87,7 +74,7 @@
             > ul {
                 align-self: flex-end;
                 display: flex;
-                gap: 1em;
+                gap: rem-calc(16);
 
                 > li {
                     color: rgba($tertiary, 0.825);
@@ -115,15 +102,15 @@
                 align-items: flex-end;
                 justify-content: center;
                 height: 100%;
-                gap: 2em;
-                padding: 0 3em;
+                gap: rem-calc(32);
+                padding: rem-calc(0 48);
 
                 > li {
                     > a {
-                        font-size: 1.75rem;
+                        font-size: rem-calc(28);
                         display: flex;
                         align-items: center;
-                        gap: 0.5em;
+                        gap: rem-calc(8);
 
                         &.active {
                             &::before {
@@ -145,8 +132,8 @@
                 flex-direction: row;
                 align-items: flex-end;
                 justify-content: center;
-                gap: 1.75em;
-                margin-top: 1em;
+                gap: rem-calc(28);
+                margin-top: rem-calc(16);
 
                 > li {
                     color: rgba($tertiary, 0.825);
@@ -161,6 +148,19 @@
                 &.open {
                     display: block;
                 }
+            }
+        }
+    }
+
+    &.is-sticky {
+        background: $primary;
+        padding: rem-calc(20 0 22);
+
+        @include box-shadow;
+
+        > div {
+            .logo {
+                max-width: rem-calc(175);
             }
         }
     }
