@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import GoogleMapReact from "google-map-react";
 
-import * as mapsStyles from "../styles/modules/components/maps.module.scss";
+import * as mapsStyles from "../../styles/modules/components/maps.module.scss";
 
-import kirLogo from "../images/logo/KIR-icon.png";
+import kirLogo from "../../images/logo/KIR-icon.png";
 
 interface DefaultProps {
     center: {

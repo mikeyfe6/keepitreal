@@ -4,9 +4,9 @@ import { Link } from "gatsby";
 
 import { StaticImage } from "gatsby-plugin-image";
 
-import Hamburger from "./hamburger";
+import Hamburger from "../layout/hamburger";
 
-import * as headerStyles from "../styles/modules/layout/header.module.scss";
+import * as headerStyles from "../../styles/modules/layout/header.module.scss";
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
                 <div className={headerStyles.logo}>
                     <Link to="/">
                         <StaticImage
-                            src="../images/logo/KIR-light-logo.png"
+                            src="../../images/logo/KIR-light-logo.png"
                             alt="Keep It Real Logo"
                         />
                     </Link>

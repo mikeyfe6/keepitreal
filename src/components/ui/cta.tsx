@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { Link } from "gatsby";
 
-import * as ctaStyles from "../styles/modules/components/cta.module.scss";
+import * as ctaStyles from "../../styles/modules/components/cta.module.scss";
 
 interface Workshop {
     name: string;

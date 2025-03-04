@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 
 import { StaticImage } from "gatsby-plugin-image";
 
-import * as heroStyles from "../styles/modules/layout/hero.module.scss";
+import * as heroStyles from "../../styles/modules/layout/hero.module.scss";
 
 const Hero: React.FC = () => {
     const { pathname } = useLocation();
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
 
             <div className={heroStyles.image}>
                 <StaticImage
-                    src="../images/hero.jpeg"
+                    src="../../images/hero.jpeg"
                     alt="Keep It Real Hero Image"
                     objectPosition={"100% 62.5%"}
                 />

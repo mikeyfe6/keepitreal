@@ -3,8 +3,8 @@ import React, { useRef, useState } from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
 import Layout from "../components/layout";
-import Cta from "../components/cta";
-import Sidebar from "../components/sidebar";
+import Cta from "../components/ui/cta";
+import Sidebar from "../components/ui/sidebar";
 
 import { Seo } from "../components/seo";
 

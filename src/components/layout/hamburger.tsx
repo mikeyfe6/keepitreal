@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import * as hamburgerStyles from "../styles/modules/layout/hamburger.module.scss";
+import * as hamburgerStyles from "../../styles/modules/layout/hamburger.module.scss";
 
 interface HamburgerProps {
     isOpen: boolean;

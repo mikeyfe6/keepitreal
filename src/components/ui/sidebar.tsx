@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import * as sidebarStyles from "../styles/modules/layout/sidebar.module.scss";
+import * as sidebarStyles from "../../styles/modules/layout/sidebar.module.scss";
 
 interface SidebarProps {
     handleSidebarClick: (sectionId: string) => void;

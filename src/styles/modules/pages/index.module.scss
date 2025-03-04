@@ -3,7 +3,7 @@
 .index {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: rem-calc(32);
 
     > div {
         @include main-card;
@@ -11,7 +11,7 @@
         > ol {
             display: flex;
             flex-direction: column;
-            gap: 2.5em;
+            gap: rem-calc(40);
         }
     }
 
@@ -30,45 +30,4 @@
             outline-color: transparent;
         }
     }
-
-    // display: flex;
-    // flex-direction: column;
-    // margin-top: -7em;
-    // margin-bottom: 3em;
-
-    // @include tablet {
-    // 	margin-top: -1em;
-    // }
-
-    // @include compact {
-    // 	margin-top: 12.75em;
-    // }
-
-    // > div {
-    // 	max-width: 525px;
-    // 	background: rgba($white, 0.05);
-    // 	padding: 2.5em 2em;
-    // 	margin: -1em 0;
-
-    // 	@include compact {
-    // 		&:first-of-type {
-    // 			padding-bottom: 3.5em;
-    // 		}
-
-    // 		&:not(:first-of-type) {
-    // 			padding: 3.5em 2em;
-    // 		}
-    // 	}
-
-    // 	@include box-shadow;
-    // 	@include border-radius;
-
-    // 	&:nth-child(odd) {
-    // 		align-self: flex-start;
-    // 	}
-
-    // 	&:nth-child(even) {
-    // 		align-self: flex-end;
-    // 	}
-    // }
 }

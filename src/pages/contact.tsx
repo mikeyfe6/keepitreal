@@ -3,8 +3,8 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
 import Layout from "../components/layout";
-import Form from "../components/form";
-import Maps from "../components/maps";
+import Form from "../components/forms/form";
+import Maps from "../components/ui/maps";
 
 import { Seo } from "../components/seo";
 
