@@ -107,7 +107,7 @@ main {
 
         li {
             &:not(#cta li) {
-                margin-inline-start: rem-calc(16);
+                margin-inline-start: rem-calc(24);
                 padding-left: rem-calc(8);
             }
         }
