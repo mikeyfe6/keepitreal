@@ -35,7 +35,7 @@ const Header: React.FC = () => {
     return (
         <header
             className={`${headerStyles.header} ${
-                isOpen ? "mobileMenu" : "defaultMenu"
+                isOpen ? "mobileMenu" : "desktopMenu"
             } ${isSticky ? headerStyles.isSticky : ""}`}
         >
             <div>

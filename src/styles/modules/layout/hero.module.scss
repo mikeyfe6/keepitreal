@@ -5,93 +5,60 @@
 
     display: flex;
     align-items: center;
-    padding-top: rem-calc(200);
-
-    @include tablet {
-        flex-wrap: wrap;
-    }
+    flex-direction: column-reverse;
+    padding-top: rem-calc(160);
+    gap: rem-calc(44);
 
     @include mobile {
-        padding-top: rem-calc(160);
+        padding-top: rem-calc(237.5);
+        gap: rem-calc(48);
+    }
+
+    @include tablet {
+        flex-direction: row;
     }
 
     .slogan {
         color: $white;
-        padding: rem-calc(12);
-        max-width: rem-calc(325);
-        margin-right: rem-calc(64);
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         height: fit-content;
+        gap: rem-calc(24);
 
-        @include laptop {
-            margin-right: rem-calc(32);
+        @include phablet {
+            flex-direction: row;
         }
 
         @include tablet {
-            order: 3;
-            max-width: 100%;
-            margin-top: rem-calc(-80);
-            margin-left: rem-calc(32);
-            flex-direction: row;
-            gap: rem-calc(80);
-            justify-content: space-between;
-        }
-
-        @include phablet {
-            margin-top: rem-calc(-64);
-        }
-
-        @include mobile {
-            margin-top: rem-calc(-40);
+            max-width: rem-calc(337.5);
             flex-direction: column;
-            gap: 0;
-        }
-
-        @include compact {
-            margin-top: rem-calc(-32);
-            margin-left: rem-calc(16);
-            margin-right: rem-calc(16);
         }
 
         > h1 {
-            line-height: rem-calc(45);
+            line-height: 1.6;
+            font-size: rem-calc(24);
+            margin-top: rem-calc(-12);
+            margin-bottom: 0;
 
-            @include desktop {
-                font-size: 1.75rem;
+            @include tablet {
+                margin-top: unset;
             }
 
             @include laptop {
-                font-size: 1.625rem;
-                line-height: rem-calc(42.5);
-            }
-
-            @include tablet {
-                line-height: rem-calc(45);
-            }
-
-            @include mobile {
-                font-size: 1.5rem;
-                line-height: rem-calc(40);
-            }
-
-            @include compact {
-                font-size: 1.25rem;
-                line-height: rem-calc(35);
+                font-size: rem-calc(28);
             }
         }
 
-        .buttons {
+        > .buttons {
             display: flex;
-            gap: rem-calc(12);
+            gap: rem-calc(14);
 
-            @include tablet {
+            @include phablet {
                 flex-direction: column;
-                margin-top: rem-calc(8);
-                gap: rem-calc(16);
             }
 
-            @include mobile {
+            @include tablet {
                 flex-direction: row;
             }
 
@@ -102,124 +69,30 @@
     }
 
     .line {
-        width: 7px;
-        height: rem-calc(650);
-        display: inline-block;
-        background-color: white;
+        width: 100%;
+        height: rem-calc(5);
+        display: block;
+        background-color: rgba($white, 0.9);
 
         @include border-radius(2px);
-        @include box-shadow(2);
-
-        @include desktop {
-            height: rem-calc(600);
-        }
-
-        @include laptop {
-            height: rem-calc(575);
-        }
 
         @include tablet {
+            width: rem-calc(20);
             height: rem-calc(600);
-            width: rem-calc(5);
-        }
-
-        @include phablet {
-            height: rem-calc(525);
-        }
-
-        @include mobile {
-            height: rem-calc(375);
-            width: rem-calc(3);
-        }
-
-        @include compact {
-            height: rem-calc(337.5);
         }
     }
 
     .image {
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        border-radius: rem-calc(0 32 32 0);
         overflow: hidden;
-        border: 5px solid $tertiary;
-        border-left: none !important;
+        border: 3px solid $secondary;
 
+        @include border-radius(16px);
         @include box-shadow;
 
-        @include tablet {
-            flex-basis: 99%;
-        }
-
-        @include mobile {
-            border: 3px solid $tertiary;
-        }
-
-        @include compact {
-            flex-basis: 98%;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-
-            // background: linear-gradient(
-            //     to right,
-            //     rgba($primary, 1) 0%,
-            //     rgba($primary, 0.75) 25%,
-            //     rgba(transparent, 0.25) 50%,
-            //     rgba($secondary, 0.5) 75%,
-            //     rgba($secondary, 0.75) 100%
-            // );
-        }
-
         [data-gatsby-image-wrapper] {
-            max-height: rem-calc(412.5);
-
-            @include desktop {
-                max-height: rem-calc(375);
-            }
-
-            @include laptop {
-                max-height: rem-calc(350);
-            }
-
-            @include tablet {
-                max-height: rem-calc(400);
-            }
-
-            @include phablet {
-                max-height: rem-calc(300);
-            }
-
-            @include mobile {
-                max-height: rem-calc(237.5);
-            }
-
-            @include compact {
-                max-height: rem-calc(212.5);
-            }
-
-            img {
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: rem-calc(10);
-                    height: 150%;
-                    background: white;
-                    pointer-events: none;
-                    z-index: 1;
-                }
-            }
+            aspect-ratio: 16 / 8;
+            height: 100%;
+            width: 100%;
         }
     }
 }

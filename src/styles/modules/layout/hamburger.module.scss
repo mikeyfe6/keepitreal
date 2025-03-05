@@ -6,12 +6,12 @@
     height: fit-content;
     position: relative;
     z-index: 2;
-    display: none;
+    display: block;
 
     @include border-radius;
 
     @include phablet {
-        display: block;
+        display: none;
     }
 
     .icon {

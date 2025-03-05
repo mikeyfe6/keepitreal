@@ -5,10 +5,10 @@
     width: 100%;
     right: 0;
     z-index: 3;
-    padding: rem-calc(48 0 16);
+    padding: rem-calc(32 0 16);
 
     @include mobile {
-        padding: rem-calc(32 0 16);
+        padding: rem-calc(48 0 16);
     }
 
     > div {
@@ -19,24 +19,26 @@
         @include container(rem-calc(1275));
 
         .logo {
-            max-width: rem-calc(250);
+            max-width: rem-calc(175);
 
-            @include phablet {
+            @include smooth-trans;
+
+            @include mobile {
                 max-width: rem-calc(200);
             }
 
-            @include mobile {
-                max-width: rem-calc(175);
+            @include phablet {
+                max-width: rem-calc(250);
             }
         }
 
         .desktop {
-            display: flex;
+            display: none;
             flex-direction: column;
             gap: rem-calc(28);
 
             @include phablet {
-                display: none;
+                display: flex;
             }
 
             .nav {
@@ -75,6 +77,7 @@
                 align-self: flex-end;
                 display: flex;
                 gap: rem-calc(16);
+                height: rem-calc(23);
 
                 > li {
                     color: rgba($tertiary, 0.825);
@@ -95,6 +98,14 @@
             height: 100vh;
             background-color: $primary;
             z-index: 2;
+
+            &.open {
+                display: block;
+
+                @include phablet {
+                    display: none;
+                }
+            }
 
             &-menu {
                 display: flex;
@@ -143,12 +154,6 @@
                     }
                 }
             }
-
-            @include phablet {
-                &.open {
-                    display: block;
-                }
-            }
         }
     }
 
@@ -160,7 +165,11 @@
 
         > div {
             .logo {
-                max-width: rem-calc(175);
+                max-width: rem-calc(150);
+
+                @include mobile {
+                    max-width: rem-calc(175);
+                }
             }
         }
     }

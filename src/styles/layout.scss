@@ -35,10 +35,6 @@ body {
     color: $white;
 
     @include container(1300px);
-
-    &:has(.mobile-menu) {
-        overflow: hidden;
-    }
 }
 
 .keep-it-real {
@@ -48,12 +44,28 @@ body {
 
     &__logo {
         position: absolute;
-        bottom: rem-calc(100);
-        right: rem-calc(50);
-        max-width: rem-calc(300);
+        bottom: rem-calc(187.5);
+        right: rem-calc(25);
+        max-width: rem-calc(250);
         opacity: 0.1;
         z-index: -1;
         mask-image: linear-gradient(165deg, transparent, black);
+
+        @include phablet {
+            bottom: rem-calc(100);
+            right: rem-calc(37.5);
+            max-width: rem-calc(300);
+        }
+    }
+
+    &:not(:has(> section)) {
+        main {
+            margin-top: rem-calc(175);
+
+            @include mobile {
+                margin-top: rem-calc(240);
+            }
+        }
     }
 }
 
@@ -91,7 +103,7 @@ main {
 
     ol {
         list-style-type: decimal;
-        margin: rem-calc(16) 0;
+        margin: rem-calc(16 0);
 
         li {
             &:not(#cta li) {
@@ -103,10 +115,11 @@ main {
 
     &:has(aside) {
         display: flex;
+        flex-direction: column-reverse;
         gap: rem-calc(48);
 
         @include tablet {
-            flex-direction: column-reverse;
+            flex-direction: row;
         }
     }
 }
@@ -131,7 +144,7 @@ iframe {
 
     &.spotify {
         aspect-ratio: 1;
-        height: 80px;
+        height: rem-calc(80);
 
         @include box-shadow(1);
 
@@ -161,4 +174,9 @@ a {
     opacity: 0.5;
     color: $black;
     outline: $black 1px solid;
+
+    p {
+        font-size: rem-calc(14);
+        font-weight: bold;
+    }
 }

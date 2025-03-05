@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { useLocation } from "@reach/router";
+
 import { StaticImage } from "gatsby-plugin-image";
 
 import Header from "./layout/header";
@@ -15,20 +17,20 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+    const { pathname } = useLocation();
+
     return (
         <>
             <div className="keep-it-real">
                 <Header />
-                <Hero />
+                {pathname === "/" && <Hero />}
                 <main>{children}</main>
-
                 <div className="keep-it-real__logo">
                     <StaticImage
                         src="../images/logo/KIR-light-icon.png"
                         alt="Keep It Real Transparent Logo"
                     />
                 </div>
-
                 <Footer />
             </div>
 

@@ -17,9 +17,9 @@ const ContactPage: React.FC<PageProps> = () => {
                 <Form />
                 <div>
                     <h3>Bezoekadres & postadres:</h3>
-                    <h4>
+                    <h5>
                         <u>Stichting Keep It Real</u>
-                    </h4>
+                    </h5>
                     <p>
                         Piet Heinkade 3, 1019 BR Amsterdam <br />
                         E-mail<span>:</span> Secretariaat@keeptreal.nl <br />

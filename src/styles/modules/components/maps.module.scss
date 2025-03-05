@@ -9,7 +9,7 @@
     width: 100%;
     margin-top: rem-calc(32);
     overflow: hidden;
-    border: 5px solid $secondary;
+    border: 3px solid $secondary;
 
     @include box-shadow;
     @include smooth-trans;

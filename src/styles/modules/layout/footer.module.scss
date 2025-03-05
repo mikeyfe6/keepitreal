@@ -11,24 +11,19 @@
         justify-content: space-between;
         align-items: center;
         gap: rem-calc(32);
+        flex-direction: column;
 
         @include container(rem-calc(1300), rem-calc(32), rem-calc(20));
 
-        @include mobile {
-            flex-direction: column;
+        @include phablet {
+            flex-direction: row;
+        }
 
-            p {
-                &:first-child {
-                    align-self: flex-start;
-                }
+        ul {
+            align-self: center;
 
-                &:last-child {
-                    align-self: flex-end;
-                }
-            }
-
-            ul {
-                align-self: center;
+            @include phablet {
+                align-self: flex-start;
             }
         }
 
@@ -38,32 +33,42 @@
             font-size: rem-calc(16);
             position: relative;
 
-            @include mobile {
-                &:first-child {
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 25%;
-                        height: 3px;
-                        background-color: $tertiary;
-                        bottom: rem-calc(-45);
-                        left: 0;
+            &:first-child {
+                align-self: flex-start;
 
-                        @include border-radius;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 25%;
+                    height: 3px;
+                    background-color: $tertiary;
+                    bottom: rem-calc(-45);
+                    left: 0;
+
+                    @include border-radius;
+
+                    @include phablet {
+                        display: none;
                     }
                 }
+            }
 
-                &:last-child {
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        width: 25%;
-                        height: 3px;
-                        background-color: $tertiary;
-                        top: rem-calc(-42.5);
-                        right: 0;
+            &:last-child {
+                align-self: flex-end;
 
-                        @include border-radius;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 25%;
+                    height: 3px;
+                    background-color: $tertiary;
+                    top: rem-calc(-42.5);
+                    right: 0;
+
+                    @include border-radius;
+
+                    @include phablet {
+                        display: none;
                     }
                 }
             }

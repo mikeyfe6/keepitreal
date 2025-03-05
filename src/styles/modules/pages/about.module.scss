@@ -6,26 +6,26 @@
     gap: rem-calc(48);
 
     > div {
-        max-width: rem-calc(850);
+        max-width: rem-calc(775);
 
         @include border-radius;
         @include box-shadow;
         @include main-card;
 
         .show-on-mobile {
-            display: none;
+            display: block;
             margin-bottom: rem-calc(20);
             padding-bottom: rem-calc(16);
             border-bottom: 1px solid rgba($white, 0.825);
+
+            @include mobile {
+                display: none;
+            }
 
             span {
                 display: block;
                 font-size: rem-calc(18);
                 margin-top: rem-calc(4);
-            }
-
-            @include mobile {
-                display: block;
             }
         }
 
@@ -34,34 +34,43 @@
 
             @include border-radius;
 
+            th,
+            td {
+                min-width: rem-calc(267.5);
+                padding: rem-calc(16 12);
+            }
+
             thead {
                 background: rgba($white, 0.825);
                 color: $primary;
+                display: none;
+                border-bottom: 3px solid $white;
 
                 @include mobile {
-                    display: none;
+                    display: block;
                 }
 
                 th {
                     font-weight: bolder;
                     font-size: rem-calc(18);
-                    border-bottom: 3px solid $white;
                 }
             }
 
             tbody {
                 tr {
+                    display: flex;
+                    flex-direction: column;
+
                     @include mobile {
-                        display: flex;
-                        flex-direction: column;
+                        flex-direction: row;
                     }
 
                     &:first-child {
                         td {
-                            padding-top: rem-calc(32);
+                            padding-top: rem-calc(8);
 
                             @include mobile {
-                                padding-top: rem-calc(8);
+                                padding-top: rem-calc(32);
                             }
                         }
                     }
@@ -74,24 +83,12 @@
                         &:first-of-type {
                             display: flex;
                             align-items: center;
-                            gap: rem-calc(12);
+                            gap: rem-calc(24);
 
                             > i {
-                                min-width: rem-calc(24);
+                                min-width: rem-calc(28);
                             }
                         }
-                    }
-                }
-            }
-
-            th,
-            td {
-                min-width: rem-calc(267.5);
-                padding: rem-calc(16 12);
-
-                @include mobile {
-                    &:last-of-type {
-                        padding: rem-calc(8 12 32);
                     }
                 }
             }

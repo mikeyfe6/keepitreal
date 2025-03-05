@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-
-import { useLocation } from "@reach/router";
+import React from "react";
 
 import { Link } from "gatsby";
 
@@ -9,40 +7,19 @@ import { StaticImage } from "gatsby-plugin-image";
 import * as heroStyles from "../../styles/modules/layout/hero.module.scss";
 
 const Hero: React.FC = () => {
-    const { pathname } = useLocation();
-
-    const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsSmallScreen(window.innerWidth < 641);
-        };
-
-        handleResize();
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
-    const isHomeAndSmallScreen = pathname === "/" && isSmallScreen;
-
     return (
         <section className={heroStyles.hero}>
-            {(isHomeAndSmallScreen || !isSmallScreen) && (
-                <div className={heroStyles.slogan}>
-                    <h1>
-                        Welkom bij <strong>KEEP IT REAL</strong>. Een programma
-                        waarin jongeren talenten ontdekken en we het onderwijs
-                        verrijken met levenslessen.
-                    </h1>
-                    <div className={heroStyles.buttons}>
-                        <Link to="/workshops/">Workshops</Link>
-                        <Link to="/contact/">Contact</Link>
-                    </div>
+            <div className={heroStyles.slogan}>
+                <h1>
+                    Welkom bij <strong>KEEP IT REAL</strong>. Een programma
+                    waarin jongeren talenten ontdekken en we het onderwijs
+                    verrijken met levenslessen.
+                </h1>
+                <div className={heroStyles.buttons}>
+                    <Link to="/workshops/">Workshops</Link>
+                    <Link to="/contact/">Contact</Link>
                 </div>
-            )}
+            </div>
 
             <div className={heroStyles.line} />
 
