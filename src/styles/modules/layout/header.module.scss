@@ -63,7 +63,7 @@
                                     border-right: 6px solid transparent;
                                     border-top: 7.5px solid $tertiary;
                                     position: absolute;
-                                    top: rem-calc(-20);
+                                    top: rem-calc(-16);
                                     left: 50%;
                                     transform: translateX(-50%);
                                 }
@@ -164,7 +164,7 @@
             rgba($primary, 1) 0%,
             rgba($primary, 0.75) 100%
         );
-        padding: rem-calc(16 0);
+        padding: rem-calc(16 0 20);
 
         @include box-shadow;
 
