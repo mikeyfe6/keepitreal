@@ -2,7 +2,7 @@
 @use "functions" as *;
 @use "mediaqueries" as *;
 
-@mixin container($maxWidth: 1400px, $padding: 2em, $gap: 0) {
+@mixin container($maxWidth: rem-calc(1400), $padding: rem-calc(32), $gap: 0) {
     max-width: $maxWidth;
     margin: 0 auto;
     padding: $gap rem-calc(20);

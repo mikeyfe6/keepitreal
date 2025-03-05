@@ -278,6 +278,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen
+                        loading="lazy"
                         className="youtube w-margin"
                     />
 
@@ -289,6 +290,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen
+                        loading="lazy"
                         className="youtube w-margin"
                     />
                 </div>

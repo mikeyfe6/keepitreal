@@ -19,6 +19,15 @@
     font-display: swap;
 }
 
+html,
+body,
+#gatsby-focus-wrapper,
+/* stylelint-disable-next-line selector-id-pattern */
+#___gatsby {
+    height: 100%;
+    margin: 0;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -30,16 +39,18 @@ html {
 }
 
 body {
-    background: linear-gradient(145deg, $primary 30%, $secondary 100%);
     font-family: Montserrat, sans-serif;
+    background: linear-gradient(145deg, $primary 30%, $secondary 100%);
+    min-width: rem-calc(320);
     color: $white;
 
-    @include container(1300px);
+    @include container(rem-calc(1300));
 }
 
 .keep-it-real {
     display: flex;
     flex-direction: column;
+    min-height: 100%;
     margin: 0;
 
     &__logo {

@@ -36,17 +36,14 @@
         }
 
         > h1 {
-            line-height: 1.6;
-            font-size: rem-calc(24);
+            line-height: 1.55;
             margin-top: rem-calc(-12);
             margin-bottom: 0;
 
+            @include fluid-typing(24, 32);
+
             @include tablet {
                 margin-top: unset;
-            }
-
-            @include laptop {
-                font-size: rem-calc(28);
             }
         }
 
@@ -86,7 +83,7 @@
         overflow: hidden;
         border: 3px solid $secondary;
 
-        @include border-radius(16px);
+        @include border-radius(8px);
         @include box-shadow;
 
         [data-gatsby-image-wrapper] {

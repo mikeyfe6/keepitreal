@@ -133,7 +133,7 @@ const config: GatsbyConfig = {
                 short_name: siteMetadata.title,
                 description: siteMetadata.slogan,
                 start_url: `/`,
-                icon: "src/images/favicon/icon.svg",
+                icon: "src/images/favicon/icon.png",
                 background_color: siteMetadata.bgWebColor,
                 theme_color: siteMetadata.bgThemeColor,
                 display: `standalone`,
