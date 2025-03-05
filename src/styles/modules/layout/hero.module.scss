@@ -7,7 +7,7 @@
     align-items: center;
     flex-direction: column-reverse;
     padding-top: rem-calc(160);
-    gap: rem-calc(44);
+    gap: rem-calc(40);
 
     @include mobile {
         padding-top: rem-calc(237.5);
@@ -70,7 +70,7 @@
 
     .line {
         width: 100%;
-        height: rem-calc(5);
+        height: rem-calc(3);
         display: block;
         background-color: rgba($white, 0.9);
 
