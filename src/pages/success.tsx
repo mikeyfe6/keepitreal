@@ -20,5 +20,5 @@ const SuccessPage: React.FC<PageProps> = () => {
 export default SuccessPage;
 
 export const Head: HeadFC = () => (
-    <Seo title="Formulier verzonden!" pathname="/success/" />
+    <Seo title="Formulier verzonden!" pathname="/success/" noindex />
 );

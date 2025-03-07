@@ -8,6 +8,8 @@ interface SEOProps {
     keywords?: string;
     pathname?: string;
     children?: ReactNode;
+    noindex?: boolean;
+    article?: boolean;
 }
 
 export const Seo: React.FC<SEOProps> = ({
@@ -16,6 +18,8 @@ export const Seo: React.FC<SEOProps> = ({
     keywords,
     pathname,
     children,
+    noindex,
+    article,
 }: SEOProps) => {
     const {
         title: siteTitle,
@@ -55,7 +59,7 @@ export const Seo: React.FC<SEOProps> = ({
             <meta property="og:locale" content="nl_NL" />
             <meta
                 property="og:type"
-                content={pathname ? "article" : "website"}
+                content={article ? "article" : "website"}
             />
 
             {/* TWITTER META TAGS */}
@@ -79,6 +83,9 @@ export const Seo: React.FC<SEOProps> = ({
                 crossOrigin="anonymous"
                 referrerPolicy="no-referrer"
             />
+
+            {/* ROBOTS META TAG */}
+            {noindex && <meta name="robots" content="noindex" />}
 
             {children}
         </>
