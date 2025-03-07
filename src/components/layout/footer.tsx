@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import * as footerStyles from "../../styles/modules/layout/footer.module.scss";
 
 const Footer: React.FC = () => {
@@ -14,7 +16,10 @@ const Footer: React.FC = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            <i className="fab fa-instagram fa-lg" />
+                            <FontAwesomeIcon
+                                icon={["fab", "instagram"]}
+                                size="xl"
+                            />
                         </a>
                     </li>
                     <li>
@@ -23,7 +28,10 @@ const Footer: React.FC = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            <i className="fab fa-facebook fa-lg" />
+                            <FontAwesomeIcon
+                                icon={["fab", "facebook"]}
+                                size="lg"
+                            />
                         </a>
                     </li>
                     <li>
@@ -32,7 +40,10 @@ const Footer: React.FC = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            <i className="fab fa-tiktok fa-lg" />
+                            <FontAwesomeIcon
+                                icon={["fab", "tiktok"]}
+                                size="lg"
+                            />
                         </a>
                     </li>
                     <li>
@@ -41,7 +52,10 @@ const Footer: React.FC = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            <i className="fab fa-youtube fa-lg" />
+                            <FontAwesomeIcon
+                                icon={["fab", "youtube"]}
+                                size="lg"
+                            />
                         </a>
                     </li>
                     <li>
@@ -50,7 +64,10 @@ const Footer: React.FC = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            <i className="fab fa-spotify fa-lg" />
+                            <FontAwesomeIcon
+                                icon={["fab", "spotify"]}
+                                size="lg"
+                            />
                         </a>
                     </li>
                 </ul>

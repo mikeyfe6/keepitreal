@@ -4,6 +4,8 @@ import { Link } from "gatsby";
 
 import { StaticImage } from "gatsby-plugin-image";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Hamburger from "../layout/hamburger";
 
 import * as headerStyles from "../../styles/modules/layout/header.module.scss";
@@ -102,7 +104,10 @@ const Header: React.FC = () => {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                <i className="fab fa-instagram fa-lg" />
+                                <FontAwesomeIcon
+                                    icon={["fab", "instagram"]}
+                                    size="xl"
+                                />
                             </a>
                         </li>
                         <li>
@@ -111,7 +116,10 @@ const Header: React.FC = () => {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                <i className="fab fa-facebook fa-lg" />
+                                <FontAwesomeIcon
+                                    icon={["fab", "facebook"]}
+                                    size="lg"
+                                />
                             </a>
                         </li>
                         <li>
@@ -120,7 +128,10 @@ const Header: React.FC = () => {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                <i className="fab fa-tiktok fa-lg" />
+                                <FontAwesomeIcon
+                                    icon={["fab", "tiktok"]}
+                                    size="lg"
+                                />
                             </a>
                         </li>
                         <li>
@@ -129,7 +140,10 @@ const Header: React.FC = () => {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                <i className="fab fa-youtube fa-lg" />
+                                <FontAwesomeIcon
+                                    icon={["fab", "youtube"]}
+                                    size="lg"
+                                />
                             </a>
                         </li>
                         <li>
@@ -138,7 +152,10 @@ const Header: React.FC = () => {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                <i className="fab fa-spotify fa-lg" />
+                                <FontAwesomeIcon
+                                    icon={["fab", "spotify"]}
+                                    size="lg"
+                                />
                             </a>
                         </li>
                     </ul>
@@ -195,7 +212,10 @@ const Header: React.FC = () => {
                                     rel="noopener noreferrer"
                                     target="_blank"
                                 >
-                                    <i className="fab fa-instagram fa-2xl" />
+                                    <FontAwesomeIcon
+                                        icon={["fab", "instagram"]}
+                                        size="2xl"
+                                    />
                                 </a>
                             </li>
                             <li>
@@ -204,7 +224,10 @@ const Header: React.FC = () => {
                                     rel="noopener noreferrer"
                                     target="_blank"
                                 >
-                                    <i className="fab fa-facebook fa-2xl" />
+                                    <FontAwesomeIcon
+                                        icon={["fab", "facebook"]}
+                                        size="2xl"
+                                    />
                                 </a>
                             </li>
                             <li>
@@ -213,7 +236,10 @@ const Header: React.FC = () => {
                                     rel="noopener noreferrer"
                                     target="_blank"
                                 >
-                                    <i className="fab fa-tiktok fa-2xl" />
+                                    <FontAwesomeIcon
+                                        icon={["fab", "tiktok"]}
+                                        size="2xl"
+                                    />
                                 </a>
                             </li>
                             <li>
@@ -222,7 +248,10 @@ const Header: React.FC = () => {
                                     rel="noopener noreferrer"
                                     target="_blank"
                                 >
-                                    <i className="fab fa-youtube fa-2xl" />
+                                    <FontAwesomeIcon
+                                        icon={["fab", "youtube"]}
+                                        size="2xl"
+                                    />
                                 </a>
                             </li>
                             <li>
@@ -231,7 +260,10 @@ const Header: React.FC = () => {
                                     rel="noopener noreferrer"
                                     target="_blank"
                                 >
-                                    <i className="fab fa-spotify fa-2xl" />
+                                    <FontAwesomeIcon
+                                        icon={["fab", "spotify"]}
+                                        size="2xl"
+                                    />
                                 </a>
                             </li>
                         </ul>

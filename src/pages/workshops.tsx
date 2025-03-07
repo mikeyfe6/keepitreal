@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "@reach/router";
 
 import type { HeadFC, PageProps } from "gatsby";
+
 import { StaticImage } from "gatsby-plugin-image";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Layout from "../components/layout";
 
@@ -68,8 +71,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
                                     <h6>Kenny Brenet</h6>
                                     <span>&middot;</span>
                                     <a href="mailto:s.g.brenet@gmail.com">
-                                        <i className="fa-solid fa-right-long" />
-                                        <i className="fa-solid fa-square-envelope fa-xl" />
+                                        <FontAwesomeIcon icon={"right-long"} />
+                                        <FontAwesomeIcon
+                                            icon={"square-envelope"}
+                                            size={"xl"}
+                                        />
                                     </a>
                                 </div>
                             </div>
@@ -129,8 +135,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
                                     <h6>F.I.</h6>
                                     <span>&middot;</span>
                                     <a href="mailto:l.g.ramazan2@icloud.com">
-                                        <i className="fa-solid fa-right-long" />
-                                        <i className="fa-solid fa-square-envelope fa-xl" />
+                                        <FontAwesomeIcon icon={"right-long"} />
+                                        <FontAwesomeIcon
+                                            icon={"square-envelope"}
+                                            size={"xl"}
+                                        />
                                     </a>
                                 </div>
                             </div>
@@ -191,8 +200,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
                                     <h6>Melanie Falix</h6>
                                     <span>&middot;</span>
                                     <a href="mailto:m.falix@hotmail.com">
-                                        <i className="fa-solid fa-right-long" />
-                                        <i className="fa-solid fa-square-envelope fa-xl" />
+                                        <FontAwesomeIcon icon={"right-long"} />
+                                        <FontAwesomeIcon
+                                            icon={"square-envelope"}
+                                            size={"xl"}
+                                        />
                                     </a>
                                 </div>
                             </div>
@@ -253,8 +265,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
                                     <h6>Franco III</h6>
                                     <span>&middot;</span>
                                     <a href="mailto:francothethird3@gmail.com">
-                                        <i className="fa-solid fa-right-long" />
-                                        <i className="fa-solid fa-square-envelope fa-xl" />
+                                        <FontAwesomeIcon icon={"right-long"} />
+                                        <FontAwesomeIcon
+                                            icon={"square-envelope"}
+                                            size={"xl"}
+                                        />
                                     </a>
                                 </div>
                                 <span>&</span>
@@ -266,8 +281,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
                                     <h6>Mxller</h6>
                                     <span>&middot;</span>
                                     <a href="mailto:mxller444@gmail.com">
-                                        <i className="fa-solid fa-right-long" />
-                                        <i className="fa-solid fa-square-envelope fa-xl" />
+                                        <FontAwesomeIcon icon={"right-long"} />
+                                        <FontAwesomeIcon
+                                            icon={"square-envelope"}
+                                            size={"xl"}
+                                        />
                                     </a>
                                 </div>
                             </div>
@@ -322,8 +340,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
                                     <h6>Bradley Mensah</h6>
                                     <span>&middot;</span>
                                     <a href="mailto:edmondmensah96@gmail.com">
-                                        <i className="fa-solid fa-right-long" />
-                                        <i className="fa-solid fa-square-envelope fa-xl" />
+                                        <FontAwesomeIcon icon={"right-long"} />
+                                        <FontAwesomeIcon
+                                            icon={"square-envelope"}
+                                            size={"xl"}
+                                        />
                                     </a>
                                 </div>
                             </div>
@@ -382,8 +403,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
                                     <h6>Wenner Regales</h6>
                                     <span>&middot;</span>
                                     <a href="mailto:regalnessnl@gmail.com">
-                                        <i className="fa-solid fa-right-long" />
-                                        <i className="fa-solid fa-square-envelope fa-xl" />
+                                        <FontAwesomeIcon icon={"right-long"} />
+                                        <FontAwesomeIcon
+                                            icon={"square-envelope"}
+                                            size={"xl"}
+                                        />
                                     </a>
                                 </div>
                             </div>
@@ -485,8 +509,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
                                     <h6>Kimberley Leysner</h6>
                                     <span>&middot;</span>
                                     <a href="mailto:kimberley_leysner@hotmail.com">
-                                        <i className="fa-solid fa-right-long" />
-                                        <i className="fa-solid fa-square-envelope fa-xl" />
+                                        <FontAwesomeIcon icon={"right-long"} />
+                                        <FontAwesomeIcon
+                                            icon={"square-envelope"}
+                                            size={"xl"}
+                                        />
                                     </a>
                                 </div>
                             </div>
@@ -575,8 +602,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
                                         href="mailto:nomibynaomi@gmail.com
 "
                                     >
-                                        <i className="fa-solid fa-right-long" />
-                                        <i className="fa-solid fa-square-envelope fa-xl" />
+                                        <FontAwesomeIcon icon={"right-long"} />
+                                        <FontAwesomeIcon
+                                            icon={"square-envelope"}
+                                            size={"xl"}
+                                        />
                                     </a>
                                 </div>
                             </div>

@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import * as sidebarStyles from "../../styles/modules/layout/sidebar.module.scss";
 
 interface SidebarProps {
@@ -132,7 +134,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         >
                             Artikel Parool: "Keep It Real: Een uniek initiatief
                             voor jongeren"{" "}
-                            <i className="fa-solid fa-square-arrow-up-right" />
+                            <FontAwesomeIcon icon={"square-arrow-up-right"} />
                         </a>
                     </li>
                 </ul>

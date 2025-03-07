@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import { Link } from "gatsby";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import * as ctaStyles from "../../styles/modules/components/cta.module.scss";
 
 interface Workshop {
@@ -26,7 +28,7 @@ const Overlay: React.FC<OverlayProps> = ({ item, onClose }) => (
             <div>
                 <Link to={`/workshops/#${item.anchor}`}>Meer informatie</Link>
                 <button onClick={onClose}>
-                    <i className="fa-solid fa-xmark fa-xl" />
+                    <FontAwesomeIcon icon={"xmark"} size="xl" />
                 </button>
             </div>
         </div>

@@ -131,7 +131,7 @@
                                 margin-bottom: 0;
                                 background-color: rgba($white, 0.9);
                                 color: $primary;
-                                padding: rem-calc(4 8);
+                                padding: rem-calc(3 8);
 
                                 @include border-radius;
                             }
@@ -150,11 +150,11 @@
                                 @include smooth-trans;
 
                                 &:hover {
-                                    > i:first-child {
+                                    > svg:first-child {
                                         animation: arrow-bounce 2.5s infinite;
                                     }
 
-                                    > i:nth-of-type(2) {
+                                    > svg:nth-of-type(2) {
                                         color: rgba($tertiary, 0.95);
                                     }
 

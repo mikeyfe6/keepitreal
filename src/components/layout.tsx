@@ -4,6 +4,48 @@ import { useLocation } from "@reach/router";
 
 import { StaticImage } from "gatsby-plugin-image";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+    faXmark,
+    faSquareArrowUpRight,
+    faHandHoldingHand,
+    faPeopleArrows,
+    faHandshake,
+    faUsers,
+    faPersonChalkboard,
+    faUsersViewfinder,
+    faLanguage,
+    faRightLong,
+    faSquareEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+
+import {
+    faInstagram,
+    faFacebook,
+    faTiktok,
+    faYoutube,
+    faSpotify,
+} from "@fortawesome/free-brands-svg-icons";
+
+library.add(
+    faInstagram,
+    faFacebook,
+    faTiktok,
+    faYoutube,
+    faSpotify,
+    faXmark,
+    faSquareArrowUpRight,
+    faHandHoldingHand,
+    faPeopleArrows,
+    faHandshake,
+    faUsers,
+    faPersonChalkboard,
+    faUsersViewfinder,
+    faLanguage,
+    faRightLong,
+    faSquareEnvelope
+);
+
 import Header from "./layout/header";
 import Hero from "./layout/hero";
 import Footer from "./layout/footer";

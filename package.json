@@ -20,6 +20,10 @@
     "stylelint-scss-check": "stylelint-config-prettier-scss-check"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "gatsby": "^5.14.1",
     "gatsby-adapter-netlify": "^1.2.0",
     "gatsby-plugin-canonical-urls": "^5.14.0",

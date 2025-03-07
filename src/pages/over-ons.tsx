@@ -2,6 +2,8 @@ import * as React from "react";
 
 import type { HeadFC, PageProps } from "gatsby";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Layout from "../components/layout";
 
 import { Seo } from "../components/seo";
@@ -77,7 +79,10 @@ const AboutUsPage: React.FC<PageProps> = () => {
                         <tbody>
                             <tr>
                                 <td>
-                                    <i className="fa-solid fa-hand-holding-hand fa-xl" />{" "}
+                                    <FontAwesomeIcon
+                                        icon={"hand-holding-hand"}
+                                        size="xl"
+                                    />{" "}
                                     Empathie en acceptatie
                                 </td>
                                 <td>
@@ -89,7 +94,10 @@ const AboutUsPage: React.FC<PageProps> = () => {
                             </tr>
                             <tr>
                                 <td>
-                                    <i className="fa-solid fa-people-arrows fa-xl" />{" "}
+                                    <FontAwesomeIcon
+                                        icon={"people-arrows"}
+                                        size="xl"
+                                    />{" "}
                                     Sociaal leren
                                 </td>
                                 <td>
@@ -100,7 +108,10 @@ const AboutUsPage: React.FC<PageProps> = () => {
                             </tr>
                             <tr>
                                 <td>
-                                    <i className="fa-solid fa-handshake fa-xl" />{" "}
+                                    <FontAwesomeIcon
+                                        icon={"handshake"}
+                                        size="xl"
+                                    />{" "}
                                     Sociale verbinding
                                 </td>
                                 <td>
@@ -111,7 +122,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
                             </tr>
                             <tr>
                                 <td>
-                                    <i className="fa-solid fa-users fa-xl" />{" "}
+                                    <FontAwesomeIcon icon={"users"} size="xl" />{" "}
                                     Sociale controle
                                 </td>
                                 <td>
@@ -123,7 +134,10 @@ const AboutUsPage: React.FC<PageProps> = () => {
                             </tr>
                             <tr>
                                 <td>
-                                    <i className="fa-solid fa-person-chalkboard fa-xl" />{" "}
+                                    <FontAwesomeIcon
+                                        icon={"person-chalkboard"}
+                                        size="xl"
+                                    />{" "}
                                     Verhaal en identiteitsvorming
                                 </td>
                                 <td>
@@ -134,7 +148,10 @@ const AboutUsPage: React.FC<PageProps> = () => {
                             </tr>
                             <tr>
                                 <td>
-                                    <i className="fa-solid fa-users-viewfinder fa-xl" />{" "}
+                                    <FontAwesomeIcon
+                                        icon={"users-viewfinder"}
+                                        size="xl"
+                                    />{" "}
                                     Hoop en perspectief
                                 </td>
                                 <td>
@@ -145,7 +162,10 @@ const AboutUsPage: React.FC<PageProps> = () => {
                             </tr>
                             <tr>
                                 <td>
-                                    <i className="fa-solid fa-language fa-xl" />{" "}
+                                    <FontAwesomeIcon
+                                        icon={"language"}
+                                        size="xl"
+                                    />{" "}
                                     Vertaling en verbinding
                                 </td>
                                 <td>

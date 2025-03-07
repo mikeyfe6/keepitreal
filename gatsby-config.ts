@@ -114,7 +114,6 @@ const config: GatsbyConfig = {
                 },
             },
         },
-        // TODO: exclude the succes page
         "gatsby-plugin-sitemap",
         {
             resolve: "gatsby-source-filesystem",

@@ -1,5 +1,4 @@
 @use "./customs" as *;
-@use "resets";
 @use "typography";
 
 @font-face {
@@ -74,11 +73,11 @@ body {
 main {
     flex: 1;
     margin: rem-calc(40 0 80);
+    line-height: 1.575;
 
     p,
     span,
     li {
-        line-height: 1.5;
         letter-spacing: 0.125px;
 
         &:not(#workshops p, #workshops span, #workshops li, #media li) {
@@ -128,6 +127,11 @@ main {
 
 footer {
     flex-shrink: 0;
+}
+
+svg,
+iframe {
+    all: unset;
 }
 
 iframe {

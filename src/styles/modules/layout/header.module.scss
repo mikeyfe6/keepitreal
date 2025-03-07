@@ -36,6 +36,7 @@
             display: none;
             flex-direction: column;
             gap: rem-calc(28);
+            align-items: flex-end;
 
             @include phablet {
                 display: flex;
@@ -74,10 +75,8 @@
             }
 
             > ul {
-                align-self: flex-end;
                 display: flex;
                 gap: rem-calc(16);
-                height: rem-calc(23);
 
                 > li {
                     color: rgba($tertiary, 0.825);
@@ -140,13 +139,13 @@
 
             &-socials {
                 display: flex;
-                flex-direction: row;
-                align-items: flex-end;
-                justify-content: center;
+                align-items: center;
                 gap: rem-calc(28);
                 margin-top: rem-calc(16);
 
                 > li {
+                    display: flex;
+                    align-items: center;
                     color: rgba($tertiary, 0.825);
 
                     &:hover {

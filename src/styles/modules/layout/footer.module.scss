@@ -13,18 +13,10 @@
         gap: rem-calc(32);
         flex-direction: column;
 
-        @include container(rem-calc(1300), rem-calc(32), rem-calc(20));
+        @include container(rem-calc(1300), rem-calc(32), rem-calc(16));
 
         @include phablet {
             flex-direction: row;
-        }
-
-        ul {
-            align-self: center;
-
-            @include phablet {
-                align-self: flex-start;
-            }
         }
 
         > p {
@@ -76,9 +68,17 @@
 
         > ul {
             display: flex;
+            align-self: center;
             gap: rem-calc(16);
 
+            @include phablet {
+                align-self: flex-start;
+            }
+
             li {
+                display: flex;
+                align-self: center;
+
                 a:hover {
                     color: $tertiary;
                 }
