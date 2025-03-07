@@ -1,3 +1,4 @@
+import { count } from "console";
 import type { GatsbyConfig } from "gatsby";
 
 require("dotenv").config({
@@ -14,24 +15,27 @@ const siteMetadata = {
     image: `/KIR-bg-logo.png`,
 
     twitterUsername: `@keepitrealkir`,
-    facebookUrl: `#!`,
-    instagramUrl: `#!`,
+    facebookUrl: `https://www.facebook.com/profile.php?id=61559466671196`,
+    instagramUrl: `https://www.instagram.com/keepitrealkir/`,
+    tiktokUrl: `https://www.tiktok.com/@keepitrealkir`,
+    youtubeUrl: `https://www.youtube.com/@keepitreal_de_podcast`,
+    spotifyUrl: `https://open.spotify.com/show/7wDDGz0HtXhn3WPCJ3KLcO?si=80196a51f4e4423d`,
     linkedinUrl: `#!`,
-    youtubeUrl: `#!`,
 
     telephone: ``,
     phoneRaw: ``,
     mobile: ``,
 
-    email: ``,
-    address: ``,
-    postalCode: ``,
-    city: ``,
+    email: `secretariaat@keeptreal.nl`,
+    address: `Piet Heinkade 3`,
+    postalCode: `1019 BR`,
+    city: ` Amsterdam`,
+    country: `Nederland`,
 
-    companyName: ``,
-    kvk: ``,
+    companyName: `Stichting Keep It Real`,
+    kvk: `94261237`,
     btw: ``,
-    bank: ``,
+    bank: `NL77 ABNA 0136 1411 96`,
 
     bgWebColor: `#0d0128`,
     bgThemeColor: `#662d92`,

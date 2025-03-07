@@ -46,7 +46,9 @@ h6 {
 }
 
 p,
-li {
+li,
+td,
+th {
     @include fluid-typing(17, 18);
 
     aside & {

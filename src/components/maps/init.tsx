@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 
 import { Loader } from "@googlemaps/js-api-loader";
 
+import { useSiteMetadata } from "../../hooks/use-site-metadata";
+
 interface GoogleMapProps {
     center: { lat: number; lng: number };
     zoom: number;
@@ -13,6 +15,9 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
     zoom,
     markers = [],
 }) => {
+    const { companyName, address, postalCode, city, country } =
+        useSiteMetadata();
+
     const mapRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -22,26 +27,69 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
         });
 
         loader.importLibrary("maps").then(async (mapsLib) => {
-            const { Map } = mapsLib;
+            const { Map, InfoWindow } = mapsLib;
             const { AdvancedMarkerElement } = await loader.importLibrary(
                 "marker"
             );
 
             if (mapRef.current) {
                 const map = new Map(mapRef.current, {
+                    mapId: process.env.GATSBY_GOOGLE_MAPS_ID || "",
                     center,
                     zoom,
-                    mapId: process.env.GATSBY_GOOGLE_MAPS_ID || "",
+                    zoomControl: true,
+                    fullscreenControl: true,
                 });
+
+                const infoWindow = new InfoWindow();
 
                 markers.forEach((marker) => {
                     const markerElement = document.createElement("div");
                     markerElement.innerHTML = `<img src="${marker.imageUrl}" alt="Marker" style="width:40px; height:40px;" />`;
 
-                    new AdvancedMarkerElement({
+                    const advancedMarker = new AdvancedMarkerElement({
                         position: { lat: marker.lat, lng: marker.lng },
                         map,
                         content: markerElement,
+                        gmpClickable: true,
+                    });
+
+                    const markerStyle = `
+                       padding: 4px 8px;
+                       font-size: 12px;
+                       border-radius: 3px;
+                       line-height: 1.4;
+                       background: #162987;
+                    `;
+
+                    const linkStyle = `
+                        display: block;
+                        text-decoration: underline; 
+                        margin-top: 4px;
+                    `;
+
+                    const titleStyle = `
+                        font-weight: bold;
+                        color: #fff;
+                    `;
+
+                    const markerUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                        address + ", " + postalCode + " " + city
+                    )}`;
+
+                    advancedMarker.addEventListener("gmp-click", () => {
+                        infoWindow.close();
+                        infoWindow.setContent(
+                            `<p style="${markerStyle}"> 
+                                <span style="${titleStyle}">${companyName}</span> <br />
+                                ${address}, ${postalCode} <br />
+                                ${city}, ${country} <br />
+                                <a href="${markerUrl}" style="${linkStyle} target="_blank">
+                                    Openen in Google Maps
+                                </a>
+                            </p>`
+                        );
+                        infoWindow.open(map, advancedMarker);
                     });
                 });
             }

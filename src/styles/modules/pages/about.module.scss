@@ -37,14 +37,21 @@
             th,
             td {
                 min-width: rem-calc(267.5);
-                padding: rem-calc(16 12);
+                padding: rem-calc(16 0);
+
+                @include mobile {
+                    padding: rem-calc(16);
+                }
             }
 
             thead {
-                background: rgba($white, 0.825);
+                background: rgba($white, 0.75);
                 color: $primary;
                 display: none;
-                border-bottom: 3px solid $white;
+                border: 2px solid $secondary;
+                overflow: hidden;
+
+                @include border-radius(5px);
 
                 @include mobile {
                     display: block;

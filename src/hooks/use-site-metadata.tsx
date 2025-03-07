@@ -2,8 +2,8 @@ import { graphql, useStaticQuery } from "gatsby";
 
 interface SiteMetadata {
     title: string;
-    description: string;
     slogan: string;
+    description: string;
 
     siteUrl: string;
     image: string;
@@ -11,8 +11,10 @@ interface SiteMetadata {
     twitterUsername: string;
     facebookUrl: string;
     instagramUrl: string;
-    linkedinUrl: string;
+    tiktokUrl: string;
     youtubeUrl: string;
+    spotifyUrl: string;
+    linkedinUrl: string;
 
     telephone: string;
     phoneRaw: string;
@@ -22,6 +24,7 @@ interface SiteMetadata {
     address: string;
     postalCode: string;
     city: string;
+    country: string;
 
     companyName: string;
     kvk: string;
@@ -47,8 +50,10 @@ export const useSiteMetadata = (): SiteMetadata => {
                     twitterUsername
                     facebookUrl
                     instagramUrl
-                    linkedinUrl
+                    tiktokUrl
                     youtubeUrl
+                    spotifyUrl
+                    linkedinUrl
 
                     telephone
                     phoneRaw
@@ -58,6 +63,7 @@ export const useSiteMetadata = (): SiteMetadata => {
                     address
                     postalCode
                     city
+                    country
 
                     companyName
                     kvk

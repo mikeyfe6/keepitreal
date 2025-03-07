@@ -20,11 +20,28 @@ const ContactPage: React.FC<PageProps> = () => {
                     <h5>
                         <u>Stichting Keep It Real</u>
                     </h5>
+
                     <p>
-                        Piet Heinkade 3, 1019 BR Amsterdam <br />
-                        E-mail<span>:</span> Secretariaat@keeptreal.nl <br />
-                        KvK<span>:</span> 94261237 <br />
-                        Bank<span>:</span> ​NL77 ABNA 0136 1411 96
+                        Piet Heinkade 3 <br /> 1019 BR Amsterdam
+                    </p>
+
+                    <p>
+                        E-mail<span>:</span>
+                        <br />
+                        <a href="mailto:secretariaat@keeptreal.nl">
+                            secretariaat@keeptreal.nl
+                        </a>
+                    </p>
+
+                    <p>
+                        KvK<span>:</span>
+                        <br />
+                        94261237
+                    </p>
+
+                    <p>
+                        Bank<span>:</span> <br />
+                        NL77 ABNA 0136 1411 96
                     </p>
 
                     {/* <p>
