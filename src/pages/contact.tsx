@@ -48,6 +48,4 @@ const ContactPage: React.FC<PageProps> = () => {
 
 export default ContactPage;
 
-export const Head: HeadFC = () => (
-    <Seo title="Neem Contact Op" pathname="/contact/" />
-);
+export const Head: HeadFC = () => <Seo title="Contact" pathname="/contact/" />;
