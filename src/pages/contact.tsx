@@ -2,6 +2,8 @@ import * as React from "react";
 
 import type { HeadFC, PageProps } from "gatsby";
 
+import { useSiteMetadata } from "../hooks/use-site-metadata";
+
 import Layout from "../components/layout";
 import Form from "../components/forms/form";
 import Maps from "../components/ui/maps";
@@ -11,6 +13,9 @@ import { Seo } from "../components/seo";
 import * as contactStyles from "../styles/modules/pages/contact.module.scss";
 
 const ContactPage: React.FC<PageProps> = () => {
+    const { companyName, address, postalCode, city, email, kvk, bank } =
+        useSiteMetadata();
+
     return (
         <Layout>
             <div className={contactStyles.contact}>
@@ -18,30 +23,28 @@ const ContactPage: React.FC<PageProps> = () => {
                 <div>
                     <h3>Bezoekadres & postadres:</h3>
                     <h5>
-                        <u>Stichting Keep It Real</u>
+                        <u>{companyName}</u>
                     </h5>
 
                     <p>
-                        Piet Heinkade 3 <br /> 1019 BR Amsterdam
+                        {address} <br /> {postalCode} {city}
                     </p>
 
                     <p>
                         E-mail<span>:</span>
                         <br />
-                        <a href="mailto:secretariaat@keeptreal.nl">
-                            secretariaat@keeptreal.nl
-                        </a>
+                        <a href={`mailto:${email}`}>{email}</a>
                     </p>
 
                     <p>
                         KvK<span>:</span>
                         <br />
-                        94261237
+                        {kvk}
                     </p>
 
                     <p>
                         Bank<span>:</span> <br />
-                        NL77 ABNA 0136 1411 96
+                        {bank}
                     </p>
 
                     {/* <p>

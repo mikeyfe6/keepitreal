@@ -2,9 +2,14 @@ import * as React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { useSiteMetadata } from "../../hooks/use-site-metadata";
+
 import * as footerStyles from "../../styles/modules/layout/footer.module.scss";
 
 const Footer: React.FC = () => {
+    const { facebookUrl, instagramUrl, tiktokUrl, youtubeUrl, spotifyUrl } =
+        useSiteMetadata();
+
     return (
         <footer className={footerStyles.footer}>
             <div className={footerStyles.footerContainer}>
@@ -12,7 +17,7 @@ const Footer: React.FC = () => {
                 <ul>
                     <li>
                         <a
-                            href="https://www.instagram.com/keepitrealkir"
+                            href={instagramUrl}
                             rel="noopener noreferrer"
                             target="_blank"
                         >
@@ -24,7 +29,7 @@ const Footer: React.FC = () => {
                     </li>
                     <li>
                         <a
-                            href="https://www.facebook.com/profile.php?id=61559466671196"
+                            href={facebookUrl}
                             rel="noopener noreferrer"
                             target="_blank"
                         >
@@ -36,7 +41,7 @@ const Footer: React.FC = () => {
                     </li>
                     <li>
                         <a
-                            href="https://www.tiktok.com/@keepitreal_nl"
+                            href={tiktokUrl}
                             rel="noopener noreferrer"
                             target="_blank"
                         >
@@ -48,7 +53,7 @@ const Footer: React.FC = () => {
                     </li>
                     <li>
                         <a
-                            href="https://www.youtube.com/@keepitreal_de_podcast"
+                            href={youtubeUrl}
                             rel="noopener noreferrer"
                             target="_blank"
                         >
@@ -60,7 +65,7 @@ const Footer: React.FC = () => {
                     </li>
                     <li>
                         <a
-                            href="https://open.spotify.com/show/7wDDGz0HtXhn3WPCJ3KLcO?si=80196a51f4e4423d"
+                            href={spotifyUrl}
                             rel="noopener noreferrer"
                             target="_blank"
                         >
