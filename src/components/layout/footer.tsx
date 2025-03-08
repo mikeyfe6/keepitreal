@@ -7,13 +7,23 @@ import { useSiteMetadata } from "../../hooks/use-site-metadata";
 import * as footerStyles from "../../styles/modules/layout/footer.module.scss";
 
 const Footer: React.FC = () => {
-    const { facebookUrl, instagramUrl, tiktokUrl, youtubeUrl, spotifyUrl } =
-        useSiteMetadata();
+    const {
+        title,
+        facebookUrl,
+        instagramUrl,
+        tiktokUrl,
+        youtubeUrl,
+        spotifyUrl,
+    } = useSiteMetadata();
+
+    const currentYear = new Date().getFullYear();
 
     return (
         <footer className={footerStyles.footer}>
             <div className={footerStyles.footerContainer}>
-                <p>© 2024 - Keep It Real </p>
+                <p>
+                    © {currentYear} - {title}{" "}
+                </p>
                 <ul>
                     <li>
                         <a
