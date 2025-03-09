@@ -297,7 +297,6 @@ const AboutUsPage: React.FC<PageProps> = () => {
                         title="Keep It Real De Dreef 2023"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
                         loading="lazy"
                         className="youtube w-margin"
                     />
@@ -309,7 +308,6 @@ const AboutUsPage: React.FC<PageProps> = () => {
                         title="Keep It Real Orion College Zuidoost 2023"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
                         loading="lazy"
                         className="youtube w-margin"
                     />

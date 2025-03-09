@@ -117,13 +117,10 @@ const IndexPage: React.FC<PageProps> = () => {
                     </ol>
 
                     <iframe
-                        width="560"
-                        height="315"
                         src="https://www.youtube-nocookie.com/embed/v8i5Z0x0rwc?si=BStmnNjZ-vZQPNBV"
                         title="Amsterdammer van het Jaar: Wenner Regales"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
                         referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
                         loading="lazy"
                         className="youtube w-margin"
                     />
@@ -176,7 +173,6 @@ const IndexPage: React.FC<PageProps> = () => {
                     <iframe
                         title="Keep It Real Podcast"
                         src="https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator"
-                        allowFullScreen={true}
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                         loading="lazy"
                         className="spotify w-margin"

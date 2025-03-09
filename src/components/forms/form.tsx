@@ -47,7 +47,7 @@ const Form: React.FC = () => {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                data-netlify-recaptcha="true"
+                // data-netlify-recaptcha="true"
                 onSubmit={handleSubmit}
             >
                 <input type="hidden" name="bot-field" />
@@ -113,7 +113,7 @@ const Form: React.FC = () => {
                         required
                     />
                 </div>
-                <div data-netlify-recaptcha="true" />
+                {/* <div data-netlify-recaptcha="true" /> */}
                 <div>
                     <button type="submit">Versturen</button>
                 </div>
