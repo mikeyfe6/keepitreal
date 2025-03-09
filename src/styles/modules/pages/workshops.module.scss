@@ -114,10 +114,12 @@
                         }
 
                         > span {
+                            display: none;
+                            font-weight: 600;
                             color: $tertiary;
 
-                            @include tablet {
-                                display: none;
+                            @include compact {
+                                display: block;
                             }
                         }
 
@@ -138,6 +140,7 @@
 
                             > span {
                                 color: $tertiary;
+                                font-weight: 500;
                             }
 
                             > a {
