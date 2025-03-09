@@ -293,7 +293,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
                     <iframe
                         width="560"
                         height="315"
-                        src="https://www.youtube.com/embed/ErKTVPbeUJ0?si=lx2uqQABSI7C-yKf"
+                        src="https://www.youtube-nocookie.com/embed/ErKTVPbeUJ0?si=lx2uqQABSI7C-yKf"
                         title="Keep It Real De Dreef 2023"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
@@ -305,7 +305,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
                     <iframe
                         width="560"
                         height="315"
-                        src="https://www.youtube.com/embed/OVvH0tBxjCw?si=UHcn51Fa-EtqNCpQ"
+                        src="https://www.youtube-nocookie.com/embed/OVvH0tBxjCw?si=UHcn51Fa-EtqNCpQ"
                         title="Keep It Real Orion College Zuidoost 2023"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"

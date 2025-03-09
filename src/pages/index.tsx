@@ -119,7 +119,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     <iframe
                         width="560"
                         height="315"
-                        src="https://www.youtube.com/embed/v8i5Z0x0rwc?si=BStmnNjZ-vZQPNBV"
+                        src="https://www.youtube-nocookie.com/embed/v8i5Z0x0rwc?si=BStmnNjZ-vZQPNBV"
                         title="Amsterdammer van het Jaar: Wenner Regales"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
