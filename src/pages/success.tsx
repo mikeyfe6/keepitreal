@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import type { HeadFC, PageProps } from "gatsby";
+import { HeadFC, PageProps, Link } from "gatsby";
 
 import Layout from "../components/layout";
 
@@ -12,6 +12,11 @@ const SuccessPage: React.FC<PageProps> = () => {
             <div>
                 <h2>Bedankt! Je bericht is verzonden</h2>
                 <p>We komen bij je terug!</p>
+                <br />
+                <br />
+                <Link to="/">
+                    <u>Ga naar de homepage</u>
+                </Link>
             </div>
         </Layout>
     );

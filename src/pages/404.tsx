@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import type { HeadFC, PageProps } from "gatsby";
+import { HeadFC, PageProps, Link } from "gatsby";
 
 import Layout from "../components/layout";
 
@@ -11,6 +11,10 @@ const NotFoundPage: React.FC<PageProps> = () => {
         <Layout>
             <div>
                 <h1>Pagina niet gevonden...</h1>
+                <br />
+                <Link to="/">
+                    <u>Ga naar de homepage</u>
+                </Link>
             </div>
         </Layout>
     );
