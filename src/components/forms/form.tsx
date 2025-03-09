@@ -43,7 +43,7 @@ const Form: React.FC = () => {
             </div>
 
             <form
-                name="kir-netlifyform"
+                name="kir-form"
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
@@ -51,7 +51,7 @@ const Form: React.FC = () => {
                 onSubmit={handleSubmit}
             >
                 <input type="hidden" name="bot-field" />
-                <input type="hidden" name="form-name" value="kir-netlifyform" />
+                <input type="hidden" name="form-name" value="kir-form" />
 
                 <div>
                     <label htmlFor="formFirstName">Voornaam</label>
