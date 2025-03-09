@@ -48,7 +48,6 @@ const Form: React.FC = () => {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 data-netlify-recaptcha="true"
-                action="/success/"
                 onSubmit={handleSubmit}
             >
                 <input type="hidden" name="bot-field" />
