@@ -40,6 +40,10 @@
             margin-top: rem-calc(-12);
             margin-bottom: 0;
 
+            strong {
+                font-weight: 800;
+            }
+
             @include fluid-typing(24, 32);
 
             @include tablet {
