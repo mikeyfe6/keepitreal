@@ -7,11 +7,30 @@ import axios from "axios";
 import * as formStyles from "../../styles/modules/forms/form.module.scss";
 
 const Form: React.FC = () => {
+    const [formData, setFormData] = React.useState({
+        firstName: "",
+        lastName: "",
+        company: "",
+        phone: "",
+        email: "",
+        message: "",
+    });
+
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+
+    const handleChange = (
+        event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        const { name, value } = event.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-
-        const form = event.currentTarget;
-        const formData = new FormData(form);
+        setIsSubmitting(true);
 
         try {
             const encodedData = new URLSearchParams(formData as any).toString();
@@ -19,6 +38,7 @@ const Form: React.FC = () => {
             if (window.location.hostname === "localhost") {
                 console.log("Form data:", encodedData);
                 alert("Form submission simulated (check console).");
+                setIsSubmitting(false);
                 return;
             }
 
@@ -33,6 +53,8 @@ const Form: React.FC = () => {
             console.error("Form submission error:", error);
             alert("Er is iets misgegaan bij het versturen van het formulier.");
         }
+
+        setIsSubmitting(false);
     };
 
     return (
@@ -47,7 +69,6 @@ const Form: React.FC = () => {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                // data-netlify-recaptcha="true"
                 onSubmit={handleSubmit}
             >
                 <input type="hidden" name="bot-field" />
@@ -61,6 +82,8 @@ const Form: React.FC = () => {
                         id="formFirstName"
                         placeholder="Voornaam"
                         required
+                        value={formData.firstName}
+                        onChange={handleChange}
                     />
                 </div>
                 <div>
@@ -71,6 +94,8 @@ const Form: React.FC = () => {
                         id="formLastName"
                         placeholder="Achternaam"
                         required
+                        value={formData.lastName}
+                        onChange={handleChange}
                     />
                 </div>
                 <div>
@@ -81,6 +106,8 @@ const Form: React.FC = () => {
                         id="formCompany"
                         placeholder="Bedrijfsnaam"
                         required
+                        value={formData.company}
+                        onChange={handleChange}
                     />
                 </div>
                 <div>
@@ -91,6 +118,8 @@ const Form: React.FC = () => {
                         id="formPhoneNr"
                         placeholder="Telefoonnummer"
                         required
+                        value={formData.phone}
+                        onChange={handleChange}
                     />
                 </div>
                 <div>
@@ -101,6 +130,8 @@ const Form: React.FC = () => {
                         id="formEmail"
                         placeholder="E-mailadres"
                         required
+                        value={formData.email}
+                        onChange={handleChange}
                     />
                 </div>
                 <div>
@@ -111,11 +142,15 @@ const Form: React.FC = () => {
                         rows={7}
                         placeholder="Bericht"
                         required
+                        value={formData.message}
+                        onChange={handleChange}
                     />
                 </div>
-                {/* <div data-netlify-recaptcha="true" /> */}
+
                 <div>
-                    <button type="submit">Versturen</button>
+                    <button type="submit" disabled={isSubmitting}>
+                        {isSubmitting ? "Versturen..." : "Versturen"}
+                    </button>
                 </div>
             </form>
         </div>
