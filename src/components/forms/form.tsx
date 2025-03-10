@@ -28,16 +28,22 @@ const Form: React.FC = () => {
         }));
     };
 
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (
+        event: React.FormEvent<HTMLFormElement>,
+        form: HTMLFormElement | null
+    ) => {
         event.preventDefault();
+        if (!form) return;
         setIsSubmitting(true);
 
         try {
-            const encodedData = new URLSearchParams(formData as any).toString();
+            const encodedData = new URLSearchParams(
+                new FormData(form) as any
+            ).toString();
 
             if (window.location.hostname === "localhost") {
                 console.log("Form data:", encodedData);
-                alert("Form submission simulated (check console).");
+                alert("Form submission simulated (check console). ");
                 setIsSubmitting(false);
                 return;
             }
@@ -66,10 +72,12 @@ const Form: React.FC = () => {
 
             <form
                 name="kir-form"
-                method="POST"
+                method="post"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                onSubmit={handleSubmit}
+                onSubmit={(event) =>
+                    handleSubmit(event, document.querySelector("form"))
+                }
             >
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="kir-form" />
