@@ -18,6 +18,28 @@
         flex: 50%;
         height: fit-content;
 
+        a,
+        button {
+            position: relative;
+
+            @include smooth-trans;
+
+            &:hover {
+                &::after {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-top: 6px solid transparent;
+                    border-bottom: 6px solid transparent;
+                    border-right: 10px solid rgba($tertiary, 0.75);
+                    position: absolute;
+                    top: 50%;
+                    right: rem-calc(-20);
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
         @include main-card;
 
         span {
