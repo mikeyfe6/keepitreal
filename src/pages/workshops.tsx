@@ -228,11 +228,11 @@ const WorkhopsPage: React.FC<PageProps> = () => {
                     >
                         <div className={workshopStyles.workshopsImageDouble}>
                             <StaticImage
-                                src="../images/workshops/beats-pound-1.tiff"
+                                src="../images/workshops/beats-pound-2.tiff"
                                 alt="Workshop Beats by the Pound"
                             />
                             <StaticImage
-                                src="../images/workshops/beats-pound-2.tiff"
+                                src="../images/workshops/beats-pound-1.tiff"
                                 alt="Workshop Beats by the Pound"
                             />
                         </div>
