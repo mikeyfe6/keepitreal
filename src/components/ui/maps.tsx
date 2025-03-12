@@ -4,7 +4,7 @@ import GoogleMaps from "../maps/init";
 
 import kirLogo from "../../images/favicon/icon.svg";
 
-import * as mapsStyles from "../../styles/modules/components/maps.module.scss";
+import * as mapsStyles from "../../styles/modules/ui/maps.module.scss";
 
 const Maps: React.FC = () => {
     const center = { lat: 52.378456, lng: 4.91302 };

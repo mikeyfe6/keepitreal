@@ -89,9 +89,9 @@ const Form: React.FC = () => {
                         name="firstName"
                         id="formFirstName"
                         placeholder="Voornaam"
-                        required
                         value={formData.firstName}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div>
@@ -101,9 +101,9 @@ const Form: React.FC = () => {
                         name="lastName"
                         id="formLastName"
                         placeholder="Achternaam"
-                        required
                         value={formData.lastName}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div>
@@ -113,9 +113,9 @@ const Form: React.FC = () => {
                         name="company"
                         id="formCompany"
                         placeholder="Bedrijfsnaam"
-                        required
                         value={formData.company}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div>
@@ -125,9 +125,9 @@ const Form: React.FC = () => {
                         name="phone"
                         id="formPhoneNr"
                         placeholder="Telefoonnummer"
-                        required
                         value={formData.phone}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div>
@@ -137,9 +137,9 @@ const Form: React.FC = () => {
                         name="email"
                         id="formEmail"
                         placeholder="E-mailadres"
-                        required
                         value={formData.email}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div>
@@ -149,15 +149,15 @@ const Form: React.FC = () => {
                         id="formMessage"
                         rows={7}
                         placeholder="Bericht"
-                        required
                         value={formData.message}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 
                 <div>
                     <button type="submit" disabled={isSubmitting}>
-                        {isSubmitting ? "Versturen..." : "Versturen"}
+                        {isSubmitting ? "Versturen ..." : "Versturen"}
                     </button>
                 </div>
             </form>

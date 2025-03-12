@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import * as ctaStyles from "../../styles/modules/components/cta.module.scss";
+import * as ctaStyles from "../../styles/modules/ui/cta.module.scss";
 
 interface Workshop {
     name: string;

@@ -4,7 +4,7 @@ import type { HeadFC, PageProps } from "gatsby";
 
 import Layout from "../components/layout";
 import Cta from "../components/ui/cta";
-import Sidebar from "../components/ui/sidebar";
+import Sidebar from "../components/layout/sidebar";
 
 import { Seo } from "../components/seo";
 

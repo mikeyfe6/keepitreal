@@ -28,6 +28,7 @@
                 width: 100%;
                 background: rgba($white, 0.15);
                 padding: rem-calc(14);
+                resize: none;
 
                 @include border-radius;
                 @include smooth-trans;
