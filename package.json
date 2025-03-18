@@ -25,7 +25,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@googlemaps/js-api-loader": "^1.16.8",
-    "axios": "^1.8.2",
+    "axios": "^1.8.3",
     "gatsby": "^5.14.1",
     "gatsby-adapter-netlify": "^1.2.0",
     "gatsby-plugin-canonical-urls": "^5.14.0",
@@ -44,14 +44,14 @@
     "gatsby-transformer-sharp": "^5.14.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.85.1"
+    "sass": "^1.86.0"
   },
   "devDependencies": {
     "@types/google.maps": "^3.58.1",
-    "@types/node": "^22.13.9",
-    "@types/react": "^19.0.10",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.11",
     "@types/react-dom": "^19.0.4",
-    "stylelint": "^16.15.0",
+    "stylelint": "^16.16.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "^5.8.2"

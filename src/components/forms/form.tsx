@@ -88,7 +88,7 @@ const Form: React.FC = () => {
                         type="text"
                         name="firstName"
                         id="formFirstName"
-                        placeholder="Voornaam"
+                        placeholder="Voornaam *"
                         value={formData.firstName}
                         onChange={handleChange}
                         required
@@ -100,7 +100,7 @@ const Form: React.FC = () => {
                         type="text"
                         name="lastName"
                         id="formLastName"
-                        placeholder="Achternaam"
+                        placeholder="Achternaam *"
                         value={formData.lastName}
                         onChange={handleChange}
                         required
@@ -115,7 +115,6 @@ const Form: React.FC = () => {
                         placeholder="Bedrijfsnaam"
                         value={formData.company}
                         onChange={handleChange}
-                        required
                     />
                 </div>
                 <div>
@@ -127,7 +126,6 @@ const Form: React.FC = () => {
                         placeholder="Telefoonnummer"
                         value={formData.phone}
                         onChange={handleChange}
-                        required
                     />
                 </div>
                 <div>
@@ -136,7 +134,7 @@ const Form: React.FC = () => {
                         type="email"
                         name="email"
                         id="formEmail"
-                        placeholder="E-mailadres"
+                        placeholder="E-mailadres *"
                         value={formData.email}
                         onChange={handleChange}
                         required
@@ -148,7 +146,7 @@ const Form: React.FC = () => {
                         name="message"
                         id="formMessage"
                         rows={7}
-                        placeholder="Bericht"
+                        placeholder="Bericht *"
                         value={formData.message}
                         onChange={handleChange}
                         required
