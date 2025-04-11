@@ -11,15 +11,14 @@ import { Link } from "gatsby";
 import * as heroStyles from "../../styles/modules/layout/hero.module.scss";
 
 const Hero: React.FC = () => {
-    const iframeRef = useRef<HTMLIFrameElement>(null);
+    const playerRef = useRef<HTMLIFrameElement>(null);
     const [player, setPlayer] = useState<Player | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [isMuted, setIsMuted] = useState(true);
+    const [isMuted, setIsMuted] = useState(false);
     const [loading, setLoading] = useState(true);
-    // const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
-        if (iframeRef.current) {
+        if (playerRef.current) {
             const options = {
                 id: 1074564963,
                 loop: true,
@@ -29,12 +28,11 @@ const Hero: React.FC = () => {
                 controls: false,
             };
 
-            const vimeoPlayer = new Player(iframeRef.current, options);
+            const vimeoPlayer = new Player(playerRef.current, options);
             setPlayer(vimeoPlayer);
 
             vimeoPlayer.ready().then(() => {
                 setLoading(false);
-                // setIsReady(true);
             });
 
             vimeoPlayer.getVolume().then((volume) => {
@@ -44,22 +42,25 @@ const Hero: React.FC = () => {
     }, []);
 
     const handlePlay = async () => {
-        if (player) {
-            const volume = await player.getVolume();
-
-            if (volume === 0) {
-                await player.setVolume(1);
-                setIsMuted(false);
+        try {
+            if (player && !loading) {
+                await player.play();
+                setIsPlaying(true);
             }
-
-            await player.play();
-            setIsPlaying(true);
+        } catch (error) {
+            console.error("Error playing video:", error);
         }
     };
 
     const handlePause = () => {
-        player?.pause();
-        setIsPlaying(false);
+        try {
+            if (player) {
+                player.pause();
+                setIsPlaying(false);
+            }
+        } catch (error) {
+            console.error("Error pausing video:", error);
+        }
     };
 
     const handleMute = async () => {
@@ -109,7 +110,7 @@ const Hero: React.FC = () => {
                     </div>
                 )}
 
-                <div ref={iframeRef} style={{ opacity: loading ? 0 : 1 }} />
+                <div ref={playerRef} style={{ opacity: loading ? 0 : 1 }} />
                 <div className={heroStyles.controls}>
                     <button onClick={handleFullscreen} title="Volledig Scherm">
                         <FontAwesomeIcon icon={"expand"} />
