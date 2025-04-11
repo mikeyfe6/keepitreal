@@ -16,6 +16,7 @@ const Hero: React.FC = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(true);
     const [loading, setLoading] = useState(true);
+    const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
         if (iframeRef.current) {
@@ -33,6 +34,7 @@ const Hero: React.FC = () => {
 
             vimeoPlayer.ready().then(() => {
                 setLoading(false);
+                setIsReady(true);
             });
 
             vimeoPlayer.getVolume().then((volume) => {
@@ -42,7 +44,7 @@ const Hero: React.FC = () => {
     }, []);
 
     const handlePlayPause = async () => {
-        if (player) {
+        if (player && isReady) {
             const currentlyPaused = await player.getPaused();
             if (currentlyPaused) {
                 player.play();
@@ -55,7 +57,7 @@ const Hero: React.FC = () => {
     };
 
     const handleMuteUnmute = async () => {
-        if (player) {
+        if (player && isReady) {
             const currentlyMuted = (await player.getVolume()) === 0;
             if (currentlyMuted) {
                 player.setVolume(1);
@@ -68,7 +70,7 @@ const Hero: React.FC = () => {
     };
 
     const handleFullscreen = () => {
-        if (player) {
+        if (player && isReady) {
             player.requestFullscreen();
         }
     };
@@ -102,7 +104,7 @@ const Hero: React.FC = () => {
                     </div>
                 )}
 
-                <div ref={iframeRef} />
+                <div ref={iframeRef} style={{ opacity: loading ? 0 : 1 }} />
 
                 <div className={heroStyles.controls}>
                     <button onClick={handleFullscreen} title="Volledig Scherm">
