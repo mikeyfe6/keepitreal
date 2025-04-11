@@ -64,10 +64,12 @@
             }
 
             > a {
-                @include button(2);
+                &:nth-child(1) {
+                    @include button(1);
+                }
 
                 &:nth-child(2) {
-                    @include button(1);
+                    @include button(2);
                 }
             }
         }
