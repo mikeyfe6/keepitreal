@@ -68,8 +68,6 @@
 
 @mixin button($type: 1) {
     display: block;
-    padding: rem-calc(12 16);
-    height: fit-content;
     font-weight: 600;
 
     @include border-radius;
@@ -79,17 +77,41 @@
     @if $type == 1 {
         background-color: rgba($white, 0.825);
         color: $primary;
+        padding: rem-calc(12 16);
+        height: fit-content;
 
         &:hover {
             background-color: rgba($white, 1);
         }
     } @else if $type == 2 {
         background-color: rgba($tertiary, 0.825);
-        border-color: rgba($secondary, 0.875);
         color: $white;
+        border-color: rgba($secondary, 0.875);
+        padding: rem-calc(12 16);
+        height: fit-content;
 
         &:hover {
             background-color: rgba($tertiary, 1);
+        }
+    } @else if $type == 3 {
+        background-color: rgba($tertiary, 0.725);
+        border-color: rgba($secondary, 0.875);
+        color: $white;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem-calc(32);
+        height: rem-calc(32);
+
+        svg {
+            width: rem-calc(18);
+            height: rem-calc(18);
+        }
+
+        &:hover {
+            background-color: rgba($white, 1);
+            color: rgba($tertiary, 0.825);
         }
     }
 }

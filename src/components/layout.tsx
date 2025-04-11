@@ -17,6 +17,11 @@ import {
     faLanguage,
     faRightLong,
     faSquareEnvelope,
+    faPlay,
+    faPause,
+    faVolumeMute,
+    faVolumeUp,
+    faExpand,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -43,7 +48,12 @@ library.add(
     faUsersViewfinder,
     faLanguage,
     faRightLong,
-    faSquareEnvelope
+    faSquareEnvelope,
+    faPlay,
+    faPause,
+    faVolumeMute,
+    faVolumeUp,
+    faExpand
 );
 
 import Header from "./layout/header";
