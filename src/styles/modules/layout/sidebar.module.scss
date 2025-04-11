@@ -4,10 +4,11 @@
     display: flex;
     flex-direction: column;
     gap: rem-calc(32);
-    min-width: 100%;
+    width: 100%;
+    min-width: rem-calc(350);
 
-    @include compact {
-        min-width: rem-calc(400);
+    @include phablet {
+        max-width: rem-calc(400);
     }
 
     > div {
@@ -173,8 +174,8 @@
         &:nth-child(2) {
             background-color: rgba($secondary, 0.75);
 
-            > h4 {
-                font-size: rem-calc(20);
+            > h3 {
+                @include underline($color: $primary);
             }
         }
 
@@ -184,22 +185,10 @@
                 rgba($secondary, 1%),
                 $primary
             );
-
-            > h4 {
-                font-size: rem-calc(20);
-
-                @include underline($color: $secondary);
-            }
         }
 
         &:nth-child(5) {
             background-color: rgba($secondary, 0.75);
-
-            > h4 {
-                font-size: rem-calc(20);
-
-                @include underline($color: $tertiary);
-            }
 
             > ul > li > a {
                 display: flex;

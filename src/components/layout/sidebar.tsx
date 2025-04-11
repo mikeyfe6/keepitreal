@@ -2,6 +2,10 @@ import * as React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { useSrcImages } from "../../hooks/use-src-image";
+
+import LightBox from "../utils/lightbox";
+
 import * as sidebarStyles from "../../styles/modules/layout/sidebar.module.scss";
 
 interface SidebarProps {
@@ -13,6 +17,8 @@ const Sidebar: React.FC<SidebarProps> = ({
     handleSidebarClick,
     activeSection,
 }) => {
+    const { kunstEnCultuur } = useSrcImages();
+
     return (
         <aside className={sidebarStyles.aside}>
             <div>
@@ -83,6 +89,8 @@ const Sidebar: React.FC<SidebarProps> = ({
             <div id="events">
                 <h3>Opkomende evenementen</h3>
 
+                <hr />
+
                 <ul>
                     <li>
                         {/* <p>
@@ -91,7 +99,12 @@ const Sidebar: React.FC<SidebarProps> = ({
 						<p>
 							<strong>tijd/datum:</strong> 12:00 - 16:00, 01-01-2022
 						</p> */}
-                        <p>Stay tuned...</p>
+                        {/* <p>Stay tuned...</p> */}
+
+                        <LightBox
+                            image={kunstEnCultuur}
+                            alt="Wijkimpuls - 26/04/24"
+                        />
                     </li>
                 </ul>
             </div>
