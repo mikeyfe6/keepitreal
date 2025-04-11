@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(true);
     const [loading, setLoading] = useState(true);
-    const [isReady, setIsReady] = useState(false);
+    // const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
         if (iframeRef.current) {
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
 
             vimeoPlayer.ready().then(() => {
                 setLoading(false);
-                setIsReady(true);
+                // setIsReady(true);
             });
 
             vimeoPlayer.getVolume().then((volume) => {
@@ -43,36 +43,41 @@ const Hero: React.FC = () => {
         }
     }, []);
 
-    const handlePlayPause = async () => {
-        if (player && isReady) {
-            const currentlyPaused = await player.getPaused();
-            if (currentlyPaused) {
-                player.play();
-                setIsPlaying(true);
-            } else {
-                player.pause();
-                setIsPlaying(false);
+    const handlePlay = async () => {
+        if (player) {
+            const volume = await player.getVolume();
+
+            if (volume === 0) {
+                await player.setVolume(1);
+                setIsMuted(false);
             }
+
+            await player.play();
+            setIsPlaying(true);
         }
     };
 
-    const handleMuteUnmute = async () => {
-        if (player && isReady) {
-            const currentlyMuted = (await player.getVolume()) === 0;
-            if (currentlyMuted) {
-                player.setVolume(1);
-                setIsMuted(false);
-            } else {
-                player.setVolume(0);
-                setIsMuted(true);
-            }
+    const handlePause = () => {
+        player?.pause();
+        setIsPlaying(false);
+    };
+
+    const handleMute = async () => {
+        if (player) {
+            await player.setVolume(0);
+            setIsMuted(true);
+        }
+    };
+
+    const handleUnmute = async () => {
+        if (player) {
+            await player.setVolume(1);
+            setIsMuted(false);
         }
     };
 
     const handleFullscreen = () => {
-        if (player && isReady) {
-            player.requestFullscreen();
-        }
+        player?.requestFullscreen();
     };
 
     return (
@@ -105,17 +110,22 @@ const Hero: React.FC = () => {
                 )}
 
                 <div ref={iframeRef} style={{ opacity: loading ? 0 : 1 }} />
-
                 <div className={heroStyles.controls}>
                     <button onClick={handleFullscreen} title="Volledig Scherm">
                         <FontAwesomeIcon icon={"expand"} />
                     </button>
-                    <button onClick={handleMuteUnmute} title="Geluid Aan/Uit">
+                    <button
+                        onClick={isMuted ? handleUnmute : handleMute}
+                        title="Geluid Aan/Uit"
+                    >
                         <FontAwesomeIcon
                             icon={isMuted ? "volume-mute" : "volume-up"}
                         />
                     </button>
-                    <button onClick={handlePlayPause} title="Afspelen/Pauzeren">
+                    <button
+                        onClick={isPlaying ? handlePause : handlePlay}
+                        title="Afspelen/Pauzeren"
+                    >
                         <FontAwesomeIcon icon={isPlaying ? "pause" : "play"} />
                     </button>
                 </div>
