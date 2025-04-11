@@ -31,19 +31,22 @@ const ContactPage: React.FC<PageProps> = () => {
                     </p>
 
                     <p>
-                        E-mail<span>:</span>
+                        <b>E-mail</b>
+                        <span>:</span>
                         <br />
                         <a href={`mailto:${email}`}>{email}</a>
                     </p>
 
                     <p>
-                        KvK<span>:</span>
+                        <b>KvK</b>
+                        <span>:</span>
                         <br />
                         {kvk}
                     </p>
 
                     <p>
-                        Bank<span>:</span> <br />
+                        <b>Bank</b>
+                        <span>:</span> <br />
                         {bank}
                     </p>
 
@@ -52,7 +55,8 @@ const ContactPage: React.FC<PageProps> = () => {
 						<span>E-mailadres:</span> test@keeptreal.nl
 					</p> */}
                     <p>
-                        We zijn bereikbaar van maandag t/m vrijdag van 9:00 tot
+                        <b> We zijn bereikbaar van</b>
+                        <span>:</span> <br /> maandag t/m vrijdag van 9:00 tot
                         17:00
                     </p>
                     {/* <p>

@@ -75,7 +75,7 @@
     @include smooth-trans;
 
     @if $type == 1 {
-        background-color: rgba($white, 0.825);
+        background-color: rgba($white, 0.875);
         color: $primary;
         padding: rem-calc(12 16);
         height: fit-content;

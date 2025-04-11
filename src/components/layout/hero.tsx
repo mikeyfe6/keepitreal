@@ -15,12 +15,12 @@ const Hero: React.FC = () => {
     const [player, setPlayer] = useState<Player | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         if (iframeRef.current) {
             const options = {
                 id: 1074564963,
-                autoplay: false,
                 loop: true,
                 muted: false,
                 background: false,
@@ -30,6 +30,10 @@ const Hero: React.FC = () => {
 
             const vimeoPlayer = new Player(iframeRef.current, options);
             setPlayer(vimeoPlayer);
+
+            vimeoPlayer.ready().then(() => {
+                setLoading(false);
+            });
 
             vimeoPlayer.getVolume().then((volume) => {
                 setIsMuted(volume === 0);
@@ -91,6 +95,12 @@ const Hero: React.FC = () => {
                     alt="Keep It Real Hero Image"
                     objectPosition={"100% 62.5%"}
                 /> */}
+
+                {loading && (
+                    <div className={heroStyles.spinner}>
+                        <span />
+                    </div>
+                )}
 
                 <div ref={iframeRef} />
 
