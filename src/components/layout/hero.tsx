@@ -41,12 +41,10 @@ const Hero: React.FC = () => {
         }
     }, []);
 
-    const handlePlay = async () => {
+    const handlePlay = () => {
         try {
-            if (player && !loading) {
-                await player.play();
-                setIsPlaying(true);
-            }
+            player?.play();
+            setIsPlaying(true);
         } catch (error) {
             console.error("Error playing video:", error);
         }
@@ -54,10 +52,8 @@ const Hero: React.FC = () => {
 
     const handlePause = () => {
         try {
-            if (player) {
-                player.pause();
-                setIsPlaying(false);
-            }
+            player?.pause();
+            setIsPlaying(false);
         } catch (error) {
             console.error("Error pausing video:", error);
         }
