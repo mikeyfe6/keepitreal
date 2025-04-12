@@ -16,6 +16,7 @@ const Hero: React.FC = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(false);
     const [loading, setLoading] = useState(true);
+    const vimeoInitialized = useRef(false);
 
     useEffect(() => {
         if (playerRef.current) {
@@ -33,26 +34,39 @@ const Hero: React.FC = () => {
 
             vimeoPlayer.ready().then(() => {
                 setLoading(false);
-            });
 
-            vimeoPlayer.getVolume().then((volume) => {
-                setIsMuted(volume === 0);
+                vimeoPlayer
+                    .getVolume()
+                    .then((volume) => {
+                        setIsMuted(volume === 0);
+                    })
+                    .catch((err) => {
+                        console.warn("Volume check blocked:", err);
+                    });
             });
         }
     }, []);
 
-    const handlePlay = () => {
+    const handlePlay = async () => {
+        if (!player) return;
         try {
-            player?.play();
+            if (!vimeoInitialized.current) {
+                await player.setVolume(0);
+                await player.setVolume(1);
+                vimeoInitialized.current = true;
+            }
+
+            await player.play();
             setIsPlaying(true);
         } catch (error) {
             console.error("Error playing video:", error);
         }
     };
 
-    const handlePause = () => {
+    const handlePause = async () => {
+        if (!player) return;
         try {
-            player?.pause();
+            await player.pause();
             setIsPlaying(false);
         } catch (error) {
             console.error("Error pausing video:", error);
@@ -60,21 +74,32 @@ const Hero: React.FC = () => {
     };
 
     const handleMute = async () => {
-        if (player) {
+        if (!player) return;
+        try {
             await player.setVolume(0);
             setIsMuted(true);
+        } catch (error) {
+            console.error("Error muting video:", error);
         }
     };
 
     const handleUnmute = async () => {
-        if (player) {
+        if (!player) return;
+        try {
             await player.setVolume(1);
             setIsMuted(false);
+        } catch (error) {
+            console.error("Error unmuting video:", error);
         }
     };
 
-    const handleFullscreen = () => {
-        player?.requestFullscreen();
+    const handleFullscreen = async () => {
+        if (!player) return;
+        try {
+            await player.requestFullscreen();
+        } catch (error) {
+            console.error("Fullscreen request failed:", error);
+        }
     };
 
     return (
