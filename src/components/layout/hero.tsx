@@ -133,7 +133,10 @@ const Hero: React.FC = () => {
 
                 <div ref={playerRef} style={{ opacity: loading ? 0 : 1 }} />
                 {!loading && (
-                    <div className={heroStyles.controls}>
+                    <div
+                        className={heroStyles.controls}
+                        style={{ opacity: isPlaying ? 0.375 : 1 }}
+                    >
                         <button
                             onClick={handleFullscreen}
                             title="Volledig Scherm"
