@@ -132,25 +132,32 @@ const Hero: React.FC = () => {
                 )}
 
                 <div ref={playerRef} style={{ opacity: loading ? 0 : 1 }} />
-                <div className={heroStyles.controls}>
-                    <button onClick={handleFullscreen} title="Volledig Scherm">
-                        <FontAwesomeIcon icon={"expand"} />
-                    </button>
-                    <button
-                        onClick={isMuted ? handleUnmute : handleMute}
-                        title="Geluid Aan/Uit"
-                    >
-                        <FontAwesomeIcon
-                            icon={isMuted ? "volume-mute" : "volume-up"}
-                        />
-                    </button>
-                    <button
-                        onClick={isPlaying ? handlePause : handlePlay}
-                        title="Afspelen/Pauzeren"
-                    >
-                        <FontAwesomeIcon icon={isPlaying ? "pause" : "play"} />
-                    </button>
-                </div>
+                {!loading && (
+                    <div className={heroStyles.controls}>
+                        <button
+                            onClick={handleFullscreen}
+                            title="Volledig Scherm"
+                        >
+                            <FontAwesomeIcon icon={"expand"} />
+                        </button>
+                        <button
+                            onClick={isMuted ? handleUnmute : handleMute}
+                            title="Geluid Aan/Uit"
+                        >
+                            <FontAwesomeIcon
+                                icon={isMuted ? "volume-mute" : "volume-up"}
+                            />
+                        </button>
+                        <button
+                            onClick={isPlaying ? handlePause : handlePlay}
+                            title="Afspelen/Pauzeren"
+                        >
+                            <FontAwesomeIcon
+                                icon={isPlaying ? "pause" : "play"}
+                            />
+                        </button>
+                    </div>
+                )}
             </div>
         </section>
     );
