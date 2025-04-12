@@ -33,10 +33,6 @@
                 @include border-radius;
                 @include smooth-trans;
 
-                &::placeholder {
-                    opacity: 0.5;
-                }
-
                 &:focus {
                     outline: 2px solid rgba($tertiary, 1);
                 }
