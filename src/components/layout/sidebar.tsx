@@ -103,7 +103,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
                         <LightBox
                             image={kunstEnCultuur}
-                            alt="Wijkimpuls - 26/04/24"
+                            alt="Kunst En Cultuurmarkt - Zaterdag 12 april 2025 @ Zandkasteel, Amsterdam Zuidoost"
                         />
                     </li>
                 </ul>
