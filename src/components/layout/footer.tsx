@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
                 </ul>
 
                 <p>
-                    Webcrafted by{" "}
+                    {"</>"} by{" "}
                     <a
                         href="https://menefex.nl"
                         rel="noopener noreferrer"
