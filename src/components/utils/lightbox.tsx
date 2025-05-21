@@ -50,6 +50,7 @@ const LightBox = ({
                                     image={imageData}
                                     alt={alt}
                                     className={styles.lightboxImage}
+                                    objectFit="contain"
                                 />
                             </div>
                         )}
