@@ -7,6 +7,11 @@ interface SrcImagesQuery {
             gatsbyImageData: IGatsbyImageData;
         };
     };
+    flexZijn: {
+        childImageSharp: {
+            gatsbyImageData: IGatsbyImageData;
+        };
+    };
 }
 
 export const useSrcImages = () => {
@@ -19,10 +24,18 @@ export const useSrcImages = () => {
                     gatsbyImageData(width: 1000)
                 }
             }
+            flexZijn: file(
+                relativePath: { eq: "events/flexzijn-wennerregales.jpg" }
+            ) {
+                childImageSharp {
+                    gatsbyImageData(width: 1000)
+                }
+            }
         }
     `);
 
     return {
         kunstEnCultuur: data.kunstEnCultuur.childImageSharp.gatsbyImageData,
+        flexZijn: data.flexZijn.childImageSharp.gatsbyImageData,
     };
 };

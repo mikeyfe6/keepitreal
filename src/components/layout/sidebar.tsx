@@ -17,7 +17,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     handleSidebarClick,
     activeSection,
 }) => {
-    const { kunstEnCultuur } = useSrcImages();
+    const { flexZijn } = useSrcImages();
 
     return (
         <aside className={sidebarStyles.aside}>
@@ -102,8 +102,8 @@ const Sidebar: React.FC<SidebarProps> = ({
                         {/* <p>Stay tuned...</p> */}
 
                         <LightBox
-                            image={kunstEnCultuur}
-                            alt="Kunst En Cultuurmarkt - Zaterdag 12 april 2025 @ Zandkasteel, Amsterdam Zuidoost"
+                            image={flexZijn}
+                            alt="Flex Zijn - Wenner Regales - Dinsdag 27 mei 2025 @ Flexbieb, Talbotstraat 46 in IJburg"
                         />
                     </li>
                 </ul>

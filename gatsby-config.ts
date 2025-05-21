@@ -1,4 +1,3 @@
-import { count } from "console";
 import type { GatsbyConfig } from "gatsby";
 
 require("dotenv").config({
