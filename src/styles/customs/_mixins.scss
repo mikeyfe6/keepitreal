@@ -46,8 +46,10 @@
 }
 
 @mixin underline($offset: 7px, $thickness: 1px, $color: $primary) {
+    text-decoration-line: underline;
+    text-decoration-color: $color;
+    text-decoration-thickness: $thickness;
     text-underline-offset: $offset;
-    text-decoration: underline $thickness solid $color;
 }
 
 @mixin clamp($lines: 2) {
