@@ -116,7 +116,7 @@ const AnbiPage: React.FC<PageProps> = () => {
                     <p>
                         <strong>Bestuur:</strong> Bestuurders kunnen recht
                         hebben op vergoeding van gemaakte kosten en een niet
-                        bovenmatig vakantiegeld voor hun werkzaamheden. <br />
+                        bovenmatig vacatiegeld voor hun werkzaamheden. <br />
                         <strong>Personeel:</strong> CAO niet van toepassing.
                     </p>
 
