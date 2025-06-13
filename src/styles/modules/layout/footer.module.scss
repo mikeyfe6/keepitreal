@@ -31,10 +31,10 @@
                 &::after {
                     content: "";
                     position: absolute;
-                    width: 25%;
-                    height: 3px;
+                    width: rem-calc(50);
+                    height: rem-calc(3);
                     background-color: $tertiary;
-                    bottom: rem-calc(-45);
+                    bottom: rem-calc(-46.5);
                     left: 0;
 
                     @include border-radius;
@@ -51,10 +51,10 @@
                 &::before {
                     content: "";
                     position: absolute;
-                    width: 25%;
-                    height: 3px;
+                    width: rem-calc(50);
+                    height: rem-calc(3);
                     background-color: $tertiary;
-                    top: rem-calc(-42.5);
+                    top: rem-calc(-47.5);
                     right: 0;
 
                     @include border-radius;
