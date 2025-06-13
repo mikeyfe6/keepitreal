@@ -13,21 +13,43 @@ import { Seo } from "../components/seo";
 import * as contactStyles from "../styles/modules/pages/contact.module.scss";
 
 const ContactPage: React.FC<PageProps> = () => {
-    const { companyName, address, postalCode, city, email, kvk, bank } =
-        useSiteMetadata();
+    const {
+        companyName,
+        facility,
+        street,
+        postalCode,
+        city,
+        mailingStreet,
+        mailingPostalcode,
+        mailingCity,
+        email,
+        kvk,
+        bank,
+    } = useSiteMetadata();
 
     return (
         <Layout>
             <div className={contactStyles.contact}>
                 <Form />
                 <div>
-                    <h3>Bezoekadres & postadres:</h3>
-                    <h5>
+                    <h3>
                         <u>{companyName}</u>
-                    </h5>
-
+                    </h3>
+                    <h4>
+                        Bezoekadres<span>:</span>
+                    </h4>
                     <p>
-                        {address} <br /> {postalCode} {city}
+                        {facility} <br />
+                        {street} <br />
+                        {postalCode} {city}
+                    </p>
+
+                    <h4>
+                        Postadres<span>:</span>
+                    </h4>
+                    <p>
+                        {mailingStreet} <br />
+                        {mailingPostalcode} {mailingCity}
                     </p>
 
                     <p>

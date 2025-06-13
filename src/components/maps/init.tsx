@@ -15,7 +15,7 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
     zoom,
     markers = [],
 }) => {
-    const { companyName, address, postalCode, city, country } =
+    const { companyName, street, postalCode, city, country } =
         useSiteMetadata();
 
     const mapRef = useRef<HTMLDivElement>(null);
@@ -74,7 +74,7 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
                     `;
 
                     const markerUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                        address + ", " + postalCode + " " + city
+                        street + ", " + postalCode + " " + city
                     )}`;
 
                     advancedMarker.addEventListener("gmp-click", () => {
@@ -82,7 +82,7 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
                         infoWindow.setContent(
                             `<p style="${markerStyle}"> 
                                 <span style="${titleStyle}">${companyName}</span> <br />
-                                ${address}, ${postalCode} <br />
+                                ${street}, ${postalCode} <br />
                                 ${city}, ${country} <br />
                                 <a href="${markerUrl}" style="${linkStyle} target="_blank">
                                     Openen in Google Maps

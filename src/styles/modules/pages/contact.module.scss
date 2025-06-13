@@ -18,6 +18,22 @@
         flex: 50%;
         height: fit-content;
 
+        @include main-card;
+
+        h3 {
+            margin-bottom: rem-calc(24);
+        }
+
+        h4 {
+            margin-bottom: rem-calc(2);
+
+            @include fluid-typing(20, 22);
+
+            &:not(:first-child) {
+                margin-top: rem-calc(16);
+            }
+        }
+
         a,
         button {
             position: relative;
@@ -39,8 +55,6 @@
                 }
             }
         }
-
-        @include main-card;
 
         b {
             font-weight: 600;

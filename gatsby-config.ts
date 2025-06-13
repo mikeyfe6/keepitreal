@@ -24,12 +24,17 @@ const siteMetadata = {
     telephone: ``,
     phoneRaw: ``,
     mobile: ``,
-
     email: `secretariaat@keeptreal.nl`,
-    address: `Piet Heinkade 3`,
-    postalCode: `1019 BR`,
-    city: ` Amsterdam`,
+
+    facility: `De Ster`,
+    street: `Woudrichemstraat 8`,
+    postalCode: `1107 NG`,
+    city: `Amsterdam`,
     country: `Nederland`,
+
+    mailingStreet: `Piet Heinkade 3`,
+    mailingPostalcode: `1019 BR`,
+    mailingCity: `Amsterdam`,
 
     companyName: `Stichting Keep It Real`,
     kvk: `94261237`,
@@ -106,14 +111,14 @@ const config: GatsbyConfig = {
             },
         },
         "gatsby-plugin-image",
-     {
-			resolve: `gatsby-plugin-sharp`,
-			options: {
-				defaults: {
-					placeholder: `blurred`,
-				},
-			},
-		},
+        {
+            resolve: `gatsby-plugin-sharp`,
+            options: {
+                defaults: {
+                    placeholder: `blurred`,
+                },
+            },
+        },
         "gatsby-transformer-sharp",
         {
             resolve: `gatsby-plugin-sass`,

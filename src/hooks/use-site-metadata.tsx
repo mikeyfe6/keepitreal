@@ -19,12 +19,17 @@ interface SiteMetadata {
     telephone: string;
     phoneRaw: string;
     mobile: string;
-
     email: string;
-    address: string;
+
+    facility: string;
+    street: string;
     postalCode: string;
     city: string;
     country: string;
+
+    mailingStreet: string;
+    mailingPostalcode: string;
+    mailingCity: string;
 
     companyName: string;
     kvk: string;
@@ -58,12 +63,17 @@ export const useSiteMetadata = (): SiteMetadata => {
                     telephone
                     phoneRaw
                     mobile
-
                     email
-                    address
+
+                    facility
+                    street
                     postalCode
                     city
                     country
+
+                    mailingStreet
+                    mailingPostalcode
+                    mailingCity
 
                     companyName
                     kvk
