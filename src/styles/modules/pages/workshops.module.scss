@@ -7,7 +7,7 @@
         @include main-card;
 
         a {
-            @include text-link($color: $tertiary);
+            @include text-link;
         }
 
         &:last-child {
