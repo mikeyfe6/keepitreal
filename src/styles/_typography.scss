@@ -65,3 +65,7 @@ th {
 u {
     @include underline($color: $tertiary);
 }
+
+b {
+    font-weight: 600;
+}

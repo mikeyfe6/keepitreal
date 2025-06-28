@@ -91,7 +91,7 @@ main {
         }
 
         li {
-            &:not(#workshops li, #cta li, #events li, #media li) {
+            &:not(#workshops > ul > li, #cta li, #events li, #media li) {
                 margin-inline-start: rem-calc(16);
                 padding-left: rem-calc(8);
             }

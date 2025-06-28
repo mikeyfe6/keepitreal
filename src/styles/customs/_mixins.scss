@@ -52,6 +52,19 @@
     text-underline-offset: $offset;
 }
 
+@mixin text-link($offset: 7px, $thickness: 2px, $color: $primary) {
+    text-decoration-line: underline;
+    text-decoration-color: $color;
+    text-decoration-thickness: $thickness;
+    text-underline-offset: $offset;
+
+    @include smooth-trans;
+
+    &:hover {
+        text-decoration-thickness: $thickness * 2;
+    }
+}
+
 @mixin clamp($lines: 2) {
     display: -webkit-box;
     -webkit-line-clamp: $lines;

@@ -3,6 +3,8 @@ import { useLocation } from "@reach/router";
 
 import type { HeadFC, PageProps } from "gatsby";
 
+import { Link } from "gatsby";
+
 import { StaticImage } from "gatsby-plugin-image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,10 +30,46 @@ const WorkhopsPage: React.FC<PageProps> = () => {
                 <div>
                     <h2>Workshops</h2>
                     <p>
-                        Deze workshops dienen om jonge positieve ervaringen mee
-                        te geven, verdiepende gesprekken aan te gaan met mensen
-                        die qua ervaring op henzelf lijken. Het workshopaanbod
-                        ziet er als volgt uit.
+                        Naast ons aanbod voor jongeren, verzorgen wij ook
+                        professionele trainingen en workshops voor mensen die
+                        met jongeren werken. Denk aan korte sessies, studiedagen
+                        of teambuilding. Deze trainingen zijn afgeleid van ons
+                        schoolaanbod en bevatten:
+                    </p>
+                    <br />
+                    <ul>
+                        <li>
+                            Inhoudelijke kennisoverdracht over thema’s naar
+                            keuze
+                        </li>
+                        <li>
+                            Inleven in het perspectief van jongeren en redeneren
+                            vanuit jongerencultuur
+                        </li>
+                        <li>Teambuilding voor professionals</li>
+                    </ul>
+                    <br />
+                    <p>
+                        <a
+                            href="/workshops-professionals-kir.pdf"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            Bekijk de flyer
+                        </a>{" "}
+                        voor meer info of{" "}
+                        <Link to="/contact">neem contact met ons op</Link> voor
+                        maatwerk of een prijsindicatie.
+                    </p>
+                    <p>
+                        Ons reguliere workshopaanbod richt zich op jongeren en
+                        draait om het creëren van positieve ervaringen en het
+                        voeren van echte gesprekken met mensen die weten hoe hun
+                        wereld eruitziet.{" "}
+                        <b>
+                            Het aanbod hieronder geeft een beeld van onze
+                            workshops.
+                        </b>
                     </p>
                 </div>
 

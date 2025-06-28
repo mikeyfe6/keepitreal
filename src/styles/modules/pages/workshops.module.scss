@@ -6,6 +6,10 @@
     > div {
         @include main-card;
 
+        a {
+            @include text-link($color: $tertiary);
+        }
+
         &:last-child {
             color: $primary;
 
