@@ -172,6 +172,29 @@
         }
 
         &:nth-child(2) {
+            background: linear-gradient(
+                to left,
+                rgba($secondary, 1%),
+                $primary
+            );
+
+            > h3 {
+                @include underline($color: $primary);
+            }
+
+            > p > u {
+                @include underline($color: $tertiary, $offset: 3px);
+            }
+
+            > a {
+                display: block;
+                margin: rem-calc(16 0);
+
+                @include text-link;
+            }
+        }
+
+        &:nth-child(3) {
             background-color: rgba($secondary, 0.75);
 
             > h3 {
@@ -179,7 +202,7 @@
             }
         }
 
-        &:nth-child(4) {
+        &:nth-child(5) {
             background: linear-gradient(
                 to left,
                 rgba($secondary, 1%),
@@ -187,7 +210,7 @@
             );
         }
 
-        &:nth-child(5) {
+        &:nth-child(6) {
             background-color: rgba($secondary, 0.75);
 
             > ul > li > a {

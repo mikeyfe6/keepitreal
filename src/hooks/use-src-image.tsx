@@ -12,6 +12,11 @@ interface SrcImagesQuery {
             gatsbyImageData: IGatsbyImageData;
         };
     };
+    omarmprijs: {
+        childImageSharp: {
+            gatsbyImageData: IGatsbyImageData;
+        };
+    };
 }
 
 export const useSrcImages = () => {
@@ -31,11 +36,19 @@ export const useSrcImages = () => {
                     gatsbyImageData(width: 1000)
                 }
             }
+            omarmprijs: file(
+                relativePath: { eq: "omarmprijs-2025.jpg" }
+            ) {
+                childImageSharp {
+                    gatsbyImageData(width: 1000)
+                }
+            }
         }
     `);
 
     return {
         kunstEnCultuur: data.kunstEnCultuur.childImageSharp.gatsbyImageData,
         flexZijn: data.flexZijn.childImageSharp.gatsbyImageData,
+        omarmprijs: data.omarmprijs.childImageSharp.gatsbyImageData,
     };
 };

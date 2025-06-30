@@ -66,6 +66,7 @@ u {
     @include underline($color: $tertiary);
 }
 
-b {
+b,
+strong {
     font-weight: 600;
 }

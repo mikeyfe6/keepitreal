@@ -17,7 +17,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     handleSidebarClick,
     activeSection,
 }) => {
-    const { flexZijn } = useSrcImages();
+    const { omarmprijs, flexZijn } = useSrcImages();
 
     return (
         <aside className={sidebarStyles.aside}>
@@ -86,6 +86,35 @@ const Sidebar: React.FC<SidebarProps> = ({
                 </ul>
             </div>
 
+            <div id="actual">
+                <p>
+                    <strong>
+                        Keep It Real is genomineerd voor de OMARMprijs en we
+                        hebben jouw stem nodig! Tell a friend to tell a friend.
+                    </strong>
+                </p>
+                <p>
+                    Tot <u>9 juli 2025</u> kan jij stemmen op Keep It Real. Wij
+                    geloven in talenten, kansen en de kracht van de volgende
+                    generatie en begeleiden en helpen jongeren bij het nemen van
+                    de regie over hun leven.
+                </p>
+                <p>
+                    📅 De winnaar wordt bekendgemaakt op donderdag 16 oktober.
+                </p>
+                <a
+                    href="https://www.pact-amsterdam.nl"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    Klik hier om jouw stem uit te brengen
+                </a>
+                <LightBox
+                    image={omarmprijs}
+                    alt="Omarmprijs 2025 - Stem op Keep It Real!"
+                />
+            </div>
+
             <div id="events">
                 <h3>Opkomende evenementen</h3>
 
@@ -93,14 +122,6 @@ const Sidebar: React.FC<SidebarProps> = ({
 
                 <ul>
                     <li>
-                        {/* <p>
-							<strong>plaats</strong>: locatie
-						</p>
-						<p>
-							<strong>tijd/datum:</strong> 12:00 - 16:00, 01-01-2022
-						</p> */}
-                        {/* <p>Stay tuned...</p> */}
-
                         <LightBox
                             image={flexZijn}
                             alt="Flex Zijn - Wenner Regales - Dinsdag 27 mei 2025 @ Flexbieb, Talbotstraat 46 in IJburg"
