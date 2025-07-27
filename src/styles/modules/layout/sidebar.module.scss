@@ -1,6 +1,8 @@
 @use "../../customs/" as *;
 
 .aside {
+    $aside: &;
+
     display: flex;
     flex-direction: column;
     gap: rem-calc(32);
@@ -19,7 +21,7 @@
             padding: rem-calc(32 28);
         }
 
-        &:first-child {
+        &#{$aside}-legend {
             padding: rem-calc(40 28);
             background: linear-gradient(
                 to left,
@@ -171,7 +173,7 @@
             }
         }
 
-        &:nth-child(2) {
+        &#{$aside}-actual {
             background: linear-gradient(
                 to left,
                 rgba($secondary, 1%),
@@ -194,15 +196,38 @@
             }
         }
 
-        &:nth-child(3) {
+        &#{$aside}-events {
             background-color: rgba($secondary, 0.75);
 
             > h3 {
                 @include underline($color: $primary);
+
+                &:last-of-type {
+                    margin-top: rem-calc(24);
+                }
+            }
+
+            > hr {
+                @include hr($white);
+            }
+
+            > ul {
+                &#{$aside}-events-active > li {
+                    button {
+                        margin-top: rem-calc(16);
+
+                        @include button(1, "full");
+                    }
+                }
+
+                &#{$aside}-events-archive {
+                    display: flex;
+                    gap: rem-calc(8);
+                }
             }
         }
 
-        &:nth-child(5) {
+        &#{$aside}-contact {
             background: linear-gradient(
                 to left,
                 rgba($secondary, 1%),
@@ -210,7 +235,7 @@
             );
         }
 
-        &:nth-child(6) {
+        &#{$aside}-media {
             background-color: rgba($secondary, 0.75);
 
             > ul > li > a {

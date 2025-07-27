@@ -17,6 +17,11 @@ interface SrcImagesQuery {
             gatsbyImageData: IGatsbyImageData;
         };
     };
+    backToSchool: {
+        childImageSharp: {
+            gatsbyImageData: IGatsbyImageData;
+        };
+    };
 }
 
 export const useSrcImages = () => {
@@ -37,7 +42,14 @@ export const useSrcImages = () => {
                 }
             }
             omarmprijs: file(
-                relativePath: { eq: "omarmprijs-2025.jpg" }
+                relativePath: { eq: "actual/omarmprijs-2025.jpg" }
+            ) {
+                childImageSharp {
+                    gatsbyImageData(width: 1000)
+                }
+            }
+            backToSchool: file(
+                relativePath: { eq: "events/b2school-flyer.png" }
             ) {
                 childImageSharp {
                     gatsbyImageData(width: 1000)
@@ -50,5 +62,6 @@ export const useSrcImages = () => {
         kunstEnCultuur: data.kunstEnCultuur.childImageSharp.gatsbyImageData,
         flexZijn: data.flexZijn.childImageSharp.gatsbyImageData,
         omarmprijs: data.omarmprijs.childImageSharp.gatsbyImageData,
+        backToSchool: data.backToSchool.childImageSharp.gatsbyImageData,
     };
 };

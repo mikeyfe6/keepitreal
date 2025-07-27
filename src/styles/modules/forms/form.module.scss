@@ -1,6 +1,6 @@
 @use "../../customs/" as *;
 
-.form {
+.contact-form {
     form {
         display: flex;
         flex-direction: column;
@@ -44,6 +44,141 @@
                 > button {
                     @include button;
                 }
+            }
+        }
+    }
+}
+
+.event-form {
+    form {
+        > div:has(input, select, fieldset) {
+            margin-bottom: rem-calc(24);
+
+            > label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: 600;
+                color: $primary;
+            }
+
+            > input {
+                width: 100%;
+                padding: rem-calc(14);
+                border: 2px solid rgba($primary, 0.2);
+
+                @include border-radius(5px);
+
+                &:focus {
+                    outline: none;
+                    border-color: $tertiary;
+                }
+            }
+
+            > select {
+                width: 100%;
+                padding: rem-calc(12);
+                border: 2px solid rgba($primary, 0.2);
+                background-color: $white;
+
+                @include border-radius(5px);
+
+                &:focus {
+                    outline: none;
+                    border-color: $tertiary;
+                }
+            }
+
+            > fieldset {
+                border: none;
+                padding: 0;
+                margin: 0;
+
+                > legend {
+                    font-weight: 600;
+                    color: $primary;
+                    margin-bottom: rem-calc(8);
+                    padding: 0;
+                }
+
+                > div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: rem-calc(12);
+
+                    > div {
+                        display: flex;
+                        align-items: center;
+                        gap: rem-calc(12);
+                        cursor: pointer;
+                        user-select: none;
+
+                        input[type="radio"] {
+                            appearance: none;
+                            width: rem-calc(18);
+                            height: rem-calc(18);
+                            border: 2px solid rgba($primary, 0.2);
+                            border-radius: 50%;
+                            background-color: $white;
+                            position: relative;
+                            transition:
+                                border-color 0.2s ease,
+                                box-shadow 0.2s ease;
+                            display: inline-block;
+
+                            &:checked {
+                                border-color: $white;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    width: rem-calc(16);
+                                    height: rem-calc(16);
+                                    border-radius: 50%;
+                                    background-color: rgba($tertiary, 0.8);
+                                    transition:
+                                        background-color 0.2s ease,
+                                        transform 0.2s ease;
+                                    outline: none;
+                                    box-shadow: 0 0 0 3px rgba($secondary, 0.3);
+                                }
+
+                                + label {
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+
+                        label {
+                            color: $primary;
+                            transition: color 0.2s ease;
+                        }
+                    }
+                }
+            }
+        }
+
+        .error {
+            background-color: rgba($red, 0.1);
+            color: $red;
+            font-weight: 500;
+            padding: rem-calc(12);
+            margin-top: rem-calc(24);
+            font-size: 0.9rem;
+
+            @include border-radius;
+        }
+
+        > button {
+            margin-top: rem-calc(48);
+
+            @include button(2, "full", $secondary);
+
+            &:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
             }
         }
     }

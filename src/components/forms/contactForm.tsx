@@ -6,7 +6,7 @@ import axios from "axios";
 
 import * as formStyles from "../../styles/modules/forms/form.module.scss";
 
-const Form: React.FC = () => {
+const ContactForm: React.FC = () => {
     const [formData, setFormData] = React.useState({
         firstName: "",
         lastName: "",
@@ -64,7 +64,7 @@ const Form: React.FC = () => {
     };
 
     return (
-        <div className={formStyles.form}>
+        <div className={formStyles.contactForm}>
             <div>
                 <h2>Vul hieronder je gegevens in</h2>
                 <p>En we komen spoedig met je in contact!</p>
@@ -72,7 +72,7 @@ const Form: React.FC = () => {
 
             <form
                 name="kir-form"
-                method="post"
+                method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={(event) =>
@@ -163,4 +163,4 @@ const Form: React.FC = () => {
     );
 };
 
-export default Form;
+export default ContactForm;

@@ -1,0 +1,68 @@
+@use "../../customs" as *;
+
+.modal {
+    &-overlay {
+        position: fixed;
+        inset: 0;
+        background-color: rgb(0 0 0 / 87.5%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        padding: rem-calc(16);
+    }
+
+    &-content {
+        background: $white;
+        max-width: rem-calc(600);
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+
+        @include box-shadow;
+        @include border-radius;
+    }
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: rem-calc(16 24);
+        border-bottom: 1px solid rgba($secondary, 0.5);
+
+        > h2 {
+            margin: 0;
+            color: $primary;
+
+            @include fluid-typing(20, 24);
+        }
+
+        > button {
+            color: $white;
+            background-color: $secondary;
+            aspect-ratio: 1 / 1;
+            width: rem-calc(20);
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include smooth-trans;
+            @include border-radius;
+
+            &:hover {
+                background-color: $primary;
+            }
+        }
+    }
+
+    &-body {
+        padding: rem-calc(24);
+        color: $primary;
+
+        p {
+            margin-bottom: rem-calc(24);
+        }
+    }
+}

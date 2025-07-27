@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 
-import * as styles from "../../styles/modules/utils/lightbox.module.scss";
+import * as lightBoxStyles from "../../styles/modules/utils/lightbox.module.scss";
 
 const LightBox = ({
     image,
@@ -20,6 +20,12 @@ const LightBox = ({
         setIsModalOpen(false);
     };
 
+    const handleBackdropClick = (e: React.MouseEvent) => {
+        if (e.target === e.currentTarget) {
+            closeModal();
+        }
+    };
+
     const imageData = image ? getImage(image) : null;
 
     // TODO: sizes implementeren in parameter
@@ -27,19 +33,23 @@ const LightBox = ({
     return (
         <>
             {imageData && (
-                <div onClick={openModal} className={styles.lightboxThumbnail}>
+                <div
+                    onClick={openModal}
+                    className={lightBoxStyles.lightboxThumbnail}
+                >
                     <GatsbyImage image={imageData} alt={alt} />
                 </div>
             )}
 
             {isModalOpen && imageData && (
                 <div
-                    className={`${styles.lightboxModal} modal`}
+                    className={`${lightBoxStyles.lightboxModal} modal`}
                     data-main-modal
+                    onClick={handleBackdropClick}
                 >
-                    <div className={styles.lightboxContent}>
+                    <div className={lightBoxStyles.lightboxContent}>
                         <span
-                            className={styles.lightboxClose}
+                            className={lightBoxStyles.lightboxClose}
                             onClick={closeModal}
                         >
                             &times;
@@ -49,7 +59,7 @@ const LightBox = ({
                                 <GatsbyImage
                                     image={imageData}
                                     alt={alt}
-                                    className={styles.lightboxImage}
+                                    className={lightBoxStyles.lightboxImage}
                                     objectFit="contain"
                                 />
                             </div>

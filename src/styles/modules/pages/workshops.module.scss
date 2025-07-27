@@ -99,10 +99,7 @@
                     @include main-card(rgba($primary, 0.75));
 
                     > hr {
-                        width: 100%;
-                        margin: rem-calc(24 0);
-                        height: 1px;
-                        background: $tertiary;
+                        @include hr;
                     }
 
                     #{$workshops}-holder {

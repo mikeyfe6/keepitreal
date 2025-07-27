@@ -79,9 +79,14 @@
     }
 }
 
-@mixin button($type: 1) {
+@mixin button($type: 1, $size: "normal", $color: $tertiary) {
     display: block;
     font-weight: 600;
+
+    @if $size == "full" {
+        width: 100%;
+        text-align: center;
+    }
 
     @include border-radius;
     @include box-shadow(1);
@@ -97,14 +102,14 @@
             background-color: rgba($white, 1);
         }
     } @else if $type == 2 {
-        background-color: rgba($tertiary, 0.825);
+        background-color: rgba($color, 0.825);
         color: $white;
         border-color: rgba($secondary, 0.875);
         padding: rem-calc(12 16);
         height: fit-content;
 
         &:hover {
-            background-color: rgba($tertiary, 1);
+            background-color: rgba($color, 1);
         }
     } @else if $type == 3 {
         background-color: rgba($tertiary, 0.725);
@@ -139,4 +144,11 @@
     @include mobile {
         padding: rem-calc(40 32);
     }
+}
+
+@mixin hr($color: $tertiary, $height: 1px) {
+    width: 100%;
+    margin: rem-calc(24 0);
+    height: $height;
+    background: $color;
 }

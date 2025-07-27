@@ -5,7 +5,7 @@ import type { HeadFC, PageProps } from "gatsby";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 
 import Layout from "../components/layout";
-import Form from "../components/forms/form";
+import ContactForm from "../components/forms/contactForm";
 import Maps from "../components/ui/maps";
 
 import { Seo } from "../components/seo";
@@ -30,7 +30,7 @@ const ContactPage: React.FC<PageProps> = () => {
     return (
         <Layout>
             <div className={contactStyles.contact}>
-                <Form />
+                <ContactForm />
                 <div>
                     <h3>
                         <u>{companyName}</u>
