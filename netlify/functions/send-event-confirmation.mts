@@ -1,4 +1,3 @@
-import { Config } from "@netlify/functions";
 import { Resend } from "resend";
 
 const resend = new Resend(
@@ -70,8 +69,4 @@ export default async (req: Request) => {
             }
         );
     }
-};
-
-export const config: Config = {
-    path: "/.netlify/functions/send-event-confirmation",
 };

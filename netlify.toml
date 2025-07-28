@@ -12,3 +12,8 @@ command = "npm run build:prod"
 
 [context.staging]
 command = "npm run build:staging"
+
+[functions]
+directory = "netlify/functions"
+node_bundler = "esbuild"
+external_node_modules = ["resend"]
