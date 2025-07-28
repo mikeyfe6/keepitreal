@@ -21,23 +21,43 @@ const Sidebar: React.FC<SidebarProps> = ({
     handleSidebarClick,
     activeSection,
 }) => {
-    const { omarmprijs, backToSchool, flexZijn, kunstEnCultuur } =
-        useSrcImages();
+    const {
+        // omarmprijs,
+        backToSchool,
+        flexZijn,
+        kunstEnCultuur,
+    } = useSrcImages();
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    const [countdown, setCountdown] = useState(5);
 
     const handleOpenModal = () => {
         setIsModalOpen(true);
+        setShowSuccessMessage(false);
     };
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
+        setShowSuccessMessage(false);
+        setCountdown(5);
     };
 
     const handleRegistrationSuccess = () => {
-        alert(
-            "Bedankt voor je aanmelding! We nemen binnenkort contact met je op."
-        );
-        setIsModalOpen(false);
+        setShowSuccessMessage(true);
+        setCountdown(5);
+
+        const timer = setInterval(() => {
+            setCountdown((prev) => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    setIsModalOpen(false);
+                    setShowSuccessMessage(false);
+                    setCountdown(5);
+                    return 0;
+                }
+                return prev - 1;
+            });
+        }, 1000);
     };
 
     return (
@@ -225,15 +245,31 @@ const Sidebar: React.FC<SidebarProps> = ({
             <Modal
                 isOpen={isModalOpen}
                 onClose={handleCloseModal}
-                title="Aanmelden voor Back to School"
+                title={
+                    showSuccessMessage ? "" : "Aanmelden voor Back to School"
+                }
             >
-                <div>
-                    <p>Vul het formulier hieronder in.</p>
-                    <EventForm
-                        onSuccess={handleRegistrationSuccess}
-                        eventName="Back to School"
-                    />
-                </div>
+                {showSuccessMessage ?
+                    <div>
+                        <h3>
+                            {" "}
+                            <FontAwesomeIcon icon={"circle-check"} /> Aanmelding
+                            verstuurd!
+                        </h3>
+                        <p>Check je mail voor een bevestiging!</p>
+                        <small>
+                            Deze popup verdwijnt over {countdown} seconde
+                            {countdown !== 1 ? "n" : ""}...
+                        </small>
+                    </div>
+                :   <div>
+                        <p>Vul het formulier hieronder in *</p>
+                        <EventForm
+                            onSuccess={handleRegistrationSuccess}
+                            eventName="Back to School"
+                        />
+                    </div>
+                }
             </Modal>
         </>
     );

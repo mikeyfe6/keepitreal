@@ -28,9 +28,8 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
 
         loader.importLibrary("maps").then(async (mapsLib) => {
             const { Map, InfoWindow } = mapsLib;
-            const { AdvancedMarkerElement } = await loader.importLibrary(
-                "marker"
-            );
+            const { AdvancedMarkerElement } =
+                await loader.importLibrary("marker");
 
             if (mapRef.current) {
                 const map = new Map(mapRef.current, {
@@ -80,14 +79,14 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
                     advancedMarker.addEventListener("gmp-click", () => {
                         infoWindow.close();
                         infoWindow.setContent(
-                            `<p style="${markerStyle}"> 
+                            `<div style="${markerStyle}"> 
                                 <span style="${titleStyle}">${companyName}</span> <br />
                                 ${street}, ${postalCode} <br />
                                 ${city}, ${country} <br />
                                 <a href="${markerUrl}" style="${linkStyle} target="_blank">
                                     Openen in Google Maps
                                 </a>
-                            </p>`
+                            </div>`
                         );
                         infoWindow.open(map, advancedMarker);
                     });
@@ -96,7 +95,13 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
         });
     }, [center, zoom, markers]);
 
-    return <div ref={mapRef} style={{ width: "100%", height: "100%" }} />;
+    return (
+        <div
+            ref={mapRef}
+            style={{ width: "100%", height: "100%" }}
+            className="gmaps"
+        />
+    );
 };
 
 export default GoogleMap;

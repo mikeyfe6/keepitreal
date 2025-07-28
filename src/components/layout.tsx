@@ -22,6 +22,7 @@ import {
     faVolumeMute,
     faVolumeUp,
     faExpand,
+    faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -53,7 +54,8 @@ library.add(
     faPause,
     faVolumeMute,
     faVolumeUp,
-    faExpand
+    faExpand,
+    faCircleCheck
 );
 
 import Header from "./layout/header";

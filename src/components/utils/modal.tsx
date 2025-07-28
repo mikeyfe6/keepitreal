@@ -27,7 +27,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
         >
             <div className={modalStyles.modalContent}>
                 <div className={modalStyles.modalHeader}>
-                    <h2>{title}</h2>
+                    {title && <h2>{title}</h2>}
                     <button onClick={onClose} aria-label="Sluit modal">
                         <FontAwesomeIcon icon="times" />
                     </button>

@@ -35,7 +35,7 @@
             margin: 0;
             color: $primary;
 
-            @include fluid-typing(20, 24);
+            @include fluid-typing(18, 24);
         }
 
         > button {
@@ -47,6 +47,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-left: auto;
 
             @include smooth-trans;
             @include border-radius;
@@ -61,8 +62,30 @@
         padding: rem-calc(24);
         color: $primary;
 
-        p {
-            margin-bottom: rem-calc(24);
+        &:has(form) {
+            p {
+                margin-bottom: rem-calc(24);
+            }
+        }
+
+        &:not(:has(form)) {
+            > div {
+                padding: rem-calc(32);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: rem-calc(20);
+
+                > h3 {
+                    color: $green;
+                    margin-bottom: 0;
+                }
+
+                > small {
+                    color: $grey;
+                    font-style: italic;
+                }
+            }
         }
     }
 }

@@ -42,7 +42,6 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
                 return;
             }
 
-            // 1. Submit to Netlify Forms (URL-encoded)
             const netlifyFormData = new URLSearchParams();
             netlifyFormData.append("form-name", "kir-event");
             netlifyFormData.append("name", formData.name);
@@ -57,7 +56,6 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
                 },
             });
 
-            // 2. Send confirmation email (JSON format)
             try {
                 const emailData = {
                     name: formData.name,
@@ -69,7 +67,7 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
 
                 await axios.post(
                     "/.netlify/functions/send-event-confirmation",
-                    emailData, // Send as plain object, not FormData
+                    emailData,
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -142,7 +140,7 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
                         onChange={handleChange}
                         required
                     >
-                        <option value="">Selecteer een type workshop</option>
+                        <option value="">Selecteer een workshop</option>
                         <option value="Schilderen en beeldende kunst">
                             Schilderen en beeldende kunst
                         </option>
