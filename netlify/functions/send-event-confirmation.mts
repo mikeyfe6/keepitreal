@@ -1,27 +1,60 @@
 import { Resend } from "resend";
 
-const resend = new Resend(
-    typeof Netlify !== "undefined" && Netlify.env ?
-        Netlify.env.get("RESEND_API_KEY")
-    :   process.env.RESEND_API_KEY
-);
-
 export default async (req: Request) => {
     if (req.method !== "POST") {
         return new Response("Method not allowed", { status: 405 });
     }
 
     try {
-        const formData = await req.formData();
+        // Check if API key exists
+        const apiKey = process.env.RESEND_API_KEY;
+        if (!apiKey) {
+            console.error("RESEND_API_KEY is not set");
+            return new Response(
+                JSON.stringify({
+                    success: false,
+                    error: "Email service not configured",
+                }),
+                {
+                    status: 500,
+                    headers: { "Content-Type": "application/json" },
+                }
+            );
+        }
 
-        const name = formData.get("name") as string;
-        const email = formData.get("email") as string;
-        const workshop = formData.get("workshop") as string;
-        const time = formData.get("time") as string;
-        const eventName = formData.get("event") as string;
+        const resend = new Resend(apiKey);
 
-        await resend.emails.send({
-            from: "no-reply@keeptreal.nl",
+        // Parse JSON instead of FormData
+        const data = await req.json();
+        console.log("Received data:", data);
+
+        const { name, email, workshop, time, event: eventName } = data;
+
+        // Validate required fields
+        if (!name || !email || !workshop || !time || !eventName) {
+            console.error("Missing required fields:", {
+                name,
+                email,
+                workshop,
+                time,
+                eventName,
+            });
+            return new Response(
+                JSON.stringify({
+                    success: false,
+                    error: "Missing required fields",
+                }),
+                {
+                    status: 400,
+                    headers: { "Content-Type": "application/json" },
+                }
+            );
+        }
+
+        console.log(`Attempting to send email to: ${email}`);
+
+        const emailResult = await resend.emails.send({
+            from: "no-reply@send.keeptreal.nl", // Make sure this domain is verified in Resend
             to: email,
             subject: `Bevestiging aanmelding - ${eventName}`,
             html: `
@@ -45,10 +78,13 @@ export default async (req: Request) => {
             `,
         });
 
+        console.log("Email sent successfully:", emailResult);
+
         return new Response(
             JSON.stringify({
                 success: true,
                 message: "Confirmation email sent",
+                emailId: emailResult.data?.id,
             }),
             {
                 status: 200,
@@ -58,10 +94,18 @@ export default async (req: Request) => {
     } catch (error) {
         console.error("Error sending confirmation email:", error);
 
+        // Log the full error details
+        if (error instanceof Error) {
+            console.error("Error message:", error.message);
+            console.error("Error stack:", error.stack);
+        }
+
         return new Response(
             JSON.stringify({
                 success: false,
                 error: "Failed to send confirmation email",
+                details:
+                    error instanceof Error ? error.message : "Unknown error",
             }),
             {
                 status: 500,
