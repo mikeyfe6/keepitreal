@@ -32,6 +32,14 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
         setError("");
 
         try {
+            const formDataToSend = new FormData();
+            formDataToSend.append("form-name", "kir-event");
+            formDataToSend.append("name", formData.name);
+            formDataToSend.append("email", formData.email);
+            formDataToSend.append("workshop", formData.workshop);
+            formDataToSend.append("time", formData.time);
+            formDataToSend.append("event", eventName);
+
             if (window.location.hostname === "localhost") {
                 console.log("Registration data:", {
                     ...formData,
@@ -42,41 +50,20 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
                 return;
             }
 
-            // Prepare data for Netlify Forms (URL-encoded)
-            const netlifyFormData = new URLSearchParams();
-            netlifyFormData.append("form-name", "kir-event");
-            netlifyFormData.append("name", formData.name);
-            netlifyFormData.append("email", formData.email);
-            netlifyFormData.append("workshop", formData.workshop);
-            netlifyFormData.append("time", formData.time);
-            netlifyFormData.append("event", eventName);
+            const encodedData = new URLSearchParams(
+                formDataToSend as any
+            ).toString();
 
-            // Submit to Netlify Forms
-            await axios.post("/", netlifyFormData.toString(), {
+            await axios.post("/", encodedData, {
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
                 },
             });
 
-            // Prepare data for Netlify Function (JSON)
-            const emailData = {
-                name: formData.name,
-                email: formData.email,
-                workshop: formData.workshop,
-                time: formData.time,
-                event: eventName,
-            };
-
-            // Send confirmation email
             try {
                 await axios.post(
                     "/.netlify/functions/send-event-confirmation",
-                    emailData,
-                    {
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                    }
+                    formDataToSend
                 );
             } catch (emailError) {
                 console.warn("Failed to send confirmation email:", emailError);
