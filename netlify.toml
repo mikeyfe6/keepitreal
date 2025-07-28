@@ -6,6 +6,7 @@ YARN_VERSION = "1.22.22" # - latest YARN version
 [build]
 publish = "public"
 command = "npm run build"
+functions = "netlify/functions"
 
 [context.production]
 command = "npm run build:prod"

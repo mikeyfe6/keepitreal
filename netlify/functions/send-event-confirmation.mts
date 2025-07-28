@@ -1,10 +1,6 @@
 import { Resend } from "resend";
 
-const resend = new Resend(
-    typeof Netlify !== "undefined" && Netlify.env ?
-        Netlify.env.get("RESEND_API_KEY")
-    :   process.env.RESEND_API_KEY
-);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async (req: Request) => {
     if (req.method !== "POST") {
@@ -12,13 +8,24 @@ export default async (req: Request) => {
     }
 
     try {
-        const formData = await req.formData();
+        // Parse JSON instead of FormData
+        const data = await req.json();
 
-        const name = formData.get("name") as string;
-        const email = formData.get("email") as string;
-        const workshop = formData.get("workshop") as string;
-        const time = formData.get("time") as string;
-        const eventName = formData.get("event") as string;
+        const { name, email, workshop, time, event: eventName } = data;
+
+        // Validate required fields
+        if (!name || !email || !workshop || !time || !eventName) {
+            return new Response(
+                JSON.stringify({
+                    success: false,
+                    error: "Missing required fields",
+                }),
+                {
+                    status: 400,
+                    headers: { "Content-Type": "application/json" },
+                }
+            );
+        }
 
         await resend.emails.send({
             from: "no-reply@send.keeptreal.nl",
