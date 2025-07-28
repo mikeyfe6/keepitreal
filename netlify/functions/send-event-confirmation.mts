@@ -48,7 +48,7 @@ export default async (req: Request) => {
         }
 
         const emailResult = await resend.emails.send({
-            from: "no-reply@keeptreal.nl",
+            from: "Keep It Real <no-reply@keeptreal.nl>",
             to: email,
             subject: `Bevestiging aanmelding - ${eventName}`,
             html: `
