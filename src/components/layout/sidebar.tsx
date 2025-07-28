@@ -79,6 +79,16 @@ const Sidebar: React.FC<SidebarProps> = ({
                     </ul>
                 </div>
 
+                <div id="podcast">
+                    <iframe
+                        title="Keep It Real Podcast"
+                        src="https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        className="spotify"
+                    />
+                </div>
+
                 <div id="legend" className={sidebarStyles.asideLegend}>
                     <h3>KiR</h3>
                     <ul>
@@ -144,7 +154,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     </ul>
                 </div>
 
-                <div id="actual" className={sidebarStyles.asideActual}>
+                {/* <div id="actual" className={sidebarStyles.asideActual}>
                     <p>
                         <strong>
                             Keep It Real is genomineerd voor de OMARMprijs en we
@@ -173,17 +183,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         image={omarmprijs}
                         alt="Omarmprijs 2025 - Stem op Keep It Real!"
                     />
-                </div>
-
-                <div id="podcast">
-                    <iframe
-                        title="Keep It Real Podcast"
-                        src="https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"
-                        className="spotify"
-                    />
-                </div>
+                </div> */}
 
                 <div id="contact" className={sidebarStyles.asideContact}>
                     <h3>Word Lid van Keep It Real</h3>

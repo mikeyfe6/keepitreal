@@ -54,8 +54,8 @@ export default async (req: Request) => {
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
                     <h2 style="color: #333;">Bedankt voor je aanmelding!</h2>
-                    
-                    <p>Beste ${name},</p>
+
+                    <p>Beste <strong>${name}</strong>,</p>
 
                     <p>Bedankt voor jouw aanmelding voor deelname aan de workshop: <strong>${workshop}</strong> voor het <strong>${time}</strong>. Als je onverhoopt toch niet aanwezig kan zijn, stuur dan een email naar <a href="mailto:secretariaat@keeptreal.nl">secretariaat@keeptreal.nl</a>.</p>
 
