@@ -47,8 +47,6 @@ export default async (req: Request) => {
             );
         }
 
-        console.log(`Attempting to send email to: ${email}`);
-
         const emailResult = await resend.emails.send({
             from: "no-reply@keeptreal.nl",
             to: email,
@@ -73,7 +71,6 @@ export default async (req: Request) => {
                 </div>
             `,
         });
-
 
         return new Response(
             JSON.stringify({
