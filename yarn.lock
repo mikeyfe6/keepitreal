@@ -1059,9 +1059,9 @@
   integrity sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA==
 
 "@contentful/content-source-maps@^0.11.8":
-  version "0.11.29"
-  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.29.tgz#aa1f3f1d7c223bf9758c4a2c99616179180afd24"
-  integrity sha512-ZxsHSQt9KktVhD+s4jbLzB4uwd+dl/NdBvh+1hh+kNj5ufp/7eAfvCq9BWeWiuTHUrciy8FlYdaqBMIaGXE1/Q==
+  version "0.11.30"
+  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.30.tgz#9c4051d8bc1055aba60c612b7d3054b7f22ccbee"
+  integrity sha512-pZ5FLK0owJldlVw+yomNijMTjkg++19uU3Rq3suYDsGQ4/liTJmnwu+7hf82WADGtk28BNbZWzl8hNisg2OZpQ==
   dependencies:
     "@vercel/stega" "^0.1.2"
     json-pointer "^0.6.2"
@@ -1878,10 +1878,10 @@
   dependencies:
     is-promise "^4.0.0"
 
-"@netlify/functions@^4.1.15":
-  version "4.1.15"
-  resolved "https://registry.yarnpkg.com/@netlify/functions/-/functions-4.1.15.tgz#1ed77a3da59e2959c522f68c48c52eb1acc26217"
-  integrity sha512-kR3wq64Zw45UFZ78c7Q/adA3Jkamhju4OfydJ0DrR++TbzI19ijxCmimaJvmMgrAuKtZ2n8+JqGtLavt2MmdUA==
+"@netlify/functions@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@netlify/functions/-/functions-4.2.0.tgz#be706aca4e3260f0799b29b06deed48a5aec8197"
+  integrity sha512-Y30SRtIEj74x74XZsPO6pIVsCmdKkPrlZSaDq6+xsr0Eskh7qWPMB02I4hpfDD6lRjsz8rDbNk4qWVRdBrcAFg==
   dependencies:
     "@netlify/blobs" "10.0.7"
     "@netlify/dev-utils" "4.1.0"
@@ -2446,9 +2446,9 @@
     picomatch "^4.0.2"
 
 "@rollup/rollup-linux-x64-gnu@^4.18.0":
-  version "4.46.0"
-  resolved "https://registry.yarnpkg.com/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.46.0.tgz#f094a39afaa12c26e08338a2b5d6bd63cc63ec9a"
-  integrity sha512-Cv+moII5C8RM6gZbR3cb21o6rquVDZrN2o81maROg1LFzBz2dZUwIQSxFA8GtGZ/F2KtsqQ2z3eFPBb6akvQNg==
+  version "4.46.1"
+  resolved "https://registry.yarnpkg.com/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.46.1.tgz#3991010418c005e8791c415e7c2072b247157710"
+  integrity sha512-9OADZYryz/7E8/qt0vnaHQgmia2Y0wrjSSn1V/uL+zw/i7NUhxbX4cHXdEQ7dnJgzYDS81d8+tf6nbIdRFZQoQ==
 
 "@rtsao/scc@^1.1.0":
   version "1.1.0"
@@ -2970,10 +2970,10 @@
   dependencies:
     resolve "^1.10.0"
 
-"@vimeo/player@^2.29.1":
-  version "2.29.1"
-  resolved "https://registry.yarnpkg.com/@vimeo/player/-/player-2.29.1.tgz#a5701c42dd40c98b2c1e8278c8dc5d067a26dfbe"
-  integrity sha512-NNa43LxLltE4kMmbaxNsGkS0FJ6rmMjiDMgLJNUU6OAeSMnNz6OVsHInAnes7l9Z4m4dOoq+zHCcLqoNAArNgw==
+"@vimeo/player@^2.29.2":
+  version "2.29.2"
+  resolved "https://registry.yarnpkg.com/@vimeo/player/-/player-2.29.2.tgz#efda955fc2d3e71557c572fabf11d87636f913b0"
+  integrity sha512-h3ddftHtRb7HTnzby3Vef7EipfDLxRcu+Mg2v2tUxGCQz1aOxxV0dxRYQhX8wCYWK9cwYdaO5n/qBmtO+pYWAw==
   dependencies:
     native-promise-only "0.8.1"
     weakmap-polyfill "2.0.4"
@@ -3163,9 +3163,9 @@
     urlpattern-polyfill "^10.0.0"
 
 "@whatwg-node/node-fetch@^0.7.22":
-  version "0.7.22"
-  resolved "https://registry.yarnpkg.com/@whatwg-node/node-fetch/-/node-fetch-0.7.22.tgz#9f56970ce0abd2a2680e5d22cff0ea871eeb4f85"
-  integrity sha512-h4GGjGF2vH3kGJ/fEOeg9Xfu4ncoyRwFcjGIxr/5dTBgZNVwq888byIsZ+XXRDJnNnRlzVVVQDcqrZpY2yctGA==
+  version "0.7.23"
+  resolved "https://registry.yarnpkg.com/@whatwg-node/node-fetch/-/node-fetch-0.7.23.tgz#d579f3aa1713b4125cd79676625a3d116c7d73e1"
+  integrity sha512-irRAL+SrSlpegGrNekr+VM8xnJmOu7HeGqf2l8eKWKybtwQ9mQ+RjbIZHAFlq0Xqz17mg4tVIaL1C0U6VcZVqg==
   dependencies:
     "@fastify/busboy" "^3.1.1"
     "@whatwg-node/disposablestack" "^0.0.6"
@@ -3180,9 +3180,9 @@
     tslib "^2.6.3"
 
 "@whatwg-node/server@^0.10.0":
-  version "0.10.10"
-  resolved "https://registry.yarnpkg.com/@whatwg-node/server/-/server-0.10.10.tgz#6aadb16fe1950e0597fda43decdc51bb904cc50a"
-  integrity sha512-GwpdMgUmwIp0jGjP535YtViP/nnmETAyHpGPWPZKdX++Qht/tSLbGXgFUMSsQvEACmZAR1lAPNu2CnYL1HpBgg==
+  version "0.10.11"
+  resolved "https://registry.yarnpkg.com/@whatwg-node/server/-/server-0.10.11.tgz#96914371936f7254bf4aa5211e116938bb610c49"
+  integrity sha512-WkwcgL54LCR6oJB6tAD5lhpvrgvVUSoM216Y+GlcZJU3+25G2lO4FWKSWRAPgeUX5eoYgBoZ2VBF2biHGtTeSQ==
   dependencies:
     "@envelop/instrumentation" "^1.0.0"
     "@whatwg-node/disposablestack" "^0.0.6"
@@ -4698,9 +4698,9 @@ contentful-sdk-core@^9.0.1:
     "@rollup/rollup-linux-x64-gnu" "^4.18.0"
 
 contentful@^11.2.5:
-  version "11.7.13"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.7.13.tgz#8da12ca58d910474407bb4da7781caf6349dec68"
-  integrity sha512-0/RpYHITELDTANzpKXt9IWEfu2nibZFb7PPyiZ2kBV/MH/x/C9SVAIIUdzI5hgkB1o9eXa2o+GvUXfnIcFW1rA==
+  version "11.7.14"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.7.14.tgz#bb732c7a94561d762e90f43351647c1c66865c6f"
+  integrity sha512-AJlksM5NE/8LcELuzB46WKQEnFFMX+cURuaIzuObElV/Eq8vGAf/UtAFe377q+f5gs/xaUGmtM/C2SHWXZFkHQ==
   dependencies:
     "@contentful/content-source-maps" "^0.11.8"
     "@contentful/rich-text-types" "^16.6.1"

@@ -43,6 +43,42 @@ const Sidebar: React.FC<SidebarProps> = ({
     return (
         <>
             <aside className={sidebarStyles.aside}>
+                <div id="events" className={sidebarStyles.asideEvents}>
+                    <h3>Opkomende evenementen</h3>
+
+                    <ul className={sidebarStyles.asideEventsActive}>
+                        <li>
+                            <LightBox
+                                image={backToSchool}
+                                alt="Back to School - Flyer - Dinsdag 27 mei 2025 @ Flexbieb, Talbotstraat 46 in IJburg"
+                            />
+
+                            <button onClick={handleOpenModal}>
+                                Aanmelden voor Back to School
+                            </button>
+                        </li>
+                    </ul>
+
+                    <hr />
+
+                    <h3>Afgelopen evenementen</h3>
+
+                    <ul className={sidebarStyles.asideEventsArchive}>
+                        <li>
+                            <LightBox
+                                image={flexZijn}
+                                alt="Flex Zijn - Wenner Regales - Dinsdag 27 mei 2025 @ Flexbieb, Talbotstraat 46 in IJburg"
+                            />
+                        </li>
+                        <li>
+                            <LightBox
+                                image={kunstEnCultuur}
+                                alt="Kunst En Cultuurmarkt - Zaterdag 12 april 2025 @ Zandkasteel, Amsterdam Zuidoost"
+                            />
+                        </li>
+                    </ul>
+                </div>
+
                 <div id="legend" className={sidebarStyles.asideLegend}>
                     <h3>KiR</h3>
                     <ul>
@@ -137,42 +173,6 @@ const Sidebar: React.FC<SidebarProps> = ({
                         image={omarmprijs}
                         alt="Omarmprijs 2025 - Stem op Keep It Real!"
                     />
-                </div>
-
-                <div id="events" className={sidebarStyles.asideEvents}>
-                    <h3>Opkomende evenementen</h3>
-
-                    <ul className={sidebarStyles.asideEventsActive}>
-                        <li>
-                            <LightBox
-                                image={backToSchool}
-                                alt="Back to School - Flyer - Dinsdag 27 mei 2025 @ Flexbieb, Talbotstraat 46 in IJburg"
-                            />
-
-                            <button onClick={handleOpenModal}>
-                                Aanmelden voor Back to School
-                            </button>
-                        </li>
-                    </ul>
-
-                    <hr />
-
-                    <h3>Afgelopen evenementen</h3>
-
-                    <ul className={sidebarStyles.asideEventsArchive}>
-                        <li>
-                            <LightBox
-                                image={flexZijn}
-                                alt="Flex Zijn - Wenner Regales - Dinsdag 27 mei 2025 @ Flexbieb, Talbotstraat 46 in IJburg"
-                            />
-                        </li>
-                        <li>
-                            <LightBox
-                                image={kunstEnCultuur}
-                                alt="Kunst En Cultuurmarkt - Zaterdag 12 april 2025 @ Zandkasteel, Amsterdam Zuidoost"
-                            />
-                        </li>
-                    </ul>
                 </div>
 
                 <div id="podcast">
