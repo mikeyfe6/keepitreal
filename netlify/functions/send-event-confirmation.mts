@@ -6,7 +6,6 @@ export default async (req: Request) => {
     }
 
     try {
-        // Check if API key exists
         const apiKey = process.env.RESEND_API_KEY;
         if (!apiKey) {
             console.error("RESEND_API_KEY is not set");
@@ -24,13 +23,10 @@ export default async (req: Request) => {
 
         const resend = new Resend(apiKey);
 
-        // Parse JSON instead of FormData
         const data = await req.json();
-        console.log("Received data:", data);
 
         const { name, email, workshop, time, event: eventName } = data;
 
-        // Validate required fields
         if (!name || !email || !workshop || !time || !eventName) {
             console.error("Missing required fields:", {
                 name,
@@ -54,7 +50,7 @@ export default async (req: Request) => {
         console.log(`Attempting to send email to: ${email}`);
 
         const emailResult = await resend.emails.send({
-            from: "no-reply@send.keeptreal.nl", // Make sure this domain is verified in Resend
+            from: "no-reply@keeptreal.nl",
             to: email,
             subject: `Bevestiging aanmelding - ${eventName}`,
             html: `
@@ -78,7 +74,6 @@ export default async (req: Request) => {
             `,
         });
 
-        console.log("Email sent successfully:", emailResult);
 
         return new Response(
             JSON.stringify({
@@ -94,7 +89,6 @@ export default async (req: Request) => {
     } catch (error) {
         console.error("Error sending confirmation email:", error);
 
-        // Log the full error details
         if (error instanceof Error) {
             console.error("Error message:", error.message);
             console.error("Error stack:", error.stack);
