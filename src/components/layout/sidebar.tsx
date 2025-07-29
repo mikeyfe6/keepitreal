@@ -39,12 +39,12 @@ const Sidebar: React.FC<SidebarProps> = ({
     const handleCloseModal = () => {
         setIsModalOpen(false);
         setShowSuccessMessage(false);
-        setCountdown(5);
+        setCountdown(10);
     };
 
     const handleRegistrationSuccess = () => {
         setShowSuccessMessage(true);
-        setCountdown(5);
+        setCountdown(10);
 
         const timer = setInterval(() => {
             setCountdown((prev) => {
@@ -52,7 +52,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     clearInterval(timer);
                     setIsModalOpen(false);
                     setShowSuccessMessage(false);
-                    setCountdown(5);
+                    setCountdown(10);
                     return 0;
                 }
                 return prev - 1;
@@ -258,7 +258,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         </h3>
                         <p>Check je mail voor een bevestiging!</p>
                         <small>
-                            Deze popup verdwijnt over {countdown} seconde
+                            Dit venster verdwijnt over {countdown} seconde
                             {countdown !== 1 ? "n" : ""}...
                         </small>
                     </div>

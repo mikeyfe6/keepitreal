@@ -137,7 +137,7 @@
                                     width: rem-calc(16);
                                     height: rem-calc(16);
                                     border-radius: 50%;
-                                    background-color: rgba($tertiary, 0.8);
+                                    background-color: rgba($secondary, 0.8);
                                     transition:
                                         background-color 0.2s ease,
                                         transform 0.2s ease;
@@ -152,7 +152,6 @@
                         }
 
                         label {
-                            color: $primary;
                             transition: color 0.2s ease;
                         }
                     }
