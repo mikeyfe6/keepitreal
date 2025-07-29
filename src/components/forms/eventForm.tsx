@@ -111,6 +111,7 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
                         type="text"
                         id="name"
                         name="name"
+                        autoComplete="name"
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Jouw volledige naam"
@@ -124,6 +125,7 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
                         type="email"
                         id="email"
                         name="email"
+                        autoComplete="email"
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="jouw@email.nl"

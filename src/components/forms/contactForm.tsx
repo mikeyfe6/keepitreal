@@ -88,9 +88,10 @@ const ContactForm: React.FC = () => {
                         type="text"
                         name="firstName"
                         id="formFirstName"
-                        placeholder="Voornaam *"
+                        autoComplete="given-name"
                         value={formData.firstName}
                         onChange={handleChange}
+                        placeholder="Voornaam *"
                         required
                     />
                 </div>
@@ -100,9 +101,10 @@ const ContactForm: React.FC = () => {
                         type="text"
                         name="lastName"
                         id="formLastName"
-                        placeholder="Achternaam *"
+                        autoComplete="family-name"
                         value={formData.lastName}
                         onChange={handleChange}
+                        placeholder="Achternaam *"
                         required
                     />
                 </div>
@@ -112,9 +114,10 @@ const ContactForm: React.FC = () => {
                         type="text"
                         name="company"
                         id="formCompany"
-                        placeholder="Bedrijfsnaam"
+                        autoComplete="organization"
                         value={formData.company}
                         onChange={handleChange}
+                        placeholder="Bedrijfsnaam"
                     />
                 </div>
                 <div>
@@ -123,9 +126,10 @@ const ContactForm: React.FC = () => {
                         type="tel"
                         name="phone"
                         id="formPhoneNr"
-                        placeholder="Telefoonnummer"
+                        autoComplete="tel"
                         value={formData.phone}
                         onChange={handleChange}
+                        placeholder="Telefoonnummer"
                     />
                 </div>
                 <div>
@@ -134,9 +138,10 @@ const ContactForm: React.FC = () => {
                         type="email"
                         name="email"
                         id="formEmail"
-                        placeholder="E-mailadres *"
+                        autoComplete="email"
                         value={formData.email}
                         onChange={handleChange}
+                        placeholder="E-mailadres *"
                         required
                     />
                 </div>
@@ -146,9 +151,9 @@ const ContactForm: React.FC = () => {
                         name="message"
                         id="formMessage"
                         rows={7}
-                        placeholder="Bericht *"
                         value={formData.message}
                         onChange={handleChange}
+                        placeholder="Bericht *"
                         required
                     />
                 </div>
