@@ -25,7 +25,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@fortawesome/react-fontawesome": "^0.2.3",
     "@googlemaps/js-api-loader": "^1.16.10",
-    "@netlify/functions": "^4.2.0",
+    "@netlify/functions": "^4.2.1",
     "@vimeo/player": "^2.29.2",
     "axios": "^1.11.0",
     "gatsby": "^5.14.5",
@@ -52,13 +52,13 @@
   "devDependencies": {
     "@types/google.maps": "^3.58.1",
     "@types/node": "^24.1.0",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
     "@types/vimeo__player": "^2.18.3",
-    "stylelint": "^16.22.0",
+    "stylelint": "^16.23.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^15.0.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   },
   "packageManager": "yarn@1.22.22"
 }
