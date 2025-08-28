@@ -70,7 +70,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         <li>
                             <LightBox
                                 image={backToSchool}
-                                alt="Back to School - Flyer - Dinsdag 27 mei 2025 @ Flexbieb, Talbotstraat 46 in IJburg"
+                                alt="Back to School - Vrijdag 15 augustus 2025 @ De Ster, Woudrichemstraat 8 in Amsterdam"
                             />
 
                             <button onClick={handleOpenModal} disabled>
