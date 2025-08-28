@@ -132,6 +132,11 @@
             color: rgba($tertiary, 0.825);
         }
     }
+
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
 }
 
 @mixin main-card($color: rgba($white, 0.0625)) {

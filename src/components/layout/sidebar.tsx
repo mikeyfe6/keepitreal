@@ -73,7 +73,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                                 alt="Back to School - Flyer - Dinsdag 27 mei 2025 @ Flexbieb, Talbotstraat 46 in IJburg"
                             />
 
-                            <button onClick={handleOpenModal}>
+                            <button onClick={handleOpenModal} disabled>
                                 Aanmelden voor Back to School
                             </button>
                         </li>
@@ -116,9 +116,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                             <button
                                 onClick={() => handleSidebarClick("mission")}
                                 className={
-                                    activeSection === "mission" ?
-                                        sidebarStyles.active
-                                    :   ""
+                                    activeSection === "mission"
+                                        ? sidebarStyles.active
+                                        : ""
                                 }
                             >
                                 Onze Missie
@@ -128,9 +128,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                             <button
                                 onClick={() => handleSidebarClick("whatwedo")}
                                 className={
-                                    activeSection === "whatwedo" ?
-                                        sidebarStyles.active
-                                    :   ""
+                                    activeSection === "whatwedo"
+                                        ? sidebarStyles.active
+                                        : ""
                                 }
                             >
                                 <u>Wat We Doen</u>
@@ -151,9 +151,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                             <button
                                 onClick={() => handleSidebarClick("ourteam")}
                                 className={
-                                    activeSection === "ourteam" ?
-                                        sidebarStyles.active
-                                    :   ""
+                                    activeSection === "ourteam"
+                                        ? sidebarStyles.active
+                                        : ""
                                 }
                             >
                                 Onze Teamleden
@@ -163,9 +163,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                             <button
                                 onClick={() => handleSidebarClick("impact")}
                                 className={
-                                    activeSection === "impact" ?
-                                        sidebarStyles.active
-                                    :   ""
+                                    activeSection === "impact"
+                                        ? sidebarStyles.active
+                                        : ""
                                 }
                             >
                                 Impact en Toekomst
@@ -249,7 +249,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     showSuccessMessage ? "" : "Aanmelden voor Back to School"
                 }
             >
-                {showSuccessMessage ?
+                {showSuccessMessage ? (
                     <div>
                         <h3>
                             {" "}
@@ -262,14 +262,15 @@ const Sidebar: React.FC<SidebarProps> = ({
                             {countdown !== 1 ? "n" : ""}...
                         </small>
                     </div>
-                :   <div>
+                ) : (
+                    <div>
                         <p>Vul het formulier hieronder in *</p>
                         <EventForm
                             onSuccess={handleRegistrationSuccess}
                             eventName="Back to School"
                         />
                     </div>
-                }
+                )}
             </Modal>
         </>
     );

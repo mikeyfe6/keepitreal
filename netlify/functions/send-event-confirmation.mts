@@ -50,6 +50,7 @@ export default async (req: Request) => {
         const emailResult = await resend.emails.send({
             from: "Keep It Real <no-reply@keeptreal.nl>",
             to: email,
+            replyTo: "secretariaat@keeptreal.nl",
             subject: `Bevestiging aanmelding - ${eventName}`,
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
