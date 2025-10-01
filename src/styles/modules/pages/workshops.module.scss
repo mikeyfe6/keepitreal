@@ -234,9 +234,9 @@
 
             .visual {
                 &-one {
-                    margin: 0 auto;
+                    margin-left: auto;
 
-                    @include mobile {
+                    @include tablet {
                         margin: unset;
                     }
                 }
