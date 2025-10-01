@@ -130,13 +130,13 @@
                     [data-gatsby-image-wrapper] {
                         max-width: rem-calc(150);
                         width: 100%;
-                        aspect-ratio: 1 / 1;
                         height: auto;
-                        border-radius: 50%;
-                        border: 3px solid $grey-trans;
 
                         img {
                             object-position: top;
+                            aspect-ratio: 1 / 1;
+                            border: 3px solid $grey-trans;
+                            border-radius: 50%;
                         }
                     }
 
