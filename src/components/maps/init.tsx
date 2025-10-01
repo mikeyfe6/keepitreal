@@ -1,6 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
+if (typeof window !== "undefined") {
+    import("@googlemaps/js-api-loader").then(({ setOptions }) => {
+        setOptions({
+            key: process.env.GATSBY_GOOGLE_MAPS_KEY || "",
+            v: "weekly",
+            mapIds: process.env.GATSBY_GOOGLE_MAPS_ID
+                ? [process.env.GATSBY_GOOGLE_MAPS_ID]
+                : undefined,
+        });
+    });
+}
+
 interface GoogleMapProps {
     center: { lat: number; lng: number };
     zoom: number;
@@ -27,17 +39,7 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
         let isMounted = true;
 
         (async () => {
-            const { setOptions, importLibrary } = await import(
-                "@googlemaps/js-api-loader"
-            );
-
-            setOptions({
-                key: process.env.GATSBY_GOOGLE_MAPS_KEY || "",
-                v: "weekly",
-                mapIds: process.env.GATSBY_GOOGLE_MAPS_ID
-                    ? [process.env.GATSBY_GOOGLE_MAPS_ID]
-                    : undefined,
-            });
+            const { importLibrary } = await import("@googlemaps/js-api-loader");
 
             const [{ Map, InfoWindow }, { AdvancedMarkerElement }] =
                 await Promise.all([
