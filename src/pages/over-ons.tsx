@@ -2,6 +2,8 @@ import * as React from "react";
 
 import type { HeadFC, PageProps } from "gatsby";
 
+import { StaticImage } from "gatsby-plugin-image";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Layout from "../components/layout";
@@ -59,7 +61,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
                         en meiden en ouders. Iedere persoon die een onderdeel
                         verzorgt in het programma, is een ervaringsdeskundige.
                         De inzet van ervaringsdeskundigen stoelt op een aantal
-                        begeleidingsmechanismen1 die in reguliere
+                        begeleidingsmechanismen die in reguliere
                         begeleidingsvormen niet, minder of anders aanwezig zijn.
                     </p>
                 </div>
@@ -266,8 +268,8 @@ const AboutUsPage: React.FC<PageProps> = () => {
                         afgesloten, vaak met veel dank van het team aan de
                         leerlingen voor hun openheid. Het is een leuke dag
                         waarbij de leerlingen een dag niet uit boeken hoeven te
-                        leren maar door zelf te praten, na te denken of te “doen
-                        “ onder begeleiding van het team.
+                        leren maar door zelf te praten, na te denken of te
+                        “doen“ onder begeleiding van het team.
                     </p>
 
                     <p>
@@ -312,88 +314,93 @@ const AboutUsPage: React.FC<PageProps> = () => {
                         className="youtube w-margin"
                     />
                 </div>
-                {/* <div>
-					<h3>De kernboodschap</h3>
-					<p>
-						De kernboodschap van onze communicatie is dat KIR een leerling kan
-						helpen om de regie te pakken over hun eigen leven. Onze communicatie
-						hierover naar de leerlingen toe is laagdrempelig, makkelijk,
-						enthousiasmerend, aanspreken en aansluitend bij hun belevingswereld.
-						Naar de ouders toe is de boodschap samenwerkend en
-						vertrouwenwekkend. En naar de teams en externe besturen is het
-						professioneel. De communicatiestijl van KIR zit al in de naam. Er
-						wordt, ongeacht het niveau van communicatie, gecommuniceerd op een
-						authentieke wijze die de levenservaring van het team van KIR
-						weerspiegelt. Het taalgebruik is altijd toegankelijk (B1) en waar
-						nodig wordt de informatie in het Engels voor de ouders beschikbaar
-						gemaakt. De middelen die wij inzetten om onze doelgroepen te
-						bereiken zijn:
-					</p>
-					<ol>
-						<li>
-							<p>Flyers</p>
-						</li>
-						<li>
-							<p>Website</p>
-						</li>
-						<li>
-							<p>Sociale Media</p>
-						</li>
-						<li>
-							<p>Video’s en Reels</p>
-						</li>
-						<li>
-							<p>Nieuwsbrieven</p>
-						</li>
-						<li>
-							<p>Persoonlijk contact (ouders en leerlingen)</p>
-						</li>
-						<li>
-							<p>Podcast</p>
-						</li>
-					</ol>
-					<p>
-						NB: podcast is een idee dat ten goede komt van KIR in algemene zin.
-						We willen ook podcasts specifiek toespitsen op deze samenwerking.
-						Info podcast: we willen succesverhalen van “Bijlmernaren” laten
-						horen. Waarom was hun pad in het leven moeilijk of juist makkelijk?
-						Wat hebben ze gedaan om te komen waar ze nu zijn? Waar hebben ze de
-						dag van vandaag nog steeds mee te maken? Etc. Deze gesprekken willen
-						we koppelen aan jongeren. Wat is nu anders dan toen? Is het nog de
-						zelfde struggle als toen?
-					</p>
-				</div>
-				<div>
-					<h3>Waar willen we naar toe?</h3>
-					<p>
-						Punten die we de komende twee jaar samen met het Orion college en de
-						Dreef gaan ontwikkelen/organiseren:
-					</p>
-					<ol>
-						<li>
-							<p>
-								Professionaliseringsslag team (traumasensitief werken, kennis
-								van verstandelijke beperkingen middels supervisie)
-							</p>
-						</li>
-						<li>
-							<p>Actie- onderzoek: wat zijn de effecten/resultaten van KIR? </p>
-						</li>
-						<li>
-							<p>
-								Ontwikkelen leerlijn: hoe maken we KIR basis onderdeel van een
-								school curriculum?
-							</p>
-						</li>
-					</ol>
-				</div>
-				<div>
-					<h3>Ambities</h3>
-					<p>
-						We willen komen tot een volledig aanbod inclusief visie/missie
-						waarmee we onszelf kunnen profileren. On- en offline.
-					</p>
-				</div> */}
+
+                <div>
+                    <h2>Teamleden</h2>
+                    <div>
+                        <div>
+                            <StaticImage
+                                src="../images/team/Bradley.jpg"
+                                alt="Bradley"
+                            />
+                            <h3>Bradley</h3>
+                        </div>
+                        <div>
+                            <StaticImage src="../images/team/FI.jpg" alt="FI" />
+                            <h3>FI</h3>
+                        </div>
+                        <div>
+                            <StaticImage
+                                src="../images/team/Franco.jpg"
+                                alt="Franco"
+                            />
+                            <h3>Franco</h3>
+                        </div>
+                        <div>
+                            <StaticImage
+                                src="../images/team/Jamina.jpg"
+                                alt="Jamina"
+                            />
+                            <h3>Jamina</h3>
+                        </div>
+                        <div>
+                            <StaticImage
+                                src="../images/team/Jantien.jpg"
+                                alt="Jantien"
+                            />
+                            <h3>Jantien</h3>
+                        </div>
+                        <div>
+                            <StaticImage
+                                src="../images/team/Kaleisha.jpg"
+                                alt="Kaleisha"
+                            />
+                            <h3>Kaleisha</h3>
+                        </div>
+                        <div>
+                            <StaticImage
+                                src="../images/team/Kenny.jpg"
+                                alt="Kenny"
+                            />
+                            <h3>Kenny</h3>
+                        </div>
+                        <div>
+                            <StaticImage
+                                src="../images/team/Kimberley.jpg"
+                                alt="Kimberley"
+                            />
+                            <h3>Kimberley</h3>
+                        </div>
+                        <div>
+                            <StaticImage
+                                src="../images/team/Melanie.jpg"
+                                alt="Melanie"
+                            />
+                            <h3>Melanie</h3>
+                        </div>
+                        <div>
+                            <StaticImage
+                                src="../images/team/Merlien.jpg"
+                                alt="Merlien"
+                            />
+                            <h3>Merlien</h3>
+                        </div>
+                        <div>
+                            <StaticImage
+                                src="../images/team/Miller.jpg"
+                                alt="Miller"
+                            />
+                            <h3>Miller</h3>
+                        </div>
+                        <div>
+                            <StaticImage
+                                src="../images/team/Wenner.jpg"
+                                alt="Wenner"
+                            />
+                            <h3>Wenner</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </Layout>
     );

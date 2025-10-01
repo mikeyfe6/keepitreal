@@ -1,13 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "@reach/router";
+import * as React from "react";
 
-import type { HeadFC, PageProps } from "gatsby";
-
-import { Link } from "gatsby";
+import { HeadFC, PageProps, Link } from "gatsby";
 
 import { StaticImage } from "gatsby-plugin-image";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Layout from "../components/layout";
 
@@ -15,727 +10,322 @@ import { Seo } from "../components/seo";
 
 import * as workshopStyles from "../styles/modules/pages/workshops.module.scss";
 
-const WorkhopsPage: React.FC<PageProps> = () => {
-    const [activeSection, setActiveSection] = useState<string>("");
+// TODO: alle SEO beschrijvingen fixen voor alle pagina's
 
-    const { hash } = useLocation();
-
-    useEffect(() => {
-        setActiveSection(hash);
-    }, [hash]);
-
+const WorkshopsPage: React.FC<PageProps> = () => {
     return (
         <Layout>
             <div className={workshopStyles.workshops} id="workshops">
                 <div>
-                    <h2>Workshops</h2>
-                    <p>
-                        Naast ons aanbod voor jongeren, verzorgen wij ook
-                        professionele trainingen en workshops voor mensen die
-                        met jongeren werken. Denk aan korte sessies, studiedagen
-                        of teambuilding. Deze trainingen zijn afgeleid van ons
-                        schoolaanbod en bevatten:
-                    </p>
-                    <br />
-                    <ul>
-                        <li>
-                            Inhoudelijke kennisoverdracht over thema’s naar
-                            keuze
-                        </li>
-                        <li>
-                            Inleven in het perspectief van jongeren en redeneren
-                            vanuit jongerencultuur
-                        </li>
-                        <li>Teambuilding voor professionals</li>
-                    </ul>
-                    <br />
-                    <p>
-                        <a
-                            href="/workshops-professionals-kir.pdf"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                        >
-                            Bekijk de flyer
-                        </a>{" "}
-                        voor meer info of{" "}
-                        <Link to="/contact">neem contact met ons op</Link> voor
-                        maatwerk of een prijsindicatie.
-                    </p>
-                    <p>
-                        Ons reguliere workshopaanbod richt zich op jongeren en
-                        draait om het creëren van positieve ervaringen en het
-                        voeren van echte gesprekken met mensen die weten hoe hun
-                        wereld eruitziet.{" "}
-                        <b>
-                            Het aanbod hieronder geeft een beeld van onze
-                            workshops.
-                        </b>
-                    </p>
+                    <h2>Workshopaanbod voor professionals</h2>
                 </div>
 
-                <ul>
-                    <li
-                        id="genge"
-                        className={
-                            activeSection === "#genge"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsImage}>
-                            <StaticImage
-                                src="../images/workshops/genge.tiff"
-                                alt="Workshop Genge"
-                            />
-                        </div>
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Genge</h3>
-                            <p>
-                                Een therapeutische groepsles waarin tekenen het
-                                middel is. De inhoud wordt aangepast aan de
-                                groep. Belangrijke thema’s zijn: Verleidingen,
-                                keuzes en weerbaarheid.
-                            </p>
+                <div className={workshopStyles.introduction}>
+                    <div>
+                        <h3>INTRODUCTIE</h3>
+                        <p>
+                            Keep It Real reikt jongeren tools en inzichten aan
+                            voor het maken van de juiste keuzes in hun leven.
+                            Dat doen we aan de hand van workshops op het gebied
+                            van kunst, cultuur en identiteitsontwikkeling,
+                            puttend uit onze ervaringsdeskundigheid en
+                            pedagogische kennis. De workshopleiders hebben zelf
+                            hun sporen verdiend op het gebied van o.a. kunst,
+                            ondernemen, muziek, social media en maken thema's
+                            bespreekbaar als mental health, oorzaak - gevolg,
+                            weerbaarheid.
+                        </p>
 
-                            <hr />
+                        <p>
+                            Omdat wij steeds vaker de vraag kregen om onze
+                            kennis en ervaring met professionals te delen,
+                            hebben we hier een aanbod op ontwikkeld. Per
+                            workshop vindt u in dit document een toelichting. We
+                            stemmen de workshops altijd af op de specifieke
+                            vraag van het team. Het is ook mogelijk om een
+                            dagdeel vullend programma op maat samen te stellen:
+                            een team take over. We dompelen het team onder in de
+                            jongerenwereld, met momenten voor zelfreflectie en
+                            een stevige teambuilding component. In de
+                            voorbereiding kiezen we samen de programma
+                            onderdelen die het beste aansluiten bij uw vraag.
+                            Deze dag beleef je vanuit het perspectief van
+                            jongeren, waardoor je meer te weten komt over wat er
+                            speelt onder jongeren, waar zij tegen aanlopen en
+                            over relevante maatschappelijke ontwikkelingen.
+                        </p>
+                    </div>
 
-                            <div className={workshopStyles.workshopsHolder}>
-                                <p>Workshophouder:</p>
-                                <div
-                                    className={
-                                        workshopStyles.workshopsHolderInfo
-                                    }
-                                >
-                                    <h6>Kenny Brenet</h6>
-                                    <span>&middot;</span>
-                                    <a href="mailto:s.g.brenet@gmail.com">
-                                        <FontAwesomeIcon icon={"right-long"} />
-                                        <FontAwesomeIcon
-                                            icon={"square-envelope"}
-                                            size={"xl"}
-                                        />
-                                    </a>
-                                </div>
-                            </div>
+                    <div className={workshopStyles.visuals}>
+                        <StaticImage
+                            src="../images/workshops/2.jpg"
+                            alt=""
+                            className={workshopStyles.imgOne}
+                        />
 
-                            <p className={workshopStyles.workshopsBio}>
-                                Kenny Brenet is een ervaringsdeskundige van het
-                                straatleven. Zijn expressie in kunst is tekenen.
-                                Hij geeft in zijn dagelijks leven therapeutische
-                                groepslessen aan jongeren en therapie aan AA
-                                groepen voor volwassenen. Kenny was vanaf jong
-                                bezig met criminaliteit; vanaf zijn 13e zat hij
-                                in de nieuwe Lloyd (jeugdgevangenis). Veel van
-                                zijn vrienden zijn dood of achter tralies en dat
-                                was een plek waar hij niet wilde eindigen. In de
-                                Vught gevangenis kwam hij in aanraking met de
-                                bijbel waarna hij zijn leven hieraan ging
-                                toewijden. Hij put kracht uit zijn geloof en via
-                                deze weg wilt hij de volgende generatie positief
-                                beïnvloeden.
-                            </p>
-                        </div>
-                    </li>
+                        <StaticImage
+                            src="../images/workshops/5.jpg"
+                            alt=""
+                            className={workshopStyles.imgTwo}
+                        />
 
-                    <li
-                        id="oorzaak-gevolg"
-                        className={
-                            activeSection === "#oorzaak-gevolg"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsImage}>
-                            <StaticImage
-                                src="../images/workshops/gevolg-oorzaak.tiff"
-                                alt="Workshop Oorzaak: Gevolg - De Oorzaak"
-                            />
-                        </div>
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Oorzaak: Gevolg - De Oorzaak</h3>
-                            <p>
-                                Gevolg-sessies gaan in op het straatleven vanuit
-                                de belevenis van jongeren. Vanuit de eigen
-                                levenservaring gaat de workshophouder met de
-                                jongeren in gesprek om ze te motiveren om op het
-                                rechte pad te blijven.
-                            </p>
+                        <StaticImage
+                            src="../images/workshops/3.jpg"
+                            alt=""
+                            className={workshopStyles.imgThree}
+                        />
 
-                            <hr />
+                        <StaticImage
+                            src="../images/workshops/8.jpg"
+                            alt=""
+                            className={workshopStyles.imgFour}
+                        />
 
-                            <div className={workshopStyles.workshopsHolder}>
-                                <p>Workshophouder:</p>
-                                <div
-                                    className={
-                                        workshopStyles.workshopsHolderInfo
-                                    }
-                                >
-                                    <h6>F.I.</h6>
-                                    <span>&middot;</span>
-                                    <a href="mailto:l.g.ramazan2@icloud.com">
-                                        <FontAwesomeIcon icon={"right-long"} />
-                                        <FontAwesomeIcon
-                                            icon={"square-envelope"}
-                                            size={"xl"}
-                                        />
-                                    </a>
-                                </div>
-                            </div>
+                        <StaticImage
+                            src="../images/workshops/6.jpg"
+                            alt=""
+                            className={workshopStyles.imgFive}
+                        />
 
-                            <p className={workshopStyles.workshopsBio}>
-                                F.I. is een straatlegende van Amsterdam
-                                Zuidoost, beter bekend als de Bijlmer. In de
-                                media wordt hij nog steeds gezien als de baas
-                                van de bende Green Gang, maar zelf is hij nu CEO
-                                van platenmaatschappij Capital 77 Records. Hij
-                                is het boegbeeld van een “gangster” die, na 10
-                                jaar van zijn leven aan de straat te hebben
-                                gegeven, het ver heeft geschopt als rapper en
-                                Nederland introduceerde aan de talenten van
-                                Djaga Djaga, Green Gang, Mario Cash, Scarface en
-                                recentelijk C. Smoke.
-                            </p>
-                        </div>
-                    </li>
+                        <StaticImage
+                            src="../images/workshops/7.jpg"
+                            alt=""
+                            className={workshopStyles.imgSix}
+                        />
 
-                    <li
-                        id="identiteit"
-                        className={
-                            activeSection === "#identiteit"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsImage}>
-                            <StaticImage
-                                src="../images/workshops/identiteit.tiff"
-                                alt="Workshop Identiteit"
-                            />
-                        </div>
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Identiteit</h3>
-                            <p>
-                                Dit onderdeel is gericht op preventieve aanpak
-                                voor jongeren, maar ook toepasbaar op leraren en
-                                ouders. Onderdelen die aan de orde komen zijn
-                                onder andere: wie ben ik, wat wil ik,
-                                weerbaarheid, groepsdruk, grenzen aangeven,
-                                casus-beschrijving (non –fictie), jongeren
-                                worden geconfronteerd, communicatietraining,
-                                veiligheid op Social Media; schokkende content,
-                                online pesten, intimidatie en sexting.
-                            </p>
+                        <StaticImage
+                            src="../images/workshops/4.jpg"
+                            alt=""
+                            className={workshopStyles.imgSeven}
+                        />
+                    </div>
+                </div>
 
-                            <hr />
+                <hr />
 
-                            <div className={workshopStyles.workshopsHolder}>
-                                <p>Workshophouder:</p>
-                                <div
-                                    className={
-                                        workshopStyles.workshopsHolderInfo
-                                    }
-                                >
-                                    <h6>Melanie Falix</h6>
-                                    <span>&middot;</span>
-                                    <a href="mailto:m.falix@hotmail.com">
-                                        <FontAwesomeIcon icon={"right-long"} />
-                                        <FontAwesomeIcon
-                                            icon={"square-envelope"}
-                                            size={"xl"}
-                                        />
-                                    </a>
-                                </div>
-                            </div>
+                <div className={workshopStyles.codeswitching}>
+                    <div>
+                        <h3>CODE SWITCHING</h3>
+                        <p>
+                            In verschillende contexten gelden verschillende
+                            codes. Jongeren gebruiken verschillende woorden,
+                            gedragingen en andere uitingen op straat / onder
+                            vrienden, thuis en op school of in een werksetting.
+                            Het vraagt ontzettend veel van jongeren om zich
+                            steeds aan te passen naar de omgeving waarin zij
+                            zich bevinden. Het helpt als professionals die met
+                            jongeren werken zich hier bewust van zijn en zelf
+                            ook een zekere kennis hebben van de codes die
+                            jongeren in andere settingen gebruiken.
+                        </p>
+                        <p>
+                            In deze workshop nemen we de deelnemers mee in de
+                            opkomst en ontwikkeling van de snel veranderende
+                            straatcultuur en wat dit betekent voor de
+                            straatcodes die jongeren in het hier en nu
+                            gebruiken.
+                        </p>
+                        <p>
+                            <b>
+                                Duur workshop: 2 uur <br />
+                                Max aantal deelnemers: 15
+                            </b>
+                        </p>
+                    </div>
 
-                            <p className={workshopStyles.workshopsBio}>
-                                Melanie Falix is een ervaren jongerenwerker uit
-                                Amsterdam Zuidoost. Melanie is zeer bekend met
-                                de doelgroep waardoor ze haar ervaring omzet in
-                                een workshop Identiteit.
-                            </p>
-                        </div>
-                    </li>
+                    <div className={workshopStyles.visuals}>
+                        <StaticImage
+                            src="../images/workshops/9.jpg"
+                            alt=""
+                            className={workshopStyles.imgOne}
+                        />
 
-                    <li
-                        id="beats-by-the-pound"
-                        className={
-                            activeSection === "#beats-by-the-pound"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsImageDouble}>
-                            <StaticImage
-                                src="../images/workshops/beats-pound-2.tiff"
-                                alt="Workshop Beats by the Pound"
-                            />
-                            <StaticImage
-                                src="../images/workshops/beats-pound-1.tiff"
-                                alt="Workshop Beats by the Pound"
-                            />
-                        </div>
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Beats by the Pound</h3>
-                            <p>
-                                Tijdens deze workshop werken producers vanuit de
-                                music business met jongeren, die interesse
-                                hebben in het maken van beats, mixen of teksten
-                                schrijven. Tijdens de workshop leren jongeren
-                                zich te uiten, presenteren en thematisch te
-                                schrijven. Over ieder thema dat de school
-                                belangrijk vindt, kan er een tekst worden
-                                gemaakt, bijvoorbeeld over sexting, ruzies of
-                                liefde. Aan het einde zal de klas hun tekst
-                                presenteren aan de groep, wat vaak mooie
-                                momenten oplevert en verbinding maakt binnen de
-                                groep. De workshop is interactief.
-                            </p>
+                        <StaticImage
+                            src="../images/workshops/10.jpg"
+                            alt=""
+                            className={workshopStyles.imgTwo}
+                        />
 
-                            <hr />
+                        <StaticImage
+                            src="../images/workshops/11.jpg"
+                            alt=""
+                            className={workshopStyles.imgThree}
+                        />
+                    </div>
+                </div>
 
-                            <div className={workshopStyles.workshopsHolder}>
-                                <p>Workshophouders:</p>
-                                <div
-                                    className={
-                                        workshopStyles.workshopsHolderInfo
-                                    }
-                                >
-                                    <h6>Franco III</h6>
-                                    <span>&middot;</span>
-                                    <a href="mailto:francothethird3@gmail.com">
-                                        <FontAwesomeIcon icon={"right-long"} />
-                                        <FontAwesomeIcon
-                                            icon={"square-envelope"}
-                                            size={"xl"}
-                                        />
-                                    </a>
-                                </div>
-                                <span>&</span>
-                                <div
-                                    className={
-                                        workshopStyles.workshopsHolderInfo
-                                    }
-                                >
-                                    <h6>Mxller</h6>
-                                    <span>&middot;</span>
-                                    <a href="mailto:mxller444@gmail.com">
-                                        <FontAwesomeIcon icon={"right-long"} />
-                                        <FontAwesomeIcon
-                                            icon={"square-envelope"}
-                                            size={"xl"}
-                                        />
-                                    </a>
-                                </div>
-                            </div>
+                <hr />
 
-                            <p className={workshopStyles.workshopsBio}>
-                                Franco III en Mxller: Deze twee zijn opgegroeid
-                                in Amsterdam Zuidoost in de bekende
-                                “probleemwijken”. Ze zijn zelf nog jong waardoor
-                                jongeren zich met hen identificeren. Zij zijn
-                                producers en zijn bekend van grote urban
-                                bekendheden als Wizkid, Kodak Black en
-                                Broederliefde.
-                            </p>
-                        </div>
-                    </li>
+                <div className={workshopStyles.teambuilding}>
+                    <div className={workshopStyles.visualOne}>
+                        <StaticImage
+                            src="../images/workshops/13.jpg"
+                            alt=""
+                            className={workshopStyles.imgOne}
+                        />
+                    </div>
+                    <div>
+                        <h3>TEAM BUILDING X GENGE ART</h3>
+                        <p>
+                            Het team gaat onder leiding van kunstenaar Genge op
+                            een unieke en verrassende manier aan de slag met
+                            schilderkunst. Er wordt een beroep gedaan op
+                            samenwerkend en oplossend vermogen van de
+                            deelnemers. Na afloop van de sessie gaan de
+                            deelnemers naar huis met een aantal prachtige
+                            schilderijen en inzichten uit het inspirerende
+                            verhaal van de kunstenaar.
+                        </p>
 
-                    <li
-                        id="oya-talks"
-                        className={
-                            activeSection === "#oya-talks"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsImage}>
-                            <StaticImage
-                                src="../images/workshops/oya-walks.tiff"
-                                alt="Workshop Oya Talks"
-                            />
-                        </div>
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Oya Talks</h3>
-                            <p>
-                                De stellingen tijdens de sessies zijn gebaseerd
-                                op het (straat)leven. De stellingen gaan over
-                                liefde, onveilige situaties in de brede zin,
-                                discriminatie, thuissituatie, vriendengroep,
-                                groepsdruk, handvaten en vooral de kwetsbaarheid
-                                van het jongerenleven. Mental health staat
-                                centraal.
-                            </p>
+                        <p>
+                            We kunnen de teambuilding op verzoek verrijken met
+                            een vleugje inhoud naar keuze door te spelen met de
+                            symboliek van de kunst.
+                        </p>
 
-                            <hr />
+                        <p>
+                            <b>
+                                Duur: 2 uur <br />
+                                Max aantal deelnemers: 15
+                            </b>
+                        </p>
+                    </div>
+                    <div className={workshopStyles.visualTwo}>
+                        <StaticImage
+                            src="../images/workshops/12.jpg"
+                            alt=""
+                            className={workshopStyles.imgTwo}
+                        />
+                    </div>
+                </div>
 
-                            <div className={workshopStyles.workshopsHolder}>
-                                <p>Workshophouder:</p>
-                                <div
-                                    className={
-                                        workshopStyles.workshopsHolderInfo
-                                    }
-                                >
-                                    <h6>Bradley Mensah</h6>
-                                    <span>&middot;</span>
-                                    <a href="mailto:edmondmensah96@gmail.com">
-                                        <FontAwesomeIcon icon={"right-long"} />
-                                        <FontAwesomeIcon
-                                            icon={"square-envelope"}
-                                            size={"xl"}
-                                        />
-                                    </a>
-                                </div>
-                            </div>
+                <hr />
 
-                            <p className={workshopStyles.workshopsBio}>
-                                Bradley Mensah is een ervaringsdeskundige die
-                                zelf slachtoffer en uitvoerder is geweest van
-                                het straatleven. Op jonge leeftijd ondervond hij
-                                dat het straatleven niet loont, waardoor hij Oya
-                                Talk heeft opgezet om te praten met jongeren
-                                over hun pijn.
-                            </p>
-                        </div>
-                    </li>
+                <div className={workshopStyles.knowyourself}>
+                    <div>
+                        <h3>KEN JEZELF</h3>
+                        <p>
+                            Een interactieve en verdiepende sessie gebaseerd op
+                            onze meidenwerk reeks, gericht op
+                            identiteitsontwikkeling van jongeren en
+                            (jong)volwassenen. In deze workshop gaan deelnemers
+                            op een laagdrempelige manier aan de slag met vragen
+                            rondom wie ze zijn, wat hen gevormd heeft en welke
+                            waarden voor hen belangrijk zijn.
+                        </p>
+                        <p>
+                            Door middel van speelse werkvormen, reflectie in
+                            kleine groepen en gezamenlijke gesprekken, creëren
+                            we een veilige setting waarin deelnemers hun
+                            zelfbeeld verkennen en leren van elkaars
+                            perspectieven. De workshop biedt:
+                        </p>
+                        <ul>
+                            <li>Bewustwording van persoonlijke identiteit;</li>
+                            <li>
+                                Ruimte voor zelfreflectie en onderlinge
+                                verbinding;
+                            </li>
+                            <li>
+                                Actieve werkvormen die aansluiten bij de
+                                belevingswereld van jongeren;
+                            </li>
+                            <li>Een balans tussen denken, voelen en doen.</li>
+                        </ul>
+                        <p>
+                            <b>
+                                Duur: 3 uur <br />
+                                Max aantal deelnemers: 15
+                            </b>
+                        </p>
+                    </div>
+                    <div className={workshopStyles.visuals}>
+                        <StaticImage
+                            src="../images/workshops/14.jpg"
+                            alt=""
+                            className={workshopStyles.imgOne}
+                        />
 
-                    <li
-                        id="drill-101"
-                        className={
-                            activeSection === "#drill-101"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsImage}>
-                            <StaticImage
-                                src="../images/workshops/drill-101.tiff"
-                                alt="Workshop Drill 101"
-                            />
-                        </div>
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Drill 101</h3>
-                            <p>
-                                Drill is een hot item in de media, onder de
-                                jeugd en huiskamers. Maar wat is drill precies?
-                                Hoe komt het dat het momenteel de krantenkoppen
-                                domineert? Tijdens deze workshop wordt de
-                                historie, de allure en de buurten/scholen
-                                geanalyseerd om een beeld te krijgen van wat
-                                zich in de wijken afspeelt. Aan de hand van een
-                                paar stellingen worden er klassikaal dialogen
-                                gevoerd over de belevenis van drill in de echte
-                                wereld, niet online. Een vaste stelling: hoe
-                                groot schatten jullie de rol van de media in de
-                                belevenis die er is van de dril-scene?
-                            </p>
+                        <StaticImage
+                            src="../images/workshops/15.jpg"
+                            alt=""
+                            className={workshopStyles.imgTwo}
+                        />
 
-                            <hr />
+                        <StaticImage
+                            src="../images/workshops/16.jpg"
+                            alt=""
+                            className={workshopStyles.imgThree}
+                        />
+                    </div>
+                </div>
 
-                            <div className={workshopStyles.workshopsHolder}>
-                                <p>Workshophouder:</p>
-                                <div
-                                    className={
-                                        workshopStyles.workshopsHolderInfo
-                                    }
-                                >
-                                    <h6>Wenner Regales</h6>
-                                    <span>&middot;</span>
-                                    <a href="mailto:regalnessnl@gmail.com">
-                                        <FontAwesomeIcon icon={"right-long"} />
-                                        <FontAwesomeIcon
-                                            icon={"square-envelope"}
-                                            size={"xl"}
-                                        />
-                                    </a>
-                                </div>
-                            </div>
+                <hr />
 
-                            <p className={workshopStyles.workshopsBio}>
-                                Wenner is opgegroeid deels op Curaçao en deels
-                                in NL, grotendeels in achterstandswijken. Heeft
-                                zichzelf opgewerkt tot waar hij nu is. Waardoor
-                                hij de verschillende werelden snapt en aan
-                                elkaar kan verbinden. Leerlingen denken dat er
-                                maar 1 wereld is. Wenner leert leerlingen hoe je
-                                kan komen waar je wil. Door inzet en discipline.
-                            </p>
-                        </div>
-                    </li>
+                <div className={workshopStyles.streetcodes}>
+                    <div className={workshopStyles.visualOne}>
+                        <StaticImage
+                            src="../images/workshops/18.jpg"
+                            alt=""
+                            className={workshopStyles.imgOne}
+                        />
+                    </div>
+                    <div>
+                        <h3>STRAATCODES</h3>
+                        <p>
+                            Een deep dive in straatcultuur, relevant voor
+                            iedereen die zich bezighoudt met jeugd en
+                            veiligheid. We ontleden straatcultuur en verdiepen
+                            ons in wijkdynamiek. Wijkdynamiek begrijpen, is
+                            weten in welk spel je stapt. Aan bod komen:
+                        </p>
+                        <ul>
+                            <li>redenen achter ‘probleemgedrag’ op straat;</li>
+                            <li>
+                                informele hiërarchie: wie heeft écht invloed;
+                            </li>
+                            <li>waar ontstaan risico's; </li>
+                            <li>betere aansluiting in gesprekken;</li>
+                            <li>niet tegen, maar mét de wijk werken.</li>
+                        </ul>
+                        <p>
+                            Een informatieve workshop waarin we de theorie
+                            illustreren aan de hand van voorbeelden en ingaan op
+                            specifieke vragen of casuïstiek vanuit de groep.
+                        </p>
+                        <p>
+                            <b>
+                                Duur: 2 uur <br />
+                                Max aantal deelnemers: 15
+                            </b>
+                        </p>
+                    </div>
 
-                    <li
-                        id="drum-muziek"
-                        className={
-                            activeSection === "#drum-muziek"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsImage}>
-                            <StaticImage
-                                src="../images/workshops/drum-muziek.tiff"
-                                alt="Workshop Drum / Muziek"
-                            />
-                        </div>
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Drum / Muziek</h3>
-                            <p>
-                                Tijdens deze workshop wordt aan jongeren geleerd
-                                om hun gevoelens d.m.v. muziek/beweging te
-                                uiten. Drummen zorgt voor ontspanning, wat de
-                                bloeddruk verlaagt , stress vermindert en het
-                                versterken van de mentale gezondheid. Daarnaast
-                                kan het maken van muziek klachten van depressie
-                                en angst verlagen.
-                            </p>
+                    <div className={workshopStyles.visualTwo}>
+                        <StaticImage
+                            src="../images/workshops/17.jpg"
+                            alt=""
+                            className={workshopStyles.imgTwo}
+                        />
+                        <StaticImage
+                            src="../images/workshops/19.jpg"
+                            alt=""
+                            className={workshopStyles.imgThree}
+                        />
+                    </div>
+                </div>
 
-                            <hr />
-
-                            <p className={workshopStyles.workshopsBio}>
-                                Saffira van Kanten is geboren in Amsterdam.
-                                Drummen en het produceren van muziek zijn haar
-                                passie en leven. Op haar 13e is ze begonnen met
-                                drummen bij The Originals entertainment en daar
-                                drumt ze nog steeds. Op haar 27e heeft ze
-                                besloten mijn muzikaliteit te verbreden en ben
-                                begonnen met het produceren van muzieknummers.
-                                In 2016 is ze als ondernemer gestart met geven
-                                van muzikale workshops en inspireert zij de
-                                jeugd met mijn muziek en levenservaring.
-                                Momenteel werkt ze voornamelijk in
-                                jeugdgevangenissen en jeugdzorg en instellingen.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li
-                        id="online-weerbaarheid"
-                        className={
-                            activeSection === "#online-weerbaarheid"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsImage}>
-                            <StaticImage
-                                src="../images/workshops/online-weerbaarheid.tiff"
-                                alt="Workshop Online weerbaarheid"
-                            />
-                        </div>
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Online weerbaarheid</h3>
-                            <p>
-                                Bij de workshop online weerbaarheid gaan we diep
-                                op in wat de jongeren meemaken in hun online
-                                leefwereld. Zo komen topics als online shaming,
-                                exposen, sexting en online pesterijen aan bod.
-                                Door deze topics te bespreken, wordt door de
-                                workshopleider een gevoelige snaar geraakt,
-                                waardoor de jongeren zich openen voor een
-                                gesprek over wat zich afspeelt in de online
-                                leefwereld.
-                            </p>
-
-                            <hr />
-
-                            <div className={workshopStyles.workshopsHolder}>
-                                <p>Workshophouder:</p>
-                                <div
-                                    className={
-                                        workshopStyles.workshopsHolderInfo
-                                    }
-                                >
-                                    <h6>Kimberley Leysner</h6>
-                                    <span>&middot;</span>
-                                    <a href="mailto:kimberley_leysner@hotmail.com">
-                                        <FontAwesomeIcon icon={"right-long"} />
-                                        <FontAwesomeIcon
-                                            icon={"square-envelope"}
-                                            size={"xl"}
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-
-                            <p className={workshopStyles.workshopsBio}>
-                                Kimberley Leysner is al vele jaren
-                                jongerenwerker in Amsterdam zuidoost en heeft in
-                                alle wijken gewerkt. Begonnen als kinderwerker
-                                en daarna gespecialiseerd als jongerenwerker en
-                                meidenwerker. Naast het meidenwerk heeft zij ook
-                                vindplaatsgericht jongerenwerk gedaan zoals het
-                                werken met de lastigere doelgroep.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li
-                        id="social-media"
-                        className={
-                            activeSection === "#social-media"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Social Media</h3>
-                            <p>
-                                We stappen in de leefwereld van social media en
-                                creëren een safe space in dialogen waarin
-                                influencers aan bod komen. Er wordt kenbaar
-                                gemaakt dat “niets is wat het lijkt”. Een
-                                belangrijk uitgangspunt bij de
-                                dialoogbijeenkomsten is dat de thema’s
-                                herkenbaar moeten zijn, aansluiten op de
-                                leefwereld en de problematiek die leerlingen
-                                ervaren. Thema’s waaronder ook die waarop een
-                                taboe heerst, zijn onderwerpen als sociale
-                                media, wonen, arbeidsmarkt, body shaming,
-                                intimidatie en veiligheid. Door creatieve
-                                activatie met a true real talk zal er meer
-                                diepgang zijn met als doel de leerlingen andere
-                                inzichten te geven.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li
-                        id="fashion-and-identity"
-                        className={
-                            activeSection === "#fashion-and-identity"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsImage}>
-                            <StaticImage
-                                src="../images/workshops/fashion.tiff"
-                                alt="Workshop Fashion and identity"
-                            />
-                        </div>
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Fashion and identity</h3>
-                            <p>
-                                Tijdens de workshops krijgen de leerlingen de
-                                mogelijkheid om hun creativiteit te benutten en
-                                tijdens de gesprekken krijgt de workshophouder
-                                diepgang over de interesses van de leerlingen.
-                                Er wordt iets gecreëerd waar jongeren trots op
-                                zijn. Zelfs als ze dachten niet creatief te
-                                zijn.
-                            </p>
-
-                            <hr />
-
-                            <div className={workshopStyles.workshopsHolder}>
-                                <p>Workshophouder:</p>
-                                <div
-                                    className={
-                                        workshopStyles.workshopsHolderInfo
-                                    }
-                                >
-                                    <h6>Naomi Rosheuvel</h6>
-                                    <span>&middot;</span>
-
-                                    <a
-                                        href="mailto:nomibynaomi@gmail.com
-"
-                                    >
-                                        <FontAwesomeIcon icon={"right-long"} />
-                                        <FontAwesomeIcon
-                                            icon={"square-envelope"}
-                                            size={"xl"}
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-
-                            <p className={workshopStyles.workshopsBio}>
-                                Naomi is opgegroeid in ’t oosten van het land.
-                                Daar voelde zij zich door haar huidskleur niet
-                                altijd geaccepteerd of begrepen, zij werd
-                                gediscrimineerd. Zij was het onbegrepen zwarte
-                                kind in het witte schoolsysteem. Ze heeft
-                                ervaren hoe belangrijk het is om te weten waar
-                                je vandaan komt en hoe je jezelf mag zijn in een
-                                systeem dat je niet altijd begrijpt. Zij is dus
-                                op jonge leeftijd al naar Amsterdam gekomen waar
-                                zij zichzelf heeft ontwikkeld tot Fashion maker
-                                en pedagoog.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li
-                        id="sport"
-                        className={
-                            activeSection === "#sport"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Sport</h3>
-                            <p>
-                                Tijdens de workshops sport wordt bij de jongeren
-                                de focus op mentale gezondheid, discipline en
-                                een gezond lichaam gelegd.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li
-                        id="spoken-word"
-                        className={
-                            activeSection === "#spoken-word"
-                                ? workshopStyles.active
-                                : ""
-                        }
-                    >
-                        <div className={workshopStyles.workshopsContent}>
-                            <h3>Workshop Spoken Word</h3>
-                            <p>
-                                Door middel van storytelling worden thema’s
-                                aangekaart, die momenteel actueel zijn bij
-                                jongeren zoals o.a. zelfdoding; momenteel eén
-                                van de belangrijkste oorzaken bij de jongeren in
-                                Nederland.
-                            </p>
-
-                            <hr />
-
-                            <p className={workshopStyles.workshopsBio}>
-                                Hij combineert zijn levenservaring (o.a.
-                                gevlucht uit Syrie, gewoond in een
-                                asielzoekerscentra) met zijn kunst om bruggen te
-                                slaan tussen organisaties en burgers. Hij is
-                                opgegroeid in een achtergestelde buurt bij zijn
-                                moeder (gescheiden ouders) daar leerde hij veel
-                                over bevolkingsgroepen en sociaal culturele
-                                gewoontes. Dit komt terug in zijn werk, hij is
-                                een veelzijdige kunstenaar, schrijver, een
-                                woordkunstenaar en een verhalenverteller.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
+                <hr />
 
                 <div>
                     <p>
-                        Aan het einde van de KIR workshop(s) worden enquêtes
-                        afgenomen bij zowel leerlingen als workshopleiders om te
-                        weten wat er onder de jongeren speelt. Deze enquêtes
-                        zijn opgesteld door een Criminologe Shanna Mehlbaum die
-                        betrokken was bij de inzet van KIR op de Arnhemse
-                        Scholen. Ook kunnen we ophalen aan welke inzet op deze
-                        thema nog meer behoefte is. Dit onderzoek doen wij om
-                        dieper zicht te krijgen in hun bezigheden en
-                        problematiek om mogelijke na-trajecten te verzorgen.
-                        Iedere workshop duurt 1-1,5 uur, afhankelijk van de
-                        doelgroep (denk aan niveau, ouders of leerlingen). De
-                        workshopgevers hebben verschillende lokalen en
-                        materialen nodig, denk aan handenarbeidlokaal,
-                        sportzaal, digibord, eigen laptop. Hierover wordt van te
-                        voren gecommuniceerd en afspraken gemaakt.
+                        Voor meer informatie of het aanvragen van een offerte,
+                        stuur ons een bericht via het{" "}
+                        <Link to="/contact/">online contactformulier</Link> of
+                        mail naar{" "}
+                        <a href="mailto:secretariaat@keeptreal.nl">
+                            secretariaat@keeptreal.nl
+                        </a>
                     </p>
                 </div>
             </div>
@@ -743,7 +333,7 @@ const WorkhopsPage: React.FC<PageProps> = () => {
     );
 };
 
-export default WorkhopsPage;
+export default WorkshopsPage;
 
 export const Head: HeadFC = () => (
     <Seo title="Workshops" pathname="/workshops/" />

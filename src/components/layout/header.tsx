@@ -56,7 +56,7 @@ const Header: React.FC = () => {
                 </div>
 
                 <div className={headerStyles.desktop}>
-                    <nav className={headerStyles.nav}>
+                    <nav>
                         <ul>
                             <li>
                                 <Link

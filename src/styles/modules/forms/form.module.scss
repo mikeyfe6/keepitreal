@@ -61,6 +61,7 @@
                 color: $primary;
             }
 
+            /* stylelint-disable-next-line no-descending-specificity */
             > input {
                 width: 100%;
                 padding: rem-calc(14);
@@ -151,6 +152,7 @@
                             }
                         }
 
+                        /* stylelint-disable-next-line no-descending-specificity */
                         label {
                             transition: color 0.2s ease;
                         }

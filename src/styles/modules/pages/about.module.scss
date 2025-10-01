@@ -108,5 +108,43 @@
         &:nth-child(even) {
             align-self: flex-end;
         }
+
+        &:last-child {
+            align-self: center;
+            max-width: 100%;
+
+            h2 {
+                text-align: center;
+                margin-bottom: rem-calc(32);
+
+                @include underline($color: $tertiary);
+            }
+
+            > div {
+                display: flex;
+                flex-wrap: wrap;
+                gap: rem-calc(32);
+                justify-content: center;
+
+                > div {
+                    [data-gatsby-image-wrapper] {
+                        max-width: rem-calc(150);
+                        width: 100%;
+                        aspect-ratio: 1 / 1;
+                        height: auto;
+                        border-radius: 50%;
+                        border: 3px solid $grey-trans;
+
+                        img {
+                            object-position: top;
+                        }
+                    }
+
+                    h3 {
+                        text-align: center;
+                    }
+                }
+            }
+        }
     }
 }

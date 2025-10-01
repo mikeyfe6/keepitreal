@@ -19,7 +19,7 @@
 
 @mixin nav-link {
     font-size: rem-calc(18);
-    font-weight: 500;
+    font-weight: 600;
     text-underline-offset: 10px;
     text-decoration: underline;
     text-decoration-color: transparent;
@@ -72,10 +72,10 @@
 
 @mixin box-shadow($type: 1) {
     @if $type == 1 {
-        box-shadow: 0 0 1em rgba(0 0 0 / 10%);
+        box-shadow: 0 0 1em rgb(0 0 0 / 10%);
     } @else if $type == 2 {
-        box-shadow: 0 4px 4px 0 rgba(172 178 185 / 50%),
-            0 0 8px 0 rgba(172 178 185 / 50%);
+        box-shadow: 0 4px 4px 0 rgb(172 178 185 / 50%),
+            0 0 8px 0 rgb(172 178 185 / 50%);
     }
 }
 
@@ -151,9 +151,22 @@
     }
 }
 
-@mixin hr($color: $tertiary, $height: 1px) {
+@mixin hr($color: $tertiary, $height: 1px, $space: 24, $type: 1) {
     width: 100%;
-    margin: rem-calc(24 0);
     height: $height;
     background: $color;
+
+    @if $type == 1 {
+        margin: rem-calc($space 0);
+    } @else if $type == 2 {
+        margin: rem-calc(48 0);
+
+        @include mobile {
+            margin: rem-calc(60 0);
+        }
+
+        @include tablet {
+            margin: rem-calc($space 0);
+        }
+    }
 }

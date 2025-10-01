@@ -4,202 +4,393 @@
     $workshops: &;
 
     > div {
-        @include main-card;
+        &:first-child {
+            margin-bottom: 48px;
+            text-align: center;
 
-        a {
-            @include text-link;
+            @include main-card;
+
+            h2 {
+                margin-bottom: unset;
+            }
+
+            a {
+                @include text-link;
+            }
+        }
+
+        &.introduction,
+        &.codeswitching,
+        &.teambuilding,
+        &.knowyourself,
+        &.streetcodes {
+            margin: 24px 0;
+
+            ul {
+                margin: 6px 0 16px;
+            }
+        }
+
+        &.introduction {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include compact {
+                gap: 20px;
+            }
+
+            @include mobile {
+                gap: 80px;
+            }
+
+            @include laptop {
+                flex-direction: row;
+            }
+
+            .visuals {
+                position: relative;
+                min-width: 505px;
+                min-height: 447.5px;
+                transform: scale(0.625);
+                margin-top: -35px;
+                margin-bottom: -75px;
+
+                @include compact {
+                    transform: scale(0.75);
+                    margin-top: -15px;
+                    margin-bottom: -25px;
+                }
+
+                @include mobile {
+                    transform: scale(1);
+                    margin-top: unset;
+                    margin-bottom: unset;
+                }
+
+                .img-one,
+                .img-two,
+                .img-three,
+                .img-four,
+                .img-five,
+                .img-six,
+                .img-seven {
+                    position: absolute;
+                    width: 100%;
+                }
+
+                .img-one,
+                .img-three,
+                .img-four,
+                .img-five,
+                .img-six,
+                .img-seven {
+                    border-radius: 50%;
+                    aspect-ratio: 1 / 1;
+                }
+
+                .img-one {
+                    max-width: 150px;
+                    top: 25px;
+                    left: 75px;
+                    z-index: -1;
+                }
+
+                .img-two {
+                    max-width: 300px;
+                    max-height: 200px;
+                    top: 125px;
+                    left: 100px;
+                    z-index: 0;
+                }
+
+                .img-three {
+                    max-width: 162.5px;
+                    top: 0;
+                    left: 208px;
+                    z-index: -1;
+                }
+
+                .img-four {
+                    max-width: 150px;
+                    top: 47px;
+                    left: 355px;
+                    z-index: 1;
+                }
+
+                .img-five {
+                    max-width: 167.5px;
+                    top: 270px;
+                    left: 0;
+                    z-index: 1;
+                }
+
+                .img-six {
+                    max-width: 125px;
+                    top: 300px;
+                    left: 250px;
+                    z-index: 1;
+                }
+
+                .img-seven {
+                    max-width: 125px;
+                    top: 320px;
+                    left: 350px;
+                    z-index: 0;
+                }
+            }
+        }
+
+        &.codeswitching {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            @include phablet {
+                gap: 40px;
+            }
+
+            @include tablet {
+                flex-direction: row;
+                gap: 80px;
+            }
+
+            .visuals {
+                position: relative;
+                min-width: 565px;
+                min-height: 525px;
+                transform: scale(0.625);
+                margin-top: -35px;
+                margin-bottom: -100px;
+
+                @include compact {
+                    margin-top: -10px;
+                    margin-bottom: -50px;
+                    transform: scale(0.75);
+                }
+
+                @include mobile {
+                    margin-top: 25px;
+                    margin-bottom: unset;
+                    transform: scale(0.875);
+                }
+
+                @include phablet {
+                    transform: scale(1);
+                }
+
+                img {
+                    border: 2px solid $grey-trans;
+                }
+
+                .img-one,
+                .img-two,
+                .img-three {
+                    position: absolute;
+                    width: 100%;
+                }
+
+                .img-one {
+                    max-width: 375px;
+                    max-height: 225px;
+                    left: 0;
+                    top: 185px;
+                }
+
+                .img-two {
+                    max-width: 225px;
+                    max-height: 375px;
+                    transform: rotate(-15deg);
+                    left: 290px;
+                    top: 0;
+                    z-index: -1;
+                }
+
+                .img-three {
+                    max-width: 200px;
+                    max-height: 275px;
+                    left: 325px;
+                    top: 245px;
+                    transform: rotate(20deg);
+                }
+            }
+        }
+
+        &.teambuilding {
+            display: flex;
+            gap: 36px;
+            flex-wrap: wrap;
+
+            @include tablet {
+                gap: 48px;
+                flex-wrap: nowrap;
+            }
+
+            .visual {
+                &-one,
+                &-two {
+                    img {
+                        border: 2px solid $grey-trans;
+                    }
+
+                    .img-one,
+                    .img-two {
+                        width: 100%;
+                    }
+
+                    .img-one {
+                        width: 275px;
+
+                        @include mobile {
+                            width: 350px;
+                        }
+                    }
+
+                    .img-two {
+                        max-width: 175px;
+                        width: max-content;
+                    }
+                }
+            }
+        }
+
+        &.knowyourself {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            @include mobile {
+                gap: 60px;
+            }
+
+            @include laptop {
+                flex-direction: row;
+                gap: 80px;
+            }
+
+            .visuals {
+                position: relative;
+                min-width: 435px;
+                min-height: 550px;
+                transform: scale(0.625);
+                margin-top: -60px;
+                margin-bottom: -100px;
+
+                @include compact {
+                    transform: scale(0.75);
+                    margin-top: -25px;
+                    margin-bottom: -60px;
+                }
+
+                @include mobile {
+                    margin-top: unset;
+                    margin-bottom: unset;
+                    transform: scale(1);
+                }
+
+                img {
+                    border: 2px solid $grey-trans;
+                }
+
+                .img-one,
+                .img-two,
+                .img-three {
+                    position: absolute;
+                    width: 100%;
+                }
+
+                .img-one {
+                    max-width: 200px;
+                    max-height: 300px;
+                    left: 85px;
+                    top: 0;
+                }
+
+                .img-two {
+                    max-width: 200px;
+                    max-height: 300px;
+                    left: 235px;
+                    top: 100px;
+                    z-index: 0;
+                }
+
+                .img-three {
+                    max-width: 300px;
+                    max-height: 350px;
+                    top: 250px;
+                    left: 0;
+                }
+            }
+        }
+
+        &.streetcodes {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+
+            @include laptop {
+                flex-direction: row;
+            }
+
+            .visual {
+                &-one,
+                &-two {
+                    img {
+                        border: 2px solid $grey-trans;
+                    }
+
+                    .img-one {
+                        max-width: 350px;
+                        width: max-content;
+                    }
+                }
+
+                &-two {
+                    position: relative;
+                    min-width: 250px;
+                    height: 372.5px;
+                    margin: 0 auto;
+
+                    @include mobile {
+                        margin: 0 0 0 auto;
+                    }
+
+                    .img-two,
+                    .img-three {
+                        width: 100%;
+                    }
+
+                    .img-two {
+                        position: absolute;
+                        max-width: 175px;
+                        top: 0;
+                        left: 75px;
+                    }
+
+                    .img-three {
+                        position: absolute;
+                        max-width: 150px;
+                        top: 150px;
+                        left: 0;
+                    }
+                }
+            }
         }
 
         &:last-child {
             color: $primary;
+            margin-top: 48px;
+            text-align: center;
+
+            a {
+                @include text-link;
+            }
 
             @include main-card(rgba($white, 0.825));
         }
     }
 
-    > ul {
-        margin: rem-calc(32 0);
-        display: flex;
-        flex-direction: column;
-        gap: rem-calc(32);
-
-        > li {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            gap: rem-calc(20);
-            padding: rem-calc(16 0);
-            scroll-margin-top: rem-calc(150);
-
-            @include phablet {
-                flex-direction: row;
-                gap: rem-calc(32);
-            }
-
-            &.active {
-                #{$workshops}-content {
-                    outline: 2px solid $tertiary;
-                    animation: fade-out-outline 3s forwards;
-                }
-
-                @keyframes fade-out-outline {
-                    0%,
-                    60% {
-                        outline-color: $tertiary;
-                    }
-
-                    100% {
-                        outline-color: transparent;
-                    }
-                }
-            }
-
-            #{$workshops} {
-                &-image {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    max-width: rem-calc(200);
-
-                    [data-gatsby-image-wrapper] {
-                        overflow: hidden;
-
-                        @include border-radius;
-
-                        img {
-                            width: 100%;
-                        }
-                    }
-
-                    &-double {
-                        display: flex;
-                        flex-direction: row;
-                        gap: rem-calc(20 24);
-
-                        @include phablet {
-                            flex-direction: column;
-                        }
-
-                        [data-gatsby-image-wrapper] {
-                            overflow: hidden;
-                            width: rem-calc(175);
-
-                            @include border-radius;
-
-                            @include mobile {
-                                width: rem-calc(200);
-                            }
-                        }
-                    }
-                }
-
-                &-content {
-                    width: 100%;
-
-                    @include main-card(rgba($primary, 0.75));
-
-                    > hr {
-                        @include hr;
-                    }
-
-                    #{$workshops}-holder {
-                        display: flex;
-                        align-items: center;
-                        flex-wrap: wrap;
-                        margin-bottom: rem-calc(16);
-                        gap: rem-calc(12 24);
-
-                        @include tablet {
-                            flex-direction: row;
-                            gap: rem-calc(16);
-                        }
-
-                        > span {
-                            display: none;
-                            font-weight: 600;
-                            color: $tertiary;
-
-                            @include compact {
-                                display: block;
-                            }
-                        }
-
-                        &-info {
-                            display: flex;
-                            align-items: center;
-                            gap: rem-calc(16);
-
-                            > h6 {
-                                width: fit-content;
-                                margin-bottom: 0;
-                                background-color: rgba($white, 0.9);
-                                color: $primary;
-                                padding: rem-calc(3 8);
-
-                                @include border-radius;
-                            }
-
-                            > span {
-                                color: $tertiary;
-                                font-weight: 500;
-                            }
-
-                            > a {
-                                display: flex;
-                                align-items: center;
-                                flex-wrap: wrap;
-                                gap: rem-calc(14);
-                                padding: rem-calc(4);
-
-                                @include smooth-trans;
-
-                                &:hover {
-                                    > svg:first-child {
-                                        animation: arrow-bounce 2.5s infinite;
-                                    }
-
-                                    > svg:nth-of-type(2) {
-                                        color: rgba($tertiary, 0.95);
-                                    }
-
-                                    @keyframes arrow-bounce {
-                                        0%,
-                                        100% {
-                                            transform: translateX(0);
-                                        }
-
-                                        10%,
-                                        30%,
-                                        50%,
-                                        70%,
-                                        90% {
-                                            transform: translateX(0);
-                                            animation-timing-function: ease-in-out;
-                                        }
-
-                                        20%,
-                                        60% {
-                                            transform: translateX(5px);
-                                            animation-timing-function: ease-in-out;
-                                        }
-
-                                        40%,
-                                        80% {
-                                            transform: translateX(5px);
-                                            animation-timing-function: ease-in-out;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    #{$workshops}-bio {
-                        opacity: 0.75;
-                        font-size: rem-calc(16);
-                    }
-                }
-            }
-        }
+    > hr {
+        @include hr($space: 80, $type: 2);
     }
 }

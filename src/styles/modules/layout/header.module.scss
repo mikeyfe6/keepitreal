@@ -38,11 +38,13 @@
             gap: rem-calc(28);
             align-items: flex-end;
 
+            @include smooth-trans;
+
             @include phablet {
                 display: flex;
             }
 
-            .nav {
+            nav {
                 padding-top: rem-calc(24);
 
                 > ul {
@@ -74,6 +76,7 @@
                 }
             }
 
+            /* stylelint-disable-next-line no-descending-specificity */
             > ul {
                 display: flex;
                 gap: rem-calc(16);
@@ -123,6 +126,7 @@
                         gap: rem-calc(8);
 
                         &.active {
+                            /* stylelint-disable-next-line no-descending-specificity */
                             &::before {
                                 content: "";
                                 width: 0;
@@ -143,11 +147,13 @@
                 gap: rem-calc(28);
                 margin-top: rem-calc(16);
 
+                /* stylelint-disable-next-line no-descending-specificity */
                 > li {
                     display: flex;
                     align-items: center;
                     color: rgba($tertiary, 0.825);
 
+                    /* stylelint-disable-next-line no-descending-specificity */
                     &:hover {
                         color: rgba($tertiary, 1);
                     }
@@ -157,7 +163,6 @@
     }
 
     &.is-sticky {
-        // background: $primary;
         background: linear-gradient(
             to bottom,
             rgba($primary, 1) 0%,
@@ -169,14 +174,20 @@
 
         > div {
             .logo {
-                max-width: rem-calc(137.5);
+                max-width: rem-calc(112.5);
 
                 @include mobile {
-                    max-width: rem-calc(150);
+                    max-width: rem-calc(125);
                 }
 
                 @include tablet {
-                    max-width: rem-calc(175);
+                    max-width: rem-calc(150);
+                }
+            }
+
+            .desktop {
+                > ul {
+                    display: none;
                 }
             }
         }

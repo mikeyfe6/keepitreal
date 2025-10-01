@@ -70,6 +70,7 @@ body {
     }
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 main {
     flex: 1;
     margin: rem-calc(40 0 80);
@@ -107,6 +108,7 @@ main {
         margin: rem-calc(16 0);
 
         li {
+            /* stylelint-disable-next-line no-descending-specificity */
             &:not(#cta li) {
                 margin-inline-start: rem-calc(24);
                 padding-left: rem-calc(8);
@@ -114,6 +116,7 @@ main {
         }
     }
 
+    /* stylelint-disable-next-line no-descending-specificity */
     &:has(aside) {
         display: flex;
         flex-direction: column-reverse;
@@ -181,6 +184,7 @@ a {
     color: $black;
     outline: $black 1px solid;
 
+    /* stylelint-disable-next-line no-descending-specificity */
     p {
         font-size: rem-calc(14);
         font-weight: bold;
@@ -200,6 +204,7 @@ a {
         width: 100% !important;
         height: 100% !important;
 
+        /* stylelint-disable-next-line no-descending-specificity */
         > span {
             margin: rem-calc(4) auto !important;
         }

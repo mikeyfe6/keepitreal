@@ -26,7 +26,7 @@ const Overlay: React.FC<OverlayProps> = ({ item, onClose }) => (
             </div>
 
             <div>
-                <Link to={`/workshops/#${item.anchor}`}>Meer informatie</Link>
+                {/* <Link to={`/workshops/#${item.anchor}`}>Meer informatie</Link> */}
                 <button onClick={onClose}>
                     <FontAwesomeIcon icon={"xmark"} size="xl" />
                 </button>
