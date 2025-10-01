@@ -91,6 +91,7 @@
 
                 .img-one {
                     max-width: rem-calc(150);
+                    max-height: rem-calc(150);
                     top: rem-calc(25);
                     left: rem-calc(75);
                     z-index: -1;
@@ -106,6 +107,7 @@
 
                 .img-three {
                     max-width: rem-calc(162.5);
+                    max-height: rem-calc(162.5);
                     top: 0;
                     left: rem-calc(208);
                     z-index: -1;
@@ -113,6 +115,7 @@
 
                 .img-four {
                     max-width: rem-calc(150);
+                    max-height: rem-calc(150);
                     top: rem-calc(47);
                     left: rem-calc(355);
                     z-index: 1;
@@ -120,6 +123,7 @@
 
                 .img-five {
                     max-width: rem-calc(167.5);
+                    max-height: rem-calc(167.5);
                     top: rem-calc(270);
                     left: 0;
                     z-index: 1;
@@ -127,6 +131,7 @@
 
                 .img-six {
                     max-width: rem-calc(125);
+                    max-height: rem-calc(125);
                     top: rem-calc(300);
                     left: rem-calc(250);
                     z-index: 1;
@@ -134,6 +139,7 @@
 
                 .img-seven {
                     max-width: rem-calc(125);
+                    max-height: rem-calc(125);
                     top: rem-calc(320);
                     left: rem-calc(350);
                     z-index: 0;
