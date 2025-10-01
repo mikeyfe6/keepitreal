@@ -24,6 +24,7 @@
         &.teambuilding,
         &.knowyourself,
         &.streetcodes {
+            display: flex;
             margin: rem-calc(24 0);
 
             ul {
@@ -32,7 +33,6 @@
         }
 
         &.introduction {
-            display: flex;
             flex-direction: column;
             align-items: center;
 
@@ -148,9 +148,8 @@
         }
 
         &.codeswitching {
-            display: flex;
-            align-items: center;
             flex-direction: column;
+            align-items: center;
 
             @include phablet {
                 gap: rem-calc(40);
@@ -185,6 +184,7 @@
                     transform: scale(1);
                 }
 
+                /* stylelint-disable-next-line no-descending-specificity */
                 img {
                     border: 2px solid $grey-trans;
                 }
@@ -223,13 +223,12 @@
         }
 
         &.teambuilding {
-            display: flex;
-            gap: rem-calc(36);
             flex-wrap: wrap;
+            gap: rem-calc(36);
 
             @include tablet {
-                gap: rem-calc(48);
                 flex-wrap: nowrap;
+                gap: rem-calc(48);
             }
 
             .visual {
@@ -243,6 +242,7 @@
 
                 &-one,
                 &-two {
+                    /* stylelint-disable-next-line no-descending-specificity */
                     img {
                         border: 2px solid $grey-trans;
                     }
@@ -269,9 +269,8 @@
         }
 
         &.knowyourself {
-            display: flex;
-            align-items: center;
             flex-direction: column;
+            align-items: center;
 
             @include mobile {
                 gap: rem-calc(60);
@@ -302,6 +301,7 @@
                     transform: scale(1);
                 }
 
+                /* stylelint-disable-next-line no-descending-specificity */
                 img {
                     border: 2px solid $grey-trans;
                 }
@@ -338,7 +338,6 @@
         }
 
         &.streetcodes {
-            display: flex;
             flex-direction: column;
             gap: rem-calc(48);
 
@@ -349,6 +348,7 @@
             .visual {
                 &-one,
                 &-two {
+                    /* stylelint-disable-next-line no-descending-specificity */
                     img {
                         border: 2px solid $grey-trans;
                     }
