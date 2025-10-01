@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
 
@@ -26,8 +26,15 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
     const { companyName, street, postalCode, city, country } =
         useSiteMetadata();
     const mapRef = useRef<HTMLDivElement>(null);
+    const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
+        setIsClient(typeof window !== "undefined");
+    }, []);
+
+    useEffect(() => {
+        if (!isClient) return;
+
         let map: google.maps.Map | null = null;
         let markerInstances: any[] = [];
         let infoWindow: google.maps.InfoWindow | null = null;
@@ -109,7 +116,21 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
         return () => {
             isMounted = false;
         };
-    }, [center, zoom, markers, companyName, street, postalCode, city, country]);
+    }, [
+        isClient,
+        center,
+        zoom,
+        markers,
+        companyName,
+        street,
+        postalCode,
+        city,
+        country,
+    ]);
+
+    if (!isClient) {
+        return null;
+    }
 
     return (
         <div
