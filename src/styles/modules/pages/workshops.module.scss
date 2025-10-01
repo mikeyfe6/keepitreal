@@ -5,7 +5,7 @@
 
     > div {
         &:first-child {
-            margin-bottom: 48px;
+            margin-bottom: rem-calc(48);
             text-align: center;
 
             @include main-card;
@@ -24,10 +24,10 @@
         &.teambuilding,
         &.knowyourself,
         &.streetcodes {
-            margin: 24px 0;
+            margin: rem-calc(24 0);
 
             ul {
-                margin: 6px 0 16px;
+                margin: rem-calc(6 0 16);
             }
         }
 
@@ -37,11 +37,11 @@
             align-items: center;
 
             @include compact {
-                gap: 20px;
+                gap: rem-calc(20);
             }
 
             @include mobile {
-                gap: 80px;
+                gap: rem-calc(80);
             }
 
             @include laptop {
@@ -50,16 +50,16 @@
 
             .visuals {
                 position: relative;
-                min-width: 505px;
-                min-height: 447.5px;
+                min-width: rem-calc(505);
+                min-height: rem-calc(447.5);
                 transform: scale(0.625);
-                margin-top: -35px;
-                margin-bottom: -75px;
+                margin-top: rem-calc(-35);
+                margin-bottom: rem-calc(-75);
 
                 @include compact {
                     transform: scale(0.75);
-                    margin-top: -15px;
-                    margin-bottom: -25px;
+                    margin-top: rem-calc(-15);
+                    margin-bottom: rem-calc(-25);
                 }
 
                 @include mobile {
@@ -90,52 +90,52 @@
                 }
 
                 .img-one {
-                    max-width: 150px;
-                    top: 25px;
-                    left: 75px;
+                    max-width: rem-calc(150);
+                    top: rem-calc(25);
+                    left: rem-calc(75);
                     z-index: -1;
                 }
 
                 .img-two {
-                    max-width: 300px;
-                    max-height: 200px;
-                    top: 125px;
-                    left: 100px;
+                    max-width: rem-calc(300);
+                    max-height: rem-calc(200);
+                    top: rem-calc(125);
+                    left: rem-calc(100);
                     z-index: 0;
                 }
 
                 .img-three {
-                    max-width: 162.5px;
+                    max-width: rem-calc(162.5);
                     top: 0;
-                    left: 208px;
+                    left: rem-calc(208);
                     z-index: -1;
                 }
 
                 .img-four {
-                    max-width: 150px;
-                    top: 47px;
-                    left: 355px;
+                    max-width: rem-calc(150);
+                    top: rem-calc(47);
+                    left: rem-calc(355);
                     z-index: 1;
                 }
 
                 .img-five {
-                    max-width: 167.5px;
-                    top: 270px;
+                    max-width: rem-calc(167.5);
+                    top: rem-calc(270);
                     left: 0;
                     z-index: 1;
                 }
 
                 .img-six {
-                    max-width: 125px;
-                    top: 300px;
-                    left: 250px;
+                    max-width: rem-calc(125);
+                    top: rem-calc(300);
+                    left: rem-calc(250);
                     z-index: 1;
                 }
 
                 .img-seven {
-                    max-width: 125px;
-                    top: 320px;
-                    left: 350px;
+                    max-width: rem-calc(125);
+                    top: rem-calc(320);
+                    left: rem-calc(350);
                     z-index: 0;
                 }
             }
@@ -147,30 +147,30 @@
             flex-direction: column;
 
             @include phablet {
-                gap: 40px;
+                gap: rem-calc(40);
             }
 
             @include tablet {
                 flex-direction: row;
-                gap: 80px;
+                gap: rem-calc(80);
             }
 
             .visuals {
                 position: relative;
-                min-width: 565px;
-                min-height: 525px;
+                min-width: rem-calc(565);
+                min-height: rem-calc(525);
                 transform: scale(0.625);
-                margin-top: -35px;
-                margin-bottom: -100px;
+                margin-top: rem-calc(-35);
+                margin-bottom: rem-calc(-100);
 
                 @include compact {
-                    margin-top: -10px;
-                    margin-bottom: -50px;
+                    margin-top: rem-calc(-10);
+                    margin-bottom: rem-calc(-50);
                     transform: scale(0.75);
                 }
 
                 @include mobile {
-                    margin-top: 25px;
+                    margin-top: rem-calc(25);
                     margin-bottom: unset;
                     transform: scale(0.875);
                 }
@@ -191,26 +191,26 @@
                 }
 
                 .img-one {
-                    max-width: 375px;
-                    max-height: 225px;
+                    max-width: rem-calc(375);
+                    max-height: rem-calc(225);
                     left: 0;
-                    top: 185px;
+                    top: rem-calc(185);
                 }
 
                 .img-two {
-                    max-width: 225px;
-                    max-height: 375px;
+                    max-width: rem-calc(225);
+                    max-height: rem-calc(375);
                     transform: rotate(-15deg);
-                    left: 290px;
+                    left: rem-calc(290);
                     top: 0;
                     z-index: -1;
                 }
 
                 .img-three {
-                    max-width: 200px;
-                    max-height: 275px;
-                    left: 325px;
-                    top: 245px;
+                    max-width: rem-calc(200);
+                    max-height: rem-calc(275);
+                    left: rem-calc(325);
+                    top: rem-calc(245);
                     transform: rotate(20deg);
                 }
             }
@@ -218,11 +218,11 @@
 
         &.teambuilding {
             display: flex;
-            gap: 36px;
+            gap: rem-calc(36);
             flex-wrap: wrap;
 
             @include tablet {
-                gap: 48px;
+                gap: rem-calc(48);
                 flex-wrap: nowrap;
             }
 
@@ -239,15 +239,15 @@
                     }
 
                     .img-one {
-                        width: 275px;
+                        width: rem-calc(275);
 
                         @include mobile {
-                            width: 350px;
+                            width: rem-calc(350);
                         }
                     }
 
                     .img-two {
-                        max-width: 175px;
+                        max-width: rem-calc(175);
                         width: max-content;
                     }
                 }
@@ -260,26 +260,26 @@
             flex-direction: column;
 
             @include mobile {
-                gap: 60px;
+                gap: rem-calc(60);
             }
 
             @include laptop {
                 flex-direction: row;
-                gap: 80px;
+                gap: rem-calc(80);
             }
 
             .visuals {
                 position: relative;
-                min-width: 435px;
-                min-height: 550px;
+                min-width: rem-calc(435);
+                min-height: rem-calc(550);
                 transform: scale(0.625);
-                margin-top: -60px;
-                margin-bottom: -100px;
+                margin-top: rem-calc(-60);
+                margin-bottom: rem-calc(-100);
 
                 @include compact {
                     transform: scale(0.75);
-                    margin-top: -25px;
-                    margin-bottom: -60px;
+                    margin-top: rem-calc(-25);
+                    margin-bottom: rem-calc(-60);
                 }
 
                 @include mobile {
@@ -300,24 +300,24 @@
                 }
 
                 .img-one {
-                    max-width: 200px;
-                    max-height: 300px;
-                    left: 85px;
+                    max-width: rem-calc(200);
+                    max-height: rem-calc(300);
+                    left: rem-calc(85);
                     top: 0;
                 }
 
                 .img-two {
-                    max-width: 200px;
-                    max-height: 300px;
-                    left: 235px;
-                    top: 100px;
+                    max-width: rem-calc(200);
+                    max-height: rem-calc(300);
+                    left: rem-calc(235);
+                    top: rem-calc(100);
                     z-index: 0;
                 }
 
                 .img-three {
-                    max-width: 300px;
-                    max-height: 350px;
-                    top: 250px;
+                    max-width: rem-calc(300);
+                    max-height: rem-calc(350);
+                    top: rem-calc(250);
                     left: 0;
                 }
             }
@@ -326,7 +326,7 @@
         &.streetcodes {
             display: flex;
             flex-direction: column;
-            gap: 48px;
+            gap: rem-calc(48);
 
             @include laptop {
                 flex-direction: row;
@@ -340,15 +340,15 @@
                     }
 
                     .img-one {
-                        max-width: 350px;
+                        max-width: rem-calc(350);
                         width: max-content;
                     }
                 }
 
                 &-two {
                     position: relative;
-                    min-width: 250px;
-                    height: 372.5px;
+                    min-width: rem-calc(250);
+                    height: rem-calc(372.5);
                     margin: 0 auto;
 
                     @include mobile {
@@ -362,15 +362,15 @@
 
                     .img-two {
                         position: absolute;
-                        max-width: 175px;
+                        max-width: rem-calc(175);
                         top: 0;
-                        left: 75px;
+                        left: rem-calc(75);
                     }
 
                     .img-three {
                         position: absolute;
-                        max-width: 150px;
-                        top: 150px;
+                        max-width: rem-calc(150);
+                        top: rem-calc(150);
                         left: 0;
                     }
                 }
@@ -379,7 +379,7 @@
 
         &:last-child {
             color: $primary;
-            margin-top: 48px;
+            margin-top: rem-calc(48);
             text-align: center;
 
             a {

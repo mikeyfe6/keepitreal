@@ -1,8 +1,16 @@
 import React, { useEffect, useRef } from "react";
 
-import { Loader } from "@googlemaps/js-api-loader";
+import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
 
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
+
+setOptions({
+    key: process.env.GATSBY_GOOGLE_MAPS_KEY || "",
+    v: "weekly",
+    mapIds: process.env.GATSBY_GOOGLE_MAPS_ID
+        ? [process.env.GATSBY_GOOGLE_MAPS_ID]
+        : undefined,
+});
 
 interface GoogleMapProps {
     center: { lat: number; lng: number };
@@ -17,22 +25,23 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
 }) => {
     const { companyName, street, postalCode, city, country } =
         useSiteMetadata();
-
     const mapRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const loader = new Loader({
-            apiKey: process.env.GATSBY_GOOGLE_MAPS_KEY || "",
-            version: "weekly",
-        });
+        let map: google.maps.Map | null = null;
+        let markerInstances: any[] = [];
+        let infoWindow: google.maps.InfoWindow | null = null;
+        let isMounted = true;
 
-        loader.importLibrary("maps").then(async (mapsLib) => {
-            const { Map, InfoWindow } = mapsLib;
-            const { AdvancedMarkerElement } =
-                await loader.importLibrary("marker");
+        (async () => {
+            const [{ Map, InfoWindow }, { AdvancedMarkerElement }] =
+                await Promise.all([
+                    importLibrary("maps"),
+                    importLibrary("marker"),
+                ]);
 
-            if (mapRef.current) {
-                const map = new Map(mapRef.current, {
+            if (mapRef.current && isMounted) {
+                map = new Map(mapRef.current, {
                     mapId: process.env.GATSBY_GOOGLE_MAPS_ID || "",
                     center,
                     zoom,
@@ -40,7 +49,7 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
                     fullscreenControl: true,
                 });
 
-                const infoWindow = new InfoWindow();
+                infoWindow = new InfoWindow();
 
                 markers.forEach((marker) => {
                     const markerElement = document.createElement("div");
@@ -54,11 +63,11 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
                     });
 
                     const markerStyle = `
-                       padding: 4px 8px;
-                       font-size: 12px;
-                       border-radius: 3px;
-                       line-height: 1.4;
-                       background: #162987;
+                        padding: 4px 8px;
+                        font-size: 12px;
+                        border-radius: 3px;
+                        line-height: 1.4;
+                        background: #162987;
                     `;
 
                     const linkStyle = `
@@ -77,23 +86,30 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
                     )}`;
 
                     advancedMarker.addEventListener("gmp-click", () => {
-                        infoWindow.close();
-                        infoWindow.setContent(
-                            `<div style="${markerStyle}"> 
+                        if (infoWindow) infoWindow.close();
+                        if (infoWindow)
+                            infoWindow.setContent(
+                                `<div style="${markerStyle}"> 
                                 <span style="${titleStyle}">${companyName}</span> <br />
                                 ${street}, ${postalCode} <br />
                                 ${city}, ${country} <br />
-                                <a href="${markerUrl}" style="${linkStyle} target="_blank">
+                                <a href="${markerUrl}" style="${linkStyle}" target="_blank">
                                     Openen in Google Maps
                                 </a>
                             </div>`
-                        );
-                        infoWindow.open(map, advancedMarker);
+                            );
+                        if (infoWindow) infoWindow.open(map, advancedMarker);
                     });
+
+                    markerInstances.push(advancedMarker);
                 });
             }
-        });
-    }, [center, zoom, markers]);
+        })();
+
+        return () => {
+            isMounted = false;
+        };
+    }, [center, zoom, markers, companyName, street, postalCode, city, country]);
 
     return (
         <div
