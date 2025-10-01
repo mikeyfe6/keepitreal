@@ -85,7 +85,7 @@
                 .img-five,
                 .img-six,
                 .img-seven {
-                    [data-gatsby-image-wrapper] {
+                    &[data-gatsby-image-wrapper] {
                         width: 100%;
                         aspect-ratio: 1 / 1;
                         border-radius: 50%;
