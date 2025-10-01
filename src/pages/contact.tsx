@@ -94,4 +94,10 @@ const ContactPage: React.FC<PageProps> = () => {
 
 export default ContactPage;
 
-export const Head: HeadFC = () => <Seo title="Contact" pathname="/contact/" />;
+export const Head: HeadFC = () => (
+    <Seo
+        title="Contact"
+        pathname="/contact/"
+        description="Neem contact op met Stichting Keep It Real in Amsterdam. Voor vragen over onze workshops, samenwerkingen of ANBI-projecten kunt u ons bereiken via het contactformulier, e-mail of telefoon."
+    />
+);

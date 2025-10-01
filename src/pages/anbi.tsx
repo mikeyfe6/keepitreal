@@ -119,19 +119,6 @@ const AnbiPage: React.FC<PageProps> = () => {
                         bovenmatig vacatiegeld voor hun werkzaamheden. <br />
                         <strong>Personeel:</strong> CAO niet van toepassing.
                     </p>
-
-                    {/* <br /> */}
-
-                    {/* <Link to='/halfjaarrapportage-KIR.pdf'>
-						<u>Klik hier voor de halfjaarrapportage van KIR</u>
-					</Link> */}
-
-                    {/* <br /> */}
-                    {/* <br /> */}
-
-                    {/* <Link to='/begroting-KIR.xlsx'>
-						<u>Klik hier voor de begroting van KIR</u>
-					</Link> */}
                 </div>
             </section>
         </Layout>
@@ -140,4 +127,10 @@ const AnbiPage: React.FC<PageProps> = () => {
 
 export default AnbiPage;
 
-export const Head: HeadFC = () => <Seo title="ANBI" pathname="/anbi/" />;
+export const Head: HeadFC = () => (
+    <Seo
+        title="ANBI"
+        pathname="/anbi/"
+        description="Stichting Keep It Real is een culturele ANBI die jongeren ondersteunt in hun maatschappelijke, culturele en artistieke ontwikkeling via projecten en workshops."
+    />
+);

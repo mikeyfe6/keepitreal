@@ -336,5 +336,9 @@ const WorkshopsPage: React.FC<PageProps> = () => {
 export default WorkshopsPage;
 
 export const Head: HeadFC = () => (
-    <Seo title="Workshops" pathname="/workshops/" />
+    <Seo
+        title="Workshops"
+        pathname="/workshops/"
+        description="Keep It Real biedt workshops voor professionals die met jongeren werken. Met focus op kunst, cultuur en straatcodes geven we inzicht in de leefwereld van jongeren."
+    />
 );

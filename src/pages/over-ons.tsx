@@ -409,5 +409,9 @@ const AboutUsPage: React.FC<PageProps> = () => {
 export default AboutUsPage;
 
 export const Head: HeadFC = () => (
-    <Seo title="Over Ons" pathname="/over-ons/" />
+    <Seo
+        title="Over Ons"
+        pathname="/over-ons/"
+        description="Keep It Real (KIR) biedt impactvolle workshops en coaching door ervaringsdeskundigen. Voor jongeren, scholen en professionals die verschil willen maken."
+    />
 );
