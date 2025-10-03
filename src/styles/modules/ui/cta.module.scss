@@ -57,7 +57,7 @@
 
             &-content {
                 position: sticky;
-                top: 40vh;
+                top: 35vh;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
@@ -70,6 +70,27 @@
                 @include mobile {
                     position: static;
                     top: unset;
+                }
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    height: rem-calc(2);
+                    background-color: rgba($primary, 0.1);
+
+                    @include border-radius;
+                }
+
+                &::before {
+                    top: 0;
+                }
+
+                &::after {
+                    bottom: 0;
                 }
 
                 div:first-child {

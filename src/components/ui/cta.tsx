@@ -114,8 +114,6 @@ const Cta: React.FC = () => {
         },
     ];
 
-    useEffect(() => {}, []);
-
     return (
         <section>
             <div className={ctaStyles.ctaWrapper} id="cta">

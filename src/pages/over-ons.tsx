@@ -288,8 +288,11 @@ const AboutUsPage: React.FC<PageProps> = () => {
                         de belevingswereld van de leerling. Het taalgebruik naar
                         de leerling is laagdrempelig, authentiek en respectvol.
                         De leerlingen willen aan het einde van de dag graag nog
-                        een keer een KIR sessie bijwonen. Bekijk hier een
-                        impressie van de KIR dagen op beide scholen:
+                        een keer een KIR sessie bijwonen.
+                        <br />
+                        <br />
+                        Bekijk hieronder een impressie van de KIR dagen op beide
+                        scholen:
                     </p>
 
                     <iframe
