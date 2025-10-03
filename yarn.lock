@@ -1337,10 +1337,10 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "7.1.0"
 
-"@fortawesome/react-fontawesome@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-3.0.2.tgz#275ab6bc04977e145b072ba18c24779eb3427073"
-  integrity sha512-cmp/nT0pPC7HUALF8uc3+D5ECwEBWxYQbOIHwtGUWEu72sWtZc26k5onr920HWOViF0nYaC+Qzz6Ln56SQcaVg==
+"@fortawesome/react-fontawesome@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-3.1.0.tgz#bb22f49622574a80ee74213ad8c68107f3f47e64"
+  integrity sha512-5OUQH9aDH/xHJwnpD4J7oEdGvFGJgYnGe0UebaPIdMW9UxYC/f5jv2VjVEgnikdJN0HL8yQxp9Nq+7gqGZpIIA==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@2.15.0":
   version "2.15.0"
@@ -2460,9 +2460,9 @@
     picomatch "^4.0.2"
 
 "@rollup/rollup-linux-x64-gnu@^4.18.0":
-  version "4.52.3"
-  resolved "https://registry.yarnpkg.com/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.52.3.tgz#ed63dec576799fa5571eee5b2040f65faa82b49b"
-  integrity sha512-tPgGd6bY2M2LJTA1uGq8fkSPK8ZLYjDjY+ZLK9WHncCnfIz29LIXIqUgzCR0hIefzy6Hpbe8Th5WOSwTM8E7LA==
+  version "4.52.4"
+  resolved "https://registry.yarnpkg.com/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.52.4.tgz#aa9d5b307c08f05d3454225bb0a2b4cc87eeb2e1"
+  integrity sha512-Wi6AXf0k0L7E2gteNsNHUs7UMwCIhsCTs6+tqQ5GPwVRWMaflqGec4Sd8n6+FNFDw9vGcReqk2KzBDhCa1DLYg==
 
 "@rtsao/scc@^1.1.0":
   version "1.1.0"
@@ -2665,10 +2665,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.5.tgz#ec10755e871497bcd83efe927e43ec46e8c0747e"
   integrity sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==
 
-"@types/node@*", "@types/node@>=10.0.0", "@types/node@^24.6.1":
-  version "24.6.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.6.1.tgz#29cd365beb4419b3b8271c7464f1a563446d7481"
-  integrity sha512-ljvjjs3DNXummeIaooB4cLBKg2U6SPI6Hjra/9rRIy7CpM0HpLtG9HptkMKAb4HYWy5S7HUvJEuWgr/y0U8SHw==
+"@types/node@*", "@types/node@>=10.0.0", "@types/node@^24.6.2":
+  version "24.6.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.6.2.tgz#59b99878b6fed17e698e7d09e51c729c5877736a"
+  integrity sha512-d2L25Y4j+W3ZlNAeMKcy7yDsK425ibcAOO2t7aPTz6gNMH0z2GThtwENCDc0d/Pw9wgyRqE5Px1wkV7naz8ang==
   dependencies:
     undici-types "~7.13.0"
 
@@ -2694,15 +2694,15 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-dom@^19.1.11":
-  version "19.1.11"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-19.1.11.tgz#f8146889e837d053d23494ad4be6d168bfe9bdce"
-  integrity sha512-3BKc/yGdNTYQVVw4idqHtSOcFsgGuBbMveKCOgF8wQ5QtrYOc3jDIlzg3jef04zcXFIHLelyGlj0T+BJ8+KN+w==
+"@types/react-dom@^19.2.0":
+  version "19.2.0"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-19.2.0.tgz#97ebfc8400702db00d1177b06ade6720dda641c1"
+  integrity sha512-brtBs0MnE9SMx7px208g39lRmC5uHZs96caOJfTjFcYSLHNamvaSMfJNagChVNkup2SdtOxKX1FDBkRSJe1ZAg==
 
-"@types/react@*", "@types/react@^19.1.17":
-  version "19.1.17"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.17.tgz#8be0b9c546cede389b930a98eb3fad1897f209c3"
-  integrity sha512-Qec1E3mhALmaspIrhWt9jkQMNdw6bReVu64mjvhbhq2NFPftLPVr+l1SZgmw/66WwBNpDh7ao5AT6gF5v41PFA==
+"@types/react@*", "@types/react@^19.2.0":
+  version "19.2.0"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.2.0.tgz#8412946e7e1efb0de9bb59b3aa87676d96add385"
+  integrity sha512-1LOH8xovvsKsCBq1wnT4ntDUdCJKmnEakhsuoUSy6ExlHCkGP2hqnatagYTgFk6oeL0VU31u7SNjunPN+GchtA==
   dependencies:
     csstype "^3.0.2"
 
@@ -4181,9 +4181,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001746:
-  version "1.0.30001746"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001746.tgz#199d20f04f5369825e00ff7067d45d5dfa03aee7"
-  integrity sha512-eA7Ys/DGw+pnkWWSE/id29f2IcPHVoE8wxtvE5JdvD2V28VTDPy1yEeo11Guz0sJ4ZeGRcm3uaTcAqK1LXaphA==
+  version "1.0.30001747"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001747.tgz#2cfbbb7f1f046439ebaf34bba337ee3d3474c7e5"
+  integrity sha512-mzFa2DGIhuc5490Nd/G31xN1pnBnYMadtkyTjefPI7wzypqgCEpeWu9bJr0OnDsyKrW75zA9ZAt7pbQFmwLsQg==
 
 capital-case@^1.0.4:
   version "1.0.4"
@@ -4634,11 +4634,11 @@ content-type@~1.0.4, content-type@~1.0.5:
   integrity sha512-nTjqfcBFEipKdXCv4YDQWCfmcLZKm81ldF0pAopTvyrFGVbcR6P/VAAd5G7N+0tTr8QqiU0tFadD6FK4NtJwOA==
 
 contentful-resolve-response@^1.9.0:
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/contentful-resolve-response/-/contentful-resolve-response-1.9.3.tgz#83bca77e315261146fd523b7044f808f61a3b2da"
-  integrity sha512-1mPTz7bJLZsLdWAOEyjoVKys/eTXa7o3aV3EYLH7sqqF8V1fnRHlJqlDoxGZFsPxQPBYag+V89B1E/HYE0ENnQ==
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/contentful-resolve-response/-/contentful-resolve-response-1.9.4.tgz#a0206be0218af38db5280894b7fc748cbfeb68d9"
+  integrity sha512-8qu2dM2IMoVQhBhp81BVGB9ISantPmPTZ3EELGxuM8e/t+jSe+xmsVk5yHE+a9AYMBKSwgupBnkjGZE4RzFowQ==
   dependencies:
-    fast-copy "^2.1.7"
+    fast-copy "^3.0.2"
 
 contentful-sdk-core@^9.0.1:
   version "9.2.1"
@@ -4654,9 +4654,9 @@ contentful-sdk-core@^9.0.1:
     "@rollup/rollup-linux-x64-gnu" "^4.18.0"
 
 contentful@^11.2.5:
-  version "11.8.2"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.8.2.tgz#1e54503396ab73baad6039ec686709b392886a5c"
-  integrity sha512-mmeAyH39nznETuR1iCg61bdIB0FKJO9fYwEowW6ZFndQdV4cP67QDy9mVOhWEzsxHKhBaffQ1Qb8zSKs+Jo3FQ==
+  version "11.8.3"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.8.3.tgz#8b6bfce976e58ce909813e99b8a140366a822193"
+  integrity sha512-Dh8atQraS3xNQRgvZxSmSgHNqa4Lb9Egq7o0NCMuM9jry83s5DtvxyCIH0y8/MbrdZmsVAgqrSyVdmc5/0h6cw==
   dependencies:
     "@contentful/content-source-maps" "^0.11.33"
     "@contentful/rich-text-types" "^16.6.1"
@@ -5483,9 +5483,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.5.227:
-  version "1.5.228"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.228.tgz#38b849bc8714bd21fb64f5ad56bf8cfd8638e1e9"
-  integrity sha512-nxkiyuqAn4MJ1QbobwqJILiDtu/jk14hEAWaMiJmNPh1Z+jqoFlBFZjdXwLWGeVSeu9hGLg6+2G9yJaW8rBIFA==
+  version "1.5.229"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.229.tgz#ce32e345990b031ae5fec4d99e98188b90ba3731"
+  integrity sha512-cwhDcZKGcT/rEthLRJ9eBlMDkh1sorgsuk+6dpsehV0g9CABsIqBxU4rLRjG+d/U6pYU1s37A4lSKrVc5lSQYg==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -6279,11 +6279,6 @@ extract-zip@^2.0.1:
     yauzl "^2.10.0"
   optionalDependencies:
     "@types/yauzl" "^2.9.1"
-
-fast-copy@^2.1.7:
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-2.1.7.tgz#affc9475cb4b555fb488572b2a44231d0c9fa39e"
-  integrity sha512-ozrGwyuCTAy7YgFCua8rmqmytECYk/JYAMXcswOcm0qvGoE3tPb7ivBeIHTOK2DiapBhDZgacIhzhQIKU5TCfA==
 
 fast-copy@^3.0.2:
   version "3.0.2"
@@ -11249,9 +11244,9 @@ schema-utils@^3.0.0, schema-utils@^3.1.1:
     ajv-keywords "^3.5.2"
 
 schema-utils@^4.0.0, schema-utils@^4.2.0, schema-utils@^4.3.0:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-4.3.2.tgz#0c10878bf4a73fd2b1dfd14b9462b26788c806ae"
-  integrity sha512-Gn/JaSk/Mt9gYubxTtSn/QCV4em9mpAPiR1rqy/Ocu19u/G9J5WWdNoUT4SiV6mFC3y6cxyFcFwdzPM3FgxGAQ==
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-4.3.3.tgz#5b1850912fa31df90716963d45d9121fdfc09f46"
+  integrity sha512-eflK8wEtyOE6+hsaRVPxvUKYCpRgzLqDTb8krvAsRIwOGlHoSgYLgBXoubGgLd2fT41/OUYdb48v4k4WWHQurA==
   dependencies:
     "@types/json-schema" "^7.0.9"
     ajv "^8.9.0"
@@ -12144,9 +12139,9 @@ tapable@^1.0.0:
   integrity sha512-4WK/bYZmj8xLr+HUCODHGF1ZFzsYffasLUgEiMBY4fgtltdO6B4WJtlSbPaDTLpYTcGVwM2qLnFTICEcNxs3kA==
 
 tapable@^2.1.1, tapable@^2.2.0:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.3.tgz#4b67b635b2d97578a06a2713d2f04800c237e99b"
-  integrity sha512-ZL6DDuAlRlLGghwcfmSn9sK3Hr6ArtyudlSAiCqQ6IfE+b+HHbydbYDIG15IfS5do+7XQQBdBiubF/cV2dnDzg==
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.3.0.tgz#7e3ea6d5ca31ba8e078b560f0d83ce9a14aa8be6"
+  integrity sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==
 
 tar-fs@^2.0.0:
   version "2.1.4"
