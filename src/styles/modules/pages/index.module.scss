@@ -58,7 +58,7 @@
                     scroll-snap-align: start;
                     white-space: nowrap;
                     min-width: fit-content;
-                    padding: 4px;
+                    padding: rem-calc(4);
 
                     a,
                     button {
