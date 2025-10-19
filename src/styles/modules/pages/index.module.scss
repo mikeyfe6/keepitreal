@@ -1,23 +1,104 @@
 @use "../../customs/" as *;
 
 .index {
+    $index: &;
+
     display: flex;
     flex-direction: column;
     gap: rem-calc(32);
 
     > div {
-        @include main-card;
+        &:not(&#{$index}-podcast, &#{$index}-anchors) {
+            @include main-card;
+        }
+
+        &#{$index}-anchors {
+            display: flex;
+            align-items: center;
+            gap: rem-calc(24);
+
+            @include phablet {
+                display: none;
+            }
+
+            > h3 {
+                margin-bottom: 0;
+                white-space: nowrap;
+                padding: rem-calc(8 20);
+                background: linear-gradient(
+                    to left,
+                    rgba($tertiary, 87.5%),
+                    $secondary
+                );
+
+                @include border-radius;
+            }
+
+            > ul {
+                display: flex;
+                gap: rem-calc(8);
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+
+                @include border-radius;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                > li {
+                    flex: 0 0 auto;
+                    scroll-snap-align: start;
+                    white-space: nowrap;
+                    min-width: fit-content;
+                    padding: 4px;
+
+                    a,
+                    button {
+                        padding: rem-calc(8 20);
+                        background: rgba($white, 0.1);
+                        border: 2px solid transparent;
+                        font-size: rem-calc(16);
+                        font-weight: 600;
+
+                        @include border-radius;
+                        @include smooth-trans;
+
+                        &:hover {
+                            background: rgba($white, 0.2);
+                        }
+
+                        &:focus,
+                        &.active {
+                            background: rgba($white, 0.825);
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        &#{$index}-podcast {
+            display: block;
+
+            @include phablet {
+                display: none;
+            }
+        }
 
         > ol {
             display: flex;
             flex-direction: column;
             gap: rem-calc(40);
         }
-    }
 
-    .active {
-        outline: 2px solid $tertiary;
-        animation: fade-out-outline 3s forwards;
+        &.active {
+            outline: 2px solid $tertiary;
+            animation: fade-out-outline 3s forwards;
+        }
     }
 
     @keyframes fade-out-outline {

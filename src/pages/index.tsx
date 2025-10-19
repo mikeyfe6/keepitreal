@@ -15,6 +15,7 @@ const IndexPage: React.FC<PageProps> = () => {
     const whatwedoRef = useRef<HTMLDivElement>(null!);
     const ourteamRef = useRef<HTMLDivElement>(null!);
     const impactRef = useRef<HTMLDivElement>(null!);
+    const podcastRef = useRef<HTMLDivElement>(null!);
 
     const [activeSection, setActiveSection] = useState<string>("");
 
@@ -29,13 +30,14 @@ const IndexPage: React.FC<PageProps> = () => {
         }
     };
 
-    const handleSidebarClick = (sectionId: string) => {
+    const handleLegendClick = (sectionId: string) => {
         setActiveSection(sectionId);
         const sections: Record<string, React.RefObject<HTMLDivElement>> = {
             mission: missionRef,
             whatwedo: whatwedoRef,
             ourteam: ourteamRef,
             impact: impactRef,
+            podcast: podcastRef,
         };
         if (sections[sectionId]?.current) {
             handleScroll(sections[sectionId]);
@@ -59,6 +61,83 @@ const IndexPage: React.FC<PageProps> = () => {
                         van Keep It Real.
                     </p>
                 </div>
+
+                <div id="anchors" className={indexStyles.indexAnchors}>
+                    <h3>KiR : </h3>
+                    <ul>
+                        <li>
+                            <button
+                                onClick={() => handleLegendClick("mission")}
+                                className={
+                                    activeSection === "mission"
+                                        ? indexStyles.active
+                                        : ""
+                                }
+                            >
+                                Onze Missie
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                onClick={() => handleLegendClick("whatwedo")}
+                                className={
+                                    activeSection === "whatwedo"
+                                        ? indexStyles.active
+                                        : ""
+                                }
+                            >
+                                Wat We Doen
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                onClick={() => handleLegendClick("ourteam")}
+                                className={
+                                    activeSection === "ourteam"
+                                        ? indexStyles.active
+                                        : ""
+                                }
+                            >
+                                Onze Teamleden
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                onClick={() => handleLegendClick("impact")}
+                                className={
+                                    activeSection === "impact"
+                                        ? indexStyles.active
+                                        : ""
+                                }
+                            >
+                                Impact en Toekomst
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                onClick={() => handleLegendClick("podcast")}
+                                className={
+                                    activeSection === "podcast"
+                                        ? indexStyles.active
+                                        : ""
+                                }
+                            >
+                                Onze Podcast
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className={indexStyles.indexPodcast}>
+                    <iframe
+                        title="Keep It Real Podcast"
+                        src="https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        className="spotify"
+                    />
+                </div>
+
                 <div
                     ref={missionRef}
                     className={
@@ -159,7 +238,12 @@ const IndexPage: React.FC<PageProps> = () => {
                     </p>
                 </div>
 
-                <div>
+                <div
+                    ref={podcastRef}
+                    className={
+                        activeSection === "podcast" ? indexStyles.active : ""
+                    }
+                >
                     <h2>Beluister onze Podcast</h2>
                     <p>
                         Wil je meer horen over de verhalen achter Keep It Real
@@ -186,7 +270,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </div>
             </div>
             <Sidebar
-                handleSidebarClick={handleSidebarClick}
+                handleLegendClick={handleLegendClick}
                 activeSection={activeSection}
             />
         </Layout>

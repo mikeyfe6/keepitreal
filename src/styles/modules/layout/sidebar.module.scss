@@ -22,6 +22,7 @@
         }
 
         &#{$aside}-legend {
+            display: none;
             padding: rem-calc(40 28);
             background: linear-gradient(
                 to left,
@@ -31,6 +32,10 @@
 
             @include border-radius;
             @include box-shadow(1);
+
+            @include phablet {
+                display: block;
+            }
 
             > ul {
                 display: flex;
@@ -224,6 +229,14 @@
                     display: flex;
                     gap: rem-calc(8);
                 }
+            }
+        }
+
+        &#{$aside}-podcast {
+            display: none;
+
+            @include phablet {
+                display: block;
             }
         }
 

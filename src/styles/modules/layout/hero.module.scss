@@ -44,7 +44,7 @@
                 font-weight: 800;
             }
 
-            @include fluid-typing(24, 32);
+            @include fluid-typing(22, 32);
 
             @include tablet {
                 margin-top: unset;

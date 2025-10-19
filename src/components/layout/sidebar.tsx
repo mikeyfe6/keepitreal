@@ -13,12 +13,12 @@ import EventForm from "../forms/eventForm";
 import * as sidebarStyles from "../../styles/modules/layout/sidebar.module.scss";
 
 interface SidebarProps {
-    handleSidebarClick: (sectionId: string) => void;
+    handleLegendClick: (sectionId: string) => void;
     activeSection: string;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
-    handleSidebarClick,
+    handleLegendClick,
     activeSection,
 }) => {
     const {
@@ -64,7 +64,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         <>
             <aside className={sidebarStyles.aside}>
                 <div id="events" className={sidebarStyles.asideEvents}>
-                    <h3>Opkomende evenementen</h3>
+                    <h3>Evenementen</h3>
 
                     <ul className={sidebarStyles.asideEventsActive}>
                         <li>
@@ -74,14 +74,14 @@ const Sidebar: React.FC<SidebarProps> = ({
                             />
 
                             <button onClick={handleOpenModal} disabled>
-                                Aanmelden voor Back to School
+                                Aanmeldperiode verlopen
                             </button>
                         </li>
                     </ul>
 
                     <hr />
 
-                    <h3>Afgelopen evenementen</h3>
+                    {/* <h3>Afgelopen evenementen</h3> */}
 
                     <ul className={sidebarStyles.asideEventsArchive}>
                         <li>
@@ -99,7 +99,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     </ul>
                 </div>
 
-                <div id="podcast">
+                <div id="podcast" className={sidebarStyles.asidePodcast}>
                     <iframe
                         title="Keep It Real Podcast"
                         src="https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator"
@@ -114,7 +114,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     <ul>
                         <li>
                             <button
-                                onClick={() => handleSidebarClick("mission")}
+                                onClick={() => handleLegendClick("mission")}
                                 className={
                                     activeSection === "mission"
                                         ? sidebarStyles.active
@@ -126,7 +126,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         </li>
                         <li>
                             <button
-                                onClick={() => handleSidebarClick("whatwedo")}
+                                onClick={() => handleLegendClick("whatwedo")}
                                 className={
                                     activeSection === "whatwedo"
                                         ? sidebarStyles.active
@@ -149,7 +149,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         </li>
                         <li>
                             <button
-                                onClick={() => handleSidebarClick("ourteam")}
+                                onClick={() => handleLegendClick("ourteam")}
                                 className={
                                     activeSection === "ourteam"
                                         ? sidebarStyles.active
@@ -161,7 +161,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         </li>
                         <li>
                             <button
-                                onClick={() => handleSidebarClick("impact")}
+                                onClick={() => handleLegendClick("impact")}
                                 className={
                                     activeSection === "impact"
                                         ? sidebarStyles.active
@@ -169,6 +169,18 @@ const Sidebar: React.FC<SidebarProps> = ({
                                 }
                             >
                                 Impact en Toekomst
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                onClick={() => handleLegendClick("podcast")}
+                                className={
+                                    activeSection === "podcast"
+                                        ? sidebarStyles.active
+                                        : ""
+                                }
+                            >
+                                Onze Podcast
                             </button>
                         </li>
                     </ul>

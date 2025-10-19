@@ -81,18 +81,30 @@ main {
     li {
         letter-spacing: 0.125px;
 
-        &:not(#workshops p, #workshops span, #workshops li, #media li) {
+        &:not(
+                #workshops p,
+                #workshops span,
+                #workshops li,
+                #media li,
+                #anchors li
+            ) {
             max-width: 70ch;
         }
     }
 
     ul {
-        &:not(#events ul, #media ul) {
+        &:not(#events ul, #media ul, #anchors ul) {
             list-style-type: disc;
         }
 
         li {
-            &:not(#workshops > ul > li, #cta li, #events li, #media li) {
+            &:not(
+                    #workshops > ul > li,
+                    #cta li,
+                    #events li,
+                    #media li,
+                    #anchors li
+                ) {
                 margin-inline-start: rem-calc(16);
                 padding-left: rem-calc(8);
             }
@@ -119,10 +131,11 @@ main {
     /* stylelint-disable-next-line no-descending-specificity */
     &:has(aside) {
         display: flex;
-        flex-direction: column-reverse;
-        gap: rem-calc(48);
+        flex-direction: column;
+        gap: rem-calc(32);
 
         @include phablet {
+            gap: rem-calc(48);
             flex-direction: row;
         }
     }
