@@ -97,6 +97,10 @@
             display: flex;
             flex-direction: column;
             gap: rem-calc(40);
+
+            > li > h3 {
+                margin-bottom: rem-calc(8);
+            }
         }
 
         &.active {

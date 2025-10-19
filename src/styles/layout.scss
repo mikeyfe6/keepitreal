@@ -73,9 +73,13 @@ body {
 
     &:not(:has(> section)) {
         main {
-            margin-top: rem-calc(175);
+            margin-top: rem-calc(120);
 
             @include mobile {
+                margin-top: rem-calc(200);
+            }
+
+            @include tablet {
                 margin-top: rem-calc(240);
             }
         }

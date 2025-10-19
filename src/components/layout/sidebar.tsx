@@ -182,7 +182,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                                         : ""
                                 }
                             >
-                                Onze Podcast
+                                Beluister onze Podcast
                             </button>
                         </li>
                     </ul>
@@ -266,7 +266,6 @@ const Sidebar: React.FC<SidebarProps> = ({
                 {showSuccessMessage ? (
                     <div>
                         <h3>
-                            {" "}
                             <FontAwesomeIcon icon={"circle-check"} /> Aanmelding
                             verstuurd!
                         </h3>

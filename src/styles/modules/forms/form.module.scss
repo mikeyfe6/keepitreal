@@ -56,7 +56,7 @@
 
             > label {
                 display: block;
-                margin-bottom: 0.5rem;
+                margin-bottom: rem-calc(8);
                 font-weight: 600;
                 color: $primary;
             }
@@ -121,8 +121,7 @@
                             border-radius: 50%;
                             background-color: $white;
                             position: relative;
-                            transition:
-                                border-color 0.2s ease,
+                            transition: border-color 0.2s ease,
                                 box-shadow 0.2s ease;
                             display: inline-block;
 
@@ -139,8 +138,7 @@
                                     height: rem-calc(16);
                                     border-radius: 50%;
                                     background-color: rgba($secondary, 0.8);
-                                    transition:
-                                        background-color 0.2s ease,
+                                    transition: background-color 0.2s ease,
                                         transform 0.2s ease;
                                     outline: none;
                                     box-shadow: 0 0 0 3px rgba($secondary, 0.3);
@@ -167,7 +165,7 @@
             font-weight: 500;
             padding: rem-calc(12);
             margin-top: rem-calc(24);
-            font-size: 0.9rem;
+            font-size: rem-calc(14);
 
             @include border-radius;
         }

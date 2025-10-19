@@ -126,7 +126,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                         : ""
                                 }
                             >
-                                Onze Podcast
+                                Beluister onze Podcast
                             </button>
                         </li>
                     </ul>

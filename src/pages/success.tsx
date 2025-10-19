@@ -10,7 +10,7 @@ const SuccessPage: React.FC<PageProps> = () => {
     return (
         <Layout>
             <div>
-                <h2>Bedankt! Je bericht is verzonden</h2>
+                <h1>Bedankt! Je bericht is verzonden</h1>
                 <p>We komen bij je terug!</p>
                 <br />
                 <br />

@@ -400,11 +400,11 @@
             margin-top: rem-calc(48);
             text-align: center;
 
+            @include main-card(rgba($white, 0.825));
+
             a {
                 @include text-link;
             }
-
-            @include main-card(rgba($white, 0.825));
         }
     }
 
