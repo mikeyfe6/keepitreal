@@ -4,20 +4,19 @@ import type { HeadFC, PageProps } from "gatsby";
 
 import Layout from "../components/layout";
 import Cta from "../components/ui/cta";
-import Sidebar from "../components/layout/sidebar";
 
 import { Seo } from "../components/seo";
 
 import * as indexStyles from "../styles/modules/pages/index.module.scss";
 
 const IndexPage: React.FC<PageProps> = () => {
+    const [activeSection, setActiveSection] = useState<string>("");
+
     const missionRef = useRef<HTMLDivElement>(null!);
     const whatwedoRef = useRef<HTMLDivElement>(null!);
     const ourteamRef = useRef<HTMLDivElement>(null!);
     const impactRef = useRef<HTMLDivElement>(null!);
     const podcastRef = useRef<HTMLDivElement>(null!);
-
-    const [activeSection, setActiveSection] = useState<string>("");
 
     const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
         if (ref.current) {
@@ -45,7 +44,10 @@ const IndexPage: React.FC<PageProps> = () => {
     };
 
     return (
-        <Layout>
+        <Layout
+            handleLegendClick={handleLegendClick}
+            activeSection={activeSection}
+        >
             <div className={indexStyles.index}>
                 <div>
                     <p>
@@ -63,7 +65,9 @@ const IndexPage: React.FC<PageProps> = () => {
                 </div>
 
                 <div id="anchors" className={indexStyles.indexAnchors}>
-                    <h3>KiR : </h3>
+                    <h3>
+                        KIR <span>:</span>
+                    </h3>
                     <ul>
                         <li>
                             <button
@@ -164,7 +168,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     <h2>Wat We Doen</h2>
                     <ol>
                         <li>
-                            <h4>KIR Take-overs</h4>
+                            <h3>KIR Take-overs</h3>
                             <p>
                                 Een dag waarop onze teamleden de reguliere
                                 lessen overnemen. Door middel van kunst, muziek,
@@ -173,7 +177,7 @@ const IndexPage: React.FC<PageProps> = () => {
                             </p>
                         </li>
                         <li>
-                            <h4>KIR Workshops</h4>
+                            <h3>KIR Workshops</h3>
                             <p>
                                 Diepgaande sessies waarin jongeren hun
                                 creativiteit kunnen uiten en thema's kunnen
@@ -186,7 +190,7 @@ const IndexPage: React.FC<PageProps> = () => {
                             <Cta />
                         </li>
                         <li>
-                            <h4>1-op-1 Coaching</h4>
+                            <h3>1-op-1 Coaching</h3>
                             <p>
                                 Specifieke ondersteuning voor leerlingen die dat
                                 nodig hebben, om hen te helpen bij het nemen van
@@ -269,10 +273,6 @@ const IndexPage: React.FC<PageProps> = () => {
                     </p>
                 </div>
             </div>
-            <Sidebar
-                handleLegendClick={handleLegendClick}
-                activeSection={activeSection}
-            />
         </Layout>
     );
 };

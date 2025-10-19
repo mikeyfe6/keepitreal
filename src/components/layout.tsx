@@ -60,6 +60,7 @@ library.add(
 
 import Header from "./layout/header";
 import Hero from "./layout/hero";
+import Sidebar from "./layout/sidebar";
 import Footer from "./layout/footer";
 
 import ResponsiveTag from "./helpers/respoTag";
@@ -68,9 +69,15 @@ import "../styles/layout.scss";
 
 interface LayoutProps {
     children: React.ReactNode;
+    handleLegendClick?: (sectionId: string) => void;
+    activeSection?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({
+    children,
+    handleLegendClick,
+    activeSection = "",
+}) => {
     const { pathname } = useLocation();
 
     return (
@@ -78,7 +85,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="keep-it-real">
                 <Header />
                 {pathname === "/" && <Hero />}
-                <main>{children}</main>
+
+                <div className="keep-it-real__main">
+                    <main>{children}</main>
+
+                    {pathname === "/" && handleLegendClick && (
+                        <Sidebar
+                            handleLegendClick={handleLegendClick}
+                            activeSection={activeSection}
+                        />
+                    )}
+                </div>
+
                 <div className="keep-it-real__logo">
                     <StaticImage
                         src="../images/logo/KIR-light-icon.png"

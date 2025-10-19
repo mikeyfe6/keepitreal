@@ -64,7 +64,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         <>
             <aside className={sidebarStyles.aside}>
                 <div id="events" className={sidebarStyles.asideEvents}>
-                    <h3>Evenementen</h3>
+                    <h2>Evenementen</h2>
 
                     <ul className={sidebarStyles.asideEventsActive}>
                         <li>
@@ -110,7 +110,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                 </div>
 
                 <div id="legend" className={sidebarStyles.asideLegend}>
-                    <h3>KiR</h3>
+                    <h2>
+                        KIR <span>:</span>
+                    </h2>
                     <ul>
                         <li>
                             <button
@@ -137,13 +139,13 @@ const Sidebar: React.FC<SidebarProps> = ({
                             </button>
                             <ul>
                                 <li>
-                                    <h4>KIR Take-overs</h4>
+                                    <p>KIR Take-overs</p>
                                 </li>
                                 <li>
-                                    <h4>KIR Workshops</h4>
+                                    <p>KIR Workshops</p>
                                 </li>
                                 <li>
-                                    <h4>1-op-1 Coaching</h4>
+                                    <p>1-op-1 Coaching</p>
                                 </li>
                             </ul>
                         </li>
@@ -218,7 +220,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                 </div> */}
 
                 <div id="contact" className={sidebarStyles.asideContact}>
-                    <h3>Word Lid van Keep It Real</h3>
+                    <h2>Word Lid van Keep It Real</h2>
 
                     <p>
                         Wil je deel uitmaken van ons team of meer informatie
@@ -234,7 +236,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                 </div>
 
                 <div id="media" className={sidebarStyles.asideMedia}>
-                    <h3>In de media</h3>
+                    <h2>In de media</h2>
 
                     <ul>
                         <li>

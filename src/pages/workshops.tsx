@@ -17,12 +17,12 @@ const WorkshopsPage: React.FC<PageProps> = () => {
         <Layout>
             <div className={workshopStyles.workshops} id="workshops">
                 <div>
-                    <h2>Workshopaanbod voor professionals</h2>
+                    <h1>Workshopaanbod voor professionals</h1>
                 </div>
 
                 <div className={workshopStyles.introduction}>
                     <div>
-                        <h3>INTRODUCTIE</h3>
+                        <h2>INTRODUCTIE</h2>
                         <p>
                             Keep It Real reikt jongeren tools en inzichten aan
                             voor het maken van de juiste keuzes in hun leven.
@@ -105,7 +105,7 @@ const WorkshopsPage: React.FC<PageProps> = () => {
 
                 <div className={workshopStyles.codeswitching}>
                     <div>
-                        <h3>CODE SWITCHING</h3>
+                        <h2>CODE SWITCHING</h2>
                         <p>
                             In verschillende contexten gelden verschillende
                             codes. Jongeren gebruiken verschillende woorden,
@@ -165,7 +165,7 @@ const WorkshopsPage: React.FC<PageProps> = () => {
                         />
                     </div>
                     <div>
-                        <h3>TEAM BUILDING X GENGE ART</h3>
+                        <h2>TEAM BUILDING X GENGE ART</h2>
                         <p>
                             Het team gaat onder leiding van kunstenaar Genge op
                             een unieke en verrassende manier aan de slag met
@@ -203,7 +203,7 @@ const WorkshopsPage: React.FC<PageProps> = () => {
 
                 <div className={workshopStyles.knowyourself}>
                     <div>
-                        <h3>KEN JEZELF</h3>
+                        <h2>KEN JEZELF</h2>
                         <p>
                             Een interactieve en verdiepende sessie gebaseerd op
                             onze meidenwerk reeks, gericht op
@@ -271,7 +271,7 @@ const WorkshopsPage: React.FC<PageProps> = () => {
                         />
                     </div>
                     <div>
-                        <h3>STRAATCODES</h3>
+                        <h2>STRAATCODES</h2>
                         <p>
                             Een deep dive in straatcultuur, relevant voor
                             iedereen die zich bezighoudt met jeugd en

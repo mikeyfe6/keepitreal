@@ -5,5 +5,9 @@
         @include border-radius;
         @include box-shadow;
         @include main-card;
+
+        > h3 {
+            margin-bottom: unset;
+        }
     }
 }

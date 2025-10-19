@@ -7,6 +7,7 @@
     flex-direction: column;
     gap: rem-calc(32);
     width: 100%;
+    height: fit-content;
     min-width: rem-calc(350);
 
     @include phablet {
@@ -16,6 +17,10 @@
     > div {
         @include border-radius;
         @include box-shadow(1);
+
+        > h2 {
+            @include fluid-typing(22, 24);
+        }
 
         &:not(:has(iframe)) {
             padding: rem-calc(32 28);
@@ -35,6 +40,10 @@
 
             @include phablet {
                 display: block;
+            }
+
+            > h2 span {
+                color: $primary;
             }
 
             > ul {
@@ -145,13 +154,13 @@
                                 color: $primary;
                             }
 
-                            h4 {
+                            > p {
                                 font-size: rem-calc(18);
                                 margin-bottom: 0;
                             }
 
-                            a,
-                            button {
+                            > a,
+                            > button {
                                 position: relative;
 
                                 @include smooth-trans;
@@ -185,7 +194,7 @@
                 $primary
             );
 
-            > h3 {
+            > h2 {
                 @include underline($color: $primary);
             }
 
@@ -204,10 +213,10 @@
         &#{$aside}-events {
             background-color: rgba($secondary, 0.75);
 
-            > h3 {
+            > h2 {
                 @include underline($color: $primary);
 
-                &:last-of-type {
+                &:not(:first-of-type) {
                     margin-top: rem-calc(24);
                 }
             }

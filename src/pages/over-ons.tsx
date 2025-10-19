@@ -17,7 +17,7 @@ const AboutUsPage: React.FC<PageProps> = () => {
         <Layout>
             <div className={aboutStyles.about}>
                 <div>
-                    <h2>Over KIR</h2>
+                    <h1>Over Keep It Real</h1>
                     <p>
                         Het KIR programma is een initiatief van cultureel
                         professional Wenner Regales, geboren op Curaçao en zelf
@@ -248,8 +248,8 @@ const AboutUsPage: React.FC<PageProps> = () => {
                     </p>
                 </div>
                 <div>
-                    <h3>Wat doet KIR onder andere?</h3>
-                    <h4>KIR Takeovers</h4>
+                    <h2>Wat doet KIR onder andere?</h2>
+                    <h3>KIR Takeovers</h3>
                     <p>
                         Een KIR dag is een ervaring! Het doel van de
                         “experience” is om jongeren en jong volwassenen middels

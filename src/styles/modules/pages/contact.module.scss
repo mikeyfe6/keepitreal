@@ -20,11 +20,11 @@
 
         @include main-card;
 
-        h3 {
+        h2 {
             margin-bottom: rem-calc(24);
         }
 
-        h4 {
+        h3 {
             margin-bottom: rem-calc(2);
 
             @include fluid-typing(20, 22);

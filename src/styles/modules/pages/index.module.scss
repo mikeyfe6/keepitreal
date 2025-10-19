@@ -32,6 +32,10 @@
                 );
 
                 @include border-radius;
+
+                > span {
+                    color: $primary;
+                }
             }
 
             > ul {

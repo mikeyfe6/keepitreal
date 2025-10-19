@@ -66,7 +66,7 @@ const ContactForm: React.FC = () => {
     return (
         <div className={formStyles.contactForm}>
             <div>
-                <h2>Vul hieronder je gegevens in</h2>
+                <h1>Vul hieronder je gegevens in</h1>
                 <p>En we komen spoedig met je in contact!</p>
             </div>
 

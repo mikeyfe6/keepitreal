@@ -13,7 +13,7 @@ const AnbiPage: React.FC<PageProps> = () => {
         <Layout>
             <section className={anbiStyles.anbi}>
                 <div>
-                    <h2>Doelstelling: Stichting Keep It Real</h2>
+                    <h1>Doelstelling: Stichting Keep It Real</h1>
                     <p>
                         Stichting Keep It Real is een culturele instelling die
                         zich richt op het bevorderen van de maatschappelijke en
@@ -22,7 +22,7 @@ const AnbiPage: React.FC<PageProps> = () => {
                     </p>
 
                     <br />
-                    <h3>De organisatie heeft als doel:</h3>
+                    <h2>De organisatie heeft als doel:</h2>
                     <ul>
                         <li>
                             Sponsorgelden en giften aanvragen en uitbesteden aan
@@ -45,9 +45,9 @@ const AnbiPage: React.FC<PageProps> = () => {
                     </ul>
 
                     <br />
-                    <h3>
+                    <h2>
                         <u>Algemene gegevens</u>
-                    </h3>
+                    </h2>
                     <p>
                         <strong>Naam ANBI:</strong> Stichting Keep It Real{" "}
                         <br />
@@ -55,23 +55,24 @@ const AnbiPage: React.FC<PageProps> = () => {
                     </p>
 
                     <br />
-                    <h4>Bezoekadres:</h4>
+                    <h3>Bezoekadres:</h3>
+                    <p>
+                        De Ster <br />
+                        Woudrichemstraat 8<br />
+                        1107 NG Amsterdam
+                    </p>
+
+                    <br />
+                    <h3>Postadres:</h3>
                     <p>
                         Piet Heinkade 3 <br />
                         1019 BR Amsterdam
                     </p>
 
                     <br />
-                    <h4>Postadres:</h4>
-                    <p>
-                        Piet Heinkade 3 <br />
-                        1019 BR Amsterdam
-                    </p>
-
-                    <br />
-                    <h3>
+                    <h2>
                         <u>Bestuur</u>
-                    </h3>
+                    </h2>
                     <p>
                         <strong>Voorzitter:</strong> Mijke Daphne Loeven <br />
                         <strong>Secretaris:</strong> Dansowaa Asamoah <br />
@@ -80,10 +81,10 @@ const AnbiPage: React.FC<PageProps> = () => {
                     </p>
 
                     <br />
-                    <h3>
+                    <h2>
                         <u>Beleidsplan</u>
-                    </h3>
-                    <h4>Hoofdlijnen van het beleidsplan:</h4>
+                    </h2>
+                    <h3>Hoofdlijnen van het beleidsplan:</h3>
                     <ol>
                         <li>
                             De stichting heeft ten doel het bevorderen van de
@@ -110,9 +111,9 @@ const AnbiPage: React.FC<PageProps> = () => {
                         </li>
                     </ol>
 
-                    <h3>
+                    <h2>
                         <u>Beloningsbeleid</u>
-                    </h3>
+                    </h2>
                     <p>
                         <strong>Bestuur:</strong> Bestuurders kunnen recht
                         hebben op vergoeding van gemaakte kosten en een niet

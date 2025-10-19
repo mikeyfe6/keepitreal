@@ -32,21 +32,21 @@ const ContactPage: React.FC<PageProps> = () => {
             <div className={contactStyles.contact}>
                 <ContactForm />
                 <div>
-                    <h3>
+                    <h2>
                         <u>{companyName}</u>
-                    </h3>
-                    <h4>
+                    </h2>
+                    <h3>
                         Bezoekadres<span>:</span>
-                    </h4>
+                    </h3>
                     <p>
                         {facility} <br />
                         {street} <br />
                         {postalCode} {city}
                     </p>
 
-                    <h4>
+                    <h3>
                         Postadres<span>:</span>
-                    </h4>
+                    </h3>
                     <p>
                         {mailingStreet} <br />
                         {mailingPostalcode} {mailingCity}

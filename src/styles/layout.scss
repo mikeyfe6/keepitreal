@@ -59,6 +59,18 @@ body {
         }
     }
 
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: rem-calc(32);
+        margin: rem-calc(40 0 80);
+
+        @include phablet {
+            gap: rem-calc(48);
+            flex-direction: row;
+        }
+    }
+
     &:not(:has(> section)) {
         main {
             margin-top: rem-calc(175);
@@ -73,7 +85,6 @@ body {
 /* stylelint-disable-next-line no-descending-specificity */
 main {
     flex: 1;
-    margin: rem-calc(40 0 80);
     line-height: 1.575;
 
     p,
@@ -125,18 +136,6 @@ main {
                 margin-inline-start: rem-calc(24);
                 padding-left: rem-calc(8);
             }
-        }
-    }
-
-    /* stylelint-disable-next-line no-descending-specificity */
-    &:has(aside) {
-        display: flex;
-        flex-direction: column;
-        gap: rem-calc(32);
-
-        @include phablet {
-            gap: rem-calc(48);
-            flex-direction: row;
         }
     }
 }
