@@ -123,7 +123,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                                         : ""
                                 }
                             >
-                                Onze Missie
+                                Onze missie
                             </button>
                         </li>
                         <li>
@@ -158,7 +158,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                                         : ""
                                 }
                             >
-                                Onze Teamleden
+                                Onze teamleden
                             </button>
                         </li>
                         <li>
@@ -170,7 +170,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                                         : ""
                                 }
                             >
-                                Impact en Toekomst
+                                Impact en toekomst
                             </button>
                         </li>
                         <li>
@@ -182,7 +182,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                                         : ""
                                 }
                             >
-                                Beluister onze Podcast
+                                Beluister onze podcast
                             </button>
                         </li>
                     </ul>
@@ -220,7 +220,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                 </div> */}
 
                 <div id="contact" className={sidebarStyles.asideContact}>
-                    <h2>Word Lid van Keep It Real</h2>
+                    <h2>Word lid van Keep It Real</h2>
 
                     <p>
                         Wil je deel uitmaken van ons team of meer informatie
@@ -231,7 +231,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         Neem <Link to="/contact">contact</Link> met ons op via
                         onze website of sociale media. Samen kunnen we het
                         verschil maken voor de jongeren van vandaag en morgen.{" "}
-                        <strong>Keep it real!</strong>
+                        <strong>Keep It Real!</strong>
                     </p>
                 </div>
 

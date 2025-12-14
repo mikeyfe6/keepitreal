@@ -52,15 +52,15 @@ const IndexPage: React.FC<PageProps> = () => {
                 <div>
                     <p>
                         Welkom bij <strong>Keep It Real</strong>, een programma
-                        dat jongeren een ervaring biedt die verder gaat dan
-                        traditioneel onderwijs. Ontstaan uit de visie van
-                        cultureel professional Wenner Regales, is Keep It Real
-                        een initiatief dat jongeren ondersteunt bij het maken
-                        van positieve keuzes en het grijpen van kansen. Geboren
-                        op Curaçao en deels opgegroeid in Amsterdam, begrijpt
-                        Wenner de uitdagingen waar jongeren mee te maken hebben.
-                        Zijn ervaring en netwerk hebben geleid tot de oprichting
-                        van Keep It Real.
+                        dat jongeren een leerervaring biedt die verder reikt dan
+                        het traditionele onderwijs. Vanuit de visie van
+                        cultureel professional Wenner Regales ontstond Keep It
+                        Real als initiatief dat jongeren stimuleert om positieve
+                        keuzes te maken en kansen te benutten. Wenner, geboren
+                        op Curaçao en deels opgegroeid in Amsterdam, weet als
+                        geen ander welke uitdagingen jongeren tegenkomen. Zijn
+                        achtergrond, ervaring en sterke netwerk vormden de basis
+                        voor de oprichting van Keep It Real.
                     </p>
                 </div>
 
@@ -78,7 +78,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                         : ""
                                 }
                             >
-                                Onze Missie
+                                Onze missie
                             </button>
                         </li>
                         <li>
@@ -90,7 +90,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                         : ""
                                 }
                             >
-                                Wat We Doen
+                                Wat we doen
                             </button>
                         </li>
                         <li>
@@ -114,7 +114,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                         : ""
                                 }
                             >
-                                Impact en Toekomst
+                                Impact en toekomst
                             </button>
                         </li>
                         <li>
@@ -126,7 +126,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                         : ""
                                 }
                             >
-                                Beluister onze Podcast
+                                Beluister onze podcast
                             </button>
                         </li>
                     </ul>
@@ -148,7 +148,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         activeSection === "mission" ? indexStyles.active : ""
                     }
                 >
-                    <h2>Onze Missie</h2>
+                    <h2>Onze missie</h2>
                     <p>
                         Bij Keep It Real geloven we in het belang van echte
                         ervaringen. Geen standaardlessen, maar een dag vol
@@ -165,7 +165,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         activeSection === "whatwedo" ? indexStyles.active : ""
                     }
                 >
-                    <h2>Wat We Doen</h2>
+                    <h2>Wat we doen</h2>
                     <ol>
                         <li>
                             <h3>KIR Take-overs</h3>
@@ -230,7 +230,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         activeSection === "impact" ? indexStyles.active : ""
                     }
                 >
-                    <h2>Impact en Toekomst</h2>
+                    <h2>Impact en toekomst</h2>
                     <p>
                         Keep It Real streeft naar een blijvende impact. We
                         werken samen met scholen en andere partners om ons
@@ -248,7 +248,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         activeSection === "podcast" ? indexStyles.active : ""
                     }
                 >
-                    <h2>Beluister onze Podcast</h2>
+                    <h2>Beluister onze podcast</h2>
                     <p>
                         Wil je meer horen over de verhalen achter Keep It Real
                         en de inspirerende mensen die deel uitmaken van ons
@@ -269,7 +269,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     <p>
                         Abonneer je op onze podcast via jouw favoriete platform
                         en blijf op de hoogte van de laatste afleveringen.{" "}
-                        <strong>Keep it real</strong> en luister mee!
+                        <strong>Keep It Real</strong> en luister mee!
                     </p>
                 </div>
             </div>
