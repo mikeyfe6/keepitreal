@@ -20,6 +20,7 @@
 
     .slogan {
         color: $white;
+        min-width: rem-calc(300);
         max-width: 100%;
         display: flex;
         flex-direction: column;
