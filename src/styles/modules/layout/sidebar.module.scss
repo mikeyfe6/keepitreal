@@ -255,6 +255,10 @@
                 rgba($secondary, 1%),
                 $primary
             );
+
+            > p > a {
+                @include text-link;
+            }
         }
 
         &#{$aside}-media {

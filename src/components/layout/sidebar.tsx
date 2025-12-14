@@ -228,7 +228,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     </p>
 
                     <p>
-                        Neem <Link to="/contact">contact</Link> met ons op via
+                        <Link to="/contact">Neem contact met ons op</Link> via
                         onze website of sociale media. Samen kunnen we het
                         verschil maken voor de jongeren van vandaag en morgen.{" "}
                         <strong>Keep It Real!</strong>
