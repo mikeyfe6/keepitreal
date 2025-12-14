@@ -1,13 +1,15 @@
 @use "../../customs/" as *;
 
 .about {
-    display: flex;
-    flex-direction: column;
-    gap: rem-calc(48);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem-calc(32);
+
+    @include laptop {
+        grid-template-columns: 1fr 1fr;
+    }
 
     > div {
-        max-width: rem-calc(775);
-
         @include border-radius;
         @include box-shadow;
         @include main-card;
@@ -101,16 +103,8 @@
             }
         }
 
-        &:nth-child(odd) {
-            align-self: flex-start;
-        }
-
-        &:nth-child(even) {
-            align-self: flex-end;
-        }
-
         &:last-child {
-            align-self: center;
+            grid-column: 1 / -1;
             max-width: 100%;
 
             h2 {
