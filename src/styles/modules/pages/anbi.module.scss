@@ -1,7 +1,12 @@
 @use "../../customs/" as *;
 
 .anbi {
+    display: flex;
+    justify-content: center;
+
     > div {
+        max-width: rem-calc(800);
+
         @include border-radius;
         @include box-shadow;
         @include main-card;

@@ -1,15 +1,14 @@
 @use "../../customs/" as *;
 
 .about {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: rem-calc(32);
-
-    @include laptop {
-        grid-template-columns: 1fr 1fr;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(48);
 
     > div {
+        max-width: rem-calc(800);
+        align-self: center;
+
         @include border-radius;
         @include box-shadow;
         @include main-card;
@@ -104,7 +103,7 @@
         }
 
         &:last-child {
-            grid-column: 1 / -1;
+            align-self: center;
             max-width: 100%;
 
             h2 {
