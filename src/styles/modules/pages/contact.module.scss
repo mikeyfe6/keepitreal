@@ -2,7 +2,7 @@
 
 .contact {
     display: flex;
-    gap: rem-calc(32);
+    gap: rem-calc(36);
     flex-direction: column-reverse;
 
     @include phablet {

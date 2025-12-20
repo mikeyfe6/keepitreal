@@ -3,7 +3,11 @@
 .about {
     display: flex;
     flex-direction: column;
-    gap: rem-calc(48);
+    gap: rem-calc(36);
+
+    @include tablet {
+        gap: rem-calc(48);
+    }
 
     > div {
         max-width: rem-calc(800);
