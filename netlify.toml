@@ -1,8 +1,8 @@
 [build.environment]
-NODE_VERSION = "22.0.0" # Stabiele moderne versie
-NPM_VERSION = "11.12.1" # - latest NPM version
-YARN_VERSION = "4.13.0"
-COREPACK_ENABLE = "1"   # CRUCIAAL voor Yarn 4
+NODE_VERSION = "24.14.1" # - latest NODE version
+NPM_VERSION = "11.12.1"  # - latest NPM version
+YARN_VERSION = "4.13.0"  # - latest YARN version
+COREPACK_ENABLE = "1"
 
 [build]
 publish = "public"
