@@ -44,21 +44,25 @@
     "gatsby-source-contentful": "^8.17.0",
     "gatsby-source-filesystem": "^5.16.0",
     "gatsby-transformer-sharp": "^5.16.0",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "resend": "^6.11.0",
-    "sass": "^1.99.0"
+    "react": "18",
+    "react-dom": "18",
+    "resend": "^6.12.0",
+    "sass": "^1.99.0",
+    "sharp": "0.32.6"
   },
   "devDependencies": {
-    "@types/google.maps": "^3.58.1",
+    "@babel/core": "^7.29.0",
+    "@types/babel__core": "^7",
+    "@types/google.maps": "^3.64.0",
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/vimeo__player": "^2.18.3",
-    "stylelint": "^17.7.0",
+    "postcss": "^8.5.10",
+    "stylelint": "^17.8.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^17.0.0",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   },
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.14.1"
 }
