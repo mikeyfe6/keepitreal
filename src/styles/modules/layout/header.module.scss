@@ -150,7 +150,7 @@
 
             &.open {
                 display: block;
-                padding: (64 0);
+                padding: (64 0 96);
 
                 @include phablet {
                     display: none;

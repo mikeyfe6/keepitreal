@@ -46,7 +46,7 @@
     "gatsby-transformer-sharp": "^5.16.0",
     "react": "18",
     "react-dom": "18",
-    "resend": "^6.12.0",
+    "resend": "^6.12.2",
     "sass": "^1.99.0",
     "sharp": "0.32.6"
   },

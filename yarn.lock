@@ -10414,15 +10414,15 @@ __metadata:
   linkType: hard
 
 "jsonfile@npm:^6.0.1":
-  version: 6.2.0
-  resolution: "jsonfile@npm:6.2.0"
+  version: 6.2.1
+  resolution: "jsonfile@npm:6.2.1"
   dependencies:
     graceful-fs: "npm:^4.1.6"
     universalify: "npm:^2.0.0"
   dependenciesMeta:
     graceful-fs:
       optional: true
-  checksum: 10c0/7f4f43b08d1869ded8a6822213d13ae3b99d651151d77efd1557ced0889c466296a7d9684e397bd126acf5eb2cfcb605808c3e681d0fdccd2fe5a04b47e76c0d
+  checksum: 10c0/e1abf000ecee9942d4d028a8e02dc752617face227d72afd1cfb2187e2433079e625bf82b807a313689db71b6472c6b2b389a2340d2798737b1199a39631c28a
   languageName: node
   linkType: hard
 
@@ -10483,7 +10483,7 @@ __metadata:
     postcss: "npm:^8.5.10"
     react: "npm:18"
     react-dom: "npm:18"
-    resend: "npm:^6.12.0"
+    resend: "npm:^6.12.2"
     sass: "npm:^1.99.0"
     sharp: "npm:0.32.6"
     stylelint: "npm:^17.8.0"
@@ -13688,9 +13688,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resend@npm:^6.12.0":
-  version: 6.12.0
-  resolution: "resend@npm:6.12.0"
+"resend@npm:^6.12.2":
+  version: 6.12.2
+  resolution: "resend@npm:6.12.2"
   dependencies:
     postal-mime: "npm:2.7.4"
     svix: "npm:1.90.0"
@@ -13699,7 +13699,7 @@ __metadata:
   peerDependenciesMeta:
     "@react-email/render":
       optional: true
-  checksum: 10c0/bb837b126c80ad555b46ce0b1a580d2a6fc858ff80ca2d9ed50ecb588ae7e827008ab87caf0e79ef078379c083aa5cb8f39ec86bdee09da8ca73fb7a030811f5
+  checksum: 10c0/24de17d936aa03727b466d8dc44bd18151d5d0c8a5fd2318b9eb67780ce9d1eddc0b0b862083319fb99439c0112d115106ecea93d2f66ac7b30fb50844b5ba5c
   languageName: node
   linkType: hard
 
