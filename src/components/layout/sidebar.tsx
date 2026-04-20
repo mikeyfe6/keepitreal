@@ -17,10 +17,7 @@ interface SidebarProps {
     activeSection: string;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({
-    handleLegendClick,
-    activeSection,
-}) => {
+const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) => {
     const {
         // omarmprijs,
         backToSchool,
@@ -117,11 +114,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         <li>
                             <button
                                 onClick={() => handleLegendClick("mission")}
-                                className={
-                                    activeSection === "mission"
-                                        ? sidebarStyles.active
-                                        : ""
-                                }
+                                className={activeSection === "mission" ? sidebarStyles.active : ""}
                             >
                                 Onze missie
                             </button>
@@ -129,11 +122,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         <li>
                             <button
                                 onClick={() => handleLegendClick("whatwedo")}
-                                className={
-                                    activeSection === "whatwedo"
-                                        ? sidebarStyles.active
-                                        : ""
-                                }
+                                className={activeSection === "whatwedo" ? sidebarStyles.active : ""}
                             >
                                 <u>Wat We Doen</u>
                             </button>
@@ -152,11 +141,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         <li>
                             <button
                                 onClick={() => handleLegendClick("ourteam")}
-                                className={
-                                    activeSection === "ourteam"
-                                        ? sidebarStyles.active
-                                        : ""
-                                }
+                                className={activeSection === "ourteam" ? sidebarStyles.active : ""}
                             >
                                 Onze teamleden
                             </button>
@@ -164,11 +149,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         <li>
                             <button
                                 onClick={() => handleLegendClick("impact")}
-                                className={
-                                    activeSection === "impact"
-                                        ? sidebarStyles.active
-                                        : ""
-                                }
+                                className={activeSection === "impact" ? sidebarStyles.active : ""}
                             >
                                 Impact en toekomst
                             </button>
@@ -176,13 +157,17 @@ const Sidebar: React.FC<SidebarProps> = ({
                         <li>
                             <button
                                 onClick={() => handleLegendClick("podcast")}
-                                className={
-                                    activeSection === "podcast"
-                                        ? sidebarStyles.active
-                                        : ""
-                                }
+                                className={activeSection === "podcast" ? sidebarStyles.active : ""}
                             >
                                 Beluister onze podcast
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                onClick={() => handleLegendClick("partners")}
+                                className={activeSection === "partners" ? sidebarStyles.active : ""}
+                            >
+                                Onze partners
                             </button>
                         </li>
                     </ul>
@@ -222,15 +207,11 @@ const Sidebar: React.FC<SidebarProps> = ({
                 <div id="contact" className={sidebarStyles.asideContact}>
                     <h2>Word lid van Keep It Real</h2>
 
-                    <p>
-                        Wil je deel uitmaken van ons team of meer informatie
-                        over onze programma's?
-                    </p>
+                    <p>Wil je deel uitmaken van ons team of meer informatie over onze programma's?</p>
 
                     <p>
-                        <Link to="/contact">Neem contact met ons op</Link> via
-                        onze website of sociale media. Samen kunnen we het
-                        verschil maken voor de jongeren van vandaag en morgen.{" "}
+                        <Link to="/contact">Neem contact met ons op</Link> via onze website of sociale media. Samen
+                        kunnen we het verschil maken voor de jongeren van vandaag en morgen.{" "}
                         <strong>Keep It Real!</strong>
                     </p>
                 </div>
@@ -245,29 +226,29 @@ const Sidebar: React.FC<SidebarProps> = ({
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                Artikel Parool: "Keep It Real: Een uniek
-                                initiatief voor jongeren"{" "}
-                                <FontAwesomeIcon
-                                    icon={"square-arrow-up-right"}
-                                />
+                                Artikel Parool: "Keep It Real: Een uniek initiatief voor jongeren"{" "}
+                                <FontAwesomeIcon icon={"square-arrow-up-right"} />
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div id="offer" className={sidebarStyles.asideOffer}>
+                    <p>
+                        Wij bieden ook trajecten op maat, werken binnen scholen en justitiële instellingen en trainen
+                        professionals.
+                    </p>
                 </div>
             </aside>
 
             <Modal
                 isOpen={isModalOpen}
                 onClose={handleCloseModal}
-                title={
-                    showSuccessMessage ? "" : "Aanmelden voor Back to School"
-                }
+                title={showSuccessMessage ? "" : "Aanmelden voor Back to School"}
             >
-                {showSuccessMessage ? (
+                {showSuccessMessage ?
                     <div>
                         <h3>
-                            <FontAwesomeIcon icon={"circle-check"} /> Aanmelding
-                            verstuurd!
+                            <FontAwesomeIcon icon={"circle-check"} /> Aanmelding verstuurd!
                         </h3>
                         <p>Check je mail voor een bevestiging!</p>
                         <small>
@@ -275,15 +256,11 @@ const Sidebar: React.FC<SidebarProps> = ({
                             {countdown !== 1 ? "n" : ""}...
                         </small>
                     </div>
-                ) : (
-                    <div>
+                :   <div>
                         <p>Vul het formulier hieronder in *</p>
-                        <EventForm
-                            onSuccess={handleRegistrationSuccess}
-                            eventName="Back to School"
-                        />
+                        <EventForm onSuccess={handleRegistrationSuccess} eventName="Back to School" />
                     </div>
-                )}
+                }
             </Modal>
         </>
     );

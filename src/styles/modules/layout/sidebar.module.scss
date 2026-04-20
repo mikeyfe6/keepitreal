@@ -15,8 +15,7 @@
     }
 
     > div {
-        @include border-radius;
-        @include box-shadow(1);
+        color: $white;
 
         > h2 {
             @include fluid-typing(22, 24);
@@ -24,16 +23,15 @@
 
         &:not(:has(iframe)) {
             padding: rem-calc(32 28);
+
+            @include border-radius;
+            @include box-shadow(1);
         }
 
         &#{$aside}-legend {
             display: none;
             padding: rem-calc(40 28);
-            background: linear-gradient(
-                to left,
-                rgba($tertiary, 87.5%),
-                $secondary
-            );
+            background: linear-gradient(to left, rgba($tertiary, 87.5%), $secondary);
 
             @include border-radius;
             @include box-shadow(1);
@@ -172,8 +170,7 @@
                                         height: 0;
                                         border-top: 6px solid transparent;
                                         border-bottom: 6px solid transparent;
-                                        border-right: 10px solid
-                                            rgba($primary, 0.5);
+                                        border-right: 10px solid rgba($primary, 0.5);
                                         position: absolute;
                                         top: 50%;
                                         right: rem-calc(-20);
@@ -188,11 +185,7 @@
         }
 
         &#{$aside}-actual {
-            background: linear-gradient(
-                to left,
-                rgba($secondary, 1%),
-                $primary
-            );
+            background: linear-gradient(to left, rgba($secondary, 1%), $primary);
 
             > h2 {
                 @include underline($color: $primary);
@@ -243,6 +236,7 @@
 
         &#{$aside}-podcast {
             display: none;
+            height: rem-calc(80);
 
             @include phablet {
                 display: block;
@@ -250,11 +244,7 @@
         }
 
         &#{$aside}-contact {
-            background: linear-gradient(
-                to left,
-                rgba($secondary, 1%),
-                $primary
-            );
+            background: linear-gradient(to left, rgba($secondary, 75%), $primary);
 
             > p > a {
                 @include text-link;
@@ -281,6 +271,10 @@
                     align-self: flex-end;
                 }
             }
+        }
+
+        &#{$aside}-offer {
+            background-color: rgba($tertiary, 1);
         }
     }
 }

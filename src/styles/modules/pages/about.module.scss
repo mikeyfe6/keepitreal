@@ -14,7 +14,7 @@
         align-self: center;
 
         @include border-radius;
-        @include box-shadow;
+        @include box-shadow(1);
         @include main-card;
 
         .show-on-mobile {

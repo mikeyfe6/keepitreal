@@ -1672,13 +1672,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/react-fontawesome@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "@fortawesome/react-fontawesome@npm:3.3.0"
+"@fortawesome/react-fontawesome@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "@fortawesome/react-fontawesome@npm:3.3.1"
   peerDependencies:
     "@fortawesome/fontawesome-svg-core": ~6 || ~7
     react: ^18.0.0 || ^19.0.0
-  checksum: 10c0/6c35b9197ee64afc3afad85dee644938c51938cbf2e851c878eed5dd9afba5d1da88a46aca3c3cd88af9e7de16798910d27ef2a45047dd0ef36de070f51f71c0
+  checksum: 10c0/aaa4d907418829367177dc1a34c3446377582ec0127ba1c510b29927059557ecf49eec2fed5d737002bec1e5360a57607909aac1b616c7f4039e3b0f9732c98c
   languageName: node
   linkType: hard
 
@@ -4386,14 +4386,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.15.0, axios@npm:^1.6.4":
-  version: 1.15.0
-  resolution: "axios@npm:1.15.0"
+"axios@npm:^1.15.0, axios@npm:^1.15.1, axios@npm:^1.6.4":
+  version: 1.15.1
+  resolution: "axios@npm:1.15.1"
   dependencies:
     follow-redirects: "npm:^1.15.11"
     form-data: "npm:^4.0.5"
     proxy-from-env: "npm:^2.1.0"
-  checksum: 10c0/47e0f860e98d4d7aa145e89ce0cae00e1fb0f1d2485f065c21fce955ddb1dba4103a46bd0e47acd18a27208a7f62c96249e620db575521b92a968619ab133409
+  checksum: 10c0/f8b5f3aa954cc1da283e32ad81882967a371dfec7dcc75174fcae93093daeb5399aec2ec587d04779f46b00ff1c297ac9edf3fa596452d6a3d455ce5b58093a4
   languageName: node
   linkType: hard
 
@@ -10453,7 +10453,7 @@ __metadata:
     "@fortawesome/fontawesome-svg-core": "npm:^7.2.0"
     "@fortawesome/free-brands-svg-icons": "npm:^7.2.0"
     "@fortawesome/free-solid-svg-icons": "npm:^7.2.0"
-    "@fortawesome/react-fontawesome": "npm:^3.3.0"
+    "@fortawesome/react-fontawesome": "npm:^3.3.1"
     "@googlemaps/js-api-loader": "npm:^2.0.2"
     "@netlify/functions": "npm:^5.2.0"
     "@types/babel__core": "npm:^7"
@@ -10463,7 +10463,7 @@ __metadata:
     "@types/react-dom": "npm:^19.2.3"
     "@types/vimeo__player": "npm:^2.18.3"
     "@vimeo/player": "npm:^2.30.3"
-    axios: "npm:^1.15.0"
+    axios: "npm:^1.15.1"
     gatsby: "npm:^5.16.1"
     gatsby-adapter-netlify: "npm:^1.4.0"
     gatsby-plugin-canonical-urls: "npm:^5.16.0"
@@ -13921,15 +13921,15 @@ __metadata:
   linkType: hard
 
 "safe-array-concat@npm:^1.1.3":
-  version: 1.1.3
-  resolution: "safe-array-concat@npm:1.1.3"
+  version: 1.1.4
+  resolution: "safe-array-concat@npm:1.1.4"
   dependencies:
-    call-bind: "npm:^1.0.8"
-    call-bound: "npm:^1.0.2"
-    get-intrinsic: "npm:^1.2.6"
+    call-bind: "npm:^1.0.9"
+    call-bound: "npm:^1.0.4"
+    get-intrinsic: "npm:^1.3.0"
     has-symbols: "npm:^1.1.0"
     isarray: "npm:^2.0.5"
-  checksum: 10c0/43c86ffdddc461fb17ff8a17c5324f392f4868f3c7dd2c6a5d9f5971713bc5fd755667212c80eab9567595f9a7509cc2f83e590ddaebd1bd19b780f9c79f9a8d
+  checksum: 10c0/95fb4904ab1d9360a666fe5ba6d88f1c4a3a39682739e4512cff809fc6b5722a94bd95189211015bfb45859a7ffbc3340ea303ae22721c91c59e8946d310975a
   languageName: node
   linkType: hard
 

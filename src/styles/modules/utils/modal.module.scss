@@ -20,7 +20,7 @@
         overflow-y: auto;
         position: relative;
 
-        @include box-shadow;
+        @include box-shadow(1);
         @include border-radius;
     }
 

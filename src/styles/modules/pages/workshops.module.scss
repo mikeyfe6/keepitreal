@@ -23,13 +23,22 @@
         &.codeswitching,
         &.teambuilding,
         &.knowyourself,
-        &.streetcodes {
+        &.streetcodes,
+        &.betweenstreetandme {
             display: flex;
             margin: rem-calc(24 0);
 
             ul {
                 margin: rem-calc(6 0 16);
             }
+        }
+
+        &.codeswitching,
+        &.teambuilding,
+        &.knowyourself,
+        &.streetcodes,
+        &.betweenstreetandme {
+            scroll-margin-top: rem-calc(225);
         }
 
         &.introduction {
@@ -150,6 +159,7 @@
         &.codeswitching {
             flex-direction: column;
             align-items: center;
+            scroll-margin-top: rem-calc(225);
 
             @include phablet {
                 gap: rem-calc(40);
@@ -225,6 +235,7 @@
         &.teambuilding {
             flex-wrap: wrap;
             gap: rem-calc(36);
+            scroll-margin-top: rem-calc(225);
 
             @include tablet {
                 flex-wrap: nowrap;
@@ -256,7 +267,7 @@
                         width: rem-calc(250);
 
                         @include mobile {
-                            width: rem-calc(350);
+                            width: rem-calc(425);
                         }
                     }
 
@@ -271,6 +282,7 @@
         &.knowyourself {
             flex-direction: column;
             align-items: center;
+            scroll-margin-top: rem-calc(225);
 
             @include mobile {
                 gap: rem-calc(60);
@@ -340,6 +352,7 @@
         &.streetcodes {
             flex-direction: column;
             gap: rem-calc(48);
+            scroll-margin-top: rem-calc(225);
 
             @include laptop {
                 flex-direction: row;
@@ -393,6 +406,10 @@
                     }
                 }
             }
+        }
+
+        &.betweenstreetandme {
+            scroll-margin-top: rem-calc(225);
         }
 
         &:last-child {

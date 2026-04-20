@@ -25,13 +25,13 @@
                     white-space: nowrap;
                     text-align: center;
                     font-weight: bold;
+                    color: $white;
 
                     @include border-radius;
                     @include box-shadow(1);
 
                     &:hover {
                         background-color: rgba($tertiary, 0.825);
-                        color: $white;
                     }
                 }
             }
@@ -64,6 +64,7 @@
                 gap: rem-calc(20 32);
                 width: 100%;
                 padding: rem-calc(40 24);
+                color: $white;
 
                 @include border-radius;
 

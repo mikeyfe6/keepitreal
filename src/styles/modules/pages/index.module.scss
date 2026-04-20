@@ -15,7 +15,7 @@
         &#{$index}-anchors {
             display: flex;
             align-items: center;
-            gap: rem-calc(24);
+            gap: rem-calc(12);
 
             @include phablet {
                 display: none;
@@ -25,11 +25,9 @@
                 margin-bottom: 0;
                 white-space: nowrap;
                 padding: rem-calc(8 20);
-                background: linear-gradient(
-                    to left,
-                    rgba($tertiary, 87.5%),
-                    $secondary
-                );
+                background: linear-gradient(to left, rgba($tertiary, 87.5%), $secondary);
+                opacity: 0.9;
+                color: $white;
 
                 @include border-radius;
 
@@ -63,7 +61,7 @@
                     a,
                     button {
                         padding: rem-calc(8 20);
-                        background: rgba($white, 0.1);
+                        background: rgba($primary, 0.1);
                         border: 2px solid transparent;
                         font-size: rem-calc(16);
                         font-weight: 600;
@@ -72,12 +70,12 @@
                         @include smooth-trans;
 
                         &:hover {
-                            background: rgba($white, 0.2);
+                            background: rgba($primary, 0.2);
                         }
 
                         &:focus,
                         &.active {
-                            background: rgba($white, 0.825);
+                            background: rgba($primary, 0.3);
                             color: $primary;
                         }
                     }
@@ -90,6 +88,31 @@
 
             @include phablet {
                 display: none;
+            }
+        }
+
+        &#{$index}-results {
+            > div {
+                display: flex;
+                gap: rem-calc(24);
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                > div {
+                    background-color: rgba($primary, 0.825);
+                    color: $white;
+                    padding: rem-calc(24 16);
+                    flex: 1;
+
+                    @include border-radius;
+
+                    p {
+                        white-space: nowrap;
+                        font-size: rem-calc(16);
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                }
             }
         }
 

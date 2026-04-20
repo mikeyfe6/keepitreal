@@ -133,7 +133,7 @@
         aspect-ratio: 15.9 / 9;
 
         @include border-radius(5px);
-        @include box-shadow;
+        @include box-shadow(1);
 
         iframe {
             height: 100%;
