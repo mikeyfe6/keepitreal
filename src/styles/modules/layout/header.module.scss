@@ -211,11 +211,11 @@
                 background: none;
                 border: none;
                 color: $tertiary;
-                cursor: pointer;
                 padding: rem-calc(4);
                 display: flex;
                 align-items: center;
                 transition: transform 0.2s ease;
+                cursor: pointer;
 
                 &-open {
                     transform: rotate(180deg);

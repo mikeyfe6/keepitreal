@@ -32,6 +32,12 @@ const Header: React.FC = () => {
         setIsOffersOpen(!isOffersOpen);
     };
 
+    const closeMobileMenu = () => {
+        setIsOpen(false);
+        setIsWorkshopsOpen(false);
+        setIsOffersOpen(false);
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 37.5) {
@@ -184,19 +190,29 @@ const Header: React.FC = () => {
                             {isWorkshopsOpen && (
                                 <ul className={headerStyles.mobileSubmenu}>
                                     <li>
-                                        <Link to="/workshops/#codeswitching">Code Switching</Link>
+                                        <Link to="/workshops/#codeswitching" onClick={closeMobileMenu}>
+                                            Code Switching
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/workshops/#teambuilding">Team Building X Genge Art</Link>
+                                        <Link to="/workshops/#teambuilding" onClick={closeMobileMenu}>
+                                            Team Building X Genge Art
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/workshops/#kenjezelf">Ken Jezelf</Link>
+                                        <Link to="/workshops/#kenjezelf" onClick={closeMobileMenu}>
+                                            Ken Jezelf
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/workshops/#straatcodes">Straatcodes</Link>
+                                        <Link to="/workshops/#straatcodes" onClick={closeMobileMenu}>
+                                            Straatcodes
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/workshops/#tussen-de-straat-en-ik">Tussen de straat en ik</Link>
+                                        <Link to="/workshops/#tussen-de-straat-en-ik" onClick={closeMobileMenu}>
+                                            Tussen de straat en ik
+                                        </Link>
                                     </li>
                                 </ul>
                             )}
@@ -220,16 +236,24 @@ const Header: React.FC = () => {
                             {isOffersOpen && (
                                 <ul className={headerStyles.mobileSubmenu}>
                                     <li>
-                                        <Link to="/#!">Workshops jongeren</Link>
+                                        <Link to="/#!" onClick={closeMobileMenu}>
+                                            Workshops jongeren
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/#!">Trainingen professionals</Link>
+                                        <Link to="/#!" onClick={closeMobileMenu}>
+                                            Trainingen professionals
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/#!">Persoonlijke begeleiding</Link>
+                                        <Link to="/#!" onClick={closeMobileMenu}>
+                                            Persoonlijke begeleiding
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/#!">Op maat trajecten</Link>
+                                        <Link to="/#!" onClick={closeMobileMenu}>
+                                            Op maat trajecten
+                                        </Link>
                                     </li>
                                 </ul>
                             )}

@@ -38,7 +38,15 @@
         &.knowyourself,
         &.streetcodes,
         &.betweenstreetandme {
-            scroll-margin-top: rem-calc(225);
+            scroll-margin-top: rem-calc(175);
+
+            @include mobile {
+                scroll-margin-top: rem-calc(200);
+            }
+
+            @include tablet {
+                scroll-margin-top: rem-calc(225);
+            }
         }
 
         &.introduction {
@@ -159,7 +167,6 @@
         &.codeswitching {
             flex-direction: column;
             align-items: center;
-            scroll-margin-top: rem-calc(225);
 
             @include phablet {
                 gap: rem-calc(40);
@@ -235,7 +242,6 @@
         &.teambuilding {
             flex-wrap: wrap;
             gap: rem-calc(36);
-            scroll-margin-top: rem-calc(225);
 
             @include tablet {
                 flex-wrap: nowrap;
@@ -282,7 +288,6 @@
         &.knowyourself {
             flex-direction: column;
             align-items: center;
-            scroll-margin-top: rem-calc(225);
 
             @include mobile {
                 gap: rem-calc(60);
@@ -352,7 +357,6 @@
         &.streetcodes {
             flex-direction: column;
             gap: rem-calc(48);
-            scroll-margin-top: rem-calc(225);
 
             @include laptop {
                 flex-direction: row;
@@ -406,10 +410,6 @@
                     }
                 }
             }
-        }
-
-        &.betweenstreetandme {
-            scroll-margin-top: rem-calc(225);
         }
 
         &:last-child {
