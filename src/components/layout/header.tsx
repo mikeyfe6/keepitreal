@@ -184,7 +184,7 @@ const Header: React.FC = () => {
                                         isWorkshopsOpen ? headerStyles.mobileChevronOpen : ""
                                     }`}
                                 >
-                                    <FontAwesomeIcon icon={"chevron-down"} size="sm" />
+                                    <FontAwesomeIcon icon={"chevron-down"} />
                                 </button>
                             </div>
                             {isWorkshopsOpen && (
@@ -230,7 +230,7 @@ const Header: React.FC = () => {
                                         isOffersOpen ? headerStyles.mobileChevronOpen : ""
                                     }`}
                                 >
-                                    <FontAwesomeIcon icon={"chevron-down"} size="sm" />
+                                    <FontAwesomeIcon icon={"chevron-down"} />
                                 </button>
                             </div>
                             {isOffersOpen && (
