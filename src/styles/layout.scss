@@ -44,8 +44,8 @@ body {
     &__logo {
         position: absolute;
         bottom: rem-calc(187.5);
-        right: rem-calc(25);
-        max-width: rem-calc(250);
+        right: rem-calc(0);
+        max-width: rem-calc(200);
         opacity: 0.1;
         z-index: -1;
         mask-image: linear-gradient(165deg, transparent, black);
