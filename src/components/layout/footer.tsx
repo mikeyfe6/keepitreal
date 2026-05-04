@@ -7,14 +7,7 @@ import { useSiteMetadata } from "../../hooks/use-site-metadata";
 import * as footerStyles from "../../styles/modules/layout/footer.module.scss";
 
 const Footer: React.FC = () => {
-    const {
-        title,
-        facebookUrl,
-        instagramUrl,
-        tiktokUrl,
-        youtubeUrl,
-        spotifyUrl,
-    } = useSiteMetadata();
+    const { title, facebookUrl, instagramUrl, tiktokUrl, youtubeUrl, spotifyUrl } = useSiteMetadata();
 
     const currentYear = new Date().getFullYear();
 
@@ -26,63 +19,28 @@ const Footer: React.FC = () => {
                 </p>
                 <ul>
                     <li>
-                        <a
-                            href={instagramUrl}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <FontAwesomeIcon
-                                icon={["fab", "instagram"]}
-                                size="xl"
-                            />
+                        <a href={instagramUrl} rel="noopener noreferrer" target="_blank">
+                            <FontAwesomeIcon icon={["fab", "instagram"]} size="xl" />
                         </a>
                     </li>
                     <li>
-                        <a
-                            href={facebookUrl}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <FontAwesomeIcon
-                                icon={["fab", "facebook"]}
-                                size="lg"
-                            />
+                        <a href={facebookUrl} rel="noopener noreferrer" target="_blank">
+                            <FontAwesomeIcon icon={["fab", "facebook"]} size="lg" />
                         </a>
                     </li>
                     <li>
-                        <a
-                            href={tiktokUrl}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <FontAwesomeIcon
-                                icon={["fab", "tiktok"]}
-                                size="lg"
-                            />
+                        <a href={tiktokUrl} rel="noopener noreferrer" target="_blank">
+                            <FontAwesomeIcon icon={["fab", "tiktok"]} size="lg" />
                         </a>
                     </li>
                     <li>
-                        <a
-                            href={youtubeUrl}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <FontAwesomeIcon
-                                icon={["fab", "youtube"]}
-                                size="lg"
-                            />
+                        <a href={youtubeUrl} rel="noopener noreferrer" target="_blank">
+                            <FontAwesomeIcon icon={["fab", "youtube"]} size="lg" />
                         </a>
                     </li>
                     <li>
-                        <a
-                            href={spotifyUrl}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <FontAwesomeIcon
-                                icon={["fab", "spotify"]}
-                                size="lg"
-                            />
+                        <a href={spotifyUrl} rel="noopener noreferrer" target="_blank">
+                            <FontAwesomeIcon icon={["fab", "spotify"]} size="lg" />
                         </a>
                     </li>
                 </ul>

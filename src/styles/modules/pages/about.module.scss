@@ -14,14 +14,14 @@
         align-self: center;
 
         @include border-radius;
-        @include box-shadow;
+        @include box-shadow(1);
         @include main-card;
 
         .show-on-mobile {
             display: block;
             margin-bottom: rem-calc(20);
             padding-bottom: rem-calc(16);
-            border-bottom: 1px solid rgba($white, 0.825);
+            border-bottom: 1px solid rgba($primary, 0.825);
 
             @include mobile {
                 display: none;

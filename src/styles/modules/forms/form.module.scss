@@ -14,7 +14,7 @@
             top: rem-calc(-32);
             left: 0;
             width: 25%;
-            height: 3px;
+            height: rem-calc(3);
             background: rgba($tertiary, 1);
         }
 
@@ -26,7 +26,7 @@
             input,
             textarea {
                 width: 100%;
-                background: rgba($white, 0.15);
+                background: rgba($primary, 0.05);
                 padding: rem-calc(14);
                 resize: none;
 
@@ -42,7 +42,7 @@
                 align-self: flex-end;
 
                 > button {
-                    @include button;
+                    @include button(2);
                 }
             }
         }
@@ -121,7 +121,8 @@
                             border-radius: 50%;
                             background-color: $white;
                             position: relative;
-                            transition: border-color 0.2s ease,
+                            transition:
+                                border-color 0.2s ease,
                                 box-shadow 0.2s ease;
                             display: inline-block;
 
@@ -138,7 +139,8 @@
                                     height: rem-calc(16);
                                     border-radius: 50%;
                                     background-color: rgba($secondary, 0.8);
-                                    transition: background-color 0.2s ease,
+                                    transition:
+                                        background-color 0.2s ease,
                                         transform 0.2s ease;
                                     outline: none;
                                     box-shadow: 0 0 0 3px rgba($secondary, 0.3);

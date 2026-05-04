@@ -4,13 +4,7 @@ import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 import * as lightBoxStyles from "../../styles/modules/utils/lightbox.module.scss";
 
-const LightBox = ({
-    image,
-    alt,
-}: {
-    image: IGatsbyImageData | undefined;
-    alt: string;
-}) => {
+const LightBox = ({ image, alt }: { image: IGatsbyImageData | undefined; alt: string }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
@@ -33,25 +27,15 @@ const LightBox = ({
     return (
         <>
             {imageData && (
-                <div
-                    onClick={openModal}
-                    className={lightBoxStyles.lightboxThumbnail}
-                >
+                <div onClick={openModal} className={lightBoxStyles.lightboxThumbnail}>
                     <GatsbyImage image={imageData} alt={alt} />
                 </div>
             )}
 
             {isModalOpen && imageData && (
-                <div
-                    className={`${lightBoxStyles.lightboxModal} modal`}
-                    data-main-modal
-                    onClick={handleBackdropClick}
-                >
+                <div className={`${lightBoxStyles.lightboxModal} modal`} data-main-modal onClick={handleBackdropClick}>
                     <div className={lightBoxStyles.lightboxContent}>
-                        <span
-                            className={lightBoxStyles.lightboxClose}
-                            onClick={closeModal}
-                        >
+                        <span className={lightBoxStyles.lightboxClose} onClick={closeModal}>
                             &times;
                         </span>
                         {imageData && (

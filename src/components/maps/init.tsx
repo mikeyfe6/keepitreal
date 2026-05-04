@@ -1,14 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
-if (typeof window !== "undefined") {
+if (globalThis.window !== undefined) {
     import("@googlemaps/js-api-loader").then(({ setOptions }) => {
         setOptions({
             key: process.env.GATSBY_GOOGLE_MAPS_KEY || "",
             v: "weekly",
-            mapIds: process.env.GATSBY_GOOGLE_MAPS_ID
-                ? [process.env.GATSBY_GOOGLE_MAPS_ID]
-                : undefined,
+            mapIds: process.env.GATSBY_GOOGLE_MAPS_ID ? [process.env.GATSBY_GOOGLE_MAPS_ID] : undefined,
         });
     });
 }
@@ -19,18 +17,13 @@ interface GoogleMapProps {
     markers?: { lat: number; lng: number; imageUrl?: string }[];
 }
 
-const GoogleMap: React.FC<GoogleMapProps> = ({
-    center,
-    zoom,
-    markers = [],
-}) => {
-    const { companyName, street, postalCode, city, country } =
-        useSiteMetadata();
+const GoogleMap: React.FC<GoogleMapProps> = ({ center, zoom, markers = [] }) => {
+    const { companyName, street, postalCode, city, country } = useSiteMetadata();
     const mapRef = useRef<HTMLDivElement>(null);
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-        setIsClient(typeof window !== "undefined");
+        setIsClient(globalThis.window !== undefined);
     }, []);
 
     useEffect(() => {
@@ -41,14 +34,13 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
         (async () => {
             const { importLibrary } = await import("@googlemaps/js-api-loader");
 
-            const [{ Map, InfoWindow }, { AdvancedMarkerElement }] =
-                await Promise.all([
-                    importLibrary("maps"),
-                    importLibrary("marker"),
-                ]);
+            const [{ Map: GoogleMaps, InfoWindow }, { AdvancedMarkerElement }] = await Promise.all([
+                importLibrary("maps"),
+                importLibrary("marker"),
+            ]);
 
             if (mapRef.current && isMounted) {
-                const map = new Map(mapRef.current, {
+                const map = new GoogleMaps(mapRef.current, {
                     mapId: process.env.GATSBY_GOOGLE_MAPS_ID || "",
                     center,
                     zoom,
@@ -70,13 +62,13 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
                     });
 
                     const markerUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                        street + ", " + postalCode + " " + city
+                        street + ", " + postalCode + " " + city,
                     )}`;
 
                     advancedMarker.addEventListener("gmp-click", () => {
                         infoWindow.close();
                         infoWindow.setContent(`
-                                    <div style="padding:4px 8px;font-size:12px;border-radius:3px;line-height:1.4;background:#162987;">
+                                    <div style="padding:4px 8px;font-size:12px;border-radius:3px;line-height:1.4;background:#662d92;">
                                         <span style="font-weight:bold;color:#fff;">${companyName}</span><br/>
                                         ${street}, ${postalCode}<br/>
                                         ${city}, ${country}<br/>
@@ -94,27 +86,11 @@ const GoogleMap: React.FC<GoogleMapProps> = ({
         return () => {
             isMounted = false;
         };
-    }, [
-        isClient,
-        center,
-        zoom,
-        markers,
-        companyName,
-        street,
-        postalCode,
-        city,
-        country,
-    ]);
+    }, [isClient, center, zoom, markers, companyName, street, postalCode, city, country]);
 
     if (!isClient) return null;
 
-    return (
-        <div
-            ref={mapRef}
-            style={{ width: "100%", height: "100%" }}
-            className="gmaps"
-        />
-    );
+    return <div ref={mapRef} style={{ width: "100%", height: "100%" }} className="gmaps" />;
 };
 
 export default GoogleMap;

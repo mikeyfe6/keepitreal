@@ -23,12 +23,29 @@
         &.codeswitching,
         &.teambuilding,
         &.knowyourself,
-        &.streetcodes {
+        &.streetcodes,
+        &.betweenstreetandme {
             display: flex;
             margin: rem-calc(24 0);
 
             ul {
                 margin: rem-calc(6 0 16);
+            }
+        }
+
+        &.codeswitching,
+        &.teambuilding,
+        &.knowyourself,
+        &.streetcodes,
+        &.betweenstreetandme {
+            scroll-margin-top: rem-calc(175);
+
+            @include mobile {
+                scroll-margin-top: rem-calc(200);
+            }
+
+            @include tablet {
+                scroll-margin-top: rem-calc(225);
             }
         }
 
@@ -256,7 +273,7 @@
                         width: rem-calc(250);
 
                         @include mobile {
-                            width: rem-calc(350);
+                            width: rem-calc(425);
                         }
                     }
 

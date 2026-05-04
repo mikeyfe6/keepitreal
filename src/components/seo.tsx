@@ -50,17 +50,12 @@ export const Seo: React.FC<SEOProps> = ({
 
             {/* OPEN GRAPH META TAGS */}
             {seo.title && <meta property="og:title" content={seo.title} />}
-            {seo.description && (
-                <meta property="og:description" content={seo.description} />
-            )}
+            {seo.description && <meta property="og:description" content={seo.description} />}
             {seo.image && <meta property="og:image" content={seo.image} />}
             <meta property="og:site_name" content={siteTitle} />
             {seo.url && <meta property="og:url" content={seo.url} />}
             <meta property="og:locale" content="nl_NL" />
-            <meta
-                property="og:type"
-                content={article ? "article" : "website"}
-            />
+            <meta property="og:type" content={article ? "article" : "website"} />
 
             {/* TWITTER META TAGS */}
             <meta name="twitter:card" content="summary_large_image" />
@@ -68,12 +63,8 @@ export const Seo: React.FC<SEOProps> = ({
             <meta name="twitter:description" content={seo.description} />
             <meta name="twitter:image" content={seo.image} />
             {seo.url && <meta name="twitter:url" content={seo.url} />}
-            {seo.twitterUsername && (
-                <meta name="twitter:site" content={seo.twitterUsername} />
-            )}
-            {seo.twitterUsername && (
-                <meta name="twitter:creator" content={seo.twitterUsername} />
-            )}
+            {seo.twitterUsername && <meta name="twitter:site" content={seo.twitterUsername} />}
+            {seo.twitterUsername && <meta name="twitter:creator" content={seo.twitterUsername} />}
 
             {/* ROBOTS META TAG */}
             {noindex && <meta name="robots" content="noindex" />}

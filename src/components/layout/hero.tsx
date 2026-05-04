@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
 
     return (
         <section className={heroStyles.hero}>
-            <div className={heroStyles.slogan}>
+            {/* <div className={heroStyles.slogan}>
                 <h1>
                     Welkom bij <strong>KEEP IT REAL</strong>. Een programma
                     waarin jongeren talenten ontdekken en we het onderwijs
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
                 </div>
             </div>
 
-            <div className={heroStyles.line} />
+            <div className={heroStyles.line} /> */}
 
             <div className={heroStyles.visual}>
                 {/* <StaticImage
@@ -133,31 +133,15 @@ const Hero: React.FC = () => {
 
                 <div ref={playerRef} style={{ opacity: loading ? 0 : 1 }} />
                 {!loading && (
-                    <div
-                        className={heroStyles.controls}
-                        style={{ opacity: isPlaying ? 0.375 : 1 }}
-                    >
-                        <button
-                            onClick={handleFullscreen}
-                            title="Volledig Scherm"
-                        >
+                    <div className={heroStyles.controls} style={{ opacity: isPlaying ? 0.375 : 1 }}>
+                        <button onClick={handleFullscreen} title="Volledig Scherm">
                             <FontAwesomeIcon icon={"expand"} />
                         </button>
-                        <button
-                            onClick={isMuted ? handleUnmute : handleMute}
-                            title="Geluid Aan/Uit"
-                        >
-                            <FontAwesomeIcon
-                                icon={isMuted ? "volume-mute" : "volume-up"}
-                            />
+                        <button onClick={isMuted ? handleUnmute : handleMute} title="Geluid Aan/Uit">
+                            <FontAwesomeIcon icon={isMuted ? "volume-mute" : "volume-up"} />
                         </button>
-                        <button
-                            onClick={isPlaying ? handlePause : handlePlay}
-                            title="Afspelen/Pauzeren"
-                        >
-                            <FontAwesomeIcon
-                                icon={isPlaying ? "pause" : "play"}
-                            />
+                        <button onClick={isPlaying ? handlePause : handlePlay} title="Afspelen/Pauzeren">
+                            <FontAwesomeIcon icon={isPlaying ? "pause" : "play"} />
                         </button>
                     </div>
                 )}

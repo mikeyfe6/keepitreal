@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -133,10 +133,7 @@ const Cta: React.FC = () => {
                 </ul>
 
                 {isOverlayVisible && selectedItem && (
-                    <Overlay
-                        item={selectedItem}
-                        onClose={() => setIsOverlayVisible(false)}
-                    />
+                    <Overlay item={selectedItem} onClose={() => setIsOverlayVisible(false)} />
                 )}
             </div>
         </section>

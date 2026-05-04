@@ -23,15 +23,10 @@ import {
     faVolumeUp,
     faExpand,
     faCircleCheck,
+    faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
 
-import {
-    faInstagram,
-    faFacebook,
-    faTiktok,
-    faYoutube,
-    faSpotify,
-} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faFacebook, faTiktok, faYoutube, faSpotify } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
     faInstagram,
@@ -55,7 +50,8 @@ library.add(
     faVolumeMute,
     faVolumeUp,
     faExpand,
-    faCircleCheck
+    faCircleCheck,
+    faChevronDown,
 );
 
 import Header from "./layout/header";
@@ -73,11 +69,7 @@ interface LayoutProps {
     activeSection?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({
-    children,
-    handleLegendClick,
-    activeSection = "",
-}) => {
+const Layout: React.FC<LayoutProps> = ({ children, handleLegendClick, activeSection = "" }) => {
     const { pathname } = useLocation();
 
     return (
@@ -90,18 +82,12 @@ const Layout: React.FC<LayoutProps> = ({
                     <main>{children}</main>
 
                     {pathname === "/" && handleLegendClick && (
-                        <Sidebar
-                            handleLegendClick={handleLegendClick}
-                            activeSection={activeSection}
-                        />
+                        <Sidebar handleLegendClick={handleLegendClick} activeSection={activeSection} />
                     )}
                 </div>
 
                 <div className="keep-it-real__logo">
-                    <StaticImage
-                        src="../images/logo/KIR-light-icon.png"
-                        alt="Keep It Real Watermark"
-                    />
+                    <StaticImage src="../images/logo/KIR-light-icon.png" alt="Keep It Real Watermark" />
                 </div>
                 <Footer />
             </div>

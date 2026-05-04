@@ -13,8 +13,7 @@
     font-family: Montserrat;
     font-style: italic;
     font-weight: 100 900;
-    src: url("../fonts/Montserrat-Italic-VariableFont_wght.woff2")
-        format("woff2");
+    src: url("../fonts/Montserrat-Italic-VariableFont_wght.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -30,9 +29,8 @@ html {
 
 body {
     font-family: Montserrat, sans-serif;
-    background: linear-gradient(145deg, $primary 30%, $secondary 100%);
     min-width: rem-calc(320);
-    color: $white;
+    color: $black;
 
     @include container(rem-calc(1300));
 }
@@ -46,15 +44,15 @@ body {
     &__logo {
         position: absolute;
         bottom: rem-calc(187.5);
-        right: rem-calc(25);
-        max-width: rem-calc(250);
+        right: rem-calc(0);
+        max-width: rem-calc(200);
         opacity: 0.1;
         z-index: -1;
         mask-image: linear-gradient(165deg, transparent, black);
 
         @include phablet {
             bottom: rem-calc(100);
-            right: rem-calc(37.5);
+            right: rem-calc(12.5);
             max-width: rem-calc(300);
         }
     }
@@ -64,6 +62,7 @@ body {
         flex-direction: column;
         gap: rem-calc(32);
         margin: rem-calc(40 0 80);
+        flex: 1;
 
         @include phablet {
             gap: rem-calc(48);
@@ -96,13 +95,7 @@ main {
     li {
         letter-spacing: 0.125px;
 
-        &:not(
-                #workshops p,
-                #workshops span,
-                #workshops li,
-                #media li,
-                #anchors li
-            ) {
+        &:not(#workshops p, #workshops span, #workshops li, #media li, #anchors li) {
             max-width: 70ch;
         }
     }
@@ -113,13 +106,7 @@ main {
         }
 
         li {
-            &:not(
-                    #workshops > ul > li,
-                    #cta li,
-                    #events li,
-                    #media li,
-                    #anchors li
-                ) {
+            &:not(#workshops > ul > li, #cta li, #events li, #media li, #anchors li) {
                 margin-inline-start: rem-calc(16);
                 padding-left: rem-calc(8);
             }
@@ -170,8 +157,6 @@ iframe {
     &.spotify {
         aspect-ratio: 1;
         height: rem-calc(80);
-
-        @include box-shadow(1);
 
         &.w-margin {
             margin: rem-calc(32 0 28);

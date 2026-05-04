@@ -21,10 +21,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
     };
 
     return (
-        <div
-            className={`${modalStyles.modalOverlay} modal`}
-            onClick={handleBackdropClick}
-        >
+        <div className={`${modalStyles.modalOverlay} modal`} onClick={handleBackdropClick}>
             <div className={modalStyles.modalContent}>
                 <div className={modalStyles.modalHeader}>
                     {title && <h2>{title}</h2>}

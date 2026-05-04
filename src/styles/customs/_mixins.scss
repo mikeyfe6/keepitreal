@@ -41,8 +41,12 @@
     margin-right: -50vw;
 }
 
-@mixin border-radius($radius: 3px) {
+@mixin border-radius($radius: 5px) {
     border-radius: $radius;
+}
+
+@mixin border($width: 1.5px, $color: rgba($secondary, 0.125)) {
+    border: $width solid $color;
 }
 
 @mixin underline($offset: 7px, $thickness: 1px, $color: $primary) {
@@ -72,9 +76,10 @@
 
 @mixin box-shadow($type: 1) {
     @if $type == 1 {
-        box-shadow: 0 0 1em rgb(0 0 0 / 10%);
+        box-shadow: 0 0 0.5em rgb(0 0 0 / 10%);
     } @else if $type == 2 {
-        box-shadow: 0 4px 4px 0 rgb(172 178 185 / 50%),
+        box-shadow:
+            0 4px 4px 0 rgb(172 178 185 / 50%),
             0 0 8px 0 rgb(172 178 185 / 50%);
     }
 }
@@ -143,8 +148,9 @@
     background-color: $color;
     padding: rem-calc(36 24);
 
-    @include box-shadow;
+    @include border;
     @include border-radius;
+    @include box-shadow(1);
 
     @include mobile {
         padding: rem-calc(40 32);

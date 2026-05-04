@@ -23,11 +23,11 @@
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
-    "@fortawesome/react-fontawesome": "^3.3.0",
+    "@fortawesome/react-fontawesome": "^3.3.1",
     "@googlemaps/js-api-loader": "^2.0.2",
     "@netlify/functions": "^5.2.0",
-    "@vimeo/player": "^2.30.3",
-    "axios": "^1.15.0",
+    "@vimeo/player": "^2.30.4",
+    "axios": "^1.16.0",
     "gatsby": "^5.16.1",
     "gatsby-adapter-netlify": "^1.4.0",
     "gatsby-plugin-canonical-urls": "^5.16.0",
@@ -44,21 +44,25 @@
     "gatsby-source-contentful": "^8.17.0",
     "gatsby-source-filesystem": "^5.16.0",
     "gatsby-transformer-sharp": "^5.16.0",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "resend": "^6.11.0",
-    "sass": "^1.99.0"
+    "react": "18",
+    "react-dom": "18",
+    "resend": "^6.12.2",
+    "sass": "^1.99.0",
+    "sharp": "0.32.6"
   },
   "devDependencies": {
-    "@types/google.maps": "^3.58.1",
+    "@babel/core": "^7.29.0",
+    "@types/babel__core": "^7",
+    "@types/google.maps": "^3.64.0",
     "@types/node": "^25.6.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "@types/vimeo__player": "^2.18.3",
-    "stylelint": "^17.7.0",
+    "postcss": "^8.5.13",
+    "stylelint": "^17.10.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^17.0.0",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   },
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.14.1"
 }

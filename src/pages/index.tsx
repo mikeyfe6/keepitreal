@@ -12,18 +12,18 @@ import * as indexStyles from "../styles/modules/pages/index.module.scss";
 const IndexPage: React.FC<PageProps> = () => {
     const [activeSection, setActiveSection] = useState<string>("");
 
-    const missionRef = useRef<HTMLDivElement>(null!);
+    // const missionRef = useRef<HTMLDivElement>(null!);
     const whatwedoRef = useRef<HTMLDivElement>(null!);
     const ourteamRef = useRef<HTMLDivElement>(null!);
     const impactRef = useRef<HTMLDivElement>(null!);
     const podcastRef = useRef<HTMLDivElement>(null!);
+    // const partnersRef = useRef<HTMLDivElement>(null!);
 
     const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
         if (ref.current) {
             const yOffset = -167.5;
             const element = ref.current;
-            const y =
-                element.getBoundingClientRect().top + window.scrollY + yOffset;
+            const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
 
             window.scrollTo({ top: y, behavior: "smooth" });
         }
@@ -32,11 +32,12 @@ const IndexPage: React.FC<PageProps> = () => {
     const handleLegendClick = (sectionId: string) => {
         setActiveSection(sectionId);
         const sections: Record<string, React.RefObject<HTMLDivElement>> = {
-            mission: missionRef,
+            // mission: missionRef,
             whatwedo: whatwedoRef,
             ourteam: ourteamRef,
             impact: impactRef,
             podcast: podcastRef,
+            // partners: partnersRef,
         };
         if (sections[sectionId]?.current) {
             handleScroll(sections[sectionId]);
@@ -44,23 +45,16 @@ const IndexPage: React.FC<PageProps> = () => {
     };
 
     return (
-        <Layout
-            handleLegendClick={handleLegendClick}
-            activeSection={activeSection}
-        >
+        <Layout handleLegendClick={handleLegendClick} activeSection={activeSection}>
             <div className={indexStyles.index}>
                 <div>
                     <p>
-                        Welkom bij <strong>Keep It Real</strong>, een programma
-                        dat jongeren een leerervaring biedt die verder reikt dan
-                        het traditionele onderwijs. Vanuit de visie van
-                        cultureel professional Wenner Regales ontstond Keep It
-                        Real als initiatief dat jongeren stimuleert om positieve
-                        keuzes te maken en kansen te benutten. Wenner, geboren
-                        op Curaçao en deels opgegroeid in Amsterdam, weet als
-                        geen ander welke uitdagingen jongeren tegenkomen. Zijn
-                        achtergrond, ervaring en sterke netwerk vormden de basis
-                        voor de oprichting van Keep It Real.
+                        Welkom bij <strong>Keep It Real</strong>, een programma dat jongeren een leerervaring biedt die
+                        verder reikt dan het traditionele onderwijs. Vanuit de visie van cultureel professional Wenner
+                        Regales ontstond Keep It Real als initiatief dat jongeren stimuleert om positieve keuzes te
+                        maken en kansen te benutten. Wenner, geboren op Curaçao en deels opgegroeid in Amsterdam, weet
+                        als geen ander welke uitdagingen jongeren tegenkomen. Zijn achtergrond, ervaring en sterke
+                        netwerk vormden de basis voor de oprichting van Keep It Real.
                     </p>
                 </div>
 
@@ -69,26 +63,18 @@ const IndexPage: React.FC<PageProps> = () => {
                         KIR <span>:</span>
                     </h3>
                     <ul>
-                        <li>
+                        {/* <li>
                             <button
                                 onClick={() => handleLegendClick("mission")}
-                                className={
-                                    activeSection === "mission"
-                                        ? indexStyles.active
-                                        : ""
-                                }
+                                className={activeSection === "mission" ? indexStyles.active : ""}
                             >
                                 Onze missie
                             </button>
-                        </li>
+                        </li> */}
                         <li>
                             <button
                                 onClick={() => handleLegendClick("whatwedo")}
-                                className={
-                                    activeSection === "whatwedo"
-                                        ? indexStyles.active
-                                        : ""
-                                }
+                                className={activeSection === "whatwedo" ? indexStyles.active : ""}
                             >
                                 Wat we doen
                             </button>
@@ -96,11 +82,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <li>
                             <button
                                 onClick={() => handleLegendClick("ourteam")}
-                                className={
-                                    activeSection === "ourteam"
-                                        ? indexStyles.active
-                                        : ""
-                                }
+                                className={activeSection === "ourteam" ? indexStyles.active : ""}
                             >
                                 Onze Teamleden
                             </button>
@@ -108,11 +90,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <li>
                             <button
                                 onClick={() => handleLegendClick("impact")}
-                                className={
-                                    activeSection === "impact"
-                                        ? indexStyles.active
-                                        : ""
-                                }
+                                className={activeSection === "impact" ? indexStyles.active : ""}
                             >
                                 Impact en toekomst
                             </button>
@@ -120,15 +98,19 @@ const IndexPage: React.FC<PageProps> = () => {
                         <li>
                             <button
                                 onClick={() => handleLegendClick("podcast")}
-                                className={
-                                    activeSection === "podcast"
-                                        ? indexStyles.active
-                                        : ""
-                                }
+                                className={activeSection === "podcast" ? indexStyles.active : ""}
                             >
                                 Beluister onze podcast
                             </button>
                         </li>
+                        {/* <li>
+                            <button
+                                onClick={() => handleLegendClick("partners")}
+                                className={activeSection === "partners" ? indexStyles.active : ""}
+                            >
+                                Onze partners
+                            </button>
+                        </li> */}
                     </ul>
                 </div>
 
@@ -142,49 +124,48 @@ const IndexPage: React.FC<PageProps> = () => {
                     />
                 </div>
 
-                <div
-                    ref={missionRef}
-                    className={
-                        activeSection === "mission" ? indexStyles.active : ""
-                    }
-                >
+                {/* <div ref={missionRef} className={activeSection === "mission" ? indexStyles.active : ""}>
                     <h2>Onze missie</h2>
                     <p>
-                        Bij Keep It Real geloven we in het belang van echte
-                        ervaringen. Geen standaardlessen, maar een dag vol
-                        inspiratie, interactie en empowerment. Onze
-                        ervaringsdeskundige teamleden delen hun levensverhalen
-                        en begeleiden workshops, waarbij thema's als veiligheid,
-                        identiteit, en sociale druk worden behandeld.
+                        Bij Keep It Real geloven we in het belang van echte ervaringen. Geen standaardlessen, maar een
+                        dag vol inspiratie, interactie en empowerment. Onze ervaringsdeskundige teamleden delen hun
+                        levensverhalen en begeleiden workshops, waarbij thema's als veiligheid, identiteit, en sociale
+                        druk worden behandeld.
                     </p>
-                </div>
+                </div> */}
 
-                <div
-                    ref={whatwedoRef}
-                    className={
-                        activeSection === "whatwedo" ? indexStyles.active : ""
-                    }
-                >
+                {/* <div className={indexStyles.indexResults}>
+                    <h2>Resultaten</h2>
+                    <div>
+                        <div>
+                            <p>+100 jongeren begeleid</p>
+                        </div>
+                        <div>
+                            <p>+100 jongeren begeleid</p>
+                        </div>
+                        <div>
+                            <p>+100 jongeren begeleid</p>
+                        </div>
+                    </div>
+                </div> */}
+
+                <div ref={whatwedoRef} className={activeSection === "whatwedo" ? indexStyles.active : ""}>
                     <h2>Wat we doen</h2>
                     <ol>
                         <li>
                             <h3>KIR Take-overs</h3>
                             <p>
-                                Een dag waarop onze teamleden de reguliere
-                                lessen overnemen. Door middel van kunst, muziek,
-                                sport en persoonlijke verhalen inspireren we
-                                jongeren om positieve keuzes te maken.
+                                Een dag waarop onze teamleden de reguliere lessen overnemen. Door middel van kunst,
+                                muziek, sport en persoonlijke verhalen inspireren we jongeren om positieve keuzes te
+                                maken.
                             </p>
                         </li>
                         <li>
                             <h3>KIR Workshops</h3>
                             <p>
-                                Diepgaande sessies waarin jongeren hun
-                                creativiteit kunnen uiten en thema's kunnen
-                                verkennen zoals verleidingen, identiteit, en
-                                online veiligheid. Van therapeutische
-                                tekenlessen tot muziekproductie-workshops, we
-                                bieden een breed scala aan mogelijkheden.
+                                Diepgaande sessies waarin jongeren hun creativiteit kunnen uiten en thema's kunnen
+                                verkennen zoals verleidingen, identiteit, en online veiligheid. Van therapeutische
+                                tekenlessen tot muziekproductie-workshops, we bieden een breed scala aan mogelijkheden.
                             </p>
 
                             <Cta />
@@ -192,9 +173,8 @@ const IndexPage: React.FC<PageProps> = () => {
                         <li>
                             <h3>1-op-1 Coaching</h3>
                             <p>
-                                Specifieke ondersteuning voor leerlingen die dat
-                                nodig hebben, om hen te helpen bij het nemen van
-                                de regie over hun leven.
+                                Specifieke ondersteuning voor leerlingen die dat nodig hebben, om hen te helpen bij het
+                                nemen van de regie over hun leven.
                             </p>
                         </li>
                     </ol>
@@ -209,53 +189,31 @@ const IndexPage: React.FC<PageProps> = () => {
                     />
                 </div>
 
-                <div
-                    ref={ourteamRef}
-                    className={
-                        activeSection === "ourteam" ? indexStyles.active : ""
-                    }
-                >
+                <div ref={ourteamRef} className={activeSection === "ourteam" ? indexStyles.active : ""}>
                     <h2>Teamleden</h2>
                     <p>
-                        Ons diverse team van ervaringsdeskundigen deelt een
-                        passie voor het begeleiden van jongeren. Van voormalige
-                        straatlegendes tot ervaren jongerenwerkers, elk teamlid
-                        brengt unieke kennis en expertise.
+                        Ons diverse team van ervaringsdeskundigen deelt een passie voor het begeleiden van jongeren. Van
+                        voormalige straatlegendes tot ervaren jongerenwerkers, elk teamlid brengt unieke kennis en
+                        expertise.
                     </p>
                 </div>
 
-                <div
-                    ref={impactRef}
-                    className={
-                        activeSection === "impact" ? indexStyles.active : ""
-                    }
-                >
+                <div ref={impactRef} className={activeSection === "impact" ? indexStyles.active : ""}>
                     <h2>Impact en toekomst</h2>
                     <p>
-                        Keep It Real streeft naar een blijvende impact. We
-                        werken samen met scholen en andere partners om ons
-                        programma te integreren in het curriculum en de bredere
-                        gemeenschap. Onze ambities reiken verder dan alleen
-                        workshops; we willen een cultuur van empowerment creëren
-                        die jongeren helpt om hun volledige potentieel te
-                        bereiken.
+                        Keep It Real streeft naar een blijvende impact. We werken samen met scholen en andere partners
+                        om ons programma te integreren in het curriculum en de bredere gemeenschap. Onze ambities reiken
+                        verder dan alleen workshops; we willen een cultuur van empowerment creëren die jongeren helpt om
+                        hun volledige potentieel te bereiken.
                     </p>
                 </div>
 
-                <div
-                    ref={podcastRef}
-                    className={
-                        activeSection === "podcast" ? indexStyles.active : ""
-                    }
-                >
+                <div ref={podcastRef} className={activeSection === "podcast" ? indexStyles.active : ""}>
                     <h2>Beluister onze podcast</h2>
                     <p>
-                        Wil je meer horen over de verhalen achter Keep It Real
-                        en de inspirerende mensen die deel uitmaken van ons
-                        team? Luister dan naar onze podcast! Hier delen we
-                        persoonlijke ervaringen, succesverhalen en diepgaande
-                        gesprekken over onderwerpen die jongeren aan het hart
-                        gaan.
+                        Wil je meer horen over de verhalen achter Keep It Real en de inspirerende mensen die deel
+                        uitmaken van ons team? Luister dan naar onze podcast! Hier delen we persoonlijke ervaringen,
+                        succesverhalen en diepgaande gesprekken over onderwerpen die jongeren aan het hart gaan.
                     </p>
 
                     <iframe
@@ -267,11 +225,14 @@ const IndexPage: React.FC<PageProps> = () => {
                     />
 
                     <p>
-                        Abonneer je op onze podcast via jouw favoriete platform
-                        en blijf op de hoogte van de laatste afleveringen.{" "}
-                        <strong>Keep It Real</strong> en luister mee!
+                        Abonneer je op onze podcast via jouw favoriete platform en blijf op de hoogte van de laatste
+                        afleveringen. <strong>Keep It Real</strong> en luister mee!
                     </p>
                 </div>
+                {/* <div ref={partnersRef} className={activeSection === "partners" ? indexStyles.active : ""}>
+                    <h2>Onze partners</h2>
+                    <p>[logo] [logo] [logo] [logo] [logo]</p>
+                </div> */}
             </div>
         </Layout>
     );
