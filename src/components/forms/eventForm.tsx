@@ -19,20 +19,18 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState("");
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-    ) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
         setError("");
 
         try {
-            if (window.location.hostname === "localhost") {
+            if (globalThis.location.hostname === "localhost") {
                 console.log("Registration data:", {
                     ...formData,
                     event: eventName,
@@ -65,15 +63,11 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
                     event: eventName,
                 };
 
-                await axios.post(
-                    "/.netlify/functions/send-event-confirmation",
-                    emailData,
-                    {
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                    }
-                );
+                await axios.post("/.netlify/functions/send-event-confirmation", emailData, {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                });
             } catch (emailError) {
                 console.warn("Failed to send confirmation email:", emailError);
             }
@@ -81,9 +75,7 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
             onSuccess();
         } catch (error) {
             console.error("Registration error:", error);
-            setError(
-                "Er is iets misgegaan bij de aanmelding. Probeer het opnieuw."
-            );
+            setError("Er is iets misgegaan bij de aanmelding. Probeer het opnieuw.");
             setTimeout(() => {
                 setError("");
             }, 5000);
@@ -135,26 +127,12 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
 
                 <div>
                     <label htmlFor="workshop">Type workshop *</label>
-                    <select
-                        id="workshop"
-                        name="workshop"
-                        value={formData.workshop}
-                        onChange={handleChange}
-                        required
-                    >
+                    <select id="workshop" name="workshop" value={formData.workshop} onChange={handleChange} required>
                         <option value="">Selecteer een workshop</option>
-                        <option value="Schilderen en beeldende kunst">
-                            Schilderen en beeldende kunst
-                        </option>
-                        <option value="Fashion en styling">
-                            Fashion en styling
-                        </option>
-                        <option value="Muziek en teksten schrijven">
-                            Muziek en teksten schrijven
-                        </option>
-                        <option value="Knutselen en creatieve vorming">
-                            Knutselen en creatieve vorming
-                        </option>
+                        <option value="Schilderen en beeldende kunst">Schilderen en beeldende kunst</option>
+                        <option value="Fashion en styling">Fashion en styling</option>
+                        <option value="Muziek en teksten schrijven">Muziek en teksten schrijven</option>
+                        <option value="Knutselen en creatieve vorming">Knutselen en creatieve vorming</option>
                     </select>
                 </div>
 
@@ -168,16 +146,11 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
                                     id="timeBlock1"
                                     name="time"
                                     value="Tijdsblok 1 van 10:00 - 12:00"
-                                    checked={
-                                        formData.time ===
-                                        "Tijdsblok 1 van 10:00 - 12:00"
-                                    }
+                                    checked={formData.time === "Tijdsblok 1 van 10:00 - 12:00"}
                                     onChange={handleChange}
                                     required
                                 />
-                                <label htmlFor="timeBlock1">
-                                    Tijdsblok 1 van 10:00 - 12:00
-                                </label>
+                                <label htmlFor="timeBlock1">Tijdsblok 1 van 10:00 - 12:00</label>
                             </div>
                             <div>
                                 <input
@@ -185,16 +158,11 @@ const EventForm: React.FC<EventFormProps> = ({ onSuccess, eventName }) => {
                                     id="timeBlock2"
                                     name="time"
                                     value="Tijdsblok 2 van 13:00 - 15:00"
-                                    checked={
-                                        formData.time ===
-                                        "Tijdsblok 2 van 13:00 - 15:00"
-                                    }
+                                    checked={formData.time === "Tijdsblok 2 van 13:00 - 15:00"}
                                     onChange={handleChange}
                                     required
                                 />
-                                <label htmlFor="timeBlock2">
-                                    Tijdsblok 2 van 13:00 - 15:00
-                                </label>
+                                <label htmlFor="timeBlock2">Tijdsblok 2 van 13:00 - 15:00</label>
                             </div>
                         </div>
                     </fieldset>

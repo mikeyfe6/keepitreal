@@ -2,6 +2,8 @@ import * as React from "react";
 
 import type { HeadFC, PageProps } from "gatsby";
 
+import { useSiteMetadata } from "../hooks/use-site-metadata";
+
 import Layout from "../components/layout";
 
 import { Seo } from "../components/seo";
@@ -9,38 +11,36 @@ import { Seo } from "../components/seo";
 import * as anbiStyles from "../styles/modules/pages/anbi.module.scss";
 
 const AnbiPage: React.FC<PageProps> = () => {
+    const { companyName, facility, street, postalCode, city, mailingStreet, mailingPostalcode, mailingCity } =
+        useSiteMetadata();
     return (
         <Layout>
             <section className={anbiStyles.anbi}>
                 <div>
-                    <h1>Doelstelling: Stichting Keep It Real</h1>
+                    <h1>Doelstelling: {companyName}</h1>
                     <p>
-                        Stichting Keep It Real is een culturele instelling die
-                        zich richt op het bevorderen van de maatschappelijke en
-                        culturele participatie van jongeren, evenals hun
-                        culturele en artistieke ontwikkeling.
+                        {companyName} is een culturele instelling die zich richt op het bevorderen van de
+                        maatschappelijke en culturele participatie van jongeren, evenals hun culturele en artistieke
+                        ontwikkeling.
                     </p>
 
                     <br />
                     <h2>De organisatie heeft als doel:</h2>
                     <ul>
                         <li>
-                            Sponsorgelden en giften aanvragen en uitbesteden aan
-                            projecten onder de naam van de Stichting Keep It
-                            Real.
+                            Sponsorgelden en giften aanvragen en uitbesteden aan projecten onder de naam van{" "}
+                            {companyName}.
                         </li>
                         <li>
-                            Het organiseren van activiteiten die bijdragen aan
-                            de maatschappelijke en culturele participatie van
-                            jongeren.
+                            Het organiseren van activiteiten die bijdragen aan de maatschappelijke en culturele
+                            participatie van jongeren.
                         </li>
                         <li>
-                            Het initiëren en stimuleren van projecten die
-                            jongeren ondersteunen in hun ontwikkeling.
+                            Het initiëren en stimuleren van projecten die jongeren ondersteunen in hun ontwikkeling.
                         </li>
                         <li>
-                            Samenwerken met organisaties en instellingen met
-                            vergelijkbare of complementaire doelstellingen.
+                            Samenwerken met organisaties en instellingen met vergelijkbare of complementaire
+                            doelstellingen.
                         </li>
                     </ul>
 
@@ -49,24 +49,23 @@ const AnbiPage: React.FC<PageProps> = () => {
                         <u>Algemene gegevens</u>
                     </h2>
                     <p>
-                        <strong>Naam ANBI:</strong> Stichting Keep It Real{" "}
-                        <br />
+                        <strong>Naam ANBI:</strong> {companyName} <br />
                         <strong>RSIN:</strong> Niet bekend <br />
                     </p>
 
                     <br />
                     <h3>Bezoekadres:</h3>
                     <p>
-                        De Ster <br />
-                        Woudrichemstraat 8<br />
-                        1107 NG Amsterdam
+                        {facility} <br />
+                        {street} <br />
+                        {postalCode} {city}
                     </p>
 
                     <br />
                     <h3>Postadres:</h3>
                     <p>
-                        Piet Heinkade 3 <br />
-                        1019 BR Amsterdam
+                        {mailingStreet} <br />
+                        {mailingPostalcode} {mailingCity}
                     </p>
 
                     <br />
@@ -76,8 +75,7 @@ const AnbiPage: React.FC<PageProps> = () => {
                     <p>
                         <strong>Voorzitter:</strong> Mijke Daphne Loeven <br />
                         <strong>Secretaris:</strong> Dansowaa Asamoah <br />
-                        <strong>Penningmeester:</strong> Joachim Pieter
-                        Junghanss <br />
+                        <strong>Penningmeester:</strong> Joachim Pieter Junghanss <br />
                     </p>
 
                     <br />
@@ -87,26 +85,15 @@ const AnbiPage: React.FC<PageProps> = () => {
                     <h3>Hoofdlijnen van het beleidsplan:</h3>
                     <ol>
                         <li>
-                            De stichting heeft ten doel het bevorderen van de
-                            maatschappelijke en culturele participatie van
-                            jongeren, evenals hun culturele en artistieke
-                            ontwikkeling.
+                            De stichting heeft ten doel het bevorderen van de maatschappelijke en culturele participatie
+                            van jongeren, evenals hun culturele en artistieke ontwikkeling.
                         </li>
                         <li>
-                            De stichting tracht haar doel onder meer te bereiken
-                            door:
+                            De stichting tracht haar doel onder meer te bereiken door:
                             <ul>
-                                <li>
-                                    Het organiseren van activiteiten die
-                                    bijdragen aan de doelstellingen.
-                                </li>
-                                <li>
-                                    Het initiëren en stimuleren van projecten.
-                                </li>
-                                <li>
-                                    Samenwerken met vergelijkbare organisaties
-                                    en instellingen.
-                                </li>
+                                <li>Het organiseren van activiteiten die bijdragen aan de doelstellingen.</li>
+                                <li>Het initiëren en stimuleren van projecten.</li>
+                                <li>Samenwerken met vergelijkbare organisaties en instellingen.</li>
                             </ul>
                         </li>
                     </ol>
@@ -115,9 +102,8 @@ const AnbiPage: React.FC<PageProps> = () => {
                         <u>Beloningsbeleid</u>
                     </h2>
                     <p>
-                        <strong>Bestuur:</strong> Bestuurders kunnen recht
-                        hebben op vergoeding van gemaakte kosten en een niet
-                        bovenmatig vacatiegeld voor hun werkzaamheden. <br />
+                        <strong>Bestuur:</strong> Bestuurders kunnen recht hebben op vergoeding van gemaakte kosten en
+                        een niet bovenmatig vacatiegeld voor hun werkzaamheden. <br />
                         <strong>Personeel:</strong> CAO niet van toepassing.
                     </p>
                 </div>

@@ -26,9 +26,9 @@ const siteMetadata = {
     mobile: ``,
     email: `secretariaat@keeptreal.nl`,
 
-    facility: `De Ster`,
-    street: `Woudrichemstraat 8`,
-    postalCode: `1107 NG`,
+    facility: `PopaLive`,
+    street: `Paasheuvelweg 14a`,
+    postalCode: `1105 BH`,
     city: `Amsterdam`,
     country: `Nederland`,
 

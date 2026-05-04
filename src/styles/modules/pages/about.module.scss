@@ -21,7 +21,7 @@
             display: block;
             margin-bottom: rem-calc(20);
             padding-bottom: rem-calc(16);
-            border-bottom: 1px solid rgba($white, 0.825);
+            border-bottom: 1px solid rgba($primary, 0.825);
 
             @include mobile {
                 display: none;

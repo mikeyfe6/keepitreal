@@ -60,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
     return (
         <>
             <aside className={sidebarStyles.aside}>
-                <div id="events" className={sidebarStyles.asideEvents}>
+                {/* <div id="events" className={sidebarStyles.asideEvents}>
                     <h2>Evenementen</h2>
 
                     <ul className={sidebarStyles.asideEventsActive}>
@@ -76,11 +76,11 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                         </li>
                     </ul>
 
-                    <hr />
+                    <hr /> */}
 
-                    {/* <h3>Afgelopen evenementen</h3> */}
+                {/* <h3>Afgelopen evenementen</h3> */}
 
-                    <ul className={sidebarStyles.asideEventsArchive}>
+                {/* <ul className={sidebarStyles.asideEventsArchive}>
                         <li>
                             <LightBox
                                 image={flexZijn}
@@ -94,7 +94,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                             />
                         </li>
                     </ul>
-                </div>
+                </div> */}
 
                 <div id="podcast" className={sidebarStyles.asidePodcast}>
                     <iframe
@@ -111,14 +111,14 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                         KIR <span>:</span>
                     </h2>
                     <ul>
-                        <li>
+                        {/* <li>
                             <button
                                 onClick={() => handleLegendClick("mission")}
                                 className={activeSection === "mission" ? sidebarStyles.active : ""}
                             >
                                 Onze missie
                             </button>
-                        </li>
+                        </li> */}
                         <li>
                             <button
                                 onClick={() => handleLegendClick("whatwedo")}
@@ -162,14 +162,14 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                                 Beluister onze podcast
                             </button>
                         </li>
-                        <li>
+                        {/* <li>
                             <button
                                 onClick={() => handleLegendClick("partners")}
                                 className={activeSection === "partners" ? sidebarStyles.active : ""}
                             >
                                 Onze partners
                             </button>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
 
@@ -253,7 +253,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                         <p>Check je mail voor een bevestiging!</p>
                         <small>
                             Dit venster verdwijnt over {countdown} seconde
-                            {countdown !== 1 ? "n" : ""}...
+                            {countdown === 1 ? "" : "n"}...
                         </small>
                     </div>
                 :   <div>

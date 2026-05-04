@@ -269,7 +269,7 @@ const WorkshopsPage: React.FC<PageProps> = () => {
                         <p>
                             <b>
                                 Duur: 2 uur <br />
-                                Max aantal deelnemers: ??
+                                Max aantal deelnemers: 15
                             </b>
                         </p>
                     </div>

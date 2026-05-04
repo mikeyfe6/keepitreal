@@ -18,9 +18,7 @@ const ContactForm: React.FC = () => {
 
     const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-    const handleChange = (
-        event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
         setFormData((prev) => ({
             ...prev,
@@ -28,20 +26,15 @@ const ContactForm: React.FC = () => {
         }));
     };
 
-    const handleSubmit = async (
-        event: React.FormEvent<HTMLFormElement>,
-        form: HTMLFormElement | null
-    ) => {
+    const handleSubmit = async (event: React.SyntheticEvent<HTMLFormElement>, form: HTMLFormElement | null) => {
         event.preventDefault();
         if (!form) return;
         setIsSubmitting(true);
 
         try {
-            const encodedData = new URLSearchParams(
-                new FormData(form) as any
-            ).toString();
+            const encodedData = new URLSearchParams(new FormData(form) as any).toString();
 
-            if (window.location.hostname === "localhost") {
+            if (globalThis.location.hostname === "localhost") {
                 console.log("Form data:", encodedData);
                 alert("Form submission simulated (check console). ");
                 setIsSubmitting(false);
@@ -75,9 +68,7 @@ const ContactForm: React.FC = () => {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                onSubmit={(event) =>
-                    handleSubmit(event, document.querySelector("form"))
-                }
+                onSubmit={(event) => handleSubmit(event, document.querySelector("form"))}
             >
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="kir-form" />

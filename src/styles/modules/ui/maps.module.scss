@@ -9,6 +9,7 @@
     width: 100%;
     margin-top: rem-calc(32);
     overflow: hidden;
+    color: $white;
 
     @include box-shadow(1);
     @include smooth-trans;

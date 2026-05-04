@@ -21,10 +21,8 @@ const ResponsiveTag: FC = () => {
     const [screenSize, setScreenSize] = useState<string>("");
 
     const handleResize = () => {
-        const width = window.innerWidth / 16;
-        const breakpoint = breakpoints.find(
-            (breakpoint) => width <= breakpoint.size
-        );
+        const width = globalThis.innerWidth / 16;
+        const breakpoint = breakpoints.find((breakpoint) => width <= breakpoint.size);
         if (breakpoint) {
             setScreenSize(breakpoint.label);
         }
@@ -32,10 +30,10 @@ const ResponsiveTag: FC = () => {
 
     useEffect(() => {
         handleResize();
-        window.addEventListener("resize", handleResize);
+        globalThis.addEventListener("resize", handleResize);
 
         return () => {
-            window.removeEventListener("resize", handleResize);
+            globalThis.removeEventListener("resize", handleResize);
         };
     }, []);
 

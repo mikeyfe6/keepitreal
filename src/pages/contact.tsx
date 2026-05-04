@@ -78,8 +78,7 @@ const ContactPage: React.FC<PageProps> = () => {
 					</p> */}
                     <p>
                         <b> We zijn bereikbaar van</b>
-                        <span>:</span> <br /> maandag t/m vrijdag van 9:00 tot
-                        17:00
+                        <span>:</span> <br /> maandag t/m vrijdag van 9:00 tot 17:00
                     </p>
                     {/* <p>
 						<strong>KvK:</strong> 12345678 <br /> <strong>BTW:</strong>{' '}

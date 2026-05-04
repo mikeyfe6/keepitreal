@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
     const [isWorkshopsOpen, setIsWorkshopsOpen] = useState(false);
-    const [isOffersOpen, setIsOffersOpen] = useState(false);
+    // const [isOffersOpen, setIsOffersOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -28,14 +28,14 @@ const Header: React.FC = () => {
         setIsWorkshopsOpen(!isWorkshopsOpen);
     };
 
-    const toggleOffers = () => {
-        setIsOffersOpen(!isOffersOpen);
-    };
+    // const toggleOffers = () => {
+    //     setIsOffersOpen(!isOffersOpen);
+    // };
 
     const closeMobileMenu = () => {
         setIsOpen(false);
         setIsWorkshopsOpen(false);
-        setIsOffersOpen(false);
+        // setIsOffersOpen(false);
     };
 
     useEffect(() => {
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
                                     </li>
                                 </ul>
                             </li>
-                            <li className={headerStyles.dropdown}>
+                            {/* <li className={headerStyles.dropdown}>
                                 <Link to="/#!" activeClassName={headerStyles.active} onClick={toggleOffers}>
                                     Aanbod
                                 </Link>
@@ -116,7 +116,7 @@ const Header: React.FC = () => {
                                         <Link to="/#!">Op maat trajecten</Link>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link to="/over-ons/" activeClassName={headerStyles.active}>
                                     Over ons
@@ -217,7 +217,7 @@ const Header: React.FC = () => {
                                 </ul>
                             )}
                         </li>
-                        <li className={headerStyles.mobileDropdown}>
+                        {/* <li className={headerStyles.mobileDropdown}>
                             <div className={headerStyles.mobileDropdownToggle}>
                                 <Link to="/#!" activeClassName={headerStyles.active}>
                                     Aanbod
@@ -257,7 +257,7 @@ const Header: React.FC = () => {
                                     </li>
                                 </ul>
                             )}
-                        </li>
+                        </li> */}
                         <li>
                             <Link to="/over-ons/" activeClassName={headerStyles.active}>
                                 Over Ons

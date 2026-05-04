@@ -7,11 +7,9 @@ import kirLogo from "../../images/favicon/icon.svg";
 import * as mapsStyles from "../../styles/modules/ui/maps.module.scss";
 
 const Maps: React.FC = () => {
-    const center = { lat: 52.294700016562686, lng: 4.9876751292876484 };
+    const center = { lat: 52.29873062961723, lng: 4.950875379606085 };
 
-    const markers = [
-        { lat: 52.29433583747172, lng: 4.987731455674365, imageUrl: kirLogo },
-    ];
+    const markers = [{ lat: 52.29760127532847, lng: 4.95097730354226, imageUrl: kirLogo }];
 
     return (
         <div className={mapsStyles.maps}>

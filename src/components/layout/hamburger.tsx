@@ -9,18 +9,13 @@ interface HamburgerProps {
 
 const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggleMenu }) => {
     return (
-        <div className={hamburgerStyles.hamburger}>
-            <button
-                className={`${hamburgerStyles.icon} ${
-                    isOpen ? hamburgerStyles.open : ""
-                }`}
-                onClick={toggleMenu}
-            >
+        <button className={hamburgerStyles.hamburger} onClick={toggleMenu}>
+            <div className={`${hamburgerStyles.icon} ${isOpen ? hamburgerStyles.open : ""}`}>
                 <div className={hamburgerStyles.line} />
                 <div className={hamburgerStyles.line} />
                 <div className={hamburgerStyles.line} />
-            </button>
-        </div>
+            </div>
+        </button>
     );
 };
 

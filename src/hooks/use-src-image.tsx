@@ -27,30 +27,22 @@ interface SrcImagesQuery {
 export const useSrcImages = () => {
     const data = useStaticQuery<SrcImagesQuery>(graphql`
         query {
-            kunstEnCultuur: file(
-                relativePath: { eq: "events/kunst&cultuurmarkt.jpg" }
-            ) {
+            kunstEnCultuur: file(relativePath: { eq: "events/kunst&cultuurmarkt.jpg" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1000)
                 }
             }
-            flexZijn: file(
-                relativePath: { eq: "events/flexzijn-wennerregales.jpg" }
-            ) {
+            flexZijn: file(relativePath: { eq: "events/flexzijn-wennerregales.jpg" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1000)
                 }
             }
-            omarmprijs: file(
-                relativePath: { eq: "actual/omarmprijs-2025.jpg" }
-            ) {
+            omarmprijs: file(relativePath: { eq: "actual/omarmprijs-2025.jpg" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1000)
                 }
             }
-            backToSchool: file(
-                relativePath: { eq: "events/b2school-flyer.png" }
-            ) {
+            backToSchool: file(relativePath: { eq: "events/b2school-flyer.png" }) {
                 childImageSharp {
                     gatsbyImageData(width: 1000)
                 }
