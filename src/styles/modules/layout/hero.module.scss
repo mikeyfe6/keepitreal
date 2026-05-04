@@ -135,6 +135,10 @@
         @include border-radius(5px);
         @include box-shadow(1);
 
+        > div {
+            margin: -0.5px;
+        }
+
         iframe {
             height: 100%;
             width: 100%;

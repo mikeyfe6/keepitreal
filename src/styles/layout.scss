@@ -62,6 +62,7 @@ body {
         flex-direction: column;
         gap: rem-calc(32);
         margin: rem-calc(40 0 80);
+        flex: 1;
 
         @include phablet {
             gap: rem-calc(48);
