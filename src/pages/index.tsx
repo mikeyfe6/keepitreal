@@ -84,7 +84,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                 onClick={() => handleLegendClick("ourteam")}
                                 className={activeSection === "ourteam" ? indexStyles.active : ""}
                             >
-                                Onze Teamleden
+                                Teamleden
                             </button>
                         </li>
                         <li>
