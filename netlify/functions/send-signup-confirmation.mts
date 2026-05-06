@@ -33,7 +33,7 @@ export default async function sendSignupConfirmation(req: Request) {
 
         const data = await req.json();
 
-        const { firstName, lastName, institution, contactPerson, phone, email, message } = data;
+        const { firstName, lastName, phone, email } = data;
         const fullName = `${firstName ?? ""} ${lastName ?? ""}`.trim();
 
         if (!firstName || !lastName || !phone || !email) {
@@ -54,31 +54,6 @@ export default async function sendSignupConfirmation(req: Request) {
                 },
             );
         }
-
-        const adminEmailResult = await resend.emails.send({
-            from: "Keep It Real <no-reply@keeptreal.nl>",
-            to: "secretariaat@keeptreal.nl",
-            replyTo: email,
-            subject: "Nieuwe aanmelding persoonlijke begeleiding",
-            html: `
-                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                    <h2 style="color: #333;">Nieuwe aanmelding persoonlijke begeleiding</h2>
-                    <p>Er is een nieuwe aanmelding ontvangen via het formulier op de website.</p>
-
-                    <p><strong>Naam verwijzer:</strong> ${escapeHtml(fullName)}</p>
-                    <p><strong>Verwijzende instantie:</strong> ${escapeHtml(institution ?? "-")}</p>
-                    <p><strong>Contactpersoon:</strong> ${escapeHtml(contactPerson ?? "-")}</p>
-                    <p><strong>Telefoonnummer:</strong> ${escapeHtml(phone)}</p>
-                    <p><strong>E-mailadres:</strong> ${escapeHtml(email)}</p>
-                    <p><strong>Korte toelichting aanmelding:</strong><br>${escapeHtml(message ?? "-")}</p>
-
-                    <hr style="margin-top: 30px; border: none; border-top: 1px solid #eee;">
-                    <p style="font-size: 12px; color: #666;">
-                        Deze email is automatisch gegenereerd via het aanmeldformulier op keeptreal.nl.
-                    </p>
-                </div>
-            `,
-        });
 
         const userEmailResult = await resend.emails.send({
             from: "Keep It Real <no-reply@keeptreal.nl>",
@@ -109,8 +84,7 @@ export default async function sendSignupConfirmation(req: Request) {
         return new Response(
             JSON.stringify({
                 success: true,
-                message: "Signup and confirmation emails sent",
-                adminEmailId: adminEmailResult.data?.id,
+                message: "Confirmation email sent",
                 userEmailId: userEmailResult.data?.id,
             }),
             {
