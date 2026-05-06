@@ -57,7 +57,7 @@ export default async function sendSignupConfirmation(req: Request) {
 
         const adminEmailResult = await resend.emails.send({
             from: "Keep It Real <no-reply@keeptreal.nl>",
-            to: "develop@menefex.nl",
+            to: "secretariaat@keeptreal.nl",
             replyTo: email,
             subject: "Nieuwe aanmelding persoonlijke begeleiding",
             html: `
@@ -83,7 +83,7 @@ export default async function sendSignupConfirmation(req: Request) {
         const userEmailResult = await resend.emails.send({
             from: "Keep It Real <no-reply@keeptreal.nl>",
             to: email,
-            replyTo: "develop@menefex.nl",
+            replyTo: "secretariaat@keeptreal.nl",
             subject: "Bevestiging aanmelding",
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
