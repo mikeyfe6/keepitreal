@@ -18,6 +18,7 @@ const SignUpForm: React.FC = () => {
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState("");
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
@@ -27,18 +28,20 @@ const SignUpForm: React.FC = () => {
         }));
     };
 
-    const handleSubmit = async (event: React.SyntheticEvent<HTMLFormElement>, form: HTMLFormElement | null) => {
+    const handleSubmit = async (event: React.SyntheticEvent<HTMLFormElement>) => {
         event.preventDefault();
-        if (!form) return;
+
+        const form = event.currentTarget;
         setIsSubmitting(true);
+        setError("");
 
         try {
             const encodedData = new URLSearchParams(new FormData(form) as any).toString();
 
             if (globalThis.location.hostname === "localhost") {
                 console.log("Form data:", encodedData);
+                console.log("Email payload:", formData);
                 alert("Form submission simulated (check console). ");
-                setIsSubmitting(false);
                 return;
             }
 
@@ -48,26 +51,39 @@ const SignUpForm: React.FC = () => {
                 },
             });
 
-            navigate("/success/");
-        } catch (error) {
-            console.error("Form submission error:", error);
-            alert("Er is iets misgegaan bij het versturen van het formulier.");
-        }
+            try {
+                await axios.post("/.netlify/functions/send-signup-confirmation", formData, {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                });
+            } catch (emailError) {
+                console.warn("Failed to send signup confirmation email:", emailError);
+            }
 
-        setIsSubmitting(false);
+            navigate("/success/");
+        } catch (submitError) {
+            console.error("Form submission error:", submitError);
+            setError("Er is iets misgegaan bij het versturen van het formulier. Probeer het opnieuw.");
+            setTimeout(() => {
+                setError("");
+            }, 5000);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
         <div className={formStyles.contactForm}>
             <form
-                name="signup-form"
+                name="kir-signup"
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                onSubmit={(event) => handleSubmit(event, document.querySelector("form"))}
+                onSubmit={handleSubmit}
             >
                 <input type="hidden" name="bot-field" />
-                <input type="hidden" name="form-name" value="signup-form" />
+                <input type="hidden" name="form-name" value="kir-signup" />
 
                 <div>
                     <label htmlFor="formFirstName">Voornaam</label>
@@ -159,6 +175,8 @@ const SignUpForm: React.FC = () => {
                     Na het indienen van de aanmelding ontvang je een bevestiging per e-mail. Vervolgens sturen wij een
                     officieel aanmeldformulier toe.
                 </p>
+
+                {error && <div className={formStyles.error}>{error}</div>}
 
                 <div>
                     <button type="submit" disabled={isSubmitting}>

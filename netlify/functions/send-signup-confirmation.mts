@@ -1,6 +1,14 @@
 import { Resend } from "resend";
 
-export default async (req: Request) => {
+const escapeHtml = (value: string) =>
+    value
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+
+export default async function sendSignupConfirmation(req: Request) {
     if (req.method !== "POST") {
         return new Response("Method not allowed", { status: 405 });
     }
@@ -17,7 +25,7 @@ export default async (req: Request) => {
                 {
                     status: 500,
                     headers: { "Content-Type": "application/json" },
-                }
+                },
             );
         }
 
@@ -25,15 +33,15 @@ export default async (req: Request) => {
 
         const data = await req.json();
 
-        const { name, email, workshop, time, event: eventName } = data;
+        const { firstName, lastName, institution, contactPerson, phone, email, message } = data;
+        const fullName = `${firstName ?? ""} ${lastName ?? ""}`.trim();
 
-        if (!name || !email || !workshop || !time || !eventName) {
+        if (!firstName || !lastName || !phone || !email) {
             console.error("Missing required fields:", {
-                name,
+                firstName,
+                lastName,
+                phone,
                 email,
-                workshop,
-                time,
-                eventName,
             });
             return new Response(
                 JSON.stringify({
@@ -43,27 +51,52 @@ export default async (req: Request) => {
                 {
                     status: 400,
                     headers: { "Content-Type": "application/json" },
-                }
+                },
             );
         }
 
-        const emailResult = await resend.emails.send({
+        const adminEmailResult = await resend.emails.send({
             from: "Keep It Real <no-reply@keeptreal.nl>",
-            to: email,
-            replyTo: "secretariaat@keeptreal.nl",
-            subject: `Bevestiging aanmelding - ${eventName}`,
+            to: "develop@menefex.nl",
+            replyTo: email,
+            subject: "Nieuwe aanmelding persoonlijke begeleiding",
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                    <h2 style="color: #333;">Bedankt voor je aanmelding!</h2>
+                    <h2 style="color: #333;">Nieuwe aanmelding persoonlijke begeleiding</h2>
+                    <p>Er is een nieuwe aanmelding ontvangen via het formulier op de website.</p>
 
-                    <p>Beste <strong>${name}</strong>,</p>
+                    <p><strong>Naam verwijzer:</strong> ${escapeHtml(fullName)}</p>
+                    <p><strong>Verwijzende instantie:</strong> ${escapeHtml(institution ?? "-")}</p>
+                    <p><strong>Contactpersoon:</strong> ${escapeHtml(contactPerson ?? "-")}</p>
+                    <p><strong>Telefoonnummer:</strong> ${escapeHtml(phone)}</p>
+                    <p><strong>E-mailadres:</strong> ${escapeHtml(email)}</p>
+                    <p><strong>Korte toelichting aanmelding:</strong><br>${escapeHtml(message ?? "-")}</p>
 
-                    <p>Bedankt voor jouw aanmelding voor deelname aan de workshop: <strong>${workshop}</strong> voor het <strong>${time}</strong>. Als je onverhoopt toch niet aanwezig kan zijn, stuur dan een email naar <a href="mailto:secretariaat@keeptreal.nl">secretariaat@keeptreal.nl</a>.</p>
+                    <hr style="margin-top: 30px; border: none; border-top: 1px solid #eee;">
+                    <p style="font-size: 12px; color: #666;">
+                        Deze email is automatisch gegenereerd via het aanmeldformulier op keeptreal.nl.
+                    </p>
+                </div>
+            `,
+        });
 
-                    <p>Tot 15 augustus!</p>
+        const userEmailResult = await resend.emails.send({
+            from: "Keep It Real <no-reply@keeptreal.nl>",
+            to: email,
+            replyTo: "develop@menefex.nl",
+            subject: "Bevestiging aanmelding",
+            html: `
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                    <h2 style="color: #333;">Bedankt voor je aanmelding bij Keep It Real.</h2>
+
+                    <p>Beste <strong>${escapeHtml(fullName)}</strong>,</p>
+
+                    <p>Wij hebben je aanvraag ontvangen en nemen zo snel mogelijk contact met je op.</p>
+
+                    <p>Je ontvangt binnenkort een officieel aanmeldformulier.</p>
 
                     <p>Met vriendelijke groet,<br>
-                    Keep It Real</p>
+                    Team Keep It Real</p>
 
                     <hr style="margin-top: 30px; border: none; border-top: 1px solid #eee;">
                     <p style="font-size: 12px; color: #666;">
@@ -76,13 +109,14 @@ export default async (req: Request) => {
         return new Response(
             JSON.stringify({
                 success: true,
-                message: "Confirmation email sent",
-                emailId: emailResult.data?.id,
+                message: "Signup and confirmation emails sent",
+                adminEmailId: adminEmailResult.data?.id,
+                userEmailId: userEmailResult.data?.id,
             }),
             {
                 status: 200,
                 headers: { "Content-Type": "application/json" },
-            }
+            },
         );
     } catch (error) {
         console.error("Error sending confirmation email:", error);
@@ -96,13 +130,12 @@ export default async (req: Request) => {
             JSON.stringify({
                 success: false,
                 error: "Failed to send confirmation email",
-                details:
-                    error instanceof Error ? error.message : "Unknown error",
+                details: error instanceof Error ? error.message : "Unknown error",
             }),
             {
                 status: 500,
                 headers: { "Content-Type": "application/json" },
-            }
+            },
         );
     }
-};
+}
