@@ -24,6 +24,7 @@ import {
     faExpand,
     faCircleCheck,
     faChevronDown,
+    faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faInstagram, faFacebook, faTiktok, faYoutube, faSpotify } from "@fortawesome/free-brands-svg-icons";
@@ -52,6 +53,7 @@ library.add(
     faExpand,
     faCircleCheck,
     faChevronDown,
+    faEnvelope,
 );
 
 import Header from "./layout/header";

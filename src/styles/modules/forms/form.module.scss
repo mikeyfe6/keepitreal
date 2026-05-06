@@ -18,6 +18,22 @@
             background: rgba($tertiary, 1);
         }
 
+        &[name="signup-form"] {
+            margin-top: rem-calc(36);
+
+            &::before {
+                background: rgba($secondary, 1);
+            }
+
+            p {
+                @include fluid-typing(15, 16);
+            }
+
+            button {
+                @include button(2, "normal", $secondary);
+            }
+        }
+
         > div {
             label {
                 display: none;

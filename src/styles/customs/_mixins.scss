@@ -84,7 +84,7 @@
     }
 }
 
-@mixin button($type: 1, $size: "normal", $color: $tertiary) {
+@mixin button($type: 1, $size: "normal", $color: $tertiary, $bdcolor: rgba($secondary, 0.5)) {
     display: block;
     font-weight: 600;
 
@@ -109,7 +109,6 @@
     } @else if $type == 2 {
         background-color: rgba($color, 0.825);
         color: $white;
-        border-color: rgba($secondary, 0.875);
         padding: rem-calc(12 16);
         height: fit-content;
 
@@ -118,7 +117,6 @@
         }
     } @else if $type == 3 {
         background-color: rgba($tertiary, 0.725);
-        border-color: rgba($secondary, 0.875);
         color: $white;
         aspect-ratio: 1 / 1;
         display: flex;
@@ -135,6 +133,17 @@
         &:hover {
             background-color: rgba($white, 1);
             color: rgba($tertiary, 0.825);
+        }
+    } @else if $type == 4 {
+        background-color: rgba($color, 0.825);
+        color: $primary;
+        border: 2px solid $bdcolor;
+        padding: rem-calc(12 16);
+        height: fit-content;
+
+        &:hover {
+            background-color: rgba($secondary, 0.025);
+            border-color: rgba($secondary, 0.825);
         }
     }
 

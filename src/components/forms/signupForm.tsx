@@ -6,11 +6,12 @@ import axios from "axios";
 
 import * as formStyles from "../../styles/modules/forms/form.module.scss";
 
-const ContactForm: React.FC = () => {
+const SignUpForm: React.FC = () => {
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
-        company: "",
+        institution: "",
+        contactPerson: "",
         phone: "",
         email: "",
         message: "",
@@ -58,20 +59,15 @@ const ContactForm: React.FC = () => {
 
     return (
         <div className={formStyles.contactForm}>
-            <div>
-                <h1>Vul hieronder je gegevens in</h1>
-                <p>En we komen spoedig met je in contact!</p>
-            </div>
-
             <form
-                name="kir-form"
+                name="signup-form"
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={(event) => handleSubmit(event, document.querySelector("form"))}
             >
                 <input type="hidden" name="bot-field" />
-                <input type="hidden" name="form-name" value="kir-form" />
+                <input type="hidden" name="form-name" value="signup-form" />
 
                 <div>
                     <label htmlFor="formFirstName">Voornaam</label>
@@ -100,15 +96,25 @@ const ContactForm: React.FC = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="formCompany">Bedrijfsnaam</label>
+                    <label htmlFor="formInstitution">Verwijzende instantie</label>
                     <input
                         type="text"
-                        name="company"
-                        id="formCompany"
-                        autoComplete="organization"
-                        value={formData.company}
+                        name="institution"
+                        id="formInstitution"
+                        value={formData.institution}
                         onChange={handleChange}
-                        placeholder="Bedrijfsnaam"
+                        placeholder="Verwijzende instantie"
+                    />
+                </div>
+                <div>
+                    <label htmlFor="formContactPerson">Contactpersoon</label>
+                    <input
+                        type="text"
+                        name="contactPerson"
+                        id="formContactPerson"
+                        value={formData.contactPerson}
+                        onChange={handleChange}
+                        placeholder="Contactpersoon"
                     />
                 </div>
                 <div>
@@ -121,6 +127,7 @@ const ContactForm: React.FC = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="Telefoonnummer"
+                        required
                     />
                 </div>
                 <div>
@@ -144,10 +151,14 @@ const ContactForm: React.FC = () => {
                         rows={7}
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Bericht *"
-                        required
+                        placeholder="Toelichting aanmelding"
                     />
                 </div>
+
+                <p>
+                    Na het indienen van de aanmelding ontvang je een bevestiging per e-mail. Vervolgens sturen wij een
+                    officieel aanmeldformulier toe.
+                </p>
 
                 <div>
                     <button type="submit" disabled={isSubmitting}>
@@ -159,4 +170,4 @@ const ContactForm: React.FC = () => {
     );
 };
 
-export default ContactForm;
+export default SignUpForm;

@@ -277,4 +277,10 @@
             background-color: rgba($tertiary, 1);
         }
     }
+
+    > a {
+        @include fluid-typing(15, 15.5);
+
+        @include button(4, "full", $white);
+    }
 }

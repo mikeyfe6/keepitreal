@@ -173,6 +173,8 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                     </ul>
                 </div>
 
+                <Link to="/persoonlijke-begeleiding">Aanmeldformulier persoonlijke begeleiding</Link>
+
                 {/* <div id="actual" className={sidebarStyles.asideActual}>
                     <p>
                         <strong>
