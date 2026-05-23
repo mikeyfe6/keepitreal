@@ -226,10 +226,20 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                         </li>
                     </ul>
                 </div>
+
+                <div id="press" className={sidebarStyles.asidePress}>
+                    <p>
+                        Media of persvragen? Neem contact op met de afdeling Communicatie via{" "}
+                        <a href="mailto:communicatie@keepitreal.nl">communicatie@keepitreal.nl</a>.
+                    </p>
+                </div>
+
                 <div id="offer" className={sidebarStyles.asideOffer}>
                     <p>
-                        Wij bieden ook trajecten op maat, werken binnen scholen en justitiële instellingen en trainen
-                        professionals.
+                        <b>
+                            Wij bieden ook trajecten op maat, werken binnen scholen en justitiële instellingen en
+                            trainen professionals.
+                        </b>
                     </p>
                 </div>
             </aside>
