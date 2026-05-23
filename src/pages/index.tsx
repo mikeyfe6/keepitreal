@@ -224,7 +224,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     <h2>Onze partners</h2>
                     <hr />
                     <a href="https://clipjesfabriek.nl/" target="_blank" rel="noopener noreferrer">
-                        <StaticImage src="../images/partners/clipjes-fabriek.jpeg" alt="" width={150} />
+                        <StaticImage src="../images/partners/clipjes-fabriek.jpeg" alt="" width={125} />
                     </a>
                 </div>
             </div>
