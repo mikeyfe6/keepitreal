@@ -56,7 +56,9 @@ const ContactPage: React.FC<PageProps> = () => {
                         <b>E-mail</b>
                         <span>:</span>
                         <br />
-                        <a href={`mailto:${email}`}>{email}</a>
+                        <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+                            {email}
+                        </a>
                     </p>
 
                     <p>

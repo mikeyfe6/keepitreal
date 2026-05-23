@@ -286,7 +286,9 @@ const WorkshopsPage: React.FC<PageProps> = () => {
                     <p>
                         Voor meer informatie of het aanvragen van een offerte, stuur ons een bericht via het{" "}
                         <Link to="/contact/">online contactformulier</Link> of mail naar{" "}
-                        <a href="mailto:secretariaat@keeptreal.nl">secretariaat@keeptreal.nl</a>
+                        <a href="mailto:secretariaat@keeptreal.nl" target="_blank" rel="noopener noreferrer">
+                            secretariaat@keeptreal.nl
+                        </a>
                     </p>
                 </div>
             </div>

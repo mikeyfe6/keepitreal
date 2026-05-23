@@ -230,7 +230,10 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                 <div id="press" className={sidebarStyles.asidePress}>
                     <p>
                         Media of persvragen? Neem contact op met de afdeling Communicatie via{" "}
-                        <a href="mailto:communicatie@keepitreal.nl">communicatie@keepitreal.nl</a>.
+                        <a href="mailto:communicatie@keepitreal.nl" target="_blank" rel="noopener noreferrer">
+                            communicatie@keepitreal.nl
+                        </a>
+                        .
                     </p>
                 </div>
 

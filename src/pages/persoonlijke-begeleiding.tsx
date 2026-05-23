@@ -22,7 +22,7 @@ const ContactPage: React.FC<PageProps> = () => {
                         Voor vragen over een aanmelding of informatie over persoonlijke begeleiding kun je contact
                         opnemen via: <br />
                         <br /> <FontAwesomeIcon icon="envelope" size="lg" />{" "}
-                        <a href="mailto:charity@keeptreal.nl">
+                        <a href="mailto:charity@keeptreal.nl" target="_blank" rel="noopener noreferrer">
                             <b>charity@keeptreal.nl</b>
                         </a>
                     </p>
