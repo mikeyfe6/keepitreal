@@ -118,8 +118,16 @@ const Hero: React.FC = () => {
 
             <div className={heroStyles.line} /> */}
 
-            <div>
-                <div className="elfsight-app-90fd4cef-03cb-4c2f-bd7b-c024380ed5b2" data-elfsight-app-lazy/>
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "100%",
+                    height: "100%",
+                }}
+            >
+                <div className="elfsight-app-90fd4cef-03cb-4c2f-bd7b-c024380ed5b2" data-elfsight-app-lazy />
             </div>
 
             {/* <div className={heroStyles.visual} hidden>
