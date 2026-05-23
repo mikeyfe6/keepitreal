@@ -162,14 +162,6 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                                 Beluister onze podcast
                             </button>
                         </li>
-                        {/* <li>
-                            <button
-                                onClick={() => handleLegendClick("partners")}
-                                className={activeSection === "partners" ? sidebarStyles.active : ""}
-                            >
-                                Onze partners
-                            </button>
-                        </li> */}
                     </ul>
                 </div>
 

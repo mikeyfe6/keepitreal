@@ -8,6 +8,7 @@ import Cta from "../components/ui/cta";
 import { Seo } from "../components/seo";
 
 import * as indexStyles from "../styles/modules/pages/index.module.scss";
+import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage: React.FC<PageProps> = () => {
     const [activeSection, setActiveSection] = useState<string>("");
@@ -17,7 +18,6 @@ const IndexPage: React.FC<PageProps> = () => {
     const ourteamRef = useRef<HTMLDivElement>(null!);
     const impactRef = useRef<HTMLDivElement>(null!);
     const podcastRef = useRef<HTMLDivElement>(null!);
-    // const partnersRef = useRef<HTMLDivElement>(null!);
 
     const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
         if (ref.current) {
@@ -37,7 +37,6 @@ const IndexPage: React.FC<PageProps> = () => {
             ourteam: ourteamRef,
             impact: impactRef,
             podcast: podcastRef,
-            // partners: partnersRef,
         };
         if (sections[sectionId]?.current) {
             handleScroll(sections[sectionId]);
@@ -103,14 +102,6 @@ const IndexPage: React.FC<PageProps> = () => {
                                 Beluister onze podcast
                             </button>
                         </li>
-                        {/* <li>
-                            <button
-                                onClick={() => handleLegendClick("partners")}
-                                className={activeSection === "partners" ? indexStyles.active : ""}
-                            >
-                                Onze partners
-                            </button>
-                        </li> */}
                     </ul>
                 </div>
 
@@ -229,10 +220,13 @@ const IndexPage: React.FC<PageProps> = () => {
                         afleveringen. <strong>Keep It Real</strong> en luister mee!
                     </p>
                 </div>
-                {/* <div ref={partnersRef} className={activeSection === "partners" ? indexStyles.active : ""}>
+                <div>
                     <h2>Onze partners</h2>
-                    <p>[logo] [logo] [logo] [logo] [logo]</p>
-                </div> */}
+                    <hr />
+                    <a href="https://clipjesfabriek.nl/" target="_blank" rel="noopener noreferrer">
+                        <StaticImage src="../images/partners/clipjes-fabriek.jpeg" alt="" width={150} />
+                    </a>
+                </div>
             </div>
         </Layout>
     );

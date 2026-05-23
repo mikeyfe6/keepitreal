@@ -130,6 +130,10 @@
             outline: 2px solid $tertiary;
             animation: fade-out-outline 3s forwards;
         }
+
+        > hr {
+            @include hr($color: $secondary);
+        }
     }
 
     @keyframes fade-out-outline {
