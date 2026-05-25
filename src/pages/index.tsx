@@ -220,12 +220,38 @@ const IndexPage: React.FC<PageProps> = () => {
                         afleveringen. <strong>Keep It Real</strong> en luister mee!
                     </p>
                 </div>
-                <div>
+                <div className={indexStyles.indexPartners}>
                     <h2>Onze partners</h2>
                     <hr />
-                    <a href="https://clipjesfabriek.nl/" target="_blank" rel="noopener noreferrer">
-                        <StaticImage src="../images/partners/clipjes-fabriek.jpeg" alt="" width={125} />
-                    </a>
+                    <div>
+                        <a href="https://clipjesfabriek.nl/" target="_blank" rel="noopener noreferrer">
+                            <StaticImage
+                                src="../images/partners/clipjes-fabriek.jpeg"
+                                alt="Clipjes Fabriek"
+                                width={125}
+                            />
+                        </a>
+                        <a href="https://www.amsterdam.nl/" target="_blank" rel="noopener noreferrer">
+                            <StaticImage
+                                src="../images/partners/gemeente-amsterdam.jpeg"
+                                alt="Gemeente Amsterdam"
+                                width={125}
+                            />
+                        </a>
+                        <a href="https://www.orion.nl/" target="_blank" rel="noopener noreferrer">
+                            <StaticImage src="../images/partners/orion-college.jpeg" alt="Orion College" width={125} />
+                        </a>
+                        <a href="https://www.teylingereind.nl/" target="_blank" rel="noopener noreferrer">
+                            <StaticImage src="../images/partners/teylingereind.png" alt="Teylingereind" width={125} />
+                        </a>
+                        <a href="https://www.uva.nl/" target="_blank" rel="noopener noreferrer">
+                            <StaticImage
+                                src="../images/partners/universiteit-van-amsterdam.jpeg"
+                                alt="Universiteit van Amsterdam"
+                                width={125}
+                            />
+                        </a>
+                    </div>
                 </div>
             </div>
         </Layout>

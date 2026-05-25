@@ -91,30 +91,40 @@
             }
         }
 
-        &#{$index}-results {
+        &#{$index}-partners {
             > div {
                 display: flex;
                 gap: rem-calc(24);
-                justify-content: space-between;
+                justify-content: space-around;
                 flex-wrap: wrap;
-
-                > div {
-                    background-color: rgba($primary, 0.825);
-                    color: $white;
-                    padding: rem-calc(24 16);
-                    flex: 1;
-
-                    @include border-radius;
-
-                    p {
-                        white-space: nowrap;
-                        font-size: rem-calc(16);
-                        font-weight: 600;
-                        text-align: center;
-                    }
-                }
+                align-items: center;
             }
         }
+
+        // &#{$index}-results {
+        //     > div {
+        //         display: flex;
+        //         gap: rem-calc(24);
+        //         justify-content: space-between;
+        //         flex-wrap: wrap;
+
+        //         > div {
+        //             background-color: rgba($primary, 0.825);
+        //             color: $white;
+        //             padding: rem-calc(24 16);
+        //             flex: 1;
+
+        //             @include border-radius;
+
+        //             p {
+        //                 white-space: nowrap;
+        //                 font-size: rem-calc(16);
+        //                 font-weight: 600;
+        //                 text-align: center;
+        //             }
+        //         }
+        //     }
+        // }
 
         > ol {
             display: flex;
@@ -132,7 +142,7 @@
         }
 
         > hr {
-            @include hr($color: $secondary);
+            @include hr($color: rgba($secondary, 0.5));
         }
     }
 
