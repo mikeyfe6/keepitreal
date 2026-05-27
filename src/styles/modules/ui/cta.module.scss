@@ -100,7 +100,7 @@
                     }
 
                     p {
-                        font-size: rem-calc(16);
+                        @include fluid-typing(16, 17);
                     }
                 }
 
