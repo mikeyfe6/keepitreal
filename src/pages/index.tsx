@@ -9,6 +9,7 @@ import { Seo } from "../components/seo";
 
 import * as indexStyles from "../styles/modules/pages/index.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const IndexPage: React.FC<PageProps> = () => {
     const [activeSection, setActiveSection] = useState<string>("");
@@ -105,7 +106,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     </ul>
                 </div>
 
-                <div className={indexStyles.indexPodcast}>
+                <div className={indexStyles.indexPodcastMobile}>
                     <iframe
                         title="Keep It Real Podcast"
                         src="https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator"
@@ -199,7 +200,10 @@ const IndexPage: React.FC<PageProps> = () => {
                     </p>
                 </div>
 
-                <div ref={podcastRef} className={activeSection === "podcast" ? indexStyles.active : ""}>
+                <div
+                    ref={podcastRef}
+                    className={`${indexStyles.indexPodcastDesktop} ${activeSection === "podcast" ? indexStyles.active : ""}`}
+                >
                     <h2>Beluister onze podcast</h2>
                     <p>
                         Wil je meer horen over de verhalen achter Keep It Real en de inspirerende mensen die deel
@@ -207,13 +211,15 @@ const IndexPage: React.FC<PageProps> = () => {
                         succesverhalen en diepgaande gesprekken over onderwerpen die jongeren aan het hart gaan.
                     </p>
 
-                    <iframe
-                        title="Keep It Real Podcast"
-                        src="https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"
-                        className="spotify w-margin"
-                    />
+                    <a
+                        href="https://open.spotify.com/show/7wDDGz0HtXhn3WPCJ3KLcO"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={indexStyles.spotifyButton}
+                    >
+                        <FontAwesomeIcon icon={["fab", "spotify"]} size="2x" className={indexStyles.spotifyIcon} />
+                        Volg / Luister ons op Spotify
+                    </a>
 
                     <p>
                         Abonneer je op onze podcast via jouw favoriete platform en blijf op de hoogte van de laatste
@@ -228,27 +234,27 @@ const IndexPage: React.FC<PageProps> = () => {
                             <StaticImage
                                 src="../images/partners/clipjes-fabriek.jpeg"
                                 alt="Clipjes Fabriek"
-                                width={125}
+                                width={100}
                             />
                         </a>
                         <a href="https://www.amsterdam.nl/" target="_blank" rel="noopener noreferrer">
                             <StaticImage
                                 src="../images/partners/gemeente-amsterdam.jpeg"
                                 alt="Gemeente Amsterdam"
-                                width={125}
+                                width={100}
                             />
                         </a>
                         <a href="https://www.orion.nl/" target="_blank" rel="noopener noreferrer">
-                            <StaticImage src="../images/partners/orion-college.jpeg" alt="Orion College" width={125} />
+                            <StaticImage src="../images/partners/orion-college.jpeg" alt="Orion College" width={100} />
                         </a>
                         <a href="https://www.teylingereind.nl/" target="_blank" rel="noopener noreferrer">
-                            <StaticImage src="../images/partners/teylingereind.png" alt="Teylingereind" width={125} />
+                            <StaticImage src="../images/partners/teylingereind.png" alt="Teylingereind" width={100} />
                         </a>
                         <a href="https://www.uva.nl/" target="_blank" rel="noopener noreferrer">
                             <StaticImage
                                 src="../images/partners/universiteit-van-amsterdam.jpeg"
                                 alt="Universiteit van Amsterdam"
-                                width={125}
+                                width={100}
                             />
                         </a>
                     </div>

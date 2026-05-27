@@ -8,7 +8,7 @@
     gap: rem-calc(32);
 
     > div {
-        &:not(&#{$index}-podcast, &#{$index}-anchors) {
+        &:not(&#{$index}-podcast-mobile, &#{$index}-anchors) {
             @include main-card;
         }
 
@@ -84,17 +84,48 @@
         }
 
         &#{$index}-podcast {
-            display: block;
+            &-mobile {
+                display: block;
 
-            @include phablet {
-                display: none;
+                @include phablet {
+                    display: none;
+                }
+            }
+
+            &-desktop {
+                > a {
+                    display: inline-flex;
+                    gap: rem-calc(12);
+                    align-items: center;
+                    justify-content: center;
+                    padding: rem-calc(12 24);
+                    margin: rem-calc(24 0);
+                    width: 100%;
+                    font-weight: 700;
+                    color: $white;
+                    background: linear-gradient(to left, rgba($tertiary, 87.5%), $secondary);
+
+                    @include border-radius;
+                    @include smooth-trans;
+
+                    &:hover,
+                    &:focus-visible {
+                        background: linear-gradient(to left, rgba($tertiary, 100%), rgba($secondary, 90%));
+                    }
+                }
             }
         }
 
         &#{$index}-partners {
+            display: none;
+
+            @include phablet {
+                display: block;
+            }
+
             > div {
                 display: flex;
-                gap: rem-calc(24);
+                gap: rem-calc(32);
                 justify-content: space-around;
                 flex-wrap: wrap;
                 align-items: center;

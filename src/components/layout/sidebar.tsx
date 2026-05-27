@@ -11,6 +11,7 @@ import Modal from "../utils/modal";
 import EventForm from "../forms/eventForm";
 
 import * as sidebarStyles from "../../styles/modules/layout/sidebar.module.scss";
+import { StaticImage } from "gatsby-plugin-image";
 
 interface SidebarProps {
     handleLegendClick: (sectionId: string) => void;
@@ -244,6 +245,48 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                             trainen professionals.
                         </b>
                     </p>
+                </div>
+
+                <div className={sidebarStyles.asidePartners}>
+                    <h2>Onze partners</h2>
+                    <hr />
+                    <div>
+                        <a href="https://clipjesfabriek.nl/" target="_blank" rel="noopener noreferrer">
+                            <StaticImage
+                                src="../../images/partners/clipjes-fabriek.jpeg"
+                                alt="Clipjes Fabriek"
+                                width={100}
+                            />
+                        </a>
+                        <a href="https://www.amsterdam.nl/" target="_blank" rel="noopener noreferrer">
+                            <StaticImage
+                                src="../../images/partners/gemeente-amsterdam.jpeg"
+                                alt="Gemeente Amsterdam"
+                                width={100}
+                            />
+                        </a>
+                        <a href="https://www.orion.nl/" target="_blank" rel="noopener noreferrer">
+                            <StaticImage
+                                src="../../images/partners/orion-college.jpeg"
+                                alt="Orion College"
+                                width={100}
+                            />
+                        </a>
+                        <a href="https://www.teylingereind.nl/" target="_blank" rel="noopener noreferrer">
+                            <StaticImage
+                                src="../../images/partners/teylingereind.png"
+                                alt="Teylingereind"
+                                width={100}
+                            />
+                        </a>
+                        <a href="https://www.uva.nl/" target="_blank" rel="noopener noreferrer">
+                            <StaticImage
+                                src="../../images/partners/universiteit-van-amsterdam.jpeg"
+                                alt="Universiteit van Amsterdam"
+                                width={100}
+                            />
+                        </a>
+                    </div>
                 </div>
             </aside>
 

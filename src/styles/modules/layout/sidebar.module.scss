@@ -284,6 +284,27 @@
         &#{$aside}-offer {
             background-color: rgba($tertiary, 1);
         }
+
+        &#{$aside}-partners {
+            color: $black;
+            display: block;
+
+            @include phablet {
+                display: none;
+            }
+
+            > div {
+                display: flex;
+                gap: rem-calc(32);
+                justify-content: space-around;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            > hr {
+                @include hr($color: rgba($secondary, 0.5));
+            }
+        }
     }
 
     > a {
