@@ -47,6 +47,16 @@ const IndexPage: React.FC<PageProps> = () => {
     return (
         <Layout handleLegendClick={handleLegendClick} activeSection={activeSection}>
             <div className={indexStyles.index}>
+                <div className={indexStyles.indexPodcastMobile}>
+                    <iframe
+                        title="Keep It Real Podcast"
+                        src="https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        className="spotify"
+                    />
+                </div>
+
                 <div>
                     <p>
                         Welkom bij <strong>Keep It Real</strong>, een programma dat jongeren een leerervaring biedt die
@@ -104,16 +114,6 @@ const IndexPage: React.FC<PageProps> = () => {
                             </button>
                         </li>
                     </ul>
-                </div>
-
-                <div className={indexStyles.indexPodcastMobile}>
-                    <iframe
-                        title="Keep It Real Podcast"
-                        src="https://open.spotify.com/embed/show/7wDDGz0HtXhn3WPCJ3KLcO?utm_source=generator"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"
-                        className="spotify"
-                    />
                 </div>
 
                 {/* <div ref={missionRef} className={activeSection === "mission" ? indexStyles.active : ""}>
@@ -204,7 +204,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     ref={podcastRef}
                     className={`${indexStyles.indexPodcastDesktop} ${activeSection === "podcast" ? indexStyles.active : ""}`}
                 >
-                    <h2>Beluister onze podcast</h2>
+                <h2>Beluister onze podcast</h2>
                     <p>
                         Wil je meer horen over de verhalen achter Keep It Real en de inspirerende mensen die deel
                         uitmaken van ons team? Luister dan naar onze podcast! Hier delen we persoonlijke ervaringen,
@@ -215,9 +215,8 @@ const IndexPage: React.FC<PageProps> = () => {
                         href="https://open.spotify.com/show/7wDDGz0HtXhn3WPCJ3KLcO"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={indexStyles.spotifyButton}
                     >
-                        <FontAwesomeIcon icon={["fab", "spotify"]} size="2x" className={indexStyles.spotifyIcon} />
+                        <FontAwesomeIcon icon={["fab", "spotify"]} size="2x" />
                         Volg / Luister ons op Spotify
                     </a>
 
