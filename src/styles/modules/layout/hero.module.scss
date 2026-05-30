@@ -8,10 +8,15 @@
     flex-direction: column-reverse;
     padding-top: rem-calc(160);
     gap: rem-calc(40);
+    margin-bottom: rem-calc(-20);
 
     @include mobile {
         padding-top: rem-calc(237.5);
         gap: rem-calc(48);
+    }
+
+    @include phablet {
+        margin-bottom: 0;
     }
 
     @include tablet {
