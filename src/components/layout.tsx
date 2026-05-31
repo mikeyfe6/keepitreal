@@ -27,7 +27,14 @@ import {
     faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { faInstagram, faFacebook, faTiktok, faYoutube, faSpotify } from "@fortawesome/free-brands-svg-icons";
+import {
+    faInstagram,
+    faFacebook,
+    faTiktok,
+    faYoutube,
+    faSpotify,
+    faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 library.add(
     faInstagram,
@@ -54,6 +61,7 @@ library.add(
     faCircleCheck,
     faChevronDown,
     faEnvelope,
+    faLinkedin,
 );
 
 import Header from "./layout/header";

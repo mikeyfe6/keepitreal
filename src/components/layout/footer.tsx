@@ -7,7 +7,7 @@ import { useSiteMetadata } from "../../hooks/use-site-metadata";
 import * as footerStyles from "../../styles/modules/layout/footer.module.scss";
 
 const Footer: React.FC = () => {
-    const { title, facebookUrl, instagramUrl, tiktokUrl, youtubeUrl, spotifyUrl } = useSiteMetadata();
+    const { title, facebookUrl, instagramUrl, tiktokUrl, youtubeUrl, linkedinUrl, spotifyUrl } = useSiteMetadata();
 
     const currentYear = new Date().getFullYear();
 
@@ -36,6 +36,11 @@ const Footer: React.FC = () => {
                     <li>
                         <a href={youtubeUrl} rel="noopener noreferrer" target="_blank">
                             <FontAwesomeIcon icon={["fab", "youtube"]} size="lg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href={linkedinUrl} rel="noopener noreferrer" target="_blank">
+                            <FontAwesomeIcon icon={["fab", "linkedin"]} size="lg" />
                         </a>
                     </li>
                     <li>

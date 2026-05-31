@@ -31,7 +31,7 @@
                 &::after {
                     content: "";
                     position: absolute;
-                    width: rem-calc(50);
+                    width: rem-calc(45);
                     height: rem-calc(3);
                     background-color: $tertiary;
                     bottom: rem-calc(-46.5);
@@ -51,7 +51,7 @@
                 &::before {
                     content: "";
                     position: absolute;
-                    width: rem-calc(50);
+                    width: rem-calc(45);
                     height: rem-calc(3);
                     background-color: $tertiary;
                     top: rem-calc(-47.5);
@@ -69,10 +69,11 @@
         > ul {
             display: flex;
             align-self: center;
-            gap: rem-calc(16);
+            gap: rem-calc(14);
 
             @include phablet {
                 align-self: flex-start;
+                gap: rem-calc(20);
             }
 
             li {

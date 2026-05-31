@@ -13,7 +13,7 @@ import Hamburger from "../layout/hamburger";
 import * as headerStyles from "../../styles/modules/layout/header.module.scss";
 
 const Header: React.FC = () => {
-    const { facebookUrl, instagramUrl, tiktokUrl, youtubeUrl, spotifyUrl } = useSiteMetadata();
+    const { facebookUrl, instagramUrl, tiktokUrl, youtubeUrl, spotifyUrl, linkedinUrl } = useSiteMetadata();
 
     const [isOpen, setIsOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
@@ -157,6 +157,11 @@ const Header: React.FC = () => {
                             </a>
                         </li>
                         <li>
+                            <a href={linkedinUrl} rel="noopener noreferrer" target="_blank">
+                                <FontAwesomeIcon icon={["fab", "linkedin"]} size="lg" />
+                            </a>
+                        </li>
+                        <li>
                             <a href={spotifyUrl} rel="noopener noreferrer" target="_blank">
                                 <FontAwesomeIcon icon={["fab", "spotify"]} size="lg" />
                             </a>
@@ -277,27 +282,33 @@ const Header: React.FC = () => {
                         <ul className={headerStyles.mobileSocials}>
                             <li>
                                 <a href={instagramUrl} rel="noopener noreferrer" target="_blank">
-                                    <FontAwesomeIcon icon={["fab", "instagram"]} size="2xl" />
+                                    <FontAwesomeIcon icon={["fab", "instagram"]} />
                                 </a>
                             </li>
                             <li>
                                 <a href={facebookUrl} rel="noopener noreferrer" target="_blank">
-                                    <FontAwesomeIcon icon={["fab", "facebook"]} size="2xl" />
+                                    <FontAwesomeIcon icon={["fab", "facebook"]} />
                                 </a>
                             </li>
                             <li>
                                 <a href={tiktokUrl} rel="noopener noreferrer" target="_blank">
-                                    <FontAwesomeIcon icon={["fab", "tiktok"]} size="2xl" />
+                                    <FontAwesomeIcon icon={["fab", "tiktok"]} />
                                 </a>
                             </li>
                             <li>
                                 <a href={youtubeUrl} rel="noopener noreferrer" target="_blank">
-                                    <FontAwesomeIcon icon={["fab", "youtube"]} size="2xl" />
+                                    <FontAwesomeIcon icon={["fab", "youtube"]} />
                                 </a>
                             </li>
                             <li>
+                                <a href={linkedinUrl} rel="noopener noreferrer" target="_blank">
+                                    <FontAwesomeIcon icon={["fab", "linkedin"]} />
+                                </a>
+                            </li>
+
+                            <li>
                                 <a href={spotifyUrl} rel="noopener noreferrer" target="_blank">
-                                    <FontAwesomeIcon icon={["fab", "spotify"]} size="2xl" />
+                                    <FontAwesomeIcon icon={["fab", "spotify"]} />
                                 </a>
                             </li>
                         </ul>

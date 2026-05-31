@@ -243,18 +243,22 @@
             &-socials {
                 display: flex;
                 align-items: center;
-                gap: rem-calc(28);
+                gap: rem-calc(16);
                 margin-top: rem-calc(16);
 
                 /* stylelint-disable-next-line no-descending-specificity */
                 > li {
                     display: flex;
                     align-items: center;
-                    color: rgba($tertiary, 0.825);
 
-                    /* stylelint-disable-next-line no-descending-specificity */
-                    &:hover {
-                        color: rgba($tertiary, 1);
+                    svg {
+                        color: rgba($tertiary, 0.75);
+
+                        @include fluid-typing(32, 44);
+
+                        &:hover {
+                            color: rgba($tertiary, 1);
+                        }
                     }
                 }
             }

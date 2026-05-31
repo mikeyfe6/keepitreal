@@ -19,7 +19,7 @@ const siteMetadata = {
     tiktokUrl: `https://www.tiktok.com/@keepitrealkir`,
     youtubeUrl: `https://www.youtube.com/@keepitreal_de_podcast`,
     spotifyUrl: `https://open.spotify.com/show/7wDDGz0HtXhn3WPCJ3KLcO?si=80196a51f4e4423d`,
-    linkedinUrl: `#!`,
+    linkedinUrl: `https://www.linkedin.com/company/keep-it-real-amsterdam-040120373/`,
 
     telephone: ``,
     phoneRaw: ``,
