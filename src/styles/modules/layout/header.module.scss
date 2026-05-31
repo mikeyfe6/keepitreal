@@ -150,7 +150,7 @@
 
             &.open {
                 display: block;
-                padding: (64 0 96);
+                padding: rem-calc(64 0 96);
 
                 @include phablet {
                     display: none;
@@ -244,7 +244,8 @@
                 display: flex;
                 align-items: center;
                 gap: rem-calc(16);
-                margin-top: rem-calc(16);
+                padding-top: rem-calc(32);
+                border-top: 0.5px solid rgba($primary, 0.75);
 
                 /* stylelint-disable-next-line no-descending-specificity */
                 > li {
