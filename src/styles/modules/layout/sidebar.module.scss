@@ -274,15 +274,11 @@
         }
 
         &#{$aside}-press {
-            background-color: rgba($primary, 0.85);
+            background-color: rgba($tertiary, 1);
 
             > p > a {
-                @include text-link;
+                @include text-link($white);
             }
-        }
-
-        &#{$aside}-offer {
-            background-color: rgba($tertiary, 1);
         }
 
         &#{$aside}-partners {

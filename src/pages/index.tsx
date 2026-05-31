@@ -122,7 +122,8 @@ const IndexPage: React.FC<PageProps> = () => {
                         Bij Keep It Real geloven we in het belang van echte ervaringen. Geen standaardlessen, maar een
                         dag vol inspiratie, interactie en empowerment. Onze ervaringsdeskundige teamleden delen hun
                         levensverhalen en begeleiden workshops, waarbij thema's als veiligheid, identiteit, en sociale
-                        druk worden behandeld.
+                        druk worden behandeld. Wij bieden ook trajecten op maat, werken binnen scholen en justitiële
+                        instellingen en trainen professionals.
                     </p>
                 </div>
 

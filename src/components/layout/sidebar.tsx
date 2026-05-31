@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { useSrcImages } from "../../hooks/use-src-image";
 
 // import LightBox from "../utils/lightbox";
-import Modal from "../utils/modal";
-import EventForm from "../forms/eventForm";
+// import Modal from "../utils/modal";
+// import EventForm from "../forms/eventForm";
 
 import * as sidebarStyles from "../../styles/modules/layout/sidebar.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
@@ -235,15 +235,6 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                             communicatie@keepitreal.nl
                         </a>
                         .
-                    </p>
-                </div>
-
-                <div id="offer" className={sidebarStyles.asideOffer}>
-                    <p>
-                        <b>
-                            Wij bieden ook trajecten op maat, werken binnen scholen en justitiële instellingen en
-                            trainen professionals.
-                        </b>
                     </p>
                 </div>
 

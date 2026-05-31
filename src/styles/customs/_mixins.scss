@@ -56,14 +56,14 @@
     text-underline-offset: $offset;
 }
 
-@mixin text-link {
+@mixin text-link($color: $tertiary) {
     font-weight: 600;
-    color: $tertiary;
+    color: $color;
 
     @include smooth-trans;
 
     &:hover {
-        color: rgba($tertiary, 0.7);
+        color: rgba($color, 0.825);
     }
 }
 
