@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import * as React from "react";
 
 import { Link } from "gatsby";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { useSrcImages } from "../../hooks/use-src-image";
+// import { useSrcImages } from "../../hooks/use-src-image";
 
-import LightBox from "../utils/lightbox";
+// import LightBox from "../utils/lightbox";
 import Modal from "../utils/modal";
 import EventForm from "../forms/eventForm";
 
@@ -19,44 +19,44 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) => {
-    const {
-        // omarmprijs,
-        backToSchool,
-        flexZijn,
-        kunstEnCultuur,
-    } = useSrcImages();
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-    const [countdown, setCountdown] = useState(5);
+    // const {
+    //     omarmprijs,
+    //     backToSchool,
+    //     flexZijn,
+    //     kunstEnCultuur,
+    // } = useSrcImages();
+    // const [isModalOpen, setIsModalOpen] = useState(false);
+    // const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    // const [countdown, setCountdown] = useState(5);
 
-    const handleOpenModal = () => {
-        setIsModalOpen(true);
-        setShowSuccessMessage(false);
-    };
+    // const handleOpenModal = () => {
+    //     setIsModalOpen(true);
+    //     setShowSuccessMessage(false);
+    // };
 
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
-        setShowSuccessMessage(false);
-        setCountdown(10);
-    };
+    // const handleCloseModal = () => {
+    //     setIsModalOpen(false);
+    //     setShowSuccessMessage(false);
+    //     setCountdown(10);
+    // };
 
-    const handleRegistrationSuccess = () => {
-        setShowSuccessMessage(true);
-        setCountdown(10);
+    // const handleRegistrationSuccess = () => {
+    //     setShowSuccessMessage(true);
+    //     setCountdown(10);
 
-        const timer = setInterval(() => {
-            setCountdown((prev) => {
-                if (prev <= 1) {
-                    clearInterval(timer);
-                    setIsModalOpen(false);
-                    setShowSuccessMessage(false);
-                    setCountdown(10);
-                    return 0;
-                }
-                return prev - 1;
-            });
-        }, 1000);
-    };
+    //     const timer = setInterval(() => {
+    //         setCountdown((prev) => {
+    //             if (prev <= 1) {
+    //                 clearInterval(timer);
+    //                 setIsModalOpen(false);
+    //                 setShowSuccessMessage(false);
+    //                 setCountdown(10);
+    //                 return 0;
+    //             }
+    //             return prev - 1;
+    //         });
+    //     }, 1000);
+    // };
 
     return (
         <>
@@ -112,14 +112,14 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                         KIR <span>:</span>
                     </h2>
                     <ul>
-                        {/* <li>
+                        <li>
                             <button
                                 onClick={() => handleLegendClick("mission")}
                                 className={activeSection === "mission" ? sidebarStyles.active : ""}
                             >
                                 Onze missie
                             </button>
-                        </li> */}
+                        </li>
                         <li>
                             <button
                                 onClick={() => handleLegendClick("whatwedo")}
@@ -290,7 +290,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                 </div>
             </aside>
 
-            <Modal
+            {/* <Modal
                 isOpen={isModalOpen}
                 onClose={handleCloseModal}
                 title={showSuccessMessage ? "" : "Aanmelden voor Back to School"}
@@ -311,7 +311,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                         <EventForm onSuccess={handleRegistrationSuccess} eventName="Back to School" />
                     </div>
                 }
-            </Modal>
+            </Modal> */}
         </>
     );
 };

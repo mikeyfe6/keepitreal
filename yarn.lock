@@ -2372,12 +2372,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/functions@npm:^5.2.2":
-  version: 5.2.2
-  resolution: "@netlify/functions@npm:5.2.2"
+"@netlify/functions@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@netlify/functions@npm:5.3.0"
   dependencies:
-    "@netlify/types": "npm:2.7.0"
-  checksum: 10c0/ec9b8d8213ff17a95562f69c039c42acdf384c443f86731d919b8a132eed454e32afb68665f51b76683290f162eb5f914a04a0ba69db06ea03a59851619c6787
+    "@netlify/types": "npm:2.8.0"
+  checksum: 10c0/0e78098581b92f4b37ad5f0ab2b2f9a07d8f03275fec07039a103e256ed1b3e32b7b60fecba9bd657d8af57aca1c7ad77491929e93908e7048b4224e411f1212
   languageName: node
   linkType: hard
 
@@ -2415,10 +2415,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/types@npm:2.7.0":
-  version: 2.7.0
-  resolution: "@netlify/types@npm:2.7.0"
-  checksum: 10c0/7887ef135f0e330e48cde3141fd6be3d88c1d91cb59384c6f9a626a4b8ed9c54e8982aabe30d263a50fb759102dc27dc51530eaec26cd7fb95e9123a054b999f
+"@netlify/types@npm:2.8.0":
+  version: 2.8.0
+  resolution: "@netlify/types@npm:2.8.0"
+  checksum: 10c0/f6d75de6786652890f811853cc34fa094af4fb1ac02e4e300d4aa432989d55824b7aeb4fb8bd57a92037948963080ad4bbc4c66eb32db38768c747fbeb8d9143
   languageName: node
   linkType: hard
 
@@ -3282,10 +3282,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/google.maps@npm:^3.53.1, @types/google.maps@npm:^3.64.1":
-  version: 3.64.1
-  resolution: "@types/google.maps@npm:3.64.1"
-  checksum: 10c0/4ade621941045c7e1b1ead30e0b4025b7fccf2b4cfb7c9b5f48c31cceb964c74d17c28b6105be15b99df85c23e19b25415e9fd7bdd7b1d40b7000d22dbbb4e7e
+"@types/google.maps@npm:^3.53.1, @types/google.maps@npm:^3.65.0":
+  version: 3.65.0
+  resolution: "@types/google.maps@npm:3.65.0"
+  checksum: 10c0/d41bc1ed2c63f297a8956b097953515e87aa21d25ef918102067efa97113ea558bb42be521337af93698b36d4c6283439b3e087b4b57c7033f59128cdc7159cb
   languageName: node
   linkType: hard
 
@@ -5626,8 +5626,8 @@ __metadata:
   linkType: hard
 
 "contentful@npm:^11.2.5":
-  version: 11.12.2
-  resolution: "contentful@npm:11.12.2"
+  version: 11.12.3
+  resolution: "contentful@npm:11.12.3"
   dependencies:
     "@contentful/content-source-maps": "npm:^0.11.33"
     "@contentful/rich-text-types": "npm:^16.6.1"
@@ -5637,7 +5637,7 @@ __metadata:
     json-stringify-safe: "npm:^5.0.1"
     tslib: "npm:^2.8.1"
     type-fest: "npm:^4.0.0"
-  checksum: 10c0/ff70c628e035451ae0d430477d547a5ed6e2611206ef3615462599e536eeddc7858a845ccacc6dd3cd5852459f3d390580c9bf21fae821a3995b1af0ccbe96ca
+  checksum: 10c0/f710a631843559688fed7c7fc3e44124d9167dda27ff86a11a3497129979d115181dcbdcb5dad69292ecfc3938f58ce2c07bfdc01467f05548b11c7f220e7d4c
   languageName: node
   linkType: hard
 
@@ -10371,9 +10371,9 @@ __metadata:
     "@fortawesome/free-solid-svg-icons": "npm:^7.2.0"
     "@fortawesome/react-fontawesome": "npm:^3.3.1"
     "@googlemaps/js-api-loader": "npm:^2.0.2"
-    "@netlify/functions": "npm:^5.2.2"
+    "@netlify/functions": "npm:^5.3.0"
     "@types/babel__core": "npm:^7"
-    "@types/google.maps": "npm:^3.64.1"
+    "@types/google.maps": "npm:^3.65.0"
     "@types/node": "npm:^25.9.1"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"

@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const IndexPage: React.FC<PageProps> = () => {
     const [activeSection, setActiveSection] = useState<string>("");
 
-    // const missionRef = useRef<HTMLDivElement>(null!);
+    const missionRef = useRef<HTMLDivElement>(null!);
     const whatwedoRef = useRef<HTMLDivElement>(null!);
     const ourteamRef = useRef<HTMLDivElement>(null!);
     const impactRef = useRef<HTMLDivElement>(null!);
@@ -33,7 +33,7 @@ const IndexPage: React.FC<PageProps> = () => {
     const handleLegendClick = (sectionId: string) => {
         setActiveSection(sectionId);
         const sections: Record<string, React.RefObject<HTMLDivElement>> = {
-            // mission: missionRef,
+            mission: missionRef,
             whatwedo: whatwedoRef,
             ourteam: ourteamRef,
             impact: impactRef,
@@ -73,14 +73,14 @@ const IndexPage: React.FC<PageProps> = () => {
                         KIR <span>:</span>
                     </h3>
                     <ul>
-                        {/* <li>
+                        <li>
                             <button
                                 onClick={() => handleLegendClick("mission")}
                                 className={activeSection === "mission" ? indexStyles.active : ""}
                             >
                                 Onze missie
                             </button>
-                        </li> */}
+                        </li>
                         <li>
                             <button
                                 onClick={() => handleLegendClick("whatwedo")}
@@ -116,7 +116,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     </ul>
                 </div>
 
-                {/* <div ref={missionRef} className={activeSection === "mission" ? indexStyles.active : ""}>
+                <div ref={missionRef} className={activeSection === "mission" ? indexStyles.active : ""}>
                     <h2>Onze missie</h2>
                     <p>
                         Bij Keep It Real geloven we in het belang van echte ervaringen. Geen standaardlessen, maar een
@@ -124,7 +124,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         levensverhalen en begeleiden workshops, waarbij thema's als veiligheid, identiteit, en sociale
                         druk worden behandeld.
                     </p>
-                </div> */}
+                </div>
 
                 {/* <div className={indexStyles.indexResults}>
                     <h2>Resultaten</h2>
@@ -204,7 +204,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     ref={podcastRef}
                     className={`${indexStyles.indexPodcastDesktop} ${activeSection === "podcast" ? indexStyles.active : ""}`}
                 >
-                <h2>Beluister onze podcast</h2>
+                    <h2>Beluister onze podcast</h2>
                     <p>
                         Wil je meer horen over de verhalen achter Keep It Real en de inspirerende mensen die deel
                         uitmaken van ons team? Luister dan naar onze podcast! Hier delen we persoonlijke ervaringen,
