@@ -9,6 +9,8 @@ import * as stickyTagStyles from "../../styles/modules/layout/stickytag.module.s
 const StickyTag: React.FC = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [openScrollY, setOpenScrollY] = useState<number | null>(null);
+    const [footerOffset, setFooterOffset] = useState(0);
+    const [isMobileViewport, setIsMobileViewport] = useState(false);
 
     const toggleExpanded = () => {
         setIsExpanded((prev) => {
@@ -43,8 +45,65 @@ const StickyTag: React.FC = () => {
         };
     }, [isExpanded, openScrollY]);
 
+    useEffect(() => {
+        const mediaQuery = globalThis.matchMedia("(max-width: 63.99em)");
+
+        const updateViewport = () => {
+            setIsMobileViewport(mediaQuery.matches);
+        };
+
+        updateViewport();
+        mediaQuery.addEventListener("change", updateViewport);
+
+        return () => {
+            mediaQuery.removeEventListener("change", updateViewport);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!isMobileViewport) {
+            setFooterOffset(0);
+            return;
+        }
+
+        const updateFooterOffset = () => {
+            const footerElement = document.querySelector("footer");
+
+            if (!footerElement) {
+                setFooterOffset(0);
+                return;
+            }
+
+            const footerRect = footerElement.getBoundingClientRect();
+            const overlap = globalThis.innerHeight - footerRect.top;
+            setFooterOffset(Math.max(overlap, 0));
+        };
+
+        updateFooterOffset();
+
+        globalThis.addEventListener("scroll", updateFooterOffset, { passive: true });
+        globalThis.addEventListener("resize", updateFooterOffset);
+
+        return () => {
+            globalThis.removeEventListener("scroll", updateFooterOffset);
+            globalThis.removeEventListener("resize", updateFooterOffset);
+        };
+    }, [isMobileViewport]);
+
+    const stickyTagStyle =
+        isMobileViewport && footerOffset > 0 ?
+            {
+                top: "auto",
+                bottom: `${footerOffset + 16}px`,
+                transform: "none",
+            }
+        :   undefined;
+
     return (
-        <div className={`${stickyTagStyles.stickyTag} ${isExpanded ? stickyTagStyles.expanded : ""}`}>
+        <div
+            className={`${stickyTagStyles.stickyTag} ${isExpanded ? stickyTagStyles.expanded : ""}`}
+            style={stickyTagStyle}
+        >
             <div className={stickyTagStyles.stickyTagWrapper} id="sticky-tag-cta">
                 <Link
                     to="/persoonlijke-begeleiding/"
