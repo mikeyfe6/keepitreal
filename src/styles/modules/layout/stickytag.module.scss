@@ -61,6 +61,12 @@
             &:focus-visible {
                 background-color: rgba($white, 1);
             }
+
+            &:hover {
+                svg {
+                    transform: translateX(6.25px);
+                }
+            }
         }
     }
 
