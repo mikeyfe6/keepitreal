@@ -4,6 +4,8 @@ import type { HeadFC, PageProps } from "gatsby";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { useSiteMetadata } from "../hooks/use-site-metadata";
+
 import Layout from "../components/layout";
 import SignUpForm from "../components/forms/signupForm";
 
@@ -12,6 +14,8 @@ import { Seo } from "../components/seo";
 import * as signupStyles from "../styles/modules/pages/signup.module.scss";
 
 const ContactPage: React.FC<PageProps> = () => {
+    const { contactPerson } = useSiteMetadata();
+
     return (
         <Layout>
             <div className={signupStyles.contact}>
@@ -22,8 +26,8 @@ const ContactPage: React.FC<PageProps> = () => {
                         Voor vragen over een aanmelding of informatie over persoonlijke begeleiding kun je contact
                         opnemen via: <br />
                         <br /> <FontAwesomeIcon icon="envelope" size="lg" />{" "}
-                        <a href="mailto:charity@keeptreal.nl" target="_blank" rel="noopener noreferrer">
-                            <b>charity@keeptreal.nl</b>
+                        <a href={`mailto:${contactPerson}`} target="_blank" rel="noopener noreferrer">
+                            <b>{contactPerson}</b>
                         </a>
                     </p>
                 </div>

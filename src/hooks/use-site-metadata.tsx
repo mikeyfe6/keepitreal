@@ -20,6 +20,8 @@ interface SiteMetadata {
     phoneRaw: string;
     mobile: string;
     email: string;
+    communication: string;
+    contactPerson: string;
 
     facility: string;
     street: string;
@@ -64,6 +66,8 @@ export const useSiteMetadata = (): SiteMetadata => {
                     phoneRaw
                     mobile
                     email
+                    communication
+                    contactPerson
 
                     facility
                     street

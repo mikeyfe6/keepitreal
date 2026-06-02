@@ -70,8 +70,8 @@ export default async function sendSignupConfirmation(req: Request) {
 
                     <p>Je ontvangt binnenkort een officieel aanmeldformulier.</p>
 
-                    <p>Met vriendelijke groet,<br>
-                    Team Keep It Real</p>
+                    <p>Met vriendelijke groet,<br><br>
+                    <strong>Team Keep It Real</strong></p>
 
                     <hr style="margin-top: 30px; border: none; border-top: 1px solid #eee;">
                     <p style="font-size: 12px; color: #666;">

@@ -2,7 +2,11 @@ import * as React from "react";
 
 import { Link } from "gatsby";
 
+import { StaticImage } from "gatsby-plugin-image";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
 // import { useSrcImages } from "../../hooks/use-src-image";
 
@@ -11,7 +15,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import EventForm from "../forms/eventForm";
 
 import * as sidebarStyles from "../../styles/modules/layout/sidebar.module.scss";
-import { StaticImage } from "gatsby-plugin-image";
 
 interface SidebarProps {
     handleLegendClick: (sectionId: string) => void;
@@ -19,6 +22,7 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) => {
+    const { communication } = useSiteMetadata();
     // const {
     //     omarmprijs,
     //     backToSchool,
@@ -166,7 +170,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                     </ul>
                 </div>
 
-                <Link to="/persoonlijke-begeleiding">Aanmeldformulier persoonlijke begeleiding</Link>
+                <Link to="/persoonlijke-begeleiding/">Aanmeldformulier persoonlijke begeleiding</Link>
 
                 {/* <div id="actual" className={sidebarStyles.asideActual}>
                     <p>
@@ -199,13 +203,13 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                     />
                 </div> */}
 
-                <div id="contact" className={sidebarStyles.asideContact}>
+                <div id="contact" className={sidebarStyles.asideContact} hidden>
                     <h2>Word lid van Keep It Real</h2>
 
                     <p>Wil je deel uitmaken van ons team of meer informatie over onze programma's?</p>
 
                     <p>
-                        <Link to="/contact">Neem contact met ons op</Link> via onze website of sociale media. Samen
+                        <Link to="/contact/">Neem contact met ons op</Link> via onze website of sociale media. Samen
                         kunnen we het verschil maken voor de jongeren van vandaag en morgen.{" "}
                         <strong>Keep It Real!</strong>
                     </p>
@@ -247,8 +251,8 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                 <div id="press" className={sidebarStyles.asidePress}>
                     <p>
                         Media of persvragen? Neem contact op met de afdeling Communicatie via{" "}
-                        <a href="mailto:communicatie@keepitreal.nl" target="_blank" rel="noopener noreferrer">
-                            communicatie@keepitreal.nl
+                        <a href={`mailto:${communication}`} target="_blank" rel="noopener noreferrer">
+                            {communication}
                         </a>
                         .
                     </p>

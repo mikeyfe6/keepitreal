@@ -25,6 +25,8 @@ const siteMetadata = {
     phoneRaw: ``,
     mobile: ``,
     email: `secretariaat@keeptreal.nl`,
+    communication: `communicatie@keeptreal.nl`,
+    contactPerson: `charity@keeptreal.nl`,
 
     facility: `PopaLive`,
     street: `Paasheuvelweg 14a`,
