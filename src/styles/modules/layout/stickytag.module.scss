@@ -1,0 +1,80 @@
+@use "../../customs/" as *;
+
+.sticky-tag {
+    $this: &;
+
+    position: fixed;
+    top: 70%;
+    left: 0;
+    z-index: 2;
+    opacity: 0.25;
+
+    @include tablet {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @include desktop {
+        opacity: 1;
+    }
+
+    &-wrapper {
+        display: flex;
+        align-items: stretch;
+        transform: translateX(-85%);
+
+        @include smooth-trans(transform);
+
+        > a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: rem-calc(48);
+            padding: rem-calc(10 14 10 20);
+            background: linear-gradient(to left, rgba($primary, 0.95), rgba($primary, 0.825));
+            color: $white;
+            letter-spacing: 0.01em;
+            border-top: 1.5px solid $primary;
+            border-bottom: 1.5px solid $primary;
+
+            @include box-shadow(3);
+            @include fluid-typing(13, 16);
+        }
+
+        > button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: rem-calc(48);
+            min-height: rem-calc(48);
+            background-color: rgba($white, 0.95);
+            color: $tertiary;
+            border-radius: 0 rem-calc(10) rem-calc(10) 0;
+
+            @include border($color: $primary);
+            @include box-shadow(3);
+
+            svg {
+                @include smooth-trans(transform);
+            }
+
+            &:focus-visible {
+                background-color: rgba($white, 1);
+            }
+        }
+    }
+
+    &.expanded {
+        opacity: 1;
+
+        #{$this}-wrapper {
+            transform: translateX(0%);
+        }
+
+        button {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

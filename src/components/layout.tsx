@@ -24,6 +24,7 @@ import {
     faExpand,
     faCircleCheck,
     faChevronDown,
+    faChevronRight,
     faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -60,6 +61,7 @@ library.add(
     faExpand,
     faCircleCheck,
     faChevronDown,
+    faChevronRight,
     faEnvelope,
     faLinkedin,
 );
@@ -68,6 +70,7 @@ import Header from "./layout/header";
 import Hero from "./layout/hero";
 import Sidebar from "./layout/sidebar";
 import Footer from "./layout/footer";
+import StickyTag from "./layout/stickytag";
 
 import ResponsiveTag from "./helpers/respoTag";
 
@@ -99,6 +102,8 @@ const Layout: React.FC<LayoutProps> = ({ children, handleLegendClick, activeSect
                 <div className="keep-it-real__logo">
                     <StaticImage src="../images/logo/KIR-light-icon.png" alt="Keep It Real Watermark" />
                 </div>
+
+                <StickyTag />
                 <Footer />
             </div>
 
