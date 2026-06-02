@@ -74,18 +74,10 @@ const ContactPage: React.FC<PageProps> = () => {
                         {bank}
                     </p>
 
-                    {/* <p>
-						<span>Telefoonnummer:</span> 0612345678 <br />
-						<span>E-mailadres:</span> test@keeptreal.nl
-					</p> */}
                     <p>
                         <b> We zijn bereikbaar van</b>
                         <span>:</span> <br /> maandag t/m vrijdag van 9:00 tot 17:00
                     </p>
-                    {/* <p>
-						<strong>KvK:</strong> 12345678 <br /> <strong>BTW:</strong>{' '}
-						NL123456789B01
-					</p> */}
                     <Maps />
                 </div>
             </div>

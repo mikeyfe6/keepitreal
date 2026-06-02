@@ -58,7 +58,7 @@ export default async function sendSignupConfirmation(req: Request) {
         const userEmailResult = await resend.emails.send({
             from: "Keep It Real <no-reply@keeptreal.nl>",
             to: email,
-            replyTo: "secretariaat@keeptreal.nl",
+            replyTo: "charity@keeptreal.nl",
             subject: "Bevestiging aanmelding",
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

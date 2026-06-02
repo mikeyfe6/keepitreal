@@ -221,7 +221,23 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                Artikel Parool: "Keep It Real: Een uniek initiatief voor jongeren"{" "}
+                                <p>
+                                    Ex-gedetineerden motiveren leerlingen in Zuidoost om op het rechte pad te blijven:
+                                    ‘Je bent geen pussy als je nee zegt’ <small>Bron: Het Parool</small>
+                                </p>
+                                <FontAwesomeIcon icon={"square-arrow-up-right"} />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.rtl.nl/nieuws/artikel/5593434/jongeren-wapenbezit-hoogste-jaren"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <p>
+                                    Aanpak wapens onder jongeren faalt: aantal misdrijven naar hoogste niveau in jaren{" "}
+                                    <small>Bron: RTL Nieuws</small>
+                                </p>
                                 <FontAwesomeIcon icon={"square-arrow-up-right"} />
                             </a>
                         </li>

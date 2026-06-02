@@ -4,15 +4,18 @@ import { HeadFC, PageProps, Link } from "gatsby";
 
 import { StaticImage } from "gatsby-plugin-image";
 
+import { useSiteMetadata } from "../hooks/use-site-metadata";
+
 import Layout from "../components/layout";
 
 import { Seo } from "../components/seo";
 
 import * as workshopStyles from "../styles/modules/pages/workshops.module.scss";
 
-// TODO: alle SEO beschrijvingen fixen voor alle pagina's
 
 const WorkshopsPage: React.FC<PageProps> = () => {
+    const { email } = useSiteMetadata();
+
     return (
         <Layout>
             <div className={workshopStyles.workshops} id="workshops">
@@ -286,8 +289,8 @@ const WorkshopsPage: React.FC<PageProps> = () => {
                     <p>
                         Voor meer informatie of het aanvragen van een offerte, stuur ons een bericht via het{" "}
                         <Link to="/contact/">online contactformulier</Link> of mail naar{" "}
-                        <a href="mailto:secretariaat@keeptreal.nl" target="_blank" rel="noopener noreferrer">
-                            secretariaat@keeptreal.nl
+                        <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+                            {email}
                         </a>
                     </p>
                 </div>

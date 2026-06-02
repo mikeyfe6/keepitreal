@@ -2,14 +2,16 @@ import React, { useRef, useState } from "react";
 
 import type { HeadFC, PageProps } from "gatsby";
 
+import { StaticImage } from "gatsby-plugin-image";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Layout from "../components/layout";
 import Cta from "../components/ui/cta";
 
 import { Seo } from "../components/seo";
 
 import * as indexStyles from "../styles/modules/pages/index.module.scss";
-import { StaticImage } from "gatsby-plugin-image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const IndexPage: React.FC<PageProps> = () => {
     const [activeSection, setActiveSection] = useState<string>("");

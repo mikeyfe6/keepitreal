@@ -9,7 +9,7 @@
     padding-top: rem-calc(160);
     gap: rem-calc(40);
     margin-bottom: rem-calc(-20);
-    overflow: hidden;
+    // overflow: hidden;
 
     @include mobile {
         padding-top: rem-calc(237.5);

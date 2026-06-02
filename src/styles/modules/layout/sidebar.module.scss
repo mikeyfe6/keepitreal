@@ -254,21 +254,37 @@
         &#{$aside}-media {
             background-color: rgba($secondary, 0.75);
 
-            > ul > li > a {
+            > ul {
                 display: flex;
-                justify-content: space-between;
-                gap: rem-calc(12);
-                border: 1px solid rgba($white, 0.25);
-                padding: rem-calc(12);
+                flex-direction: column;
+                gap: rem-calc(16);
 
-                @include smooth-trans;
+                > li > a {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: rem-calc(12);
+                    border: 1px solid rgba($white, 0.25);
+                    padding: rem-calc(12);
 
-                &:hover {
-                    border: 1px solid rgba($white, 0.75);
-                }
+                    @include smooth-trans;
 
-                > svg {
-                    align-self: flex-end;
+                    &:hover {
+                        border: 1px solid rgba($white, 0.75);
+                    }
+
+                    > p {
+                        display: flex;
+                        flex-direction: column;
+                        gap: rem-calc(16);
+
+                        > small {
+                            font-weight: 600;
+                        }
+                    }
+
+                    > svg {
+                        align-self: flex-start;
+                    }
                 }
             }
         }

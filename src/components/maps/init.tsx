@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
 if (globalThis.window !== undefined) {
@@ -18,7 +19,7 @@ interface GoogleMapProps {
 }
 
 const GoogleMap: React.FC<GoogleMapProps> = ({ center, zoom, markers = [] }) => {
-    const { companyName, street, postalCode, city, country } = useSiteMetadata();
+    const { companyName, street, postalCode, city, country, bgThemeColor } = useSiteMetadata();
     const mapRef = useRef<HTMLDivElement>(null);
     const [isClient, setIsClient] = useState(false);
 
@@ -68,7 +69,7 @@ const GoogleMap: React.FC<GoogleMapProps> = ({ center, zoom, markers = [] }) => 
                     advancedMarker.addEventListener("gmp-click", () => {
                         infoWindow.close();
                         infoWindow.setContent(`
-                                    <div style="padding:4px 8px;font-size:12px;border-radius:3px;line-height:1.4;background:#662d92;">
+                                    <div style="padding:4px 8px;font-size:12px;border-radius:3px;line-height:1.4;background:${bgThemeColor};">
                                         <span style="font-weight:bold;color:#fff;">${companyName}</span><br/>
                                         ${street}, ${postalCode}<br/>
                                         ${city}, ${country}<br/>
