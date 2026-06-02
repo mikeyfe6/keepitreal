@@ -34,7 +34,7 @@ const StickyTag: React.FC = () => {
         clearCloseTimeout();
         closeTimeoutRef.current = globalThis.setTimeout(() => {
             closeStickyTag();
-        }, 3000);
+        }, 5000);
     };
 
     const toggleExpanded = () => {
