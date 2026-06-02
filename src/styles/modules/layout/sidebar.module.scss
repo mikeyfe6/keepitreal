@@ -243,13 +243,13 @@
             }
         }
 
-        // &#{$aside}-contact {
-        //     background: linear-gradient(to left, rgba($secondary, 75%), $primary);
+        &#{$aside}-contact {
+            background: linear-gradient(to left, rgba($secondary, 75%), $primary);
 
-        //     > p > a {
-        //         @include text-link;
-        //     }
-        // }
+            > p > a {
+                @include text-link;
+            }
+        }
 
         &#{$aside}-media {
             // background-color: rgba($secondary, 0.75);

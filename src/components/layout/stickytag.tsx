@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Link } from "gatsby";
 
@@ -11,6 +11,31 @@ const StickyTag: React.FC = () => {
     const [openScrollY, setOpenScrollY] = useState<number | null>(null);
     const [footerOffset, setFooterOffset] = useState(0);
     const [isMobileViewport, setIsMobileViewport] = useState(false);
+    const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    const clearCloseTimeout = () => {
+        if (closeTimeoutRef.current) {
+            globalThis.clearTimeout(closeTimeoutRef.current);
+            closeTimeoutRef.current = null;
+        }
+    };
+
+    const closeStickyTag = () => {
+        setIsExpanded(false);
+        setOpenScrollY(null);
+        clearCloseTimeout();
+    };
+
+    const scheduleCloseAfterInactivity = () => {
+        if (!isExpanded) {
+            return;
+        }
+
+        clearCloseTimeout();
+        closeTimeoutRef.current = globalThis.setTimeout(() => {
+            closeStickyTag();
+        }, 3000);
+    };
 
     const toggleExpanded = () => {
         setIsExpanded((prev) => {
@@ -44,6 +69,16 @@ const StickyTag: React.FC = () => {
             globalThis.removeEventListener("scroll", handleScroll);
         };
     }, [isExpanded, openScrollY]);
+
+    useEffect(() => {
+        if (!isExpanded) {
+            clearCloseTimeout();
+        }
+
+        return () => {
+            clearCloseTimeout();
+        };
+    }, [isExpanded]);
 
     useEffect(() => {
         const mediaQuery = globalThis.matchMedia("(max-width: 63.99em)");
@@ -103,13 +138,16 @@ const StickyTag: React.FC = () => {
         <div
             className={`${stickyTagStyles.stickyTag} ${isExpanded ? stickyTagStyles.expanded : ""}`}
             style={stickyTagStyle}
+            onMouseEnter={clearCloseTimeout}
+            onMouseLeave={scheduleCloseAfterInactivity}
+            onFocusCapture={clearCloseTimeout}
+            onBlurCapture={scheduleCloseAfterInactivity}
         >
             <div className={stickyTagStyles.stickyTagWrapper} id="sticky-tag-cta">
                 <Link
                     to="/persoonlijke-begeleiding/"
                     onClick={() => {
-                        setIsExpanded(false);
-                        setOpenScrollY(null);
+                        closeStickyTag();
                     }}
                 >
                     <b>Aanmelden persoonlijke begeleiding</b>
