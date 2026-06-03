@@ -41,7 +41,7 @@ export default ContactPage;
 
 export const Head: HeadFC = () => (
     <Seo
-        title="Aanmeldformulier persoonlijke begeleiding"
+        title="Aanmelden voor persoonlijke begeleiding"
         pathname="/persoonlijke-begeleiding/"
         description="Meld een jongere of deelnemer aan voor persoonlijke begeleiding bij Keep It Real. Vul het aanmeldformulier in en wij nemen zo snel mogelijk contact op."
     />

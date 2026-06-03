@@ -13,6 +13,9 @@ const StickyTag: React.FC = () => {
     const [isMobileViewport, setIsMobileViewport] = useState(false);
     const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+    const inactivityTimeout = 3500;
+    const scrollThreshold = 150;
+
     const clearCloseTimeout = () => {
         if (closeTimeoutRef.current) {
             globalThis.clearTimeout(closeTimeoutRef.current);
@@ -34,7 +37,7 @@ const StickyTag: React.FC = () => {
         clearCloseTimeout();
         closeTimeoutRef.current = globalThis.setTimeout(() => {
             closeStickyTag();
-        }, 5000);
+        }, inactivityTimeout);
     };
 
     const toggleExpanded = () => {
@@ -57,7 +60,7 @@ const StickyTag: React.FC = () => {
         }
 
         const handleScroll = () => {
-            if (Math.abs(globalThis.scrollY - openScrollY) >= 100) {
+            if (Math.abs(globalThis.scrollY - openScrollY) >= scrollThreshold) {
                 setIsExpanded(false);
                 setOpenScrollY(null);
             }
