@@ -17,6 +17,10 @@
         @include box-shadow(1);
         @include main-card;
 
+        > ol > li > h3 {
+            margin-bottom: rem-calc(8);
+        }
+
         .show-on-mobile {
             display: block;
             margin-bottom: rem-calc(20);

@@ -83,7 +83,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                 Onze missie
                             </button>
                         </li>
-                        <li>
+                        <li hidden>
                             <button
                                 onClick={() => handleLegendClick("whatwedo")}
                                 className={activeSection === "whatwedo" ? indexStyles.active : ""}
@@ -91,7 +91,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                 Wat we doen
                             </button>
                         </li>
-                        <li>
+                        <li hidden>
                             <button
                                 onClick={() => handleLegendClick("ourteam")}
                                 className={activeSection === "ourteam" ? indexStyles.active : ""}
@@ -99,7 +99,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                 Teamleden
                             </button>
                         </li>
-                        <li>
+                        <li hidden>
                             <button
                                 onClick={() => handleLegendClick("impact")}
                                 className={activeSection === "impact" ? indexStyles.active : ""}
@@ -144,7 +144,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     </div>
                 </div> */}
 
-                <div ref={whatwedoRef} className={activeSection === "whatwedo" ? indexStyles.active : ""}>
+                <div ref={whatwedoRef} className={activeSection === "whatwedo" ? indexStyles.active : ""} hidden>
                     <h2>Wat we doen</h2>
                     <ol>
                         <li>
@@ -184,7 +184,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     />
                 </div>
 
-                <div ref={ourteamRef} className={activeSection === "ourteam" ? indexStyles.active : ""}>
+                <div ref={ourteamRef} className={activeSection === "ourteam" ? indexStyles.active : ""} hidden>
                     <h2>Teamleden</h2>
                     <p>
                         Ons diverse team van ervaringsdeskundigen deelt een passie voor het begeleiden van jongeren. Van
@@ -193,7 +193,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     </p>
                 </div>
 
-                <div ref={impactRef} className={activeSection === "impact" ? indexStyles.active : ""}>
+                <div ref={impactRef} className={activeSection === "impact" ? indexStyles.active : ""} hidden>
                     <h2>Impact en toekomst</h2>
                     <p>
                         Keep It Real streeft naar een blijvende impact. We werken samen met scholen en andere partners
@@ -228,6 +228,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         afleveringen. <strong>Keep It Real</strong> en luister mee!
                     </p>
                 </div>
+
                 <div className={indexStyles.indexPartners}>
                     <h2>Onze partners</h2>
                     <hr />

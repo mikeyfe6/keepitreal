@@ -7,6 +7,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Layout from "../components/layout";
+import Cta from "../components/ui/cta";
 
 import { Seo } from "../components/seo";
 
@@ -177,9 +178,9 @@ const AboutUsPage: React.FC<PageProps> = () => {
                     </p>
                 </div>
                 <div>
-                    <h2>Wat doet KIR onder andere?</h2>
-                    <h3>KIR Takeovers</h3>
-                    <p>
+                    {/* <h2>Wat doet KIR onder andere?</h2>
+                    <h3>KIR Takeovers</h3> */}
+                    {/* <p>
                         Een KIR dag is een ervaring! Het doel van de “experience” is om jongeren en jong volwassenen
                         middels kunst, fashion, het maken van beats, muziek, sport en veel persoonlijke verhalen en
                         ervaringen te inspireren om de juiste keuzes maken. Het team neemt voor een dag de lessen
@@ -207,28 +208,79 @@ const AboutUsPage: React.FC<PageProps> = () => {
                         <br />
                         <br />
                         Bekijk hieronder een impressie van de KIR dagen op beide scholen:
+                    </p> */}
+
+                    <h2>Wat we doen</h2>
+                    <ol>
+                        <li>
+                            <h3>KIR Take-overs</h3>
+                            <p>
+                                Een dag waarop onze teamleden de reguliere lessen overnemen. Door middel van kunst,
+                                muziek, sport en persoonlijke verhalen inspireren we jongeren om positieve keuzes te
+                                maken.
+                            </p>
+                            <br />
+                        </li>
+                        <li>
+                            <h3>KIR Workshops</h3>
+                            <p>
+                                Diepgaande sessies waarin jongeren hun creativiteit kunnen uiten en thema's kunnen
+                                verkennen zoals verleidingen, identiteit, en online veiligheid. Van therapeutische
+                                tekenlessen tot muziekproductie-workshops, we bieden een breed scala aan mogelijkheden.
+                            </p>
+
+                            <Cta />
+                            <br />
+                        </li>
+                        <li>
+                            <h3>1-op-1 Coaching</h3>
+                            <p>
+                                Specifieke ondersteuning voor leerlingen die dat nodig hebben, om hen te helpen bij het
+                                nemen van de regie over hun leven.
+                            </p>
+                        </li>
+                    </ol>
+
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube-nocookie.com/embed/v8i5Z0x0rwc?si=BStmnNjZ-vZQPNBV&amp;controls=0"
+                        title="Amsterdammer van het Jaar: Wenner Regales"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        loading="lazy"
+                        className="youtube w-margin"
+                        allowFullScreen
+                    />
+
+                    <br />
+                    <br />
+                    <p style={{ textAlign: "center" }}>
+                        Bekijk hieronder een impressie van de KIR dagen op beide scholen:
                     </p>
 
                     <iframe
                         width="560"
                         height="315"
-                        src="https://www.youtube-nocookie.com/embed/ErKTVPbeUJ0?si=lx2uqQABSI7C-yKf"
+                        src="https://www.youtube-nocookie.com/embed/ErKTVPbeUJ0?si=lx2uqQABSI7C-yKf&amp;controls=0"
                         title="Keep It Real De Dreef 2023"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         loading="lazy"
                         className="youtube w-margin"
+                        allowFullScreen
                     />
 
                     <iframe
                         width="560"
                         height="315"
-                        src="https://www.youtube-nocookie.com/embed/OVvH0tBxjCw?si=UHcn51Fa-EtqNCpQ"
+                        src="https://www.youtube-nocookie.com/embed/OVvH0tBxjCw?si=UHcn51Fa-EtqNCpQ&amp;controls=0"
                         title="Keep It Real Orion College Zuidoost 2023"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         loading="lazy"
                         className="youtube w-margin"
+                        allowFullScreen
                     />
                 </div>
 

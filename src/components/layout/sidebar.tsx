@@ -124,7 +124,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                                 Onze missie
                             </button>
                         </li>
-                        <li>
+                        <li hidden>
                             <button
                                 onClick={() => handleLegendClick("whatwedo")}
                                 className={activeSection === "whatwedo" ? sidebarStyles.active : ""}
@@ -143,7 +143,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li hidden>
                             <button
                                 onClick={() => handleLegendClick("ourteam")}
                                 className={activeSection === "ourteam" ? sidebarStyles.active : ""}
@@ -151,7 +151,7 @@ const Sidebar: React.FC<SidebarProps> = ({ handleLegendClick, activeSection }) =
                                 Teamleden
                             </button>
                         </li>
-                        <li>
+                        <li hidden>
                             <button
                                 onClick={() => handleLegendClick("impact")}
                                 className={activeSection === "impact" ? sidebarStyles.active : ""}
