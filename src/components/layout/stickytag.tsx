@@ -14,7 +14,7 @@ const StickyTag: React.FC = () => {
     const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const inactivityTimeout = 3500;
-    const scrollThreshold = 150;
+    const scrollThreshold = 200;
 
     const clearCloseTimeout = () => {
         if (closeTimeoutRef.current) {
@@ -26,6 +26,17 @@ const StickyTag: React.FC = () => {
     const closeStickyTag = () => {
         setIsExpanded(false);
         setOpenScrollY(null);
+        clearCloseTimeout();
+    };
+
+    const openStickyTag = () => {
+        setIsExpanded((prev) => {
+            if (!prev) {
+                setOpenScrollY(globalThis.scrollY);
+            }
+
+            return true;
+        });
         clearCloseTimeout();
     };
 
@@ -84,7 +95,7 @@ const StickyTag: React.FC = () => {
     }, [isExpanded]);
 
     useEffect(() => {
-        const mediaQuery = globalThis.matchMedia("(max-width: 63.99em)");
+        const mediaQuery = globalThis.matchMedia("(max-width: 89.99em)");
 
         const updateViewport = () => {
             setIsMobileViewport(mediaQuery.matches);
@@ -132,7 +143,7 @@ const StickyTag: React.FC = () => {
         isMobileViewport && footerOffset > 0 ?
             {
                 top: "auto",
-                bottom: `${footerOffset + 16}px`,
+                bottom: `${footerOffset + 12}px`,
                 transform: "none",
             }
         :   undefined;
@@ -141,7 +152,6 @@ const StickyTag: React.FC = () => {
         <div
             className={`${stickyTagStyles.stickyTag} ${isExpanded ? stickyTagStyles.expanded : ""}`}
             style={stickyTagStyle}
-            onMouseEnter={clearCloseTimeout}
             onMouseLeave={scheduleCloseAfterInactivity}
             onFocusCapture={clearCloseTimeout}
             onBlurCapture={scheduleCloseAfterInactivity}
@@ -162,8 +172,16 @@ const StickyTag: React.FC = () => {
                     aria-expanded={isExpanded}
                     aria-controls="sticky-tag-cta"
                     aria-label={isExpanded ? "Sluit aanmeldknop" : "Open aanmeldknop"}
+                    onMouseEnter={() => {
+                        if (!isMobileViewport) {
+                            openStickyTag();
+                            return;
+                        }
+
+                        clearCloseTimeout();
+                    }}
                 >
-                    <FontAwesomeIcon icon="chevron-right" size="lg" />
+                    <FontAwesomeIcon icon="chevron-right" size="xl" />
                 </button>
             </div>
         </div>

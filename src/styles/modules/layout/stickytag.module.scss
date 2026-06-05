@@ -4,13 +4,15 @@
     $this: &;
 
     position: fixed;
-    top: 90%;
+    top: auto;
+    bottom: rem-calc(75);
     left: 0;
     z-index: 2;
-    opacity: 0.25;
+    opacity: 0.375;
 
-    @include tablet {
-        top: 67.5%;
+    @include desktop {
+        top: 50%;
+        bottom: auto;
         transform: translateY(-50%);
     }
 
@@ -21,7 +23,9 @@
     &-wrapper {
         display: flex;
         align-items: stretch;
-        transform: translateX(-85%);
+        transform: translateX(-83%);
+        outline: 1.5px solid rgba($white, 0.1);
+        border-radius: 0 rem-calc(12) rem-calc(12) 0;
 
         @include smooth-trans(transform);
 
@@ -29,30 +33,38 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-height: rem-calc(48);
+            min-height: rem-calc(56);
             padding: rem-calc(10 14 10 20);
-            background: linear-gradient(to left, rgba($primary, 0.95), rgba($primary, 0.825));
+            background: linear-gradient(to right, rgba($primary, 0.95), rgba($primary, 0.925));
             color: $white;
             letter-spacing: 0.01em;
             border-top: 1.5px solid $primary;
             border-bottom: 1.5px solid $primary;
 
             @include box-shadow(3);
-            @include fluid-typing(13, 16);
+            @include fluid-typing(14, 17);
         }
 
         > button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-width: rem-calc(48);
-            min-height: rem-calc(48);
+            min-width: rem-calc(56);
+            min-height: rem-calc(56);
             background-color: rgba($white, 0.95);
             color: $tertiary;
-            border-radius: 0 rem-calc(10) rem-calc(10) 0;
+            border-radius: 0 rem-calc(12) rem-calc(12) 0;
 
-            @include border($color: $primary);
+            @include border($width: 1.75px, $color: $primary);
             @include box-shadow(3);
+
+            @include tablet {
+                &:hover {
+                    svg {
+                        transform: translateX(6.25px);
+                    }
+                }
+            }
 
             svg {
                 @include smooth-trans(transform);
@@ -60,12 +72,6 @@
 
             &:focus-visible {
                 background-color: rgba($white, 1);
-            }
-
-            &:hover {
-                svg {
-                    transform: translateX(6.25px);
-                }
             }
         }
     }

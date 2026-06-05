@@ -253,7 +253,7 @@
 
         &#{$aside}-media {
             // background-color: rgba($secondary, 0.75);
-            background: linear-gradient(to left, rgba($secondary, 75%), rgba($primary, 82.5%));
+            background: linear-gradient(145deg, rgba($primary, 50%), rgba($primary, 40%));
 
             > ul {
                 display: flex;
@@ -291,7 +291,7 @@
         }
 
         &#{$aside}-press {
-            background-color: rgba($tertiary, 1);
+            background-color: $tertiary-trans;
 
             > p > a {
                 @include text-link($white);
