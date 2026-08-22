@@ -20,14 +20,14 @@
     "stylelint-scss-check": "stylelint-config-prettier-scss-check"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^7.2.0",
-    "@fortawesome/free-brands-svg-icons": "^7.2.0",
-    "@fortawesome/free-solid-svg-icons": "^7.2.0",
-    "@fortawesome/react-fontawesome": "^3.3.1",
-    "@googlemaps/js-api-loader": "^2.1.0",
-    "@netlify/functions": "^5.3.0",
+    "@fortawesome/fontawesome-svg-core": "^7.3.1",
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
+    "@fortawesome/react-fontawesome": "^3.5.0",
+    "@googlemaps/js-api-loader": "^2.1.1",
+    "@netlify/functions": "^6.0.0",
     "@vimeo/player": "^2.30.4",
-    "axios": "^1.17.0",
+    "axios": "^1.19.0",
     "gatsby": "^5.16.1",
     "gatsby-adapter-netlify": "^1.4.0",
     "gatsby-plugin-canonical-urls": "^5.16.0",
@@ -46,23 +46,23 @@
     "gatsby-transformer-sharp": "^5.16.0",
     "react": "18",
     "react-dom": "18",
-    "resend": "^6.12.4",
-    "sass": "^1.100.0",
+    "resend": "^6.21.0",
+    "sass": "^1.103.1",
     "sharp": "0.32.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.7",
+    "@babel/core": "^8.0.1",
     "@types/babel__core": "^7",
-    "@types/google.maps": "^3.65.0",
-    "@types/node": "^25.9.1",
+    "@types/google.maps": "^3.65.5",
+    "@types/node": "^26.2.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/vimeo__player": "^2.18.3",
-    "postcss": "^8.5.15",
-    "stylelint": "^17.12.0",
+    "postcss": "^8.5.26",
+    "stylelint": "^17.14.1",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^17.0.0",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.2"
   },
-  "packageManager": "yarn@4.16.0"
+  "packageManager": "yarn@4.18.0"
 }
