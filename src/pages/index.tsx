@@ -6,6 +6,8 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { useSiteMetadata } from "../hooks/use-site-metadata";
+
 import Layout from "../components/layout";
 import Cta from "../components/ui/cta";
 
@@ -14,6 +16,8 @@ import { Seo } from "../components/seo";
 import * as indexStyles from "../styles/modules/pages/index.module.scss";
 
 const IndexPage: React.FC<PageProps> = () => {
+    const { spotifyUrl } = useSiteMetadata();
+
     const [activeSection, setActiveSection] = useState<string>("");
 
     const missionRef = useRef<HTMLDivElement>(null!);
@@ -214,11 +218,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         succesverhalen en diepgaande gesprekken over onderwerpen die jongeren aan het hart gaan.
                     </p>
 
-                    <a
-                        href="https://open.spotify.com/show/7wDDGz0HtXhn3WPCJ3KLcO"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a href={spotifyUrl} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={["fab", "spotify"]} size="2x" />
                         Volg / Luister ons op Spotify
                     </a>
