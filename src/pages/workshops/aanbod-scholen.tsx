@@ -76,10 +76,7 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                 <ul>
                     <li id="fashion" className={activeSection === "#fashion" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
-                            <div className={workshopStyles.workshopsTitle}>
-                                <FontAwesomeIcon icon="right-long" style={{ color: "#ff01ff" }} size="lg" />
-                                <h2>Workshop ‘Fashion & Identiteit’</h2>
-                            </div>
+                            <h2>Workshop ‘Fashion & Identiteit’</h2>
                             <p className={workshopStyles.workshopsSubtitle}>
                                 Mode is meer dan kleding: het is een manier om te laten zien wie je bent.
                             </p>
@@ -105,10 +102,7 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                     </li>
                     <li id="wiebenik" className={activeSection === "#wiebenik" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
-                            <div className={workshopStyles.workshopsTitle}>
-                                <FontAwesomeIcon icon="right-long" style={{ color: "#ff01ff" }} size="lg" />
-                                <h2>Workshop ‘Identiteit – Wie ben ik?’</h2>
-                            </div>
+                            <h2>Workshop ‘Identiteit – Wie ben ik?’</h2>
                             <p className={workshopStyles.workshopsSubtitle}>
                                 Wie ben ik, waar ben ik goed in en wat maakt mij uniek?
                             </p>
@@ -133,10 +127,7 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                     </li>
                     <li id="kunst" className={activeSection === "#kunst" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
-                            <div className={workshopStyles.workshopsTitle}>
-                                <FontAwesomeIcon icon="right-long" style={{ color: "#ff01ff" }} size="lg" />
-                                <h2>Workshop ‘Kunst’</h2>
-                            </div>
+                            <h2>Workshop ‘Kunst’</h2>
                             <p className={workshopStyles.workshopsSubtitle}>
                                 Kunst biedt ruimte om jezelf te ontdekken, uit te drukken en samen te werken.
                             </p>
@@ -162,10 +153,7 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                     </li>
                     <li id="samensterk" className={activeSection === "#samensterk" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
-                            <div className={workshopStyles.workshopsTitle}>
-                                <FontAwesomeIcon icon="right-long" style={{ color: "#ff01ff" }} size="lg" />
-                                <h2>Workshop ‘Meidenvenijn – Samen sterk’</h2>
-                            </div>
+                            <h2>Workshop ‘Meidenvenijn – Samen sterk’</h2>
                             <p className={workshopStyles.workshopsSubtitle}>
                                 Vriendschappen zijn belangrijk, maar kunnen soms ingewikkeld zijn.
                             </p>
@@ -191,10 +179,7 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                     </li>
                     <li id="muziek" className={activeSection === "#muziek" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
-                            <div className={workshopStyles.workshopsTitle}>
-                                <FontAwesomeIcon icon="right-long" style={{ color: "#ff01ff" }} size="lg" />
-                                <h2>Workshop ‘Muziek’</h2>
-                            </div>
+                            <h2>Workshop ‘Muziek’</h2>
                             <p className={workshopStyles.workshopsSubtitle}>
                                 Muziek geeft jongeren de ruimte om hun verhaal en creativiteit te laten horen.
                             </p>
@@ -222,10 +207,7 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                         className={activeSection === "#online-weerbaarheid" ? workshopStyles.active : ""}
                     >
                         <div className={workshopStyles.workshopsContent}>
-                            <div className={workshopStyles.workshopsTitle}>
-                                <FontAwesomeIcon icon="right-long" style={{ color: "#ff01ff" }} size="lg" />
-                                <h2>Workshop ‘Online Weerbaarheid – Slim en sterk online’</h2>
-                            </div>
+                            <h2>Workshop ‘Online Weerbaarheid – Slim en sterk online’</h2>
                             <p className={workshopStyles.workshopsSubtitle}>
                                 Online zijn is leuk, maar brengt ook uitdagingen met zich mee.
                             </p>
@@ -254,10 +236,7 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                         className={activeSection === "#oorzaak-gevolg" ? workshopStyles.active : ""}
                     >
                         <div className={workshopStyles.workshopsContent}>
-                            <div className={workshopStyles.workshopsTitle}>
-                                <FontAwesomeIcon icon="right-long" style={{ color: "#ff01ff" }} size="lg" />
-                                <h2>Workshop ‘Oorzaak & Gevolg’</h2>
-                            </div>
+                            <h2>Workshop ‘Oorzaak & Gevolg’</h2>
                             <p className={workshopStyles.workshopsSubtitle}>
                                 Welke invloed hebben mijn keuzes op mijzelf en mijn omgeving?
                             </p>
@@ -283,10 +262,7 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                     </li>
                     <li id="oya-talks" className={activeSection === "#oya-talks" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
-                            <div className={workshopStyles.workshopsTitle}>
-                                <FontAwesomeIcon icon="right-long" style={{ color: "#ff01ff" }} size="lg" />
-                                <h2>Workshop ‘Oya Talks’</h2>
-                            </div>
+                            <h2>Workshop ‘Oya Talks’</h2>
                             <p className={workshopStyles.workshopsSubtitle}>
                                 Wat speelt er écht in het leven van jongeren?
                             </p>
@@ -317,10 +293,7 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                     </li>
                     <li id="sport" className={activeSection === "#sport" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
-                            <div className={workshopStyles.workshopsTitle}>
-                                <FontAwesomeIcon icon="right-long" style={{ color: "#ff01ff" }} size="lg" />
-                                <h2>Workshop ‘Sport’</h2>
-                            </div>
+                            <h2>Workshop ‘Sport’</h2>
                             <p className={workshopStyles.workshopsSubtitle}>Bewegen, samenwerken en jezelf uitdagen.</p>
                             <p>
                                 Tijdens de sportworkshop gaan jongeren actief aan de slag met verschillende sport- en

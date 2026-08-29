@@ -166,23 +166,12 @@
 
             #{$workshops} {
                 &-content {
-                    #{$workshops}-title {
-                        display: flex;
-                        align-items: center;
-                        gap: rem-calc(16);
-                        margin-bottom: 1rem;
-
-                        h2 {
-                            margin-bottom: 0;
-                        }
-                    }
-
                     #{$workshops}-subtitle {
                         font-weight: 600;
                     }
 
                     > ul {
-                        margin-bottom: 1rem;
+                        margin-bottom: rem-calc(16);
                     }
 
                     #{$workshops}-closing {
