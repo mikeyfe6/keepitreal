@@ -31,6 +31,7 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
 
                 <div className={workshopStyles.intro}>
                     <div>
+                        <h2>Introductie</h2>
                         <p>
                             Keep It Real reikt jongeren tools en inzichten aan om bewuste keuzes te maken en sterker in
                             het leven te staan. Dit doen we met interactieve workshops op het gebied van kunst, cultuur
@@ -47,6 +48,9 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                         <p>
                             Onze workshops sluiten aan bij de belevingswereld van jongeren en bieden ruimte voor
                             herkenning, gesprek, bewustwording en persoonlijke ontwikkeling.
+                        </p>
+                        <p>
+                            <b>Bekijk hieronder ons aanbod voor scholen:</b>
                         </p>
                     </div>
 
@@ -345,15 +349,17 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                 </ul>
                 <div>
                     <p>
-                        Aan het einde van de KIR workshop(s) worden enquetes afgenomen bij zowel leerlingen als
-                        workshopleiders om te weten wat er onder de jongeren speelt. Deze enquetes zijn opgesteld door
-                        een Criminologe Shanna Mehlbaum die betrokken was bij de inzet van KIR op de Arnhemse Scholen.
-                        Ook kunnen we ophalen aan welke inzet op deze thema nog meer behoefte is. Dit onderzoek doen wij
-                        om dieper zicht te krijgen in hun bezigheden en problematiek om mogelijke na-trajecten te
-                        verzorgen. Iedere workshop duurt 1-1,5 uur, afhankelijk van de doelgroep (denk aan niveau,
-                        ouders of leerlingen). De workshopgevers hebben verschillende lokalen en materialen nodig, denk
-                        aan handenarbeidlokaal, sportzaal, digibord, eigen laptop. Hierover wordt van te voren
-                        gecommuniceerd en afspraken gemaakt.
+                        <b>Aanvullende informatie:</b>{" "}
+                    </p>
+                    <p>
+                        Een workshop duurt 1 tot 1,5 uur, afhankelijk van de doelgroep. Benodigde ruimtes en materialen
+                        worden vooraf afgestemd.
+                    </p>
+                    <p>
+                        Na afloop van de workshops verzamelen we via korte enquêtes input van leerlingen en
+                        workshopleiders. Zo krijgen we inzicht in wat er onder jongeren speelt en waar behoefte is aan
+                        eventuele vervolgtrajecten. De enquêtes zijn opgesteld door criminoloog Shanna Mehlbaum, die
+                        betrokken is bij de inzet van KIR op Arnhemse scholen.
                     </p>
                 </div>
             </div>

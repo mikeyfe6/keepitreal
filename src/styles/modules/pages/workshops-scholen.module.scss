@@ -17,7 +17,6 @@
 
         &:last-child {
             color: $primary;
-            margin-top: rem-calc(48);
 
             @include main-card(rgba($white, 0.825));
         }
@@ -163,10 +162,6 @@
                 display: block;
                 width: 100%;
                 border-bottom: 1px $tertiary solid;
-            }
-
-            &:last-child::after {
-                display: none;
             }
 
             #{$workshops} {

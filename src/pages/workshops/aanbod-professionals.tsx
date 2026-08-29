@@ -24,7 +24,7 @@ const WorkshopsProfessionalsPage: React.FC<PageProps> = () => {
 
                 <div className={workshopStyles.introduction}>
                     <div>
-                        <h2>INTRODUCTIE</h2>
+                        <h2>Introductie</h2>
                         <p>
                             Keep It Real deelt de kennis, ervaring en ervaringsdeskundigheid van onze workshophouders
                             met professionals die met en voor jongeren werken. Vanuit hun eigen expertise en
