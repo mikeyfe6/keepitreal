@@ -31,16 +31,18 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                     <div>
                         <h2>Introductie</h2>
                         <p>
-                            Keep It Real reikt jongeren tools en inzichten aan om bewuste keuzes te maken en sterker in
-                            het leven te staan. Dit doen we met interactieve workshops op het gebied van kunst, cultuur
-                            en identiteitsontwikkeling, waarbij we onze ervaringsdeskundigheid en pedagogische kennis
-                            combineren.
+                            Keep It Real reikt jongeren tools en inzichten aan om bewuste keuzes te maken, weerbaarder
+                            te worden en sterker in het leven te staan. Dit doen we met interactieve workshops op het
+                            gebied van kunst, cultuur en identiteitsontwikkeling, waarbij we onze ervaringsdeskundigheid
+                            en pedagogische kennis combineren.
                         </p>
 
                         <p>
-                            Onze workshopleiders brengen ieder hun eigen expertise en praktijkervaring mee. Vanuit die
-                            verschillende perspectieven maken zij thema’s bespreekbaar die dicht bij de leefwereld van
-                            jongeren liggen, zoals mentale gezondheid, oorzaak & gevolg, identiteit en weerbaarheid.
+                            Onze workshopleiders zijn professionals met expertise binnen onder andere kunst, cultuur en
+                            jongerenwerk. Zij brengen ieder hun eigen expertise en praktijkervaring mee en blijven zich
+                            continu ontwikkelen in hun vakgebied en pedagogische vaardigheden. Vanuit die verschillende
+                            perspectieven maken zij thema’s bespreekbaar die dicht bij de leefwereld van jongeren
+                            liggen, zoals mentale gezondheid, oorzaak & gevolg, identiteit en weerbaarheid.
                         </p>
 
                         <p>

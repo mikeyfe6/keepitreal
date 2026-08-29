@@ -17,12 +17,11 @@ const WorkshopsPage: React.FC<PageProps> = () => {
                 <div>
                     <h1>Onze workshops</h1>
                     <p>
-                        Onze workshops KIR biedt verschillende workshops die aansluiten bij de leefwereld en behoeften
-                        van jongeren, ouders, scholen en professionals. De workshops zijn praktisch, interactief en
-                        gericht op bewustwording, ontwikkeling en het versterken van vaardigheden. Een belangrijk
-                        onderdeel van KIR is de inzet van ervaringsdeskundigen. Vanuit hun eigen ervaringen brengen zij
-                        herkenning, kennis en een ander perspectief mee. Hierdoor ontstaat ruimte voor open gesprekken,
-                        nieuwe inzichten en leren vanuit de praktijk.
+                        Keep It Real biedt verschillende preventieve workshops die aansluiten bij de leefwereld en
+                        behoeften van jongeren, scholen en professionals. Het doel van de workshops is om bewustwording
+                        te vergroten, vaardigheden te versterken en jongeren en hun omgeving handvatten te bieden om
+                        vroegtijdig signalen en risico’s te herkennen en hierop te handelen. De workshops zijn
+                        praktisch, interactief, gericht op ontwikkeling, reflectie en het stimuleren van gesprekken.
                     </p>
                 </div>
                 <div>
