@@ -137,7 +137,7 @@
         outline: 2px solid $secondary;
         aspect-ratio: 15.9 / 9;
 
-        @include border-radius(5px);
+        @include border-radius;
         @include box-shadow(1);
 
         > div {
@@ -149,7 +149,7 @@
             width: 100%;
             overflow: hidden;
 
-            @include border-radius(5px);
+            @include border-radius;
         }
 
         // [data-gatsby-image-wrapper] {

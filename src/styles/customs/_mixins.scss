@@ -147,6 +147,17 @@
             background-color: rgba($secondary, 0.025);
             border-color: rgba($secondary, 0.825);
         }
+    } @else if $type == 5 {
+        background-color: rgba($color, 0.825);
+        color: $primary;
+        border: 2px solid $bdcolor;
+        padding: rem-calc(12 16);
+        height: fit-content;
+
+        &:hover {
+            background-color: rgba($tertiary, 0.025);
+            border-color: rgba($tertiary, 0.825);
+        }
     }
 
     &:disabled {

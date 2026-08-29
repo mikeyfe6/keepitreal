@@ -81,7 +81,7 @@ const Header: React.FC = () => {
                                     Workshops
                                 </Link>
                                 <ul className={headerStyles.dropdownMenu}>
-                                    <li>
+                                    {/* <li>
                                         <Link to="/workshops/#codeswitching">Code Switching</Link>
                                     </li>
                                     <li>
@@ -95,6 +95,12 @@ const Header: React.FC = () => {
                                     </li>
                                     <li>
                                         <Link to="/workshops/#tussen-de-straat-en-ik">Tussen de straat en ik </Link>
+                                    </li> */}
+                                    <li>
+                                        <Link to="/workshops/aanbod-scholen/">Aanbod voor scholen</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/workshops/aanbod-professionals/">Aanbod voor professionals</Link>
                                     </li>
                                 </ul>
                             </li>
@@ -194,7 +200,7 @@ const Header: React.FC = () => {
                             </div>
                             {isWorkshopsOpen && (
                                 <ul className={headerStyles.mobileSubmenu}>
-                                    <li>
+                                    {/* <li>
                                         <Link to="/workshops/#codeswitching" onClick={closeMobileMenu}>
                                             Code Switching
                                         </Link>
@@ -217,6 +223,16 @@ const Header: React.FC = () => {
                                     <li>
                                         <Link to="/workshops/#tussen-de-straat-en-ik" onClick={closeMobileMenu}>
                                             Tussen de straat en ik
+                                        </Link>
+                                    </li> */}
+                                    <li>
+                                        <Link to="/workshops/aanbod-scholen/" onClick={closeMobileMenu}>
+                                            Aanbod voor scholen
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/workshops/aanbod-professionals/" onClick={closeMobileMenu}>
+                                            Aanbod voor professionals
                                         </Link>
                                     </li>
                                 </ul>

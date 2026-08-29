@@ -13,7 +13,7 @@ const StickyTag: React.FC = () => {
     const [isMobileViewport, setIsMobileViewport] = useState(false);
     const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    const inactivityTimeout = 3500;
+    const inactivityTimeout = 2000;
     const scrollThreshold = 200;
 
     const clearCloseTimeout = () => {

@@ -13,6 +13,7 @@ import * as anbiStyles from "../styles/modules/pages/anbi.module.scss";
 const AnbiPage: React.FC<PageProps> = () => {
     const { companyName, facility, street, postalCode, city, mailingStreet, mailingPostalcode, mailingCity } =
         useSiteMetadata();
+
     return (
         <Layout>
             <section className={anbiStyles.anbi}>
