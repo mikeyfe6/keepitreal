@@ -1,0 +1,219 @@
+@use "../../customs/" as *;
+
+.workshops {
+    $workshops: &;
+
+    > div {
+        &:first-child {
+            margin-bottom: rem-calc(48);
+            text-align: center;
+
+            @include main-card;
+
+            h1 {
+                margin-bottom: unset;
+            }
+        }
+
+        &:last-child {
+            color: $primary;
+            margin-top: rem-calc(48);
+
+            @include main-card(rgba($white, 0.825));
+        }
+
+        &.intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include compact {
+                gap: rem-calc(20);
+            }
+
+            @include mobile {
+                gap: rem-calc(80);
+            }
+
+            @include laptop {
+                flex-direction: row;
+            }
+
+            > .visuals {
+                position: relative;
+                min-width: rem-calc(505);
+                min-height: rem-calc(447.5);
+                transform: scale(0.675);
+                margin-top: rem-calc(-25);
+                margin-bottom: rem-calc(-65);
+
+                @include compact {
+                    transform: scale(0.75);
+                    margin-top: rem-calc(-15);
+                    margin-bottom: rem-calc(-25);
+                }
+
+                @include mobile {
+                    transform: scale(1);
+                    margin-top: unset;
+                    margin-bottom: unset;
+                }
+
+                .img-one,
+                .img-two,
+                .img-three,
+                .img-four,
+                .img-five,
+                .img-six,
+                .img-seven {
+                    position: absolute;
+                }
+
+                .img-one,
+                .img-three,
+                .img-four,
+                .img-five,
+                .img-six,
+                .img-seven {
+                    width: 100%;
+                    height: auto;
+
+                    &[data-gatsby-image-wrapper] {
+                        img {
+                            aspect-ratio: 1 / 1;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .img-one {
+                    max-width: rem-calc(150);
+                    top: rem-calc(25);
+                    left: rem-calc(75);
+                    z-index: -1;
+                }
+
+                .img-two {
+                    max-width: rem-calc(300);
+                    max-height: rem-calc(200);
+                    top: rem-calc(125);
+                    left: rem-calc(100);
+                    z-index: 0;
+                }
+
+                .img-three {
+                    max-width: rem-calc(162.5);
+                    top: 0;
+                    left: rem-calc(208);
+                    z-index: -1;
+                }
+
+                .img-four {
+                    max-width: rem-calc(150);
+                    top: rem-calc(47);
+                    left: rem-calc(355);
+                    z-index: 1;
+                }
+
+                .img-five {
+                    max-width: rem-calc(167.5);
+                    top: rem-calc(270);
+                    left: 0;
+                    z-index: 1;
+                }
+
+                .img-six {
+                    max-width: rem-calc(125);
+                    top: rem-calc(300);
+                    left: rem-calc(250);
+                    z-index: 1;
+                }
+
+                .img-seven {
+                    max-width: rem-calc(125);
+                    top: rem-calc(320);
+                    left: rem-calc(350);
+                    z-index: 0;
+                }
+            }
+        }
+    }
+
+    > hr {
+        @include hr($space: 60, $type: 2);
+    }
+
+    > ul {
+        display: flex;
+        flex-direction: column;
+
+        > li {
+            gap: rem-calc(20);
+            scroll-margin-top: rem-calc(150);
+            list-style-type: none;
+
+            @include phablet {
+                flex-direction: row;
+                gap: rem-calc(32);
+            }
+
+            &::after {
+                content: "";
+                margin: rem-calc(60 0);
+                display: block;
+                width: 100%;
+                border-bottom: 1px $tertiary solid;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+
+            #{$workshops} {
+                &-content {
+                    #{$workshops}-title {
+                        display: flex;
+                        align-items: center;
+                        gap: rem-calc(16);
+                        margin-bottom: 1rem;
+
+                        h2 {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    #{$workshops}-subtitle {
+                        font-weight: 600;
+                    }
+
+                    > ul {
+                        margin-bottom: 1rem;
+                    }
+
+                    #{$workshops}-closing {
+                        opacity: 0.825;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            &.active {
+                #{$workshops}-content {
+                    outline: 2px solid $tertiary;
+                    animation: fade-out-outline 3s forwards;
+                }
+
+                @keyframes fade-out-outline {
+                    0%,
+                    60% {
+                        outline-color: $tertiary;
+                    }
+
+                    100% {
+                        outline-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
