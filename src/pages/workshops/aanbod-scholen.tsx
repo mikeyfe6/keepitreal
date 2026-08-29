@@ -6,8 +6,6 @@ import type { HeadFC, PageProps } from "gatsby";
 
 import { StaticImage } from "gatsby-plugin-image";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import Layout from "../../components/layout";
 
 import { Seo } from "../../components/seo";
@@ -49,7 +47,7 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                             Onze workshops sluiten aan bij de belevingswereld van jongeren en bieden ruimte voor
                             herkenning, gesprek, bewustwording en persoonlijke ontwikkeling.
                         </p>
-                        <p>
+                        <p className={workshopStyles.workshopsOffersDesktop}>
                             <b>Bekijk hieronder ons aanbod voor scholen:</b>
                         </p>
                     </div>
@@ -69,6 +67,10 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
 
                         <StaticImage src="../../images/workshops/4.jpg" alt="" className={workshopStyles.imgSeven} />
                     </div>
+
+                    <p className={workshopStyles.workshopsOffersMobile}>
+                        <b>Bekijk hieronder ons aanbod voor scholen:</b>
+                    </p>
                 </div>
 
                 <hr />
@@ -119,11 +121,11 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                                 <li>Omgaan met verschillen en groepsdruk;</li>
                                 <li>Keuzes maken die bij hen passen.</li>
                             </ul>
-                        </div>
 
-                        <p className={workshopStyles.workshopsClosing}>
-                            <b>De boodschap:</b> je hoeft niet hetzelfde te zijn als een ander om erbij te horen.
-                        </p>
+                            <p className={workshopStyles.workshopsClosing}>
+                                <b>De boodschap:</b> je hoeft niet hetzelfde te zijn als een ander om erbij te horen.
+                            </p>
+                        </div>
                     </li>
                     <li id="kunst" className={activeSection === "#kunst" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
@@ -144,12 +146,12 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                                 <li>Omgaan met verandering;</li>
                                 <li>Bewuster kijken naar hun eigen reacties.</li>
                             </ul>
-                        </div>
 
-                        <p className={workshopStyles.workshopsClosing}>
-                            <b>De boodschap:</b> door te creëren en te reflecteren, ontdek je meer over jezelf en
-                            elkaar.
-                        </p>
+                            <p className={workshopStyles.workshopsClosing}>
+                                <b>De boodschap:</b> door te creëren en te reflecteren, ontdek je meer over jezelf en
+                                elkaar.
+                            </p>
+                        </div>
                     </li>
                     <li id="samensterk" className={activeSection === "#samensterk" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
@@ -170,12 +172,12 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                                 <li>Conflicten en misverstanden bespreken;</li>
                                 <li>Positieve vriendschappen opbouwen.</li>
                             </ul>
-                        </div>
 
-                        <p className={workshopStyles.workshopsClosing}>
-                            <b>De boodschap:</b> samen zorgen we voor een groep waarin iedereen zich gezien, gehoord en
-                            welkom voelt.
-                        </p>
+                            <p className={workshopStyles.workshopsClosing}>
+                                <b>De boodschap:</b> samen zorgen we voor een groep waarin iedereen zich gezien, gehoord
+                                en welkom voelt.
+                            </p>
+                        </div>
                     </li>
                     <li id="muziek" className={activeSection === "#muziek" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
@@ -196,11 +198,11 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                                 <li>Muziek en teksten creëren;</li>
                                 <li>Hun ideeën omzetten in een eindproduct.</li>
                             </ul>
-                        </div>
 
-                        <p className={workshopStyles.workshopsClosing}>
-                            <b>De boodschap:</b> jouw verhaal en creativiteit mogen gezien/gehoord worden.
-                        </p>
+                            <p className={workshopStyles.workshopsClosing}>
+                                <b>De boodschap:</b> jouw verhaal en creativiteit mogen gezien/gehoord worden.
+                            </p>
+                        </div>
                     </li>
                     <li
                         id="online-weerbaarheid"
@@ -224,12 +226,12 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                                 <li>Hun privacy en grenzen bewaken;</li>
                                 <li>Weten wat ze kunnen doen als er online iets misgaat.</li>
                             </ul>
-                        </div>
 
-                        <p className={workshopStyles.workshopsClosing}>
-                            <b>De boodschap:</b> leer zelf nadenken, maak bewuste keuzes en blijf online dicht bij
-                            jezelf.
-                        </p>
+                            <p className={workshopStyles.workshopsClosing}>
+                                <b>De boodschap:</b> leer zelf nadenken, maak bewuste keuzes en blijf online dicht bij
+                                jezelf.
+                            </p>
+                        </div>
                     </li>
                     <li
                         id="oorzaak-gevolg"
@@ -253,12 +255,12 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                                 <li>Omgaan met groepsdruk en spanning;</li>
                                 <li>Doelen vertalen naar haalbare stappen.</li>
                             </ul>
-                        </div>
 
-                        <p className={workshopStyles.workshopsClosing}>
-                            <b>De boodschap:</b> elke keuze heeft een gevolg. Door bewust te kiezen, krijg je meer grip
-                            op je gedrag en je toekomst.
-                        </p>
+                            <p className={workshopStyles.workshopsClosing}>
+                                <b>De boodschap:</b> elke keuze heeft een gevolg. Door bewust te kiezen, krijg je meer
+                                grip op je gedrag en je toekomst.
+                            </p>
+                        </div>
                     </li>
                     <li id="oya-talks" className={activeSection === "#oya-talks" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
@@ -284,12 +286,12 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                                 <li>Verschillende perspectieven begrijpen;</li>
                                 <li>Handvatten vinden voor situaties die zij tegenkomen.</li>
                             </ul>
-                        </div>
 
-                        <p className={workshopStyles.workshopsClosing}>
-                            <b>De boodschap:</b> je hoeft niet alles alleen te dragen. Door te praten, te luisteren en
-                            elkaar te begrijpen, ontstaat er ruimte voor steun en verandering.
-                        </p>
+                            <p className={workshopStyles.workshopsClosing}>
+                                <b>De boodschap:</b> je hoeft niet alles alleen te dragen. Door te praten, te luisteren
+                                en elkaar te begrijpen, ontstaat er ruimte voor steun en verandering.
+                            </p>
+                        </div>
                     </li>
                     <li id="sport" className={activeSection === "#sport" ? workshopStyles.active : ""}>
                         <div className={workshopStyles.workshopsContent}>
@@ -312,12 +314,12 @@ const WorkshopsSchoolsPage: React.FC<PageProps> = () => {
                                 <li>Doorzetten en verantwoordelijkheid nemen;</li>
                                 <li>Vertrouwen in zichzelf en anderen.</li>
                             </ul>
-                        </div>
 
-                        <p className={workshopStyles.workshopsClosing}>
-                            <b>De boodschap:</b> door in beweging te komen, ontdek je wat je kunt en waar je toe in
-                            staat bent.
-                        </p>
+                            <p className={workshopStyles.workshopsClosing}>
+                                <b>De boodschap:</b> door in beweging te komen, ontdek je wat je kunt en waar je toe in
+                                staat bent.
+                            </p>
+                        </div>
                     </li>
                 </ul>
                 <div>

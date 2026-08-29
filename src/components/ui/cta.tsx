@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// import { Link } from "gatsby";
+import { Link } from "gatsby";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -26,8 +26,8 @@ const Overlay: React.FC<OverlayProps> = ({ item, onClose }) => (
             </div>
 
             <div>
-                {/* <Link to={`/workshops/#${item.anchor}`}>Meer informatie</Link> */}
-                <button onClick={onClose}>
+                <Link to={`/workshops/aanbod-scholen/#${item.anchor}`}>Meer informatie</Link>
+                <button onClick={onClose} type="button">
                     <FontAwesomeIcon icon={"xmark"} size="xl" />
                 </button>
             </div>
@@ -41,76 +41,58 @@ const Cta: React.FC = () => {
 
     const workshops: Workshop[] = [
         {
-            name: "Genge",
+            name: "Fashion & Identiteit",
             description:
-                "Een therapeutische groepsles waarin tekenen wordt gebruikt als middel. De workshop behandelt thema's zoals verleidingen, keuzes en weerbaarheid, aangepast aan de behoeften van de groep.",
-            // anchor: "genge",
+                "Tijdens deze workshop ontdekken jongeren de verbinding tussen fashion, identiteit en zelfexpressie. Met styling, moodboards en een eigen kledingconcept denken zij na over hun stijl, persoonlijkheid en uitstraling.",
+            anchor: "fashion",
         },
         {
-            name: "Oorzaak-Gevolg",
+            name: "Identiteit – Wie ben ik?",
             description:
-                "Deze sessies gaan dieper in op het straatleven vanuit het perspectief van jongeren. Er wordt gebruik gemaakt van persoonlijke levenservaringen om jongeren te motiveren om op het rechte pad te blijven.",
-            // anchor: "oorzaak-gevolg",
+                "Tijdens deze workshop ontdekken kinderen op een leuke en veilige manier meer over zichzelf. Met creatieve opdrachten, spelletjes en gesprekken staan we stil bij kwaliteiten, gevoelens, zelfvertrouwen, grenzen en de invloed van anderen.",
+            anchor: "wie-ben-ik",
         },
         {
-            name: "Identiteit",
+            name: "Kunst",
             description:
-                "Gericht op preventie voor jongeren, maar ook toepasbaar op leraren en ouders. Onderwerpen zijn onder andere zelfontdekking, weerbaarheid, groepsdruk, grenzen stellen en veiligheid op sociale media.",
-            // anchor: "identiteit",
+                "Tijdens deze workshops gaan jongeren creatief aan de slag met verschillende opdrachten. Door te creëren, samen te werken en soms buiten hun comfortzone te stappen, krijgen zij meer inzicht in hun gevoelens, gedrag en reacties.",
+            anchor: "kunst",
         },
         {
-            name: "Beats by the Pound",
+            name: "Meidenvenijn – Samen sterk",
             description:
-                "Jongeren werken samen met muziekproducenten om beats te maken, teksten te schrijven en zich creatief te uiten. Thema's die in de workshops worden behandeld, variëren en kunnen zich richten op onderwerpen als sexting, ruzies of liefde.",
-            // anchor: "beats-by-the-pound",
+                "Tijdens deze interactieve workshop ontdekken meiden meer over vriendschap, groepsgedrag en hun eigen rol binnen een groep. Met spellen, gesprekken en herkenbare situaties oefenen ze met grenzen aangeven, voor zichzelf opkomen en omgaan met conflicten.",
+            anchor: "samensterk",
+        },
+        {
+            name: "Muziek",
+            description:
+                "Tijdens deze workshop werken jongeren samen aan een eigen nummer. Van tekst schrijven en beats kiezen of maken tot vocals opnemen en het eindproduct uitwerken: zij doorlopen het volledige creatieve proces.",
+            anchor: "muziek",
+        },
+        {
+            name: "Online Weerbaarheid – Slim en sterk online",
+            description:
+                "Tijdens deze workshop leren kinderen bewuster, veiliger en sterker omgaan met social media, games en andere online omgevingen. We bespreken onder andere groepsdruk, privacy, online pesten, influencers en persoonlijke grenzen.",
+            anchor: "online-weerbaarheid",
+        },
+        {
+            name: "Oorzaak & Gevolg",
+            description:
+                "Tijdens deze workshopreeks leren jongeren inzicht krijgen in hun gedrag, keuzes en de gevolgen daarvan. Met herkenbare situaties, sport, beweging en samenwerking oefenen zij met zelfbeheersing, omgaan met spanning, verantwoordelijkheid en bewuste keuzes.",
+            anchor: "oorzaak-gevolg",
         },
         {
             name: "Oya Talks",
             description:
-                "Interactieve sessies gebaseerd op het (straat)leven, waarbij stellingen worden gebruikt om dialogen te voeren over liefde, veiligheid, discriminatie en mentale gezondheid.",
-            // anchor: "oya-talks",
-        },
-        {
-            name: "Drill 101",
-            description:
-                "Een diepgaande analyse van de drillcultuur, waarbij jongeren klassikale dialogen voeren over de rol van de media en de impact van drill in de echte wereld.",
-            // anchor: "drill-101",
-        },
-        {
-            name: "Drum / Muziek",
-            description:
-                "Jongeren leren hun emoties uiten door middel van muziek en beweging. Drummen wordt gebruikt als een therapeutisch middel om stress te verminderen en de mentale gezondheid te versterken.",
-            // anchor: "drum-muziek",
-        },
-        {
-            name: "Online weerbaarheid",
-            description:
-                "Diepgaande besprekingen over online uitdagingen zoals shaming, sexting en online pesten, om jongeren bewust te maken van de risico's en hen te helpen zichzelf te beschermen.",
-            // anchor: "online-weerbaarheid",
-        },
-        {
-            name: "Social Media",
-            description:
-                "Een veilige ruimte waarin jongeren kunnen praten over de werkelijkheid achter sociale media, met aandacht voor onderwerpen als body shaming, intimidatie en online veiligheid.",
-            // anchor: "social-media",
-        },
-        {
-            name: "Fashion and Identity",
-            description:
-                "Creatieve workshops waarin jongeren hun eigen identiteit kunnen verkennen en trots kunnen zijn op hun creatieve expressie.",
-            // anchor: "fashion-and-identity",
+                "Tijdens ‘Oya Talks’ gaan jongeren met elkaar in gesprek over thema’s die dicht bij hun leefwereld staan. Aan de hand van stellingen en herkenbare situaties bespreken we onderwerpen als liefde, discriminatie, thuissituatie, vriendengroepen, groepsdruk en (on)veilige situaties.",
+            anchor: "oya-talks",
         },
         {
             name: "Sport",
             description:
-                "Sessies gericht op mentale gezondheid, discipline en een gezonde levensstijl, waarbij de nadruk ligt op het belang van een gezond lichaam en geest.",
-            // anchor: "sport",
-        },
-        {
-            name: "Spoken Word",
-            description:
-                "Door middel van storytelling worden actuele thema's aangekaart, zoals zelfdoding, om jongeren aan te moedigen open te zijn over hun emoties en ervaringen.",
-            // anchor: "spoken-word",
+                "Tijdens de sportworkshop gaan jongeren actief aan de slag met verschillende sport- en bewegingsactiviteiten. Sport wordt ingezet om niet alleen fysiek, maar ook mentaal en sociaal te groeien.",
+            anchor: "sport",
         },
     ];
 
@@ -118,9 +100,10 @@ const Cta: React.FC = () => {
         <section>
             <div className={ctaStyles.ctaWrapper} id="cta">
                 <ul>
-                    {workshops.map((workshop, index) => (
-                        <li key={index}>
+                    {workshops.map((workshop) => (
+                        <li key={workshop.anchor ?? workshop.name}>
                             <button
+                                type="button"
                                 onClick={() => {
                                     setSelectedItem(workshop);
                                     setIsOverlayVisible(true);

@@ -83,7 +83,7 @@
                 padding: rem-calc(14);
                 border: 2px solid rgba($primary, 0.2);
 
-                @include border-radius(5px);
+                @include border-radius;
 
                 &:focus {
                     outline: none;
@@ -97,7 +97,7 @@
                 border: 2px solid rgba($primary, 0.2);
                 background-color: $white;
 
-                @include border-radius(5px);
+                @include border-radius;
 
                 &:focus {
                     outline: none;
