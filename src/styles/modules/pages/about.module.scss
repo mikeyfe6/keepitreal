@@ -57,9 +57,9 @@
                 background: rgba($white, 0.75);
                 color: $primary;
                 display: none;
-                border: 2px solid $secondary;
                 overflow: hidden;
 
+                @include border($color: $secondary);
                 @include border-radius;
 
                 @include mobile {
@@ -141,8 +141,9 @@
                         img {
                             object-position: top;
                             aspect-ratio: 1 / 1;
-                            border: 3px solid $grey-trans;
                             border-radius: 50%;
+
+                            @include border($color: $grey-trans);
                         }
                     }
 

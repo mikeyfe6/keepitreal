@@ -19,19 +19,36 @@
                 display: flex;
 
                 > button {
-                    background-color: rgba($secondary, 0.825);
-                    color: $white;
-                    border: 1px solid rgba($secondary, 0.5);
+                    color: $primary;
                     padding: rem-calc(22 20);
-                    flex: 1;
-                    white-space: nowrap;
+                    flex: 1 1 auto;
                     text-align: center;
                     font-weight: 600;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
                     @include border-radius;
                     @include box-shadow(1);
+                    @include border($color: $secondary);
+
+                    > div {
+                        max-width: rem-calc(150);
+
+                        @include ellipsis;
+                        @include fluid-typing(15, 17);
+
+                        @include mini {
+                            max-width: rem-calc(275);
+                        }
+
+                        @include compact {
+                            max-width: none;
+                        }
+                    }
 
                     &:hover {
+                        color: $white;
                         background-color: $secondary;
                     }
                 }
@@ -45,7 +62,8 @@
             width: 100%;
             height: 100%;
             background-color: rgba($secondary, 0.95);
-            border: 2px solid $tertiary;
+
+            @include border($color: $tertiary);
 
             @include mobile {
                 display: flex;
@@ -58,7 +76,7 @@
 
             &-content {
                 position: sticky;
-                top: 35vh;
+                top: 25vh;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
@@ -72,27 +90,6 @@
                 @include mobile {
                     position: static;
                     top: unset;
-                }
-
-                &::before,
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 100%;
-                    height: rem-calc(2);
-                    background-color: rgba($primary, 0.1);
-
-                    @include border-radius;
-                }
-
-                &::before {
-                    top: 0;
-                }
-
-                &::after {
-                    bottom: 0;
                 }
 
                 div:first-child {

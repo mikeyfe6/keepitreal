@@ -199,7 +199,7 @@
 
                 /* stylelint-disable-next-line no-descending-specificity */
                 img {
-                    border: 2px solid $grey-trans;
+                    @include border($color: $grey-trans);
                 }
 
                 .img-one,
@@ -257,7 +257,7 @@
                 &-two {
                     /* stylelint-disable-next-line no-descending-specificity */
                     img {
-                        border: 2px solid $grey-trans;
+                        @include border($color: $grey-trans);
                     }
 
                     .img-one,
@@ -316,7 +316,7 @@
 
                 /* stylelint-disable-next-line no-descending-specificity */
                 img {
-                    border: 2px solid $grey-trans;
+                    @include border($color: $grey-trans);
                 }
 
                 .img-one,
@@ -363,7 +363,7 @@
                 &-two {
                     /* stylelint-disable-next-line no-descending-specificity */
                     img {
-                        border: 2px solid $grey-trans;
+                        @include border($color: $grey-trans);
                     }
 
                     .img-one {

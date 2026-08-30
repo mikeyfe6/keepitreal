@@ -9,6 +9,7 @@
     left: 0;
     z-index: 2;
     opacity: 0.375;
+    pointer-events: none;
 
     @include desktop {
         top: 50%;
@@ -26,6 +27,7 @@
         transform: translateX(-83%);
         outline: 1.5px solid rgba($white, 0.1);
         border-radius: 0 rem-calc(12) rem-calc(12) 0;
+        pointer-events: auto;
 
         @include smooth-trans(transform);
 
@@ -40,6 +42,7 @@
             letter-spacing: 0.01em;
             border-top: 1.5px solid $primary;
             border-bottom: 1.5px solid $primary;
+            pointer-events: none;
 
             @include box-shadow(3);
             @include fluid-typing(14, 17);
@@ -81,6 +84,10 @@
 
         #{$this}-wrapper {
             transform: translateX(0%);
+
+            > a {
+                pointer-events: auto;
+            }
         }
 
         button {

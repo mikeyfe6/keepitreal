@@ -27,8 +27,10 @@
 
     @include smooth-trans;
 
-    &:hover {
-        text-decoration-color: $tertiary;
+    @at-root {
+        #{&}:hover {
+            text-decoration-color: $tertiary;
+        }
     }
 }
 
@@ -45,7 +47,7 @@
     border-radius: $radius;
 }
 
-@mixin border($width: 1.5px, $color: rgba($secondary, 0.125)) {
+@mixin border($width: 1.5px, $color: $smoke) {
     border: $width solid $color;
 }
 
@@ -62,8 +64,10 @@
 
     @include smooth-trans;
 
-    &:hover {
-        color: rgba($color, 0.75);
+    @at-root {
+        #{&}:hover {
+            color: rgba($color, 0.75);
+        }
     }
 }
 
@@ -74,6 +78,12 @@
     overflow: hidden;
 }
 
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 @mixin box-shadow($type: 1) {
     @if $type == 1 {
         box-shadow: 0 0 0.5em rgb(0 0 0 / 10%);
@@ -82,7 +92,11 @@
             0 4px 4px 0 rgb(172 178 185 / 50%),
             0 0 8px 0 rgb(172 178 185 / 50%);
     } @else if $type == 3 {
-        box-shadow: 0 10px 24px rgb(13 1 40 / 20%);
+        box-shadow: 0 10px 14px rgb(13 1 40 / 20%);
+    } @else if $type == 4 {
+        box-shadow:
+            rgb(67 71 85 / 27%) 0 0 0.25em,
+            rgb(90 125 188 / 5%) 0 0.25em 1em;
     }
 }
 
@@ -105,8 +119,10 @@
         padding: rem-calc(12 16);
         height: fit-content;
 
-        &:hover {
-            background-color: rgba($white, 1);
+        @at-root {
+            #{&}:hover {
+                background-color: rgba($white, 1);
+            }
         }
     } @else if $type == 2 {
         background-color: rgba($color, 0.825);
@@ -114,8 +130,10 @@
         padding: rem-calc(12 16);
         height: fit-content;
 
-        &:hover {
-            background-color: rgba($color, 1);
+        @at-root {
+            #{&}:hover {
+                background-color: rgba($color, 1);
+            }
         }
     } @else if $type == 3 {
         background-color: rgba($tertiary, 0.725);
@@ -132,50 +150,65 @@
             height: rem-calc(18);
         }
 
-        &:hover {
-            background-color: rgba($white, 1);
-            color: rgba($tertiary, 0.825);
+        @at-root {
+            #{&}:hover {
+                background-color: rgba($white, 1);
+                color: rgba($tertiary, 0.825);
+            }
         }
     } @else if $type == 4 {
         background-color: rgba($color, 0.825);
         color: $primary;
-        border: 2px solid $bdcolor;
         padding: rem-calc(12 16);
         height: fit-content;
 
-        &:hover {
-            background-color: rgba($secondary, 0.025);
-            border-color: rgba($secondary, 0.825);
+        @include border($color: $bdcolor);
+
+        @at-root {
+            #{&}:hover {
+                background-color: rgba($secondary, 0.025);
+                border-color: rgba($secondary, 0.825);
+            }
         }
     } @else if $type == 5 {
         background-color: rgba($color, 0.825);
         color: $primary;
-        border: 2px solid $bdcolor;
         padding: rem-calc(12 16);
         height: fit-content;
 
-        &:hover {
-            background-color: rgba($tertiary, 0.025);
-            border-color: rgba($tertiary, 0.825);
+        @include border($color: $bdcolor);
+
+        @at-root {
+            #{&}:hover {
+                background-color: rgba($tertiary, 0.025);
+                border-color: rgba($tertiary, 0.825);
+            }
         }
     }
 
-    &:disabled {
-        opacity: 0.5;
-        pointer-events: none;
+    @at-root {
+        #{&}:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
     }
 }
 
-@mixin main-card($color: rgba($white, 0.0625)) {
-    background-color: $color;
-    padding: rem-calc(36 24);
+@mixin main-card($color: rgba($white, 0.0625), $type: 1) {
+    padding: rem-calc(24);
 
-    @include border;
+    @if $type == 1 {
+        background-color: $color;
+    } @else if $type == 2 {
+        background-color: rgba($primary, 0.95);
+        color: $white;
+    }
+
     @include border-radius;
-    @include box-shadow(1);
+    @include box-shadow(4);
 
     @include mobile {
-        padding: rem-calc(40 32);
+        padding: rem-calc(32);
     }
 }
 

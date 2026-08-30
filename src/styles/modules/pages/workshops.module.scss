@@ -4,7 +4,7 @@
     $workshops: &;
 
     > div:first-child {
-        margin-bottom: rem-calc(48);
+        margin-bottom: rem-calc(24);
 
         @include main-card;
     }

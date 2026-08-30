@@ -109,7 +109,7 @@ const Cta: React.FC = () => {
                                     setIsOverlayVisible(true);
                                 }}
                             >
-                                {workshop.name}
+                                <div>{workshop.name}</div>
                             </button>
                         </li>
                     ))}

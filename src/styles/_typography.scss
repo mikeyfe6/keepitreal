@@ -38,7 +38,7 @@ p,
 li,
 td,
 th {
-    @include fluid-typing(17, 18);
+    @include fluid-typing(16.5, 18);
 
     aside & {
         font-size: rem-calc(16);

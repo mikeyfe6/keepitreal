@@ -50,7 +50,7 @@
                 @include smooth-trans;
 
                 &:focus {
-                    outline: 2px solid rgba($tertiary, 1);
+                    outline: 1.5px solid rgba($tertiary, 1);
                 }
             }
 
@@ -81,8 +81,8 @@
             > input {
                 width: 100%;
                 padding: rem-calc(14);
-                border: 2px solid rgba($primary, 0.2);
 
+                @include border($color: rgba($primary, 0.2));
                 @include border-radius;
 
                 &:focus {
@@ -94,9 +94,9 @@
             > select {
                 width: 100%;
                 padding: rem-calc(12);
-                border: 2px solid rgba($primary, 0.2);
                 background-color: $white;
 
+                @include border($color: rgba($primary, 0.2));
                 @include border-radius;
 
                 &:focus {
@@ -133,7 +133,6 @@
                             appearance: none;
                             width: rem-calc(18);
                             height: rem-calc(18);
-                            border: 2px solid rgba($primary, 0.2);
                             border-radius: 50%;
                             background-color: $white;
                             position: relative;
@@ -141,6 +140,8 @@
                                 border-color 0.2s ease,
                                 box-shadow 0.2s ease;
                             display: inline-block;
+
+                            @include border($color: rgba($primary, 0.2));
 
                             &:checked {
                                 border-color: $white;

@@ -7007,7 +7007,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-abstract@npm:^1.17.5, es-abstract@npm:^1.23.2, es-abstract@npm:^1.23.3, es-abstract@npm:^1.23.5, es-abstract@npm:^1.23.6, es-abstract@npm:^1.23.9, es-abstract@npm:^1.24.0, es-abstract@npm:^1.24.2":
+"es-abstract@npm:^1.17.5, es-abstract@npm:^1.23.2, es-abstract@npm:^1.23.3, es-abstract@npm:^1.23.5, es-abstract@npm:^1.23.9, es-abstract@npm:^1.24.0, es-abstract@npm:^1.24.2":
   version: 1.24.2
   resolution: "es-abstract@npm:1.24.2"
   dependencies:
@@ -9346,13 +9346,13 @@ __metadata:
   linkType: hard
 
 "graphql-compose@npm:^9.0.10":
-  version: 9.1.0
-  resolution: "graphql-compose@npm:9.1.0"
+  version: 9.2.0
+  resolution: "graphql-compose@npm:9.2.0"
   dependencies:
     graphql-type-json: "npm:0.3.2"
   peerDependencies:
-    graphql: ^14.2.0 || ^15.0.0 || ^16.0.0
-  checksum: 10c0/3323e08a8739cce90607ba0688a93813f62293eaed19ad39b0b017f31c44fd57b0d39e6c4b7e4d7999bbcfbd4e76ed8c92c6f242eac6104f6738ddbff67e62c6
+    graphql: ^14.2.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 10c0/097e2d06415c0cd07a149b645bceca2e2656091c644998fe9dfce20565127fa231480aa57b6d4172ce11c1e80a428277e24dffbd9ae4beb7f56162df167ca54f
   languageName: node
   linkType: hard
 
@@ -10737,7 +10737,7 @@ __metadata:
     postcss: "npm:^8.5.26"
     react: "npm:18"
     react-dom: "npm:18"
-    resend: "npm:6.24.0"
+    resend: "npm:6.25.0"
     sass: "npm:^1.103.1"
     sharp: "npm:0.32.6"
     stylelint: "npm:^17.14.1"
@@ -11638,14 +11638,14 @@ __metadata:
   linkType: hard
 
 "multer@npm:^2.0.1":
-  version: 2.2.0
-  resolution: "multer@npm:2.2.0"
+  version: 2.3.0
+  resolution: "multer@npm:2.3.0"
   dependencies:
     append-field: "npm:^1.0.0"
     busboy: "npm:^1.6.0"
     concat-stream: "npm:^2.0.0"
     type-is: "npm:^1.6.18"
-  checksum: 10c0/7aa366d89042427347b6ab8e4a203405d7fe942e4a3095648a14526fcf3691d98ffc2da62abf85d8aca0a341f828168eb197b33cfdcfcce29d6ef593a5625591
+  checksum: 10c0/e78fe6b1fe2132cdd33eeec4146643b906046edc1bbbcc90a43ea3d3aed6a7271272897a6d2e40e711e595a156d99b6761848a76fecca6ae3b9a7ee4892ee30c
   languageName: node
   linkType: hard
 
@@ -11766,11 +11766,11 @@ __metadata:
   linkType: hard
 
 "node-abi@npm:^3.3.0":
-  version: 3.95.0
-  resolution: "node-abi@npm:3.95.0"
+  version: 3.96.0
+  resolution: "node-abi@npm:3.96.0"
   dependencies:
     semver: "npm:^7.3.5"
-  checksum: 10c0/b2008108cf57b556bf7c9b68d090d328b90f8d8f46e1f41239146e1b8622c2674224453cafc62793641309218e34b3fd5379f8f8d8daa316c79339098bb552bd
+  checksum: 10c0/d5f70cc9c384f807c79fbd3020ec03510d3a3540e95a51cabc9a52f658a474aa9e9a15cd331d6c49eb2d6983c6cfcef7483e1fdb833686584a599041b9d171cd
   languageName: node
   linkType: hard
 
@@ -13699,7 +13699,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regexp.prototype.flags@npm:^1.5.3, regexp.prototype.flags@npm:^1.5.4":
+"regexp.prototype.flags@npm:^1.5.4":
   version: 1.5.4
   resolution: "regexp.prototype.flags@npm:1.5.4"
   dependencies:
@@ -13829,9 +13829,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resend@npm:6.24.0":
-  version: 6.24.0
-  resolution: "resend@npm:6.24.0"
+"resend@npm:6.25.0":
+  version: 6.25.0
+  resolution: "resend@npm:6.25.0"
   dependencies:
     postal-mime: "npm:2.7.5"
     standardwebhooks: "npm:1.0.0"
@@ -13840,7 +13840,7 @@ __metadata:
   peerDependenciesMeta:
     "@react-email/render":
       optional: true
-  checksum: 10c0/35e4af19a06b0cefc3319d8ab92dd693d843cec704dfdb0b55740b1e21ba8a372b8557c3efb65b525cfde2fda8e0d91e9860f23c5ddd14dac8cb7ac908313bc8
+  checksum: 10c0/8d5874a4ce8b09ecb10c6d09612f6a664b5aaf4dbeed60a1e5c7e543babc1da43a673cb09147d56d0fb2944d18e340e6634a0089fbeb2ba153d9564d31773806
   languageName: node
   linkType: hard
 
@@ -14876,23 +14876,23 @@ __metadata:
   linkType: hard
 
 "string.prototype.matchall@npm:^4.0.12":
-  version: 4.0.12
-  resolution: "string.prototype.matchall@npm:4.0.12"
+  version: 4.1.0
+  resolution: "string.prototype.matchall@npm:4.1.0"
   dependencies:
-    call-bind: "npm:^1.0.8"
-    call-bound: "npm:^1.0.3"
+    call-bind: "npm:^1.0.9"
+    call-bound: "npm:^1.0.4"
     define-properties: "npm:^1.2.1"
-    es-abstract: "npm:^1.23.6"
+    es-abstract: "npm:^1.24.2"
     es-errors: "npm:^1.3.0"
-    es-object-atoms: "npm:^1.0.0"
-    get-intrinsic: "npm:^1.2.6"
+    es-object-atoms: "npm:^1.1.2"
+    get-intrinsic: "npm:^1.3.0"
     gopd: "npm:^1.2.0"
     has-symbols: "npm:^1.1.0"
     internal-slot: "npm:^1.1.0"
-    regexp.prototype.flags: "npm:^1.5.3"
+    regexp.prototype.flags: "npm:^1.5.4"
     set-function-name: "npm:^2.0.2"
-    side-channel: "npm:^1.1.0"
-  checksum: 10c0/1a53328ada73f4a77f1fdf1c79414700cf718d0a8ef6672af5603e709d26a24f2181208144aed7e858b1bcc1a0d08567a570abfb45567db4ae47637ed2c2f85c
+    side-channel: "npm:^1.1.1"
+  checksum: 10c0/6bafcfc71b13082d0474c037e8fbd4d9c5e769eae1ba1f9d293666bc6385337c2af359604a68bc6afa18b9a71ab64ac431f49b8006db57ed118cde176bd3a7f6
   languageName: node
   linkType: hard
 
