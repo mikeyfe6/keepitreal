@@ -45,12 +45,13 @@
                 background: rgba($primary, 0.05);
                 padding: rem-calc(14);
                 resize: none;
+                outline: 1.5px solid transparent;
 
                 @include border-radius;
                 @include smooth-trans;
 
                 &:focus {
-                    outline: 1.5px solid rgba($tertiary, 1);
+                    outline-color: rgba($tertiary, 1);
                 }
             }
 
