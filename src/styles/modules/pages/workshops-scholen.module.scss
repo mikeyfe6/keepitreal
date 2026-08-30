@@ -197,10 +197,14 @@
             &.active {
                 #{$workshops}-content {
                     animation: fade-out-bg 3s forwards;
-                    outline: 20px solid rgba($tertiary, 0.075);
+                    outline: 10px solid rgba($tertiary, 0.075);
                     background-color: rgba($tertiary, 0.075);
 
                     @include border-radius(3px);
+
+                    @include mobile {
+                        outline-width: 20px;
+                    }
                 }
 
                 @keyframes fade-out-bg {
