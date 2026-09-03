@@ -77,7 +77,7 @@ const Header: React.FC = () => {
                             </li>
 
                             <li className={headerStyles.dropdown}>
-                                <Link to="/workshops/" activeClassName={headerStyles.active}>
+                                <Link to="/workshops/" activeClassName={headerStyles.active} partiallyActive={true}>
                                     Workshops
                                 </Link>
                                 <ul className={headerStyles.dropdownMenu}>
@@ -184,7 +184,7 @@ const Header: React.FC = () => {
                         </li>
                         <li className={headerStyles.mobileDropdown}>
                             <div className={headerStyles.mobileDropdownToggle}>
-                                <Link to="/workshops/" activeClassName={headerStyles.active}>
+                                <Link to="/workshops/" activeClassName={headerStyles.active} partiallyActive={true}>
                                     Workshops
                                 </Link>
                                 <button
