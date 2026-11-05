@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
 if (globalThis.window !== undefined) {
-    import("@googlemaps/js-api-loader").then(({ setOptions }) => {
+    void import("@googlemaps/js-api-loader").then(({ setOptions }) => {
         setOptions({
             key: process.env.GATSBY_GOOGLE_MAPS_KEY || "",
             v: "weekly",
@@ -32,7 +32,7 @@ const GoogleMap: React.FC<GoogleMapProps> = ({ center, zoom, markers = [] }) => 
 
         let isMounted = true;
 
-        (async () => {
+        void (async () => {
             const { importLibrary } = await import("@googlemaps/js-api-loader");
 
             const [{ Map: GoogleMaps, InfoWindow }, { AdvancedMarkerElement }] = await Promise.all([

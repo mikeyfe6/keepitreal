@@ -128,11 +128,11 @@ const Header: React.FC = () => {
                                     Over ons
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link to="/anbi/" activeClassName={headerStyles.active}>
                                     ANBI
                                 </Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link to="/contact/" activeClassName={headerStyles.active}>
                                     Contact
@@ -284,11 +284,11 @@ const Header: React.FC = () => {
                                 Over Ons
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/anbi/" activeClassName={headerStyles.active}>
                                 ANBI
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link to="/contact/" activeClassName={headerStyles.active}>
                                 Contact

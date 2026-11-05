@@ -8,7 +8,7 @@ import Layout from "../components/layout";
 
 import { Seo } from "../components/seo";
 
-import * as anbiStyles from "../styles/modules/pages/anbi.module.scss";
+// import * as anbiStyles from "../styles/modules/pages/anbi.module.scss";
 
 const AnbiPage: React.FC<PageProps> = () => {
     const { companyName, facility, street, postalCode, city, mailingStreet, mailingPostalcode, mailingCity } =
@@ -16,7 +16,9 @@ const AnbiPage: React.FC<PageProps> = () => {
 
     return (
         <Layout>
-            <section className={anbiStyles.anbi}>
+            <section
+            // className={anbiStyles.anbi}
+            >
                 <div>
                     <h1>Doelstelling: {companyName}</h1>
                     <p>
