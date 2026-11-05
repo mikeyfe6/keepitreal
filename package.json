@@ -48,7 +48,7 @@
     "react-dom": "19",
     "resend": "6.37.0",
     "sass": "^1.107.1",
-    "sharp": "0.35.5"
+    "sharp": "0.32.6"
   },
   "devDependencies": {
     "@babel/core": "^8.1.0",
